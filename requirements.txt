@@ -1,0 +1,38 @@
+# Deep Learning
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+
+# Numerical Computing
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.1
+
+# Machine Learning
+scikit-learn==1.5.2
+
+# Geospatial / Satellite Processing
+rasterio==1.4.3
+tifffile==2024.9.20
+h5py==3.12.1
+
+# Computer Vision
+opencv-python==4.10.0.84
+Pillow==11.0.0
+albumentations==1.4.20
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Metrics
+torchmetrics==1.6.0
+
+# Utilities
+tqdm==4.66.6
+PyYAML==6.0.2
+joblib==1.4.2
+python-dotenv==1.0.1
+
+# Experiment Tracking
+tensorboard==2.18.0

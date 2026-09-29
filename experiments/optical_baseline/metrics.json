@@ -1,0 +1,73 @@
+{
+  "validation_best_epoch": 50,
+  "validation_best_f1": 0.23874477949346717,
+  "final_test_precision": 0.25148292541248224,
+  "final_test_recall": 0.2830390314124606,
+  "final_test_f1": 0.26632950327551275,
+  "final_test_iou": 0.15362175440990822,
+  "final_test_far": 0.045912803598940545,
+  "false_alarm_rate_definition": "FAR = FP / (FP + TN): the fraction of unchanged pixels predicted as change.",
+  "threshold": 0.5,
+  "test_counts": {
+    "tp": 45025,
+    "tn": 2784846,
+    "fp": 134013,
+    "fn": 114052
+  },
+  "reproducibility": {
+    "seed": 42,
+    "pytorch_version": "2.5.1+cu124",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device": "cuda",
+    "learning_rate": 0.0001,
+    "batch_size": 64,
+    "epochs": 50,
+    "crop_size": 32,
+    "crops_per_city": 64,
+    "loss_function": "BCEWithLogitsLoss",
+    "optimizer": "Adam",
+    "model": "standard single-stream U-Net, not DS-UNet",
+    "modality": "Sentinel-2 optical, T1 and T2 concatenated",
+    "input_channels": 26,
+    "output_channels": 1,
+    "parameter_count": 31050881,
+    "threshold": 0.5,
+    "false_alarm_rate": "FAR = FP / (FP + TN): the fraction of unchanged pixels predicted as change.",
+    "validation_split_seed": 42,
+    "train_cities": [
+      "bordeaux",
+      "nantes",
+      "rennes",
+      "saclay_e",
+      "abudhabi",
+      "cupertino",
+      "pisa",
+      "hongkong",
+      "beirut",
+      "mumbai"
+    ],
+    "validation_cities": [
+      "beihai",
+      "bercy",
+      "aguasclaras",
+      "paris"
+    ],
+    "test_cities": [
+      "brasilia",
+      "montpellier",
+      "norcia",
+      "rio",
+      "saclay_w",
+      "valencia",
+      "dubai",
+      "lasvegas",
+      "milano",
+      "chongqing"
+    ],
+    "training_orbit": "np.random.choice of ORBITS[city] inside OSCDDataset, after the seed is set",
+    "evaluation_orbit": "first orbit listed for each city",
+    "checkpoint_selection": "highest validation F1 on full validation-city images",
+    "test_metric_aggregation": "pixel counts pooled across the official test cities, once, after training"
+  }
+}
