@@ -1,0 +1,81 @@
+experiment: Clean Asynchronous Dual Stream U-Net baseline
+research_question: Isolating whether the performance degradation in the naive asynchronous
+  setup was caused by the zero-filled placeholder representation of missing T2 optical
+  channels.
+seed: 42
+pytorch_version: 2.5.1+cu124
+cuda_available: true
+gpu_name: NVIDIA GeForce RTX 4060 Laptop GPU
+device: cuda
+learning_rate: 0.0001
+batch_size: 64
+epochs: 50
+crop_size: 32
+crops_per_city: 64
+loss_function: BCEWithLogitsLoss
+optimizer: Adam
+model: DualStreamUNetClean (src/models/dual_stream_unet_clean.py)
+modality: 'Clean Asynchronous Multimodal: S1 VV (T1+T2, 2 ch) and historical S2 (T1
+  only, 13 ch)'
+sar_input_channels: 2
+optical_input_channels: 13
+total_input_channels: 15
+base_channels: 64
+channel_order:
+- sentinel1_t1_vv
+- sentinel1_t2_vv
+- sentinel2_t1_B01
+- sentinel2_t1_B02
+- sentinel2_t1_B03
+- sentinel2_t1_B04
+- sentinel2_t1_B05
+- sentinel2_t1_B06
+- sentinel2_t1_B07
+- sentinel2_t1_B08
+- sentinel2_t1_B8A
+- sentinel2_t1_B09
+- sentinel2_t1_B10
+- sentinel2_t1_B11
+- sentinel2_t1_B12
+optical_t2_handling: NO S2 T2 loaded or used; optical encoder directly takes 13 historical
+  bands with NO zero-filled channels
+output_channels: 1
+parameter_count: 27276609
+threshold: 0.5
+false_alarm_rate: 'FAR = FP / (FP + TN): the fraction of unchanged pixels predicted
+  as change.'
+validation_split_seed: 42
+train_cities:
+- bordeaux
+- nantes
+- rennes
+- saclay_e
+- abudhabi
+- cupertino
+- pisa
+- hongkong
+- beirut
+- mumbai
+validation_cities:
+- beihai
+- bercy
+- aguasclaras
+- paris
+test_cities:
+- brasilia
+- montpellier
+- norcia
+- rio
+- saclay_w
+- valencia
+- dubai
+- lasvegas
+- milano
+- chongqing
+training_orbit: np.random.choice of ORBITS[city] inside OSCDDataset, after the seed
+  is set
+evaluation_orbit: first orbit listed for each city
+checkpoint_selection: highest validation F1 on full validation-city images
+test_metric_aggregation: pixel counts pooled across the official test cities, once,
+  after training
+city_summary: unweighted mean and sample standard deviation, omitting undefined rates

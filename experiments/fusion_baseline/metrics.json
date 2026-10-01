@@ -1,0 +1,137 @@
+{
+  "validation_best_epoch": 46,
+  "validation_best_f1": 0.25379040319893365,
+  "final_test_precision": 0.287733496147139,
+  "final_test_recall": 0.4532647711485633,
+  "final_test_f1": 0.3520101545146093,
+  "final_test_iou": 0.2135997108713555,
+  "final_test_far": 0.061150264538300754,
+  "false_alarm_rate_definition": "FAR = FP / (FP + TN): the fraction of unchanged pixels predicted as change.",
+  "threshold": 0.5,
+  "test_counts": {
+    "tp": 72104,
+    "tn": 2740370,
+    "fp": 178489,
+    "fn": 86973
+  },
+  "per_city_mean_std": {
+    "precision": {
+      "n": 10,
+      "undefined_cities": [],
+      "mean": 0.3502476927507499,
+      "sample_std": 0.2258194475633019
+    },
+    "recall": {
+      "n": 10,
+      "undefined_cities": [],
+      "mean": 0.4120242673820294,
+      "sample_std": 0.26389851467914927
+    },
+    "f1": {
+      "n": 10,
+      "undefined_cities": [],
+      "mean": 0.3080423457462348,
+      "sample_std": 0.18346665725976802
+    },
+    "iou": {
+      "n": 10,
+      "undefined_cities": [],
+      "mean": 0.1952341964098268,
+      "sample_std": 0.13582737010529733
+    },
+    "false_alarm_rate": {
+      "n": 10,
+      "undefined_cities": [],
+      "mean": 0.05114353144309086,
+      "sample_std": 0.05459045950463844
+    }
+  },
+  "warnings": [],
+  "reproducibility": {
+    "seed": 42,
+    "pytorch_version": "2.5.1+cu124",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device": "cuda",
+    "learning_rate": 0.0001,
+    "batch_size": 64,
+    "epochs": 50,
+    "crop_size": 32,
+    "crops_per_city": 64,
+    "loss_function": "BCEWithLogitsLoss",
+    "optimizer": "Adam",
+    "model": "standard single-stream U-Net, not DS-UNet",
+    "modality": "synchronous Sentinel-1 VV and Sentinel-2",
+    "input_channels": 28,
+    "channel_order": [
+      "sentinel1_t1_vv",
+      "sentinel1_t2_vv",
+      "sentinel2_t1_B01",
+      "sentinel2_t1_B02",
+      "sentinel2_t1_B03",
+      "sentinel2_t1_B04",
+      "sentinel2_t1_B05",
+      "sentinel2_t1_B06",
+      "sentinel2_t1_B07",
+      "sentinel2_t1_B08",
+      "sentinel2_t1_B8A",
+      "sentinel2_t1_B09",
+      "sentinel2_t1_B10",
+      "sentinel2_t1_B11",
+      "sentinel2_t1_B12",
+      "sentinel2_t2_B01",
+      "sentinel2_t2_B02",
+      "sentinel2_t2_B03",
+      "sentinel2_t2_B04",
+      "sentinel2_t2_B05",
+      "sentinel2_t2_B06",
+      "sentinel2_t2_B07",
+      "sentinel2_t2_B08",
+      "sentinel2_t2_B8A",
+      "sentinel2_t2_B09",
+      "sentinel2_t2_B10",
+      "sentinel2_t2_B11",
+      "sentinel2_t2_B12"
+    ],
+    "output_channels": 1,
+    "parameter_count": 31052033,
+    "threshold": 0.5,
+    "false_alarm_rate": "FAR = FP / (FP + TN): the fraction of unchanged pixels predicted as change.",
+    "validation_split_seed": 42,
+    "train_cities": [
+      "bordeaux",
+      "nantes",
+      "rennes",
+      "saclay_e",
+      "abudhabi",
+      "cupertino",
+      "pisa",
+      "hongkong",
+      "beirut",
+      "mumbai"
+    ],
+    "validation_cities": [
+      "beihai",
+      "bercy",
+      "aguasclaras",
+      "paris"
+    ],
+    "test_cities": [
+      "brasilia",
+      "montpellier",
+      "norcia",
+      "rio",
+      "saclay_w",
+      "valencia",
+      "dubai",
+      "lasvegas",
+      "milano",
+      "chongqing"
+    ],
+    "training_orbit": "np.random.choice of ORBITS[city] inside OSCDDataset, after the seed is set",
+    "evaluation_orbit": "first orbit listed for each city",
+    "checkpoint_selection": "highest validation F1 on full validation-city images",
+    "test_metric_aggregation": "pixel counts pooled across the official test cities, once, after training",
+    "city_summary": "unweighted mean and sample standard deviation, omitting undefined rates"
+  }
+}
