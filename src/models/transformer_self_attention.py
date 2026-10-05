@@ -128,7 +128,7 @@ class TransformerBlock(nn.Module):
         # x: (B, T, D)
         # -- Self-attention with pre-norm --
         normed = self.norm1(x)
-        attn_out, _ = self.attn(normed, normed, normed)  # Q=K=V=normed
+        attn_out, _ = self.attn(normed, normed, normed, need_weights=False)  # Q=K=V=normed
         x = x + attn_out                                  # residual
 
         # -- MLP with pre-norm --
@@ -186,7 +186,7 @@ class CrossAttentionBlock(nn.Module):
         """
         q = self.norm_q(x_sar)
         kv = self.norm_kv(x_opt)
-        attn_out, _ = self.cross_attn(q, kv, kv)   # Q from SAR, K/V from optical
+        attn_out, _ = self.cross_attn(q, kv, kv, need_weights=False)   # Q from SAR, K/V from optical
         x_sar = x_sar + attn_out                     # residual update to SAR stream
         x_sar = x_sar + self.mlp(self.norm_mlp(x_sar))  # MLP refinement
         return x_sar                                  # (B, T, D)
