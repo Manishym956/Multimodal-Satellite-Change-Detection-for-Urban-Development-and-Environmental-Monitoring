@@ -1,0 +1,113 @@
+{
+  "models": {
+    "SAR-only U-Net": {
+      "f1": 0.3558,
+      "iou": 0.2164,
+      "far": 0.019,
+      "prec": 0.4558,
+      "rec": 0.2917,
+      "params": 31036545
+    },
+    "Optical-only U-Net": {
+      "f1": 0.2663,
+      "iou": 0.1536,
+      "far": 0.0459,
+      "prec": 0.2515,
+      "rec": 0.283,
+      "params": 31051969
+    },
+    "Sync Fusion U-Net": {
+      "f1": 0.352,
+      "iou": 0.2136,
+      "far": 0.0612,
+      "prec": 0.2877,
+      "rec": 0.4533,
+      "params": 31052033
+    },
+    "Sync Dual-Stream CNN": {
+      "f1": 0.3868,
+      "iou": 0.2398,
+      "far": 0.0686,
+      "prec": 0.3009,
+      "rec": 0.5415,
+      "params": 27284097
+    },
+    "Naive Async CNN": {
+      "f1": 0.2052,
+      "iou": 0.1143,
+      "far": 0.0319,
+      "prec": 0.2363,
+      "rec": 0.1814,
+      "params": 27284097
+    },
+    "Clean Async CNN": {
+      "f1": 0.4117,
+      "iou": 0.2592,
+      "far": 0.0218,
+      "prec": 0.4753,
+      "rec": 0.3631,
+      "params": 27276609
+    },
+    "Transformer Self-Attn": {
+      "f1": 0.1615,
+      "iou": 0.0879,
+      "far": 0.2391,
+      "prec": 0.0974,
+      "rec": 0.4734,
+      "params": 1358081
+    },
+    "Transformer Cross-Attn": {
+      "f1": 0.3564,
+      "iou": 0.2168,
+      "far": 0.0861,
+      "prec": 0.2615,
+      "rec": 0.5592,
+      "params": 1156993
+    }
+  },
+  "pixel_counts": {
+    "Clean Async CNN": {
+      "tp": 57764,
+      "fp": 63762,
+      "fn": 101313,
+      "tn": 2855097
+    },
+    "Transformer Cross-Attn": {
+      "tp": 88959,
+      "fp": 251196,
+      "fn": 70118,
+      "tn": 2667663
+    },
+    "Transformer Self-Attn": {
+      "tp": 75307,
+      "fp": 697994,
+      "fn": 83770,
+      "tn": 2220865
+    }
+  },
+  "training_histories_available": [
+    "Clean Async CNN",
+    "Transformer Self-Attn",
+    "Transformer Cross-Attn"
+  ],
+  "training_histories_missing": [],
+  "notes": {
+    "transformer_loss": "BCEWithLogitsLoss(pos_weight=41.0)",
+    "cnn_loss": "BCEWithLogitsLoss (no pos_weight)",
+    "threshold": 0.5,
+    "seed": 42,
+    "test_cities": [
+      "brasilia",
+      "montpellier",
+      "norcia",
+      "rio",
+      "saclay_w",
+      "valencia",
+      "dubai",
+      "lasvegas",
+      "milano",
+      "chongqing"
+    ],
+    "s2_t2_in_async": "NOT LOADED"
+  }
+}

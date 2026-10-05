@@ -16,11 +16,13 @@ Can historical Sentinel-2 optical imagery improve Sentinel-1 SAR-based urban cha
 
 The repository currently contains:
 
-- DS-UNet-faithful OSCD preprocessing
+- DS-UNet-faithful OSCD preprocessing for the benchmark split used in this study
 - a completed SAR-only U-Net baseline
 - a completed optical-only U-Net baseline
+- tracked experiment summaries and comparison tables under `experiments/` and `results/`
+- a draft figure gallery for the completed baseline runs
 
-SAR and optical fusion is not yet completed. The asynchronous historical-optical experiment is not yet completed.
+The codebase has moved beyond the single-stream baselines and is now oriented toward multimodal fusion and asynchronous historical-optical experiments. SAR and optical fusion is not yet completed, and the asynchronous historical-optical experiment is not yet completed.
 
 ## 4. Dataset
 
@@ -70,11 +72,12 @@ Both models use BCEWithLogitsLoss, Adam, seed 42, 50 epochs, batch size 64, lear
 | `src/` | Dataset loading, U-Net, metrics, and baseline training |
 | `configs/` | Reserved for experiment configuration |
 | `experiments/` | Metrics, histories, and config records for completed baselines |
+| `results/` | Summary tables, figure indexes, and result-level documentation for the tracked runs |
 | `figures/` | Prediction figures for one test city per baseline |
 | `paper/` | Reserved for manuscript material |
 | `notebooks/` | Reserved for notebooks |
 
-`datasets/`, `checkpoints/`, `.venv/`, and `outputs/` are excluded from Git.
+`datasets/`, `checkpoints/`, `.venv/`, `outputs/`, and large runtime artifacts are excluded from Git.
 
 ## 9. Environment
 
