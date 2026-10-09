@@ -1,0 +1,1 @@
+experiment_id,model,dataset_version,sar_channels,optical_channels,learning_rate,batch_size,epochs,crop_size,pos_weight,num_parameters,seed,best_validation_f1,best_validation_iou,final_test_precision,final_test_recall,final_test_f1,final_test_iou,final_test_far,training_time_seconds,checkpoint_path,notes
