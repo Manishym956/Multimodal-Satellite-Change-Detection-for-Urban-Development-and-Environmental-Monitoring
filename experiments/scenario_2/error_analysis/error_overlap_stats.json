@@ -1,0 +1,50 @@
+{
+  "site": "L15-1289E-1169N_5156_3514_13",
+  "total_pixels": 238632,
+  "total_change_pixels": 3195,
+  "total_invalid_pixels": 567,
+  "models": [
+    {
+      "model": "Async Dual-Stream CNN",
+      "tp": 866,
+      "fp": 24848,
+      "fn": 2329,
+      "tn": 210589,
+      "total_invalid_pixels": 567,
+      "fp_on_invalid_pixels": 259,
+      "pct_of_fp_on_invalid": 1.042337411461687,
+      "pct_of_invalid_predicted_fp": 45.67901234567901,
+      "sar_vv_diff_mean_tp": 0.2727949321269989,
+      "sar_vv_diff_mean_fp": 0.17275020480155945,
+      "sar_vv_diff_mean_tn": 0.07406691461801529
+    },
+    {
+      "model": "Sync Dual-Stream CNN",
+      "tp": 2484,
+      "fp": 41876,
+      "fn": 711,
+      "tn": 193561,
+      "total_invalid_pixels": 567,
+      "fp_on_invalid_pixels": 258,
+      "pct_of_fp_on_invalid": 0.6161046900372528,
+      "pct_of_invalid_predicted_fp": 45.5026455026455,
+      "sar_vv_diff_mean_tp": 0.18467940390110016,
+      "sar_vv_diff_mean_fp": 0.14203381538391113,
+      "sar_vv_diff_mean_tn": 0.07203087210655212
+    },
+    {
+      "model": "Cross-Attention Transformer",
+      "tp": 2769,
+      "fp": 166162,
+      "fn": 426,
+      "tn": 69275,
+      "total_invalid_pixels": 567,
+      "fp_on_invalid_pixels": 459,
+      "pct_of_fp_on_invalid": 0.2762364439522875,
+      "pct_of_invalid_predicted_fp": 80.95238095238095,
+      "sar_vv_diff_mean_tp": 0.17991012334823608,
+      "sar_vv_diff_mean_fp": 0.09453129768371582,
+      "sar_vv_diff_mean_tn": 0.06037769839167595
+    }
+  ]
+}

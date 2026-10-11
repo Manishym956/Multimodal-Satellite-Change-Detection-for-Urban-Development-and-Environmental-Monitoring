@@ -168,9 +168,9 @@ class TransformerCrossAttention(nn.Module):
         Returns:
             logits: (B, 1, H, W) raw change logit
         """
-        if x.shape[1] != self.TOTAL_CHANNELS:
+        if x.shape[1] != self.sar_channels + self.opt_channels:
             raise ValueError(
-                f"Expected {self.TOTAL_CHANNELS} input channels "
+                f"Expected {self.sar_channels + self.opt_channels} input channels "
                 f"({self.sar_channels} SAR + {self.opt_channels} optical), "
                 f"got {x.shape[1]}"
             )

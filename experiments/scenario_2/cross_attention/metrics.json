@@ -1,0 +1,127 @@
+{
+  "validation_best_epoch": 23,
+  "validation_best_f1": 0.13280871670702177,
+  "final_test_precision": 0.02135858737479872,
+  "final_test_recall": 0.5704913252660738,
+  "final_test_f1": 0.0411756040070713,
+  "final_test_iou": 0.021020569322754108,
+  "final_test_far": 0.18919264004626088,
+  "false_alarm_rate_definition": "FAR = FP / (FP + TN): the fraction of unchanged pixels predicted as change.",
+  "threshold": 0.5,
+  "test_counts": {
+    "tp": 3913,
+    "tn": 768377,
+    "fp": 179292,
+    "fn": 2946
+  },
+  "per_site_mean_std": {
+    "precision": {
+      "n": 4,
+      "undefined_sites": [],
+      "mean": 0.06421236230615668,
+      "sample_std": 0.03963589004372967
+    },
+    "recall": {
+      "n": 4,
+      "undefined_sites": [],
+      "mean": 0.43677247811847747,
+      "sample_std": 0.2973428827580548
+    },
+    "f1": {
+      "n": 4,
+      "undefined_sites": [],
+      "mean": 0.10030800853329709,
+      "sample_std": 0.05385778638235729
+    },
+    "iou": {
+      "n": 4,
+      "undefined_sites": [],
+      "mean": 0.05343165848814154,
+      "sample_std": 0.029604709709231573
+    },
+    "false_alarm_rate": {
+      "n": 4,
+      "undefined_sites": [],
+      "mean": 0.1902731409610092,
+      "sample_std": 0.34377006186087306
+    }
+  },
+  "training_time_seconds": 357.76,
+  "evaluation_time_seconds": 2.72,
+  "warnings": [],
+  "reproducibility": {
+    "scenario": 2,
+    "experiment": "cross_attention",
+    "dataset": "SEN12-MT Urban Mapping",
+    "temporal_pairing": "Strategy B: T1=2018-03, T2=2019-12 (21 months)",
+    "model": "TransformerCrossAttention",
+    "modality": "Async: SAR T1+T2 (4ch VV+VH) + historical S2 T1 (10ch)",
+    "cross_attention_roles": "SAR tokens = Query; historical optical tokens = Key and Value",
+    "s2_t2_handling": "NOT LOADED \u2014 withheld from async model",
+    "sar_channels": 4,
+    "optical_channels": 10,
+    "total_input_channels": 14,
+    "label_derivation": "(buildings_T2 >= 0.5) XOR (buildings_T1 >= 0.5)",
+    "label_threshold": 0.5,
+    "seed": 42,
+    "pytorch_version": "2.5.1+cu124",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device": "cuda",
+    "learning_rate": 0.0001,
+    "batch_size": 64,
+    "epochs": 50,
+    "crop_size": 32,
+    "crops_per_site": 64,
+    "loss_function": "BCEWithLogitsLoss(pos_weight=94.0)",
+    "pos_weight": 94.0,
+    "pos_weight_rationale": "20 training sites: 50,387 change / 4,718,348 no-change = 93.6, rounded to 94",
+    "optimizer": "Adam",
+    "embed_dim": 128,
+    "patch_stride": 4,
+    "num_self_blocks": 2,
+    "num_cross_blocks": 1,
+    "num_heads": 4,
+    "mlp_ratio": 4,
+    "parameter_count": 1154945,
+    "threshold": 0.5,
+    "false_alarm_rate": "FAR = FP / (FP + TN): the fraction of unchanged pixels predicted as change.",
+    "train_sites": [
+      "L15-0331E-1257N_1327_3160_13",
+      "L15-0357E-1223N_1429_3296_13",
+      "L15-0358E-1220N_1433_3310_13",
+      "L15-0368E-1245N_1474_3210_13",
+      "L15-0434E-1218N_1736_3318_13",
+      "L15-0506E-1204N_2027_3374_13",
+      "L15-0544E-1228N_2176_3279_13",
+      "L15-0632E-0892N_2528_4620_13",
+      "L15-1138E-1216N_4553_3325_13",
+      "L15-1204E-1204N_4819_3372_13",
+      "L15-1209E-1113N_4838_3737_13",
+      "L15-1276E-1107N_5105_3761_13",
+      "L15-1296E-1198N_5184_3399_13",
+      "L15-1335E-1166N_5342_3524_13",
+      "L15-1389E-1284N_5557_3054_13",
+      "L15-1439E-1134N_5759_3655_13",
+      "L15-1617E-1207N_6468_3360_13",
+      "L15-1669E-1153N_6678_3579_13",
+      "L15-1672E-1207N_6691_3363_13",
+      "L15-1703E-1219N_6813_3313_13"
+    ],
+    "validation_sites": [
+      "L15-0457E-1135N_1831_3648_13",
+      "L15-0487E-1246N_1950_3207_13",
+      "L15-0977E-1187N_3911_3441_13",
+      "L15-1716E-1211N_6864_3345_13"
+    ],
+    "test_sites": [
+      "L15-0924E-1108N_3699_3757_13",
+      "L15-1289E-1169N_5156_3514_13",
+      "L15-1298E-1322N_5193_2903_13",
+      "L15-1438E-1134N_5753_3655_13"
+    ],
+    "checkpoint_selection": "highest validation F1",
+    "test_metric_aggregation": "pixel counts pooled across 4 test sites, once after training",
+    "site_summary": "unweighted mean and sample std, omitting undefined rates"
+  }
+}

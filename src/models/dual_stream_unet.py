@@ -193,62 +193,50 @@ class _SharedDecoder(nn.Module):
 class DualStreamUNet(nn.Module):
     """Dual-stream U-Net baseline following Hafner et al. 2021.
 
-    Two *independent* U-Net encoders process SAR (2 ch) and Optical (26 ch)
-    bitemporal inputs separately.  Their skip connections and bottleneck
-    features are fused by concatenation, then decoded by a single shared
-    decoder.  A 1×1 output convolution produces the change logit.
+    Accepts configurable SAR and optical channel counts to support both
+    Scenario 1 (2 SAR + 26 optical = 28 ch) and Scenario 2 (4 SAR + 20 optical = 24 ch).
+    Defaults are the Scenario 1 values; pass sar_channels / opt_channels to override.
 
-    The network accepts a single pre-concatenated 28-channel tensor in this
-    order (matching the existing fusion baseline channel ordering):
+    The network accepts a single pre-concatenated tensor:
+        [0 : sar_channels]                        SAR channels
+        [sar_channels : sar_channels+opt_channels] Optical channels
 
-        [0]     : S1 VV T1
-        [1]     : S1 VV T2
-        [2:15]  : S2 13 bands T1
-        [15:28] : S2 13 bands T2
-
-    Architecture summary (base_channels=64, matching Hafner topology):
-
-        SAR encoder:       2 ch  → 64 → 128 → 256 → 512
-        Optical encoder:  26 ch  → 64 → 128 → 256 → 512
-        Fusion:           concat at every level → 128, 256, 512, 1024
-        Shared decoder:   1024 + skip 512 → 512
-                          512  + skip 256 → 256
-                          256  + skip 128 → 128
-        Head:             Conv2d(128, 1, 1)
-
-    Inputs whose H or W are not divisible by 8 (=2^3 down-sampling levels)
-    are padded inside forward() and cropped back before return.
+    Inputs whose H or W are not divisible by 8 are padded and cropped back.
     """
 
-    # Channel split for the 28-channel fused input tensor
-    SAR_CHANNELS = 2       # S1 VV T1 + S1 VV T2
-    OPT_CHANNELS = 26      # 13 S2 bands × 2 dates
+    # Scenario 1 defaults (2 SAR + 26 optical = 28 ch)
+    SAR_CHANNELS = 2
+    OPT_CHANNELS = 26
 
-    def __init__(self, base_channels: int = 64) -> None:
+    def __init__(self, base_channels: int = 64,
+                 sar_channels: int | None = None,
+                 opt_channels: int | None = None) -> None:
         super().__init__()
         self.base_channels = base_channels
-        self.pad_multiple = 8  # three max-pool levels → must be divisible by 2^3
+        self.pad_multiple  = 8
+
+        self._sar_ch = sar_channels if sar_channels is not None else self.SAR_CHANNELS
+        self._opt_ch = opt_channels if opt_channels is not None else self.OPT_CHANNELS
 
         b = base_channels
-        self.sar_encoder = _ModalityEncoder(in_channels=self.SAR_CHANNELS, base=b)
-        self.opt_encoder = _ModalityEncoder(in_channels=self.OPT_CHANNELS, base=b)
+        self.sar_encoder = _ModalityEncoder(in_channels=self._sar_ch, base=b)
+        self.opt_encoder = _ModalityEncoder(in_channels=self._opt_ch, base=b)
         self.decoder = _SharedDecoder(base=b)
-        # Final feature map: 2 × b = 128 ch → 1 logit
         self.head = nn.Conv2d(b * 2, 1, kernel_size=1)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """
         Args:
-            x: (B, 28, H, W) pre-concatenated SAR + Optical bitemporal tensor.
+            x: (B, sar_channels+opt_channels, H, W) pre-concatenated tensor.
         Returns:
             logits: (B, 1, H, W) raw change map, before sigmoid.
         """
         # Pad to multiple of 8
         x, orig_h, orig_w = _pad_to_multiple(x, self.pad_multiple)
 
-        # Split into SAR and Optical streams
-        x_sar = x[:, :self.SAR_CHANNELS]                                          # (B,  2, H, W)
-        x_opt = x[:, self.SAR_CHANNELS: self.SAR_CHANNELS + self.OPT_CHANNELS]    # (B, 26, H, W)
+        # Split into SAR and Optical streams using instance channel counts
+        x_sar = x[:, :self._sar_ch]
+        x_opt = x[:, self._sar_ch: self._sar_ch + self._opt_ch]
 
         # Independent encoders
         sar_s1, sar_s2, sar_s3, sar_s4 = self.sar_encoder(x_sar)

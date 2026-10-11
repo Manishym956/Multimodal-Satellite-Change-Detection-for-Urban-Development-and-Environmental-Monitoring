@@ -59,32 +59,81 @@ The Scenario 1 experiments ran on the RTX 4060, which is confirmed by the `gpu_n
 | `src/utils/device.py` | **Created** | Shared `get_device(preference)` + `add_device_argument()` |
 | `src/utils/__init__.py` | **Updated** | Exports `get_device`, `add_device_argument` |
 | `src/training/test_device.py` | **Created** | 9-test device placement verification |
-| `docs/GPU_DEVICE_AUDIT.md` | **Created** | This file |
+| `src/training/verify_backward_compat.py` | **Created** | 27-check backward-compat + loader validation |
+| `src/datasets/scenario2_dataset.py` | **Created** | SEN12-MT dataset loader (async + sync modes) |
+| `src/training/train_scenario2_dual_stream.py` | **Created** | Scenario 2 CNN training (async + sync) |
+| `src/training/train_scenario2_cross_attention.py` | **Created** | Scenario 2 transformer training |
+| `src/models/dual_stream_unet.py` | **Updated** | Constructor accepts `sar_channels`/`opt_channels`; forward uses instance attrs. Scenario 1 defaults (2+26=28ch) unchanged. |
+| `src/models/dual_stream_unet_clean.py` | **Updated** | Same pattern. Scenario 1 defaults (2+13=15ch) unchanged. |
+| `src/models/transformer_cross_attention.py` | **Updated** | Forward validation uses `self.sar_channels + self.opt_channels` instead of hardcoded `TOTAL_CHANNELS=15`. Scenario 1 (15ch) unchanged. |
+| `docs/GPU_DEVICE_AUDIT.md` | **Updated** | Added verification results and Scenario 2 model changes |
 
 **No Scenario 1 training scripts were modified.** Their device selection logic is correct and the completed experiment results are unaffected.
 
 ---
 
-## Device verification test results
+## Device verification test results (confirmed executed)
 
 ```
 Execution device: GPU — NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB VRAM)
                   |  PyTorch 2.5.1+cu124  |  CUDA 12.4
 
-Test 1: get_device('auto')    → PASS  (returned cuda)
-Test 2: get_device('cpu')     → PASS  (returned cpu)
-Test 3: Model params on CUDA  → PASS
-Test 4: Input/label on CUDA   → PASS  (cuda:0)
-Test 5: Forward pass on CUDA  → PASS  (output on cuda:0, finite)
-Test 6: Loss/backward/optim   → PASS  (loss on cuda:0, finite grads, optimizer OK)
-Test 7: CUDA memory observed  → PASS  (0.1 MB allocated, 2.0 MB reserved)
-Test 8: CPU mode explicit     → PASS
-Test 9: Checkpoint save/load  → PASS  (map_location='cpu', then moved to cuda:0)
+Test 1: get_device('auto')        → PASS  (returned cuda)
+Test 2: get_device('cpu')         → PASS  (returned cpu)
+Test 3: Model params on CUDA      → PASS
+Test 4: Input/label on CUDA       → PASS  (cuda:0)
+Test 5: Forward pass on CUDA      → PASS  (output on cuda:0, finite)
+Test 6: Loss/backward/optim       → PASS  (loss on cuda:0, finite grads, optimizer OK)
+Test 7: CUDA memory observed      → PASS  (0.1 MB allocated, 2.0 MB reserved)
+Test 8: CPU mode explicit         → PASS
+Test 9: Checkpoint save/load      → PASS  (map_location='cpu', then moved to cuda:0)
 
 All 9 tests PASSED
 ```
 
-CUDA was actually used: the forward pass, loss, backward pass, and optimizer step all executed on `cuda:0` (RTX 4060). This is confirmed by the `CUDA memory allocated: 0.1 MB` measurement in Test 7.
+## Scenario 2 verify-only results (confirmed executed)
+
+```
+train_scenario2_cross_attention.py --verify-only
+  Device banner: GPU — NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB VRAM) | CUDA 12.4
+  1. Input channels:  14 (4 SAR + 10 S2 T1)  SAR [0,1], S2 T1 [0,1]
+  2. S2 T2 status:    NOT USED (14-ch input, no T2 slots)
+  3. Cross-attention: SAR → Query, Historical Optical → Key/Value ✓
+  4. 32×32 forward:   (1,1,32,32) on cuda:0 ✓
+  5. 489×488 forward: (1,1,489,488) ✓
+  6. Backward pass:   loss=1.124, grads present ✓
+  Parameter count: 1,154,945
+  Exit code: 0
+
+train_scenario2_dual_stream.py --mode async --verify-only
+  Device banner: GPU — NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB VRAM) | CUDA 12.4
+  1. Input channels:  14 (4 SAR + 10 S2 T1 [T2 withheld])
+  3. 32×32 forward:   (1,1,32,32) on cuda:0 ✓
+  4. Backward pass:   loss=1.115, grads present ✓
+  Parameter count: 27,276,033
+  Exit code: 0
+
+train_scenario2_dual_stream.py --mode sync --verify-only
+  Device banner: GPU — NVIDIA GeForce RTX 4060 Laptop GPU (8.0 GB VRAM) | CUDA 12.4
+  1. Input channels:  24 (4 SAR + 10 S2 T1 + 10 S2 T2)
+  3. 32×32 forward:   (1,1,32,32) on cuda:0 ✓
+  4. Backward pass:   loss=1.988, grads present ✓
+  Parameter count: 27,281,793
+  Exit code: 0
+```
+
+## Backward-compatibility test results (confirmed executed)
+
+`verify_backward_compat.py` — 27 checks, all PASS:
+- DualStreamUNetClean default: 27,276,609 params, 15-ch forward correct
+- DualStreamUNet default: 27,284,097 params, 28-ch forward correct
+- All three Scenario 1 checkpoints reload cleanly (asynchronous_dual_stream_clean ep26, dual_stream_baseline ep31, transformer_cross_attention ep33)
+- Scenario 2 overrides (14-ch async, 24-ch sync, 14-ch transformer) all correct
+- Dataset loader: async=14ch, sync=24ch, no NaN after fill, label binary and aligned
+- pos_weight confirmed 93.6 from 20 training sites (50,387 change / 4,718,348 no-change)
+- No path collision between Scenario 1 and Scenario 2 output directories
+
+CUDA confirmed used: all Scenario 2 forward passes executed on cuda:0.
 
 ---
 

@@ -1,0 +1,243 @@
+{
+  "audit_timestamp": "2026-10-11T22:05:00+05:30",
+  "status": "verified_read_only",
+  "locked_split_sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+  "runs": {
+    "s2_sync_cnn_baseline_seed43": {
+      "loss_type": "baseline",
+      "seed": 43,
+      "best_epoch": 30,
+      "validation_best_f1_valid": 0.2931997774067891,
+      "calibrated_tau_star": 0.79,
+      "test_0_5_all": {
+        "tp": 3669,
+        "tn": 902899,
+        "fp": 44770,
+        "fn": 3190,
+        "precision": 0.07574475113028757,
+        "recall": 0.5349176264761627,
+        "f1": 0.13269919346088466,
+        "iou": 0.07106471169304074,
+        "false_alarm_rate": 0.04724223331141991
+      },
+      "test_0_5_valid": {
+        "tp": 3643,
+        "tn": 774604,
+        "fp": 43848,
+        "fn": 3173,
+        "precision": 0.07670927123033838,
+        "recall": 0.5344776995305164,
+        "f1": 0.13416318338335756,
+        "iou": 0.07190510026843518,
+        "false_alarm_rate": 0.05357430857276908
+      },
+      "test_cal_all": {
+        "tp": 2660,
+        "tn": 929814,
+        "fp": 17855,
+        "fn": 4199,
+        "precision": 0.12966122349500367,
+        "recall": 0.3878116343490305,
+        "f1": 0.19434499890406956,
+        "iou": 0.10763130209597799,
+        "false_alarm_rate": 0.018840966624422664
+      },
+      "test_cal_valid": {
+        "tp": 2636,
+        "tn": 801161,
+        "fp": 17291,
+        "fn": 4180,
+        "precision": 0.1322828323380338,
+        "recall": 0.38673708920187794,
+        "f1": 0.19713569906143663,
+        "iou": 0.1093458331604928,
+        "false_alarm_rate": 0.021126468015228748
+      },
+      "artifact_hashes": {
+        "metrics_json": "6aabc4b24e717127714b451508abe4163fd4f3ebc36cea2050b89a610fba7fb6",
+        "training_history_csv": "6044ccb7129c6ccce03565746664a4921b0c2fccb5bdc30ced7c3145d0eaca7f",
+        "per_city_metrics_csv": "7d9a6c35ad483bc4091154b0c32f0e8f81eff817a6f78469ba68b3d38b9097de",
+        "config_yaml": "ee0444e14f6816ba4a160bcc0bcf799c5b876428296d4f2bc5f4bf8dd0feb121",
+        "best_pt": "f562cee4d858d15a73a89e8c550ba353c0948feabdcbc4a1383cf2a76fd5135e",
+        "last_pt": "fbd27dc14767687726a64289ee02381db93bd63f748c2002493b22c169c94c53"
+      }
+    },
+    "s2_sync_cnn_masked_seed43": {
+      "loss_type": "masked",
+      "seed": 43,
+      "best_epoch": 30,
+      "validation_best_f1_valid": 0.287699673742638,
+      "calibrated_tau_star": 0.8300000000000001,
+      "test_0_5_all": {
+        "tp": 3923,
+        "tn": 894974,
+        "fp": 52695,
+        "fn": 2936,
+        "precision": 0.06928891871842877,
+        "recall": 0.5719492637410701,
+        "f1": 0.12360382500748303,
+        "iou": 0.06587298921986769,
+        "false_alarm_rate": 0.055604857814279034
+      },
+      "test_0_5_valid": {
+        "tp": 3894,
+        "tn": 767200,
+        "fp": 51252,
+        "fn": 2922,
+        "precision": 0.07061255576107062,
+        "recall": 0.5713028169014085,
+        "f1": 0.12568993899486783,
+        "iou": 0.06705930977474685,
+        "false_alarm_rate": 0.06262065460161378
+      },
+      "test_cal_all": {
+        "tp": 2701,
+        "tn": 928981,
+        "fp": 18688,
+        "fn": 4158,
+        "precision": 0.12627986348122866,
+        "recall": 0.39378918209651553,
+        "f1": 0.19123477768337582,
+        "iou": 0.10572669980819666,
+        "false_alarm_rate": 0.019719965515385646
+      },
+      "test_cal_valid": {
+        "tp": 2676,
+        "tn": 800412,
+        "fp": 18040,
+        "fn": 4140,
+        "precision": 0.12917551650897857,
+        "recall": 0.3926056338028169,
+        "f1": 0.19439198024117388,
+        "iou": 0.10766012230447376,
+        "false_alarm_rate": 0.022041610259367683
+      },
+      "artifact_hashes": {
+        "metrics_json": "c317bfe425a25c7a5ab8cd33648b5a5e4b9cf1d20593288b3f2b0ef0bbb53ed1",
+        "training_history_csv": "1f48952aefec1e8827d2205bca49c3d53b2488d74e80c33275151f113afd95b6",
+        "per_city_metrics_csv": "0a1c4c9182a467c09b476e362b61259ba9ae28e0607b86503d1e2f71a9d616ba",
+        "config_yaml": "41a4ce6b9b86e9af7c3383f82b6baaf8e6e9cc1b121b9287a69b31f2c2c45c95",
+        "best_pt": "6e77b58b2834e4c8a19ff56e5fd731617e5fb5dd75d47451f13fb57adca9ecea",
+        "last_pt": "8fa0bfb381a9efa6021d9e3fe73ae13fbd9b25ab7584f83f8be421f2d0e91a76"
+      }
+    },
+    "s2_sync_cnn_baseline_seed44": {
+      "loss_type": "baseline",
+      "seed": 44,
+      "best_epoch": 43,
+      "validation_best_f1_valid": 0.27460128944689516,
+      "calibrated_tau_star": 0.86,
+      "test_0_5_all": {
+        "tp": 3924,
+        "tn": 899316,
+        "fp": 48353,
+        "fn": 2935,
+        "precision": 0.07506169060963712,
+        "recall": 0.5720950575885697,
+        "f1": 0.13271103896103897,
+        "iou": 0.07107150619430559,
+        "false_alarm_rate": 0.05102308928539395
+      },
+      "test_0_5_valid": {
+        "tp": 3899,
+        "tn": 770859,
+        "fp": 47593,
+        "fn": 2917,
+        "precision": 0.0757205002718869,
+        "recall": 0.5720363849765259,
+        "f1": 0.13373808053783356,
+        "iou": 0.07166093844768329,
+        "false_alarm_rate": 0.05815001979346376
+      },
+      "test_cal_all": {
+        "tp": 2594,
+        "tn": 933323,
+        "fp": 14346,
+        "fn": 4265,
+        "precision": 0.15312868949232586,
+        "recall": 0.37818924041405455,
+        "f1": 0.217992352619858,
+        "iou": 0.12232963923602924,
+        "false_alarm_rate": 0.015138196986500561
+      },
+      "test_cal_valid": {
+        "tp": 2571,
+        "tn": 804367,
+        "fp": 14085,
+        "fn": 4245,
+        "precision": 0.15435878962536023,
+        "recall": 0.3772007042253521,
+        "f1": 0.21906952965235174,
+        "iou": 0.12300846849433042,
+        "false_alarm_rate": 0.01720931710106396
+      },
+      "artifact_hashes": {
+        "metrics_json": "50ed31dfc57543e151bb52ab0a7f4bb5488d04da1c5727ef2f533207fd6a611b",
+        "training_history_csv": "a54349c2e0e8706df97bb53e6e75044ddfbb62b8d75e3c21491343058d000f2a",
+        "per_city_metrics_csv": "d621e090cba763fef303213b4a3e264bebf6c978873d9bb4705ad7c4493a6bde",
+        "config_yaml": "4e3ca603464f7566bdaecf896428a0ca03ddfee1d89f6b8f27e24021e29b55c9",
+        "best_pt": "e67f690065af3018c81e975e5a02ed2d223f0a94b4a955ffa77f267b64a91359",
+        "last_pt": "4141e515bf049eb79f2e0b4464fafe13f19ffdc45d096c4ddbb57bbb70c1df71"
+      }
+    },
+    "s2_sync_cnn_masked_seed44": {
+      "loss_type": "masked",
+      "seed": 44,
+      "best_epoch": 43,
+      "validation_best_f1_valid": 0.27438612300067583,
+      "calibrated_tau_star": 0.91,
+      "test_0_5_all": {
+        "tp": 3822,
+        "tn": 891351,
+        "fp": 56318,
+        "fn": 3037,
+        "precision": 0.06355171267043565,
+        "recall": 0.557224085143607,
+        "f1": 0.11409125509335959,
+        "iou": 0.06049669974832613,
+        "false_alarm_rate": 0.05942792261855141
+      },
+      "test_0_5_valid": {
+        "tp": 3797,
+        "tn": 764708,
+        "fp": 53744,
+        "fn": 3019,
+        "precision": 0.06598773048782607,
+        "recall": 0.5570715962441315,
+        "f1": 0.11799804217101481,
+        "iou": 0.06269815059445179,
+        "false_alarm_rate": 0.0656654269279078
+      },
+      "test_cal_all": {
+        "tp": 2172,
+        "tn": 936140,
+        "fp": 11529,
+        "fn": 4687,
+        "precision": 0.15852857455660171,
+        "recall": 0.31666423676920835,
+        "f1": 0.21128404669260703,
+        "iou": 0.11812051337829019,
+        "false_alarm_rate": 0.012165640112739786
+      },
+      "test_cal_valid": {
+        "tp": 2152,
+        "tn": 807183,
+        "fp": 11269,
+        "fn": 4664,
+        "precision": 0.16034572684598764,
+        "recall": 0.31572769953051644,
+        "f1": 0.21267974502149528,
+        "iou": 0.11899364113906552,
+        "false_alarm_rate": 0.013768675499601687
+      },
+      "artifact_hashes": {
+        "metrics_json": "a6724e7db64393765583c35d69955f30929cba6d4076b2b565fd25bea7910c10",
+        "training_history_csv": "e57c20eed3d7e44080ef720e561102e9cbfc6dee07e1f158dfcb5bbdbc21f662",
+        "per_city_metrics_csv": "efdfe015ada8e08b2b38768befd37fe04d6a959092ce3a8db4f2ba04cf10943a",
+        "config_yaml": "7a10c3bb53fbad551be235fd825fcdfff1ce5e0a432eed3c839f6ee3c2c69b02",
+        "best_pt": "1ff1619b17ee595dc5ffd86d047482dbf9254df6ad14b183998d850bc791a032",
+        "last_pt": "1906b5f56f4b580bafda71ef47ca846b13c38082ee7c010d237ea31420a0b70c"
+      }
+    }
+  }
+}

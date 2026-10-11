@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import torch
 
-
 def get_device(preference: str = "auto") -> torch.device:
     preference = preference.lower().strip()
     if preference not in ("auto", "cuda", "cpu"):

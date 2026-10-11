@@ -40,23 +40,32 @@ from src.models.dual_stream_unet import (
 class DualStreamUNetClean(nn.Module):
     """Clean Asynchronous Dual Stream U-Net.
 
-    SAR branch receives S1_T1 and S1_T2 (2 channels).
-    Optical branch receives historical S2_T1 only (13 channels).
+    SAR branch receives S1_T1 and S1_T2 (default 2 channels; pass sar_channels=4 for VV+VH).
+    Optical branch receives historical S2_T1 only (default 13 channels; pass opt_channels=10
+    for SEN12-MT 10-band S2).
     No zero-filled channels are used.
     """
 
-    SAR_CHANNELS = 2   # S1 VV T1, S1 VV T2
-    OPT_CHANNELS = 13  # S2 T1 (13 bands)
+    # Scenario 1 defaults; Scenario 2 overrides via constructor arguments.
+    SAR_CHANNELS   = 2   # S1 VV T1, S1 VV T2
+    OPT_CHANNELS   = 13  # S2 T1 (13 bands)
     TOTAL_CHANNELS = 15  # 2 + 13
 
-    def __init__(self, base_channels: int = 64) -> None:
+    def __init__(self, base_channels: int = 64,
+                 sar_channels: int | None = None,
+                 opt_channels: int | None = None) -> None:
         super().__init__()
         self.base_channels = base_channels
-        self.pad_multiple = 8  # 3 downsampling levels (2^3 = 8)
+        self.pad_multiple  = 8  # 3 downsampling levels (2^3 = 8)
+
+        # Allow Scenario 2 to override channel counts without touching Scenario 1 defaults.
+        self._sar_ch   = sar_channels if sar_channels is not None else self.SAR_CHANNELS
+        self._opt_ch   = opt_channels if opt_channels is not None else self.OPT_CHANNELS
+        self._total_ch = self._sar_ch + self._opt_ch
 
         b = base_channels
-        self.sar_encoder = _ModalityEncoder(in_channels=self.SAR_CHANNELS, base=b)
-        self.opt_encoder = _ModalityEncoder(in_channels=self.OPT_CHANNELS, base=b)
+        self.sar_encoder = _ModalityEncoder(in_channels=self._sar_ch, base=b)
+        self.opt_encoder = _ModalityEncoder(in_channels=self._opt_ch, base=b)
         self.decoder = _SharedDecoder(base=b)
         self.head = nn.Conv2d(b * 2, 1, kernel_size=1)
 
@@ -73,12 +82,12 @@ class DualStreamUNetClean(nn.Module):
             logits: (B, 1, H, W) raw binary change logit before sigmoid.
         """
         if x_opt is None:
-            if x.shape[1] != self.TOTAL_CHANNELS:
+            if x.shape[1] != self._total_ch:
                 raise ValueError(
-                    f"Expected {self.TOTAL_CHANNELS} channels (2 SAR + 13 Optical), got {x.shape[1]}"
+                    f"Expected {self._total_ch} channels ({self._sar_ch} SAR + {self._opt_ch} Optical), got {x.shape[1]}"
                 )
-            x_sar = x[:, :self.SAR_CHANNELS]
-            x_opt = x[:, self.SAR_CHANNELS:]
+            x_sar = x[:, :self._sar_ch]
+            x_opt = x[:, self._sar_ch:]
         else:
             x_sar = x
 

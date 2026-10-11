@@ -1,0 +1,67 @@
+scenario: 2
+experiment: sync_dual_stream
+dataset: SEN12-MT Urban Mapping
+temporal_pairing: 'Strategy B: T1=2018-03, T2=2019-12 (21 months)'
+mode: sync
+model: DualStreamUNet
+modality: 'Sync: SAR T1+T2 (4ch VV+VH) + S2 T1 (10ch) + S2 T2 (10ch)'
+s2_t2_handling: "LOADED \u2014 synchronous baseline"
+sar_channels: 4
+optical_channels: 10
+total_input_channels: 24
+label_derivation: (buildings_T2 >= 0.5) XOR (buildings_T1 >= 0.5)
+label_threshold: 0.5
+seed: 42
+pytorch_version: 2.5.1+cu124
+cuda_available: true
+gpu_name: NVIDIA GeForce RTX 4060 Laptop GPU
+device: cuda
+learning_rate: 0.0001
+batch_size: 64
+epochs: 50
+crop_size: 32
+crops_per_site: 64
+loss_function: BCEWithLogitsLoss(pos_weight=94.0)
+pos_weight: 94.0
+pos_weight_rationale: '20 training sites: 50,387 change / 4,718,348 no-change = 93.6,
+  rounded to 94'
+optimizer: Adam
+base_channels: 64
+parameter_count: 27281793
+threshold: 0.5
+false_alarm_rate: 'FAR = FP / (FP + TN): the fraction of unchanged pixels predicted
+  as change.'
+train_sites:
+- L15-0331E-1257N_1327_3160_13
+- L15-0357E-1223N_1429_3296_13
+- L15-0358E-1220N_1433_3310_13
+- L15-0368E-1245N_1474_3210_13
+- L15-0434E-1218N_1736_3318_13
+- L15-0506E-1204N_2027_3374_13
+- L15-0544E-1228N_2176_3279_13
+- L15-0632E-0892N_2528_4620_13
+- L15-1138E-1216N_4553_3325_13
+- L15-1204E-1204N_4819_3372_13
+- L15-1209E-1113N_4838_3737_13
+- L15-1276E-1107N_5105_3761_13
+- L15-1296E-1198N_5184_3399_13
+- L15-1335E-1166N_5342_3524_13
+- L15-1389E-1284N_5557_3054_13
+- L15-1439E-1134N_5759_3655_13
+- L15-1617E-1207N_6468_3360_13
+- L15-1669E-1153N_6678_3579_13
+- L15-1672E-1207N_6691_3363_13
+- L15-1703E-1219N_6813_3313_13
+validation_sites:
+- L15-0457E-1135N_1831_3648_13
+- L15-0487E-1246N_1950_3207_13
+- L15-0977E-1187N_3911_3441_13
+- L15-1716E-1211N_6864_3345_13
+test_sites:
+- L15-0924E-1108N_3699_3757_13
+- L15-1289E-1169N_5156_3514_13
+- L15-1298E-1322N_5193_2903_13
+- L15-1438E-1134N_5753_3655_13
+checkpoint_selection: highest validation F1
+test_metric_aggregation: pixel counts pooled across 4 test sites, once after training
+city_summary: unweighted mean and sample std, omitting undefined rates

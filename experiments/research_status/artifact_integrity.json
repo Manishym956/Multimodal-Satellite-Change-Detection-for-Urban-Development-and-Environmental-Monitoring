@@ -1,0 +1,608 @@
+{
+  "audit_timestamp": "2026-10-11T17:45:00+05:30",
+  "locked_split": {
+    "path": "experiments/scenario_2/configs/split_definition.json",
+    "sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "strategy": "B",
+    "train_count": 20,
+    "val_count": 4,
+    "test_count": 4,
+    "status": "verified_intact"
+  },
+  "scenario_1_artifacts": {
+    "sar_baseline": {
+      "display_name": "SAR-only U-Net",
+      "checkpoint": {
+        "path": "checkpoints/sar_baseline/best.pt",
+        "exists": true,
+        "bytes": 124231558,
+        "sha256": "536ddfe699b96ca7cbb7b2c86a19f2085705dec561b3569edce36a70259908fd"
+      },
+      "metrics_json": {
+        "path": "experiments/sar_baseline/metrics.json",
+        "exists": true,
+        "sha256": "c58ffbf291fafc1b539dc1f8433e7f87415c5ef5ae8936519865a43ab74c66e9"
+      },
+      "training_history_csv": {
+        "path": "experiments/sar_baseline/training_history.csv",
+        "exists": true,
+        "sha256": "d622846ced26e8b3077a158f3dffc655ec7577d36e7839fe178df59169db1b25"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/sar_baseline/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "3bacb6e44e2f34d066045d9eb2854c0708b35a92466b200d22ecbfbf74d7bb46"
+      },
+      "validation_best_epoch": 21,
+      "validation_best_f1": 0.06624405705229794,
+      "test_counts": {
+        "tp": 46407,
+        "tn": 2863458,
+        "fp": 55401,
+        "fn": 112670
+      },
+      "metrics": {
+        "test_precision": 0.4558286185761433,
+        "test_recall": 0.291726648101234,
+        "test_f1": 0.3557659505145946,
+        "test_iou": 0.21637184233347942,
+        "test_far": 0.018980361846872358
+      },
+      "verification_status": "verified_consistent"
+    },
+    "optical_baseline": {
+      "display_name": "Optical-only U-Net",
+      "checkpoint": {
+        "path": "checkpoints/optical_baseline/best.pt",
+        "exists": true,
+        "bytes": 124286918,
+        "sha256": "c67a11373ab3b45dc4edd1721fe7fc60518f4d86ab4c3703f27f113a5cdf84b3"
+      },
+      "metrics_json": {
+        "path": "experiments/optical_baseline/metrics.json",
+        "exists": true,
+        "sha256": "0b6f495bb54934b8729f307359970af62a7df5095a123dfdeca8b5fd88f073ab"
+      },
+      "training_history_csv": {
+        "path": "experiments/optical_baseline/training_history.csv",
+        "exists": true,
+        "sha256": "de56bd859291a299b5b7c2136efac1ceb75d155069d21b5d54c6b7ae6b053df0"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/optical_baseline/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "27da2786d2803ae7d5387beeaf1d14e3d1be602314eeb4b1863c3e6c62cfe471"
+      },
+      "validation_best_epoch": 50,
+      "validation_best_f1": 0.23874477949346717,
+      "test_counts": {
+        "tp": 45025,
+        "tn": 2784846,
+        "fp": 134013,
+        "fn": 114052
+      },
+      "metrics": {
+        "test_precision": 0.25148292541248224,
+        "test_recall": 0.2830390314124606,
+        "test_f1": 0.26632950327551275,
+        "test_iou": 0.15362175440990822,
+        "test_far": 0.045912803598940545
+      },
+      "verification_status": "verified_consistent"
+    },
+    "fusion_baseline": {
+      "display_name": "Sync Fusion U-Net",
+      "checkpoint": {
+        "path": "checkpoints/fusion_baseline/best.pt",
+        "exists": true,
+        "bytes": 124292358,
+        "sha256": "a3b060a38ecdf553731d61e1c13e463b3069944083cb6f40d14273e5b8357870"
+      },
+      "metrics_json": {
+        "path": "experiments/fusion_baseline/metrics.json",
+        "exists": true,
+        "sha256": "cc79459e0abdff8533dcca795431789dd749cabc4d683927027c0ed9c918702a"
+      },
+      "training_history_csv": {
+        "path": "experiments/fusion_baseline/training_history.csv",
+        "exists": true,
+        "sha256": "e59cc65c6b170d5a4badd405dcf2168cbaf2e99f4891e5258c49c178d46bdbf7"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/fusion_baseline/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "17b7db6419a844af2ae33ee02e551690979ccfd30e4cb54a9d6cff947520e7a0"
+      },
+      "validation_best_epoch": 46,
+      "validation_best_f1": 0.25379040319893365,
+      "test_counts": {
+        "tp": 72104,
+        "tn": 2740370,
+        "fp": 178489,
+        "fn": 86973
+      },
+      "metrics": {
+        "test_precision": 0.287733496147139,
+        "test_recall": 0.4532647711485633,
+        "test_f1": 0.3520101545146093,
+        "test_iou": 0.2135997108713555,
+        "test_far": 0.061150264538300754
+      },
+      "verification_status": "verified_consistent"
+    },
+    "dual_stream_baseline": {
+      "display_name": "Sync Dual-Stream CNN",
+      "checkpoint": {
+        "path": "checkpoints/dual_stream_baseline/best.pt",
+        "exists": true,
+        "bytes": 109228314,
+        "sha256": "c4671122658761502a20622fbc3306cf05dacf1390744717d09ebbe36c71d86e"
+      },
+      "metrics_json": {
+        "path": "experiments/dual_stream_baseline/metrics.json",
+        "exists": true,
+        "sha256": "373eee11c91bec30aa2f7522fff51ec400e7951bc8f46f1f343cdb1e3de287ce"
+      },
+      "training_history_csv": {
+        "path": "experiments/dual_stream_baseline/training_history.csv",
+        "exists": true,
+        "sha256": "8d8f195090c28550682071c46b2489c4e63694fba00c1a42d02018b638fcfee7"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/dual_stream_baseline/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "da681c164b03865dc7d8851d7c657bd8e8524ec48078112c66c886f5631503cc"
+      },
+      "validation_best_epoch": 31,
+      "validation_best_f1": 0.3523166495425412,
+      "test_counts": {
+        "tp": 86137,
+        "tn": 2718735,
+        "fp": 200124,
+        "fn": 72940
+      },
+      "metrics": {
+        "test_precision": 0.3009037207303824,
+        "test_recall": 0.5414799122437561,
+        "test_f1": 0.3868387606716696,
+        "test_iou": 0.2398016709307602,
+        "test_far": 0.06856240743386371
+      },
+      "verification_status": "verified_consistent"
+    },
+    "asynchronous_dual_stream": {
+      "display_name": "Naive Async CNN",
+      "checkpoint": {
+        "path": "checkpoints/asynchronous_dual_stream/best.pt",
+        "exists": true,
+        "bytes": 109228506,
+        "sha256": "2d848221dab5b2e3bbcdcf09fcec039721c8b69f6a792161352584c8a4fb5bf4"
+      },
+      "metrics_json": {
+        "path": "experiments/asynchronous_dual_stream/metrics.json",
+        "exists": true,
+        "sha256": "472c7bc6b51634ce55dff1f5f0cd2845b2e2de8c157add78a59c8d01fa7e68a4"
+      },
+      "training_history_csv": {
+        "path": "experiments/asynchronous_dual_stream/training_history.csv",
+        "exists": true,
+        "sha256": "b85141b75a4792b55c1a7f2e39636fcfc704ff818f42dc800f085aba90e87a92"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/asynchronous_dual_stream/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "3e8fd916072386702bc2e33fb22e4e7abd7c0d55fb3fc5e88a18085f37b4daff"
+      },
+      "validation_best_epoch": 46,
+      "validation_best_f1": 0.10928920362025221,
+      "test_counts": {
+        "tp": 28849,
+        "tn": 2825617,
+        "fp": 93242,
+        "fn": 130228
+      },
+      "metrics": {
+        "test_precision": 0.23629096329786797,
+        "test_recall": 0.18135242681217273,
+        "test_f1": 0.20520827405679165,
+        "test_iou": 0.11433542460139744,
+        "test_far": 0.03194467427169315
+      },
+      "verification_status": "verified_consistent"
+    },
+    "asynchronous_dual_stream_clean": {
+      "display_name": "Clean Async CNN",
+      "checkpoint": {
+        "path": "checkpoints/asynchronous_dual_stream_clean/best.pt",
+        "exists": true,
+        "bytes": 109197914,
+        "sha256": "7f0b274feeec30866a9e11cb0ec7eb7cb209c4cc23d66a8e4e0d55f90db9c0df"
+      },
+      "metrics_json": {
+        "path": "experiments/asynchronous_dual_stream_clean/metrics.json",
+        "exists": true,
+        "sha256": "c586947ab22e2d3f80e31abc06d41d3cb7fef30f7419d9a15ee6e9aae3e1dae0"
+      },
+      "training_history_csv": {
+        "path": "experiments/asynchronous_dual_stream_clean/training_history.csv",
+        "exists": true,
+        "sha256": "f9d9ae0efb4d6b0216761578aef811733329c0ca47c50fd53be998eb35777b13"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/asynchronous_dual_stream_clean/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "388204fe711ecbb05731edf696ea8b48c85d61eec9e5765351c702bdc18aea4f"
+      },
+      "validation_best_epoch": 26,
+      "validation_best_f1": 0.09917673309225207,
+      "test_counts": {
+        "tp": 57764,
+        "tn": 2855097,
+        "fp": 63762,
+        "fn": 101313
+      },
+      "metrics": {
+        "test_precision": 0.4753221532840709,
+        "test_recall": 0.3631197470407413,
+        "test_f1": 0.41171334590150493,
+        "test_iou": 0.25921853894515773,
+        "test_far": 0.02184483731485488
+      },
+      "verification_status": "verified_consistent"
+    },
+    "transformer_self_attention": {
+      "display_name": "Transformer Self-Attn",
+      "checkpoint": {
+        "path": "checkpoints/transformer_self_attention/best.pt",
+        "exists": true,
+        "bytes": 5464468,
+        "sha256": "41433bc92a7eed43c3d6035e69728de47ebbb78c8b91000e2db8951fccf53ce4"
+      },
+      "metrics_json": {
+        "path": "experiments/transformer_self_attention/metrics.json",
+        "exists": true,
+        "sha256": "870456c1176546fd32aad7e1ee20943e5c967512c54ff8442fc3685155cfb674"
+      },
+      "training_history_csv": {
+        "path": "experiments/transformer_self_attention/training_history.csv",
+        "exists": true,
+        "sha256": "d1229975a9b806ee9541a549a666a82451d46ac09deae35425c5a1aeb3045401"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/transformer_self_attention/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "e8044e84a86485e41ba099390a3ec1aae75f312ef922c14530b1d1da48f1654d"
+      },
+      "validation_best_epoch": 37,
+      "validation_best_f1": 0.1333233448393101,
+      "test_counts": {
+        "tp": 75307,
+        "tn": 2220865,
+        "fp": 697994,
+        "fn": 83770
+      },
+      "metrics": {
+        "test_precision": 0.09738381303011376,
+        "test_recall": 0.47339967437153074,
+        "test_f1": 0.1615374880145177,
+        "test_iou": 0.0878655327271603,
+        "test_far": 0.23913248293254316
+      },
+      "verification_status": "verified_consistent"
+    },
+    "transformer_cross_attention": {
+      "display_name": "Transformer Cross-Attn",
+      "checkpoint": {
+        "path": "checkpoints/transformer_cross_attention/best.pt",
+        "exists": true,
+        "bytes": 4663526,
+        "sha256": "470c4ba04a72f0483f255c623e7adbc792ea80b75feb75fc3a116c680f52acc6"
+      },
+      "metrics_json": {
+        "path": "experiments/transformer_cross_attention/metrics.json",
+        "exists": true,
+        "sha256": "5a9a5e324623e6085663be613ff6b213b3ef21e1010e1821236a3f7447036b48"
+      },
+      "training_history_csv": {
+        "path": "experiments/transformer_cross_attention/training_history.csv",
+        "exists": true,
+        "sha256": "f188bb4216dd45380ee73c56402878d9f5a15e474512b2a600233e26c437f9b7"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/transformer_cross_attention/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "81ebde026155272bde9e7d1920815007596d9a79627badb9b4461ea4b9537488"
+      },
+      "validation_best_epoch": 33,
+      "validation_best_f1": 0.1427819340537545,
+      "test_counts": {
+        "tp": 88959,
+        "tn": 2667663,
+        "fp": 251196,
+        "fn": 70118
+      },
+      "metrics": {
+        "test_precision": 0.2615248930634564,
+        "test_recall": 0.5592197489266204,
+        "test_f1": 0.3563834049099417,
+        "test_iou": 0.21682879448562298,
+        "test_far": 0.08605965550237267
+      },
+      "verification_status": "verified_consistent"
+    }
+  },
+  "scenario_2_artifacts": {
+    "async_dual_stream": {
+      "display_name": "Async Dual-Stream CNN Baseline",
+      "checkpoint": {
+        "path": "checkpoints/scenario_2/async_dual_stream/best.pt",
+        "exists": true,
+        "bytes": 109195674,
+        "sha256": "9e450699986ba62dd61e9de401991208b2b284383f3d9610e03354b00d941181"
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2/async_dual_stream/metrics.json",
+        "exists": true,
+        "sha256": "1bd86c2b02205dcbb224a25b34cdee95ccaab7822136a293c644c8bc7e459307"
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2/async_dual_stream/training_history.csv",
+        "exists": true,
+        "sha256": "8afd7eaef41af35199cd0f299421673618073d749643571d279aeca14b254c9c"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2/async_dual_stream/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "42950e84bd1bf4bb67fb771be7ebc676fb0861a035c018688d548f5e6c852892"
+      },
+      "validation_best_epoch": 2,
+      "validation_best_f1": 0.18320353325916186,
+      "test_counts": {
+        "tp": 1601,
+        "tn": 915825,
+        "fp": 31844,
+        "fn": 5258
+      },
+      "metrics": {
+        "test_precision": 0.04786963671699806,
+        "test_recall": 0.23341594984691647,
+        "test_f1": 0.07944620881302104,
+        "test_iou": 0.0413663023538227,
+        "test_far": 0.03360244980051052
+      },
+      "verification_status": "verified_consistent"
+    },
+    "sync_dual_stream": {
+      "display_name": "Sync Dual-Stream CNN Baseline",
+      "checkpoint": {
+        "path": "checkpoints/scenario_2/sync_dual_stream/best.pt",
+        "exists": true,
+        "bytes": 109218714,
+        "sha256": "cb66d7d904c2e5f9bcd51f4f5d4bc16b631be4f50cf562fb589f552d54cf0ddc"
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2/sync_dual_stream/metrics.json",
+        "exists": true,
+        "sha256": "1608768ed7bb2ab660c13dfd0ccbea0d2a6ef90549e59130db5bc86b27782763"
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2/sync_dual_stream/training_history.csv",
+        "exists": true,
+        "sha256": "09b59d0f675bfd141ebe4c37f7e99382cde0ff55e7b966a3efbef08ba6bcc08c"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2/sync_dual_stream/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "6cd975685d247010587db130498a2925091d5a8b02a52dad83c11721f188f246"
+      },
+      "validation_best_epoch": 21,
+      "validation_best_f1": 0.2662734183525111,
+      "test_counts": {
+        "tp": 3896,
+        "tn": 887704,
+        "fp": 59965,
+        "fn": 2963
+      },
+      "metrics": {
+        "test_precision": 0.0610075006655079,
+        "test_recall": 0.5680128298585799,
+        "test_f1": 0.11018099547511312,
+        "test_iou": 0.058302406321082245,
+        "test_far": 0.0632763127210028
+      },
+      "verification_status": "verified_consistent"
+    },
+    "cross_attention": {
+      "display_name": "Cross-Attention Transformer Baseline",
+      "checkpoint": {
+        "path": "checkpoints/scenario_2/cross_attention/best.pt",
+        "exists": true,
+        "bytes": 4655142,
+        "sha256": "e197fd54b92e172e05f91d7bf2662f98a98ae4cdc7548da384de1255b7647334"
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2/cross_attention/metrics.json",
+        "exists": true,
+        "sha256": "d5ba867470fc7e0c19edc5c02da254ba0ed09fc7ca773a39ab3afd810a8512dc"
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2/cross_attention/training_history.csv",
+        "exists": true,
+        "sha256": "68f19cfb3c79a852ce2ef310456b8904dac75728306e490286aaa6e48a35b6d4"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2/cross_attention/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "25fe53186bdc4d83880f99b173b5f1ead1f5ebae2520fccbaa3c2a1b4d612e32"
+      },
+      "validation_best_epoch": 23,
+      "validation_best_f1": 0.13280871670702177,
+      "test_counts": {
+        "tp": 3913,
+        "tn": 768377,
+        "fp": 179292,
+        "fn": 2946
+      },
+      "metrics": {
+        "test_precision": 0.02135858737479872,
+        "test_recall": 0.5704913252660738,
+        "test_f1": 0.0411756040070713,
+        "test_iou": 0.021020569322754108,
+        "test_far": 0.18919264004626088
+      },
+      "verification_status": "verified_consistent"
+    }
+  },
+  "scenario_2_masked_loss_artifacts": {
+    "async_cnn": {
+      "display_name": "Async CNN Masked Loss",
+      "checkpoint": {
+        "path": "checkpoints/scenario_2_masked_loss/async_cnn/best.pt",
+        "exists": true,
+        "bytes": 109195162,
+        "sha256": "70d4e8f772c86a9efb18aa3bfce850867ca482cf03fe7ef624caef74f3a90116"
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2_masked_loss/async_cnn/metrics.json",
+        "exists": true,
+        "sha256": "a8b2766e973069aff26996482213fec2552900086dd829a9e1b9233b5dd9234a"
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2_masked_loss/async_cnn/training_history.csv",
+        "exists": true,
+        "sha256": "7ac9aca39e086935f82698e8a2b0ccf9a37e36fde8d18c544d96f1e8c18d8ea1"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2_masked_loss/async_cnn/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "70f44988fb51eeb4fd791e659e0bc4f3ec4843ab97f976cbaf8b083e083b8561"
+      },
+      "validation_best_epoch": 2,
+      "validation_best_f1_valid": 0.16766072971083051,
+      "calibrated_threshold_tau_star": 0.52,
+      "all_pixel_test_at_0_5": {
+        "tp": 1994,
+        "tn": 907482,
+        "fp": 40187,
+        "fn": 4865,
+        "precision": 0.04727246864702117,
+        "recall": 0.2907129319142732,
+        "f1": 0.08132137030995105,
+        "iou": 0.042384049653530584,
+        "false_alarm_rate": 0.042406156579987316
+      },
+      "valid_pixel_test_at_0_5": {
+        "tp": 1973,
+        "tn": 779213,
+        "fp": 39239,
+        "fn": 4843,
+        "precision": 0.047874405512957394,
+        "recall": 0.28946596244131456,
+        "f1": 0.08216040642958274,
+        "iou": 0.04284008251004234,
+        "false_alarm_rate": 0.04794294595162575
+      },
+      "verification_status": "verified_consistent"
+    },
+    "sync_cnn": {
+      "display_name": "Sync CNN Masked Loss",
+      "checkpoint": {
+        "path": "checkpoints/scenario_2_masked_loss/sync_cnn/best.pt",
+        "exists": true,
+        "bytes": 109218202,
+        "sha256": "a1ba2965ed19af9b6f0ccefd6dcf51f7daa65f8c468c25e5e952178f0015f69e"
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2_masked_loss/sync_cnn/metrics.json",
+        "exists": true,
+        "sha256": "a3ae05cceb0feec5a220671b016d2154281413aab24c54ef61c2f9fb1d6d6fa6"
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2_masked_loss/sync_cnn/training_history.csv",
+        "exists": true,
+        "sha256": "240d57ffa089b4a3a0da2522998593d75c228e1617ca8b2b1fea46c2da982edd"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2_masked_loss/sync_cnn/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "c2eec63704aaa871a61c027932e426f2a754d69d3c10328b67870f40f3a87dce"
+      },
+      "validation_best_epoch": 30,
+      "validation_best_f1_valid": 0.28775584352670464,
+      "calibrated_threshold_tau_star": 0.78,
+      "all_pixel_test_at_0_5": {
+        "tp": 3664,
+        "tn": 904428,
+        "fp": 43241,
+        "fn": 3195,
+        "precision": 0.07811533951604306,
+        "recall": 0.5341886572386645,
+        "f1": 0.13629938248642212,
+        "iou": 0.07313373253493013,
+        "false_alarm_rate": 0.04562880077326577
+      },
+      "valid_pixel_test_at_0_5": {
+        "tp": 3639,
+        "tn": 776014,
+        "fp": 42438,
+        "fn": 3177,
+        "precision": 0.07897649586561625,
+        "recall": 0.5338908450704225,
+        "f1": 0.13759854801202426,
+        "iou": 0.07388232427823122,
+        "false_alarm_rate": 0.05185154413453691
+      },
+      "verification_status": "verified_consistent"
+    },
+    "cross_attention": {
+      "display_name": "Cross-Attention Transformer Masked Loss",
+      "checkpoint": {
+        "path": "checkpoints/scenario_2_masked_loss/cross_attention/best.pt",
+        "exists": true,
+        "bytes": 4654438,
+        "sha256": "5bc4054bef180d43557ca54c057619cfb993843c14da2f89a775519c17d5227e"
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2_masked_loss/cross_attention/metrics.json",
+        "exists": true,
+        "sha256": "f8313ed7adc3f828dcb60db0aa52a8c34a34b2c6efd4be4492c148c84b6ded0f"
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2_masked_loss/cross_attention/training_history.csv",
+        "exists": true,
+        "sha256": "521c29d97e1849c3b8509e670aefc07ed989a4b04cd7b4082ad300c21f7961df"
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2_masked_loss/cross_attention/per_city_metrics.csv",
+        "exists": true,
+        "sha256": "2ec45c5fd4da3bc835c01292e04d2be134cf7d1f8fc449334a1bf2de9d49da7b"
+      },
+      "validation_best_epoch": 41,
+      "validation_best_f1_valid": 0.22231082505055105,
+      "calibrated_threshold_tau_star": 0.5800000000000001,
+      "all_pixel_test_at_0_5": {
+        "tp": 3182,
+        "tn": 831878,
+        "fp": 115791,
+        "fn": 3677,
+        "precision": 0.02674556411959016,
+        "recall": 0.4639160227438402,
+        "f1": 0.050575370335049906,
+        "iou": 0.02594374235629841,
+        "false_alarm_rate": 0.1221850667268846
+      },
+      "valid_pixel_test_at_0_5": {
+        "tp": 3156,
+        "tn": 703732,
+        "fp": 114720,
+        "fn": 3660,
+        "precision": 0.026773897994502697,
+        "recall": 0.4630281690140845,
+        "f1": 0.050620729477432395,
+        "iou": 0.025967614533965244,
+        "false_alarm_rate": 0.140167047059571
+      },
+      "verification_status": "verified_consistent"
+    }
+  }
+}
