@@ -16,11 +16,11 @@ This document establishes the verified source of truth for all experimental arti
 1. **Repository & Artifact Integrity:**
    - The locked split definition (experiments/scenario_2/configs/split_definition.json) remains completely unchanged (sha256: 5d0841adf0...).
    - All 14 primary checkpoints (8 for OSCD, 3 for Scenario 2 Baseline, 3 for Scenario 2 Masked Loss) exist on disk, are non-empty, and their SHA256 hashes are cataloged in experiments/research_status/artifact_integrity.json.
-   - All precision, recall, F1, IoU, and false alarm rate (FAR) metrics reported in JSON and Markdown were recomputed directly from raw confusion counts (, FP, FN, TN$) and match within floating-point tolerance ($< 10^{-4}$).
+   - Precision, recall, F1, IoU, and false-alarm rate are stored with the confusion counts TP, FP, FN, and TN. For the Scenario 2 Async CNN baseline, FAR recomputed from those counts matches the saved `final_test_far` (0.033602). This note does not re-verify every other row in this pass.
 2. **Key Methodological Limitations & Confounds Discovered:**
    - **OSCD SAR Temporal Gap Limitation:** OSCD SAR images are multi-temporal composites without precise acquisition timestamps. Consequently, OSCD cannot evaluate temporal-gap sensitivity (RQ2).
-   - **Scenario 1 Val/Test Mismatch:** The Clean Async CNN achieved test F1 = 0.4117 on OSCD, but peaked at validation F1 = 0.0992 (Epoch 26). The severe gap between validation and test city distributions highlights significant cross-city domain shift.
-   - **Scenario 2 Masked-Loss Epoch-Progression Confound:** Masked-loss training yielded higher all-pixel F1 for Sync CNN (0.1363 vs 0.1102) and Cross-Attention Transformer (0.0506 vs 0.0412). However, their checkpoints were selected at later epochs (Epoch 30 vs 21 for Sync CNN; Epoch 41 vs 23 for Transformer). These gains cannot yet be attributed purely to masked loss.
+   - **Scenario 1 Val/Test Mismatch:** On OSCD seed 42 only, the Clean Async CNN test F1 is 0.4117 and the validation F1 at the selected epoch is 0.0992 (epoch 26). That test F1 is a single-seed observation. It is not a conclusive or generalizable result. The gap between the validation cities and the test cities is large. This is a description of those cities, not a significance test.
+   - **Scenario 2 Masked-Loss Epoch-Progression Confound:** On seed 42, masked-loss training recorded higher all-pixel F1 for Sync CNN (0.1363 vs 0.1102) and for the Cross-Attention Transformer (0.0506 vs 0.0412). Both of those Scenario 2 models used `pos_weight=94.0`. This is not the OSCD loss split, where CNNs used unweighted BCE and the Transformers used `pos_weight=41.0`. The seed-42 checkpoints were selected at later epochs (epoch 30 vs 21 for Sync CNN; epoch 41 vs 23 for the Transformer). Those F1 differences cannot be attributed to masked loss alone. Seeds 43 and 44 are a separate descriptive Sync CNN comparison and are not pooled into this seed-42 contrast.
    - **Async CNN Checkpoint Selection Invariance:** For Async CNN, baseline and masked-loss models are both matched at Epoch 2 (F1: 0.0794 baseline vs 0.0813 masked loss). Masked loss had minimal effect on Async CNN performance. S2-1 Async CNN all-pixel validation F1 peaked at Epoch 18 (0.1600), but those weights were not saved to disk and must not be retrained.
    - **Semantic Scope Limitation:** SpaceNet 7 labels are binary building-detection change proxies (derived from building probability maps thresholded at 0.50). They do not represent agriculture, environmental degradation, or general land-cover shifts. General environmental monitoring claims cannot be made.
 
@@ -31,7 +31,7 @@ This document establishes the verified source of truth for all experimental arti
 Below is the verified inventory of all completed experiments. Raw records are archived in experiments/research_status/experiment_inventory.csv.
 
 ### Table 1: Scenario 1 (OSCD Benchmark, Official 14 Train / 10 Test Cities)
-*All models evaluated at $\tau = 0.50$ on pooled test city pixels. Training loss: BCE with pos_weight=41.0 (except unimodal/early-fusion as noted).*
+*All models evaluated at $\tau = 0.50$ on pooled test city pixels. Every OSCD row is seed 42. The Clean Async CNN test F1 of 0.4117 is that single seed only and is not a general result. OSCD CNN-family models used unweighted BCE. The two Transformer models used pos_weight=41.0, so CNN and Transformer F1 values in this table are not an architecture-only comparison. Sentinel-1 input on OSCD is VV only.*
 
 | Model | Modality | Best Val Ep | Val F1 | Test Prec | Test Rec | Test F1 | Test IoU | Test FAR | Test TP | Test FP | Test FN | Test TN | Status |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---:|
@@ -47,7 +47,7 @@ Below is the verified inventory of all completed experiments. Raw records are ar
 ---
 
 ### Table 2: Scenario 2 (SpaceNet 7-Derived Dataset, Locked 20 Train / 4 Val / 4 Test Sites)
-*Pairing: March 2018 (T1) to December 2019 (T2). Loss pos_weight = 93.6. Threshold $\tau = 0.50$.*
+*Pairing: March 2018 (T1) to December 2019 (T2), one 21-month interval. Scenario 2 SAR input is VV and VH at both dates. Training loss uses pos_weight=94.0. The figure 93.6 is the training-split class ratio (4,718,348 / 50,387) rounded to one decimal place; it is not the weight used in training. Threshold $\tau = 0.50$.*
 
 | Experiment | Model | Loss Type | Sel. Rule | Best Ep | Val F1 | Test Prec | Test Rec | Test F1 | Test IoU | Test FAR | TP | FP | FN | TN |
 |---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -65,12 +65,13 @@ Below is the verified inventory of all completed experiments. Raw records are ar
 
 ## 3. Discrepancy and Audit Log
 
-1. **FAR Definition & Calculation Discrepancy:**
-   - In earlier Scenario 2 baseline summaries, FAR was loosely reported as  / (FP + TN) = 0.0348$ for Async CNN baseline, while exact counts give ,844 / (31,844 + 915,825) = 0.03360$. Recomputed values from counts are now locked as authoritative.
-2. **Checkpoint Selection Protocol Inconsistency:**
-   - Scenario 2 baselines used al_f1 (all-pixel) on the validation set for est.pt selection.
-   - S2-1 masked loss used al_f1_valid (valid-pixel) for est.pt selection.
-   - Audit finding: For Sync CNN and Cross-Attention Transformer, both metrics peaked at the exact same epoch (Ep 30 and Ep 41 respectively). For Async CNN, al_f1_valid peaked at Ep 2, whereas al_f1_all peaked at Ep 18. However, because Ep 18 weights were not preserved on disk, Ep 2 remains the sole evaluated checkpoint.
+1. **FAR for the Scenario 2 Async CNN baseline:**
+   - Saved counts in `experiments/scenario_2/async_dual_stream/metrics.json` are TP 1,601, FP 31,844, FN 5,258, and TN 915,825. FAR = FP / (FP + TN) = 31,844 / (31,844 + 915,825) = 0.033602, which matches `final_test_far`. No saved metrics file for this run contains a test FAR of 0.0348.
+2. **Checkpoint selection:**
+   - Scenario 2 standard-loss baselines selected the saved checkpoint by all-pixel validation F1.
+   - S2-1 masked-loss runs selected the saved checkpoint by valid-pixel validation F1 (`val_f1_valid`).
+   - In `experiments/scenario_2_masked_loss/sync_cnn/training_history.csv`, `val_f1_valid` and `val_f1_all` both peak at epoch 30. In `experiments/scenario_2_masked_loss/cross_attention/training_history.csv`, both peak at epoch 41.
+   - In `experiments/scenario_2_masked_loss/async_cnn/training_history.csv`, `val_f1_valid` peaks at epoch 2 (0.167661) and `val_f1_all` peaks at epoch 18 (0.159951). The saved selected checkpoint is epoch 2 (`validation_best_epoch` in `experiments/scenario_2_masked_loss/async_cnn/metrics.json`). Epoch 18 is not that checkpoint. The baseline Async CNN history in `experiments/scenario_2/async_dual_stream/training_history.csv` has one validation F1 series, and that series peaks at epoch 2 (0.183204), matching `validation_best_f1`.
 3. **Epoch Progression Confound in S2-1 Gains:**
    - The reported improvement for Sync CNN (+0.0261 F1) and Cross-Attention (+0.0094 F1) cannot be disentangled from the fact that they trained 9 and 18 epochs longer than their respective baselines before peaking.
 
@@ -80,32 +81,32 @@ Below is the verified inventory of all completed experiments. Raw records are ar
 
 | RQ | Original Description | Current Status | Supporting Evidence & Honest Classification |
 |:---:|:---|:---:|:---|
-| **RQ1** | Can historical Sentinel-2 optical imagery improve Sentinel-1 change detection when synchronous optical is unavailable? | **Partially investigated** | **Supported on OSCD:** Clean Async CNN achieves test F1 = 0.4117 vs SAR-only 0.3558 (+0.0559 gain) and Naive Async 0.2052. Cross-Attention Transformer achieves 0.3564.<br>**Not demonstrated on SpaceNet 7:** Async CNN achieves test F1 = 0.0794 vs Sync CNN 0.1102. Historical optical guidance on SpaceNet 7 did not outperform synchronous optical, and extreme building label sparsity makes historical guidance alone insufficient. |
-| **RQ2** | How does temporal gap between historical optical imagery and target SAR affect performance? | **Not quantitatively established** | **Cannot be answered with existing data.** OSCD SAR images are multi-temporal composites without acquisition dates. SpaceNet 7 experiments evaluated only a single fixed pair (March 2018 to December 2019, 21-month gap). Must be documented honestly as a dataset limitation and designated for future work. |
-| **RQ3** | Can additional SAR information (VV and VH polarization) improve change discrimination? | **Not quantitatively established** | **All current experiments used single-polarization (VV only).** The codebase does not include dual-pol (VV+VH) ablation experiments. Must be reported as uninvestigated and left for future work. |
-| **RQ4** | How does the proposed asynchronous multimodal approach compare with unimodal, conventional fusion, and dual-stream baselines? | **Answered by existing evidence** | **Fully benchmarked on OSCD:**<br>1. Clean Async CNN (0.4117) > Sync Dual-Stream (0.3868) > SAR-only (0.3558) > Sync Early Fusion (0.3520) > Optical-only (0.2663) > Naive Async (0.2052).<br>2. On SpaceNet 7, Sync CNN (0.1102) > Async CNN (0.0794) > Cross-Attention (0.0412). Complete quantitative baseline hierarchy established. |
-| **RQ5** | Under what temporal and environmental conditions does historical optical guidance provide greatest benefit? | **Partially investigated** | **Investigated via error analysis and qualitative inspections:** Historical optical guidance reduces false alarms caused by surface roughness and moisture changes in urban areas with stable historical building footprints. However, severe degradation occurs in rapid construction sites and unmasked cloud/sensor-boundary regions (L15-1289E). Environmental/agricultural conditions are unverified due to building-only proxy labels. |
+| **RQ1** | Can historical Sentinel-2 optical imagery improve Sentinel-1 change detection when synchronous optical is unavailable? | **Partially investigated** | **Single-seed OSCD observation (seed 42), not conclusive or generalizable:** Clean Async CNN test F1 = 0.4117, SAR-only = 0.3558 (difference +0.0559), and Naive Async = 0.2052. Those three CNNs used unweighted BCE. The Cross-Attention Transformer test F1 is 0.3564 and used pos_weight=41.0, so it is not on the same loss as the CNNs.<br>**Not demonstrated on the Scenario 2 21-month building-proxy split:** Async CNN test F1 = 0.0794 vs Sync CNN 0.1102. Both used pos_weight=94.0. |
+| **RQ2** | How does temporal gap between historical optical imagery and target SAR affect performance? | **Missing** | OSCD SAR images are multi-temporal composites without precise acquisition timestamps, so those runs do not measure gap sensitivity. Scenario 2 training used one fixed pair (March 2018 to December 2019, about 21 months). A single interval does not establish temporal-gap sensitivity. RQ2 is not complete. |
+| **RQ3** | Can additional SAR information (VV and VH polarization) improve change discrimination? | **Missing** | OSCD experiments use Sentinel-1 VV only. Scenario 2 stacks VV and VH (VV and VH at T1 and at T2) in the trained models. No run compares VV only, VH only, and VV+VH, so the polarization question is unanswered. RQ3 is not complete. |
+| **RQ4** | How does the proposed asynchronous multimodal approach compare with unimodal, conventional fusion, and dual-stream baselines? | **Partial** | OSCD seed 42 records SAR-only (0.3558), optical-only (0.2663), early fusion (0.3520), sync dual-stream (0.3868), naive async (0.2052), and clean async (0.4117). The clean-async value is that single seed only. CNN-family OSCD models used unweighted BCE; the two Transformers used pos_weight=41.0, so that order is not an architecture-only comparison. Scenario 2 records Sync CNN (0.1102), Async CNN (0.0794), and Cross-Attention (0.0412), all with pos_weight=94.0, and has no SAR-only or optical-only baseline. |
+| **RQ5** | Under what temporal and environmental conditions does historical optical guidance provide greatest benefit? | **Partial; environmental analysis blocked** | Error maps and qualitative inspections exist for urban scenes, including rapid construction and unmasked cloud or sensor-boundary regions (L15-1289E). They do not identify agricultural or environmental change. Scenario 2 labels are building-probability proxies. Environmental pseudo-change analysis is not complete. |
 
 ---
 
-## 5. Matched Sync CNN Multi-Seed Experiment Proposal
+## 5. Matched Sync CNN Multi-Seed Runs (Seeds 43 and 44)
 
-To establish statistical robustness before the submission deadline, we evaluate whether to run a matched multi-seed experiment for Sync CNN (comparing Standard BCE vs Masked BCE across seeds 43 and 44).
+The matched Sync CNN runs for seeds 43 and 44 are on disk under `experiments/scenario_2_multiseed/`. They compare standard weighted BCE with masked weighted BCE. Two matched seeds are a descriptive comparison only. They do not establish statistical significance, and they do not complete RQ2, RQ3, or environmental pseudo-change analysis.
 
 ### Experimental Setup & Controls
-- **Model:** Sync Dual-Stream CNN (DualStreamUNetSync, 27,284,097 parameters).
+- **Model:** Sync Dual-Stream CNN (`DualStreamUNet`, 27,281,793 parameters in the multiseed metrics).
 - **Split:** Locked Strategy B (20 train, 4 val, 4 test sites from split_definition.json).
-- **Input Channels:** SAR T1+T2 (2 ch) + Optical T1+T2 (6 ch) = 8 ch total.
-- **Hyperparameters:** Batch size = 64, Crop size = 32, Crops/site = 64, LR = 1e-4 (Adam), Epochs = 50, Pos Weight = 93.6.
-- **Experimental Variable:** Standard BCE Loss vs Masked BCE Loss (unmasked pixels only).
-- **Checkpoint Selection Rule:** In S2-1, both al_f1_all and al_f1_valid peaked at the exact same epoch for Sync CNN (Ep 30). For seeds 43 and 44, both metrics must be logged, and selection must use the matched criterion (or track both) to prevent selection bias.
+- **Input Channels:** SAR T1+T2 is 4 channels (VV and VH at each date). Optical T1+T2 is 20 channels (10 Sentinel-2 bands at each date). Total input is 24 channels. OSCD remains VV only; this 4-channel SAR stack is Scenario 2 only.
+- **Hyperparameters:** Batch size = 64, Crop size = 32, Crops/site = 64, LR = 1e-4 (Adam), Epochs = 50, training pos_weight = 94.0. The class ratio rounded to one decimal place is 93.6; that ratio is not the training weight.
+- **Experimental Variable:** Standard weighted BCE on all pixels vs. masked weighted BCE on valid SAR pixels. Both use training pos_weight=94.0.
+- **Checkpoint Selection Rule:** Seeds 43 and 44 selected both loss conditions by the highest valid-pixel validation F1. Seed 42 standard BCE used all-pixel validation F1 and is not part of that matched pair.
 - **Evaluation:** Dual-protocol testing at $\tau = 0.50$ and calibrated $\tau^*$.
 
 ### Runtime and Resource Estimates
 - Each Sync CNN 50-epoch run takes **~513 to 557 seconds** (~8.5 to 9.3 minutes) on the NVIDIA RTX 4060 Laptop GPU.
-- Total training runs proposed: 4 runs (Seed 43 Baseline, Seed 43 Masked, Seed 44 Baseline, Seed 44 Masked).
-- Total compute time: **~35 to 40 minutes**.
-- **Conclusion:** Highly feasible and safe within the remaining 19 days, requiring minimal compute budget.
+- The four runs are the Seed 43 and Seed 44 standard and masked Sync CNN checkpoints under `experiments/scenario_2_multiseed/`.
+- Recorded training time for those runs is about 8.5 to 9.3 minutes each.
+- The paired all-pixel F1 differences are descriptive. They are reported in `docs/SCENARIO_2_MULTISEED_SYNC_REPORT.md` and `docs/paper/02_results_v2.md`.
 
 ---
 
@@ -114,7 +115,7 @@ To establish statistical robustness before the submission deadline, we evaluate 
 | Date Window | Priority / Task | Key Deliverables & Milestones |
 |---|---|---|
 | **Oct 11 (Today)** | **Phase 1: Freeze & Audit** | Establish artifact inventory, compute hashes, lock baseline records, freeze code. |
-| **Oct 12 – Oct 13** | **Phase 2: Multi-Seed Experiment (Optional/Controlled)** | Execute 4 matched runs for Sync CNN (seeds 43, 44; Baseline vs Masked). Compute mean $\pm$ std. |
+| **Oct 12 – Oct 13** | **Phase 2: Multi-Seed Experiment (Optional/Controlled)** | Four Sync CNN runs (seeds 43 and 44; standard weighted BCE vs masked weighted BCE) are stored under `experiments/scenario_2_multiseed/`. Report the paired differences as descriptive results from two matched seeds. |
 | **Oct 14 – Oct 19** | **Phase 3: Paper Drafting & Results Integration** | Draft Methods, Experiments, and Discussion. Reconcile RQ1-RQ5 with honest claims. Freeze figures. |
 | **Oct 20 – Oct 24** | **Phase 4: Implementation Demonstration** | Prepare clean, self-contained inference script and interactive visualization notebook for demo. |
 | **Oct 25 – Oct 28** | **Phase 5: Presentation & Viva Preparation** | Prepare slide deck, rehearse defense questions, practice justification of limitations. |

@@ -1,6 +1,6 @@
 # Scenario 2 — Paper Integration Notes
 
-Updated after dataset inspection. No results exist yet.
+Updated against the saved Scenario 2 metrics. The trained split is Strategy B: March 2018 to December 2019, 20 / 4 / 4 sites, one 21-month interval. Labels are a building-probability XOR at 0.5.
 
 ---
 
@@ -41,7 +41,7 @@ Key differences from OSCD (Scenario 1):
 6. Scenario 2 results (SEN12-MT)
 7. Discussion
    7.1 Architecture ranking across datasets
-   7.2 Effect of VH polarization
+   7.2 Polarization: no VV-only vs VH-only vs VV+VH result exists (RQ3 is missing)
    7.3 Asynchronous vs synchronous trade-off
    7.4 Limitations (single seed, derived labels, no official split)
 8. Conclusion
@@ -51,25 +51,21 @@ Key differences from OSCD (Scenario 1):
 
 ## What Scenario 2 contributes
 
-Scenario 2 tests whether Scenario 1 findings generalise to a:
-- Larger dataset (80 vs 24 sites)
-- More temporally diverse dataset (monthly over ~2 years vs 2 time points)
-- Dataset with VH SAR available
-- Dataset with derived rather than manually annotated change labels
+The SEN12-MT archive has 80 sites and monthly files. The trained Scenario 2 split uses 28 of those sites (20 / 4 / 4), not all 80. It uses one 21-month pair, not a multi-gap sweep. Scenario 2 SAR inputs are VV and VH. Change labels are derived building-probability maps, not manual OSCD masks. The OSCD clean-async test F1 of 0.4117 is a single seed and is not evidence that the same gain holds here.
 
-The valid cross-scenario comparison is the relative ranking of architectures within each scenario, not absolute F1 values.
+Absolute F1 values are not comparable across the two datasets. An OSCD ranking that places a Transformer next to a CNN also mixes losses: the CNNs used unweighted BCE and the OSCD Transformers used `pos_weight=41.0`. Scenario 2 CNN and Transformer runs both used `pos_weight=94.0`.
 
 ---
 
 ## Mandatory disclosures in the paper
 
 1. Change labels for SEN12-MT are derived: (buildings_T2 ≥ 0.5) XOR (buildings_T1 ≥ 0.5). This threshold must be stated and its sensitivity acknowledged.
-2. T1 and T2 are defined as earliest and latest unmasked timesteps per site. The typical temporal gap is approximately 24 months.
-3. No official train/val/test split exists. A site-level split (70/15/15%, seed 42) was defined before training.
-4. S1 NaN pixels are filled with 0.0.
-5. pos_weight for BCEWithLogitsLoss was computed from the training split change fraction (expected ~100–300, exact value TBD).
-6. Scenario 2 uses 4-channel SAR (VV+VH × 2 dates) and 10-channel S2, different from Scenario 1.
-7. Results are single-seed (seed 42). Variance across seeds is not estimated.
+2. The trained pair is T1 = March 2018 and T2 = December 2019, one interval of about 21 months. It is not an earliest-to-latest pairing and it is not a 24-month gap study. RQ2 remains missing.
+3. The locked split is 20 train / 4 validation / 4 test sites. It is not a 70/15/15 split.
+4. S1 NaN pixels are filled with 0.0 after the validity mask is taken from those NaNs. A zero that was already present stays valid.
+5. Training `pos_weight` is 94.0. The class ratio 4,718,348 / 50,387 equals 93.6 when rounded to one decimal place. 93.6 is not the training weight.
+6. Scenario 2 uses 4-channel SAR (VV and VH at each date). Asynchronous optical input is 10 Sentinel-2 bands at T1. OSCD SAR is VV only, and OSCD CNNs used unweighted BCE while the OSCD Transformers used `pos_weight=41.0`.
+7. The main Scenario 2 baselines are seed 42. Seeds 43 and 44 are a descriptive matched Sync CNN comparison only. They do not estimate a significant seed effect, and they do not complete RQ2 or RQ3.
 
 ---
 
@@ -78,4 +74,4 @@ The valid cross-scenario comparison is the relative ranking of architectures wit
 - Cannot claim absolute improvement over Scenario 1 (different datasets).
 - Cannot claim that higher F1 on SEN12-MT proves the architecture is better.
 - Cannot attribute performance differences solely to data volume without controlling for modality differences.
-- Cannot answer the temporal-gap hypothesis from the original research question (month-level dates available, but SAR scene-level dates within a month are not).
+- Cannot answer the temporal-gap question from the saved runs. Those runs use one 21-month pair. Monthly files exist in the archive, but no multi-gap experiment was trained. RQ2 and RQ3 remain missing, and environmental pseudo-change analysis remains blocked by the building-probability XOR labels.

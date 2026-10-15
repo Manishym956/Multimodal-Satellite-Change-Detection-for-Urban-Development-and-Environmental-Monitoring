@@ -46,7 +46,7 @@ The Scenario 1 experiments ran on the RTX 4060, which is confirmed by the `gpu_n
 | No `--device` CLI argument | Users cannot request CPU without editing code | **Fixed**: `add_device_argument()` helper; added to new scripts |
 | No explicit device placement test | No automated test confirming CUDA execution | **Fixed**: `src/training/test_device.py` |
 | `pin_memory` not set | DataLoaders do not enable `pin_memory=True` | **Not changed** — see note |
-| Scenario 2 stubs raise `NotImplementedError` | `train_scenario2_*.py` stubs | Unchanged — correct, dataset loader not yet implemented |
+| Scenario 2 noted here as unimplemented stubs | `train_scenario2_*.py` | **Superseded.** The loader and trainers exist. Completed runs are under `experiments/scenario_2/`, with `device: cuda` and `pos_weight: 94.0` in the saved metrics. |
 
 **Note on `pin_memory`:** Pinned memory (`pin_memory=True` in DataLoader) enables faster host→GPU transfers via DMA. With `num_workers=0` (the current setting), workers run in the main process and `pin_memory` provides marginal benefit. It was not added to avoid unnecessary changes to Scenario 1 scripts. It can be enabled in Scenario 2 scripts if data loading is a bottleneck.
 
@@ -130,7 +130,7 @@ train_scenario2_dual_stream.py --mode sync --verify-only
 - All three Scenario 1 checkpoints reload cleanly (asynchronous_dual_stream_clean ep26, dual_stream_baseline ep31, transformer_cross_attention ep33)
 - Scenario 2 overrides (14-ch async, 24-ch sync, 14-ch transformer) all correct
 - Dataset loader: async=14ch, sync=24ch, no NaN after fill, label binary and aligned
-- pos_weight confirmed 93.6 from 20 training sites (50,387 change / 4,718,348 no-change)
+- Training-split class ratio: 4,718,348 no-change / 50,387 change = 93.6 to one decimal place. Saved Scenario 2 metrics use training `pos_weight` 94.0. 93.6 is that ratio, not the weight passed to the loss.
 - No path collision between Scenario 1 and Scenario 2 output directories
 
 CUDA confirmed used: all Scenario 2 forward passes executed on cuda:0.
@@ -139,7 +139,7 @@ CUDA confirmed used: all Scenario 2 forward passes executed on cuda:0.
 
 ## Scenario 2 device requirements
 
-When `src/datasets/scenario2_dataset.py` and the Scenario 2 training scripts are implemented, they must:
+`src/datasets/scenario2_dataset.py` and the Scenario 2 training scripts are implemented. Saved metrics record CUDA on the RTX 4060 Laptop GPU and training `pos_weight` 94.0. The device rules for those runs are:
 
 1. Import and call `get_device(args.device)` — do not repeat the raw `torch.cuda.is_available()` one-liner.
 2. Add `--device` via `add_device_argument(parser)` in `parse_args()`.

@@ -119,7 +119,7 @@ From 27 Strategy A sites:
 - Total change pixels: 71,595
 - **Estimated pos_weight ≈ 89.0**
 
-This is approximately twice the OSCD Scenario 1 value (41.0), reflecting the sparser change class. The exact pos_weight must be recomputed from the actual training split (56 sites) before training.
+This is approximately twice the OSCD Transformer training weight (41.0). OSCD CNNs used unweighted BCE, so 41.0 is not their loss weight. The 89.0 figure and the 56-site plan were not used. The trained Strategy B split has 20 sites. Its class ratio is 4,718,348 / 50,387 = 93.6 to one decimal place, and the saved metrics use training `pos_weight` 94.0.
 
 ### 4.4 Label validity caveat (mandatory disclosure)
 
@@ -233,9 +233,10 @@ Split written to `experiments/scenario_2/configs/split_definition.json`. No over
 | Total training pixels | 4,768,735 |
 | Change pixels | 50,387 (1.057%) |
 | No-change pixels | 4,718,348 |
-| **pos_weight** | **93.6** |
+| Class ratio, one decimal place | 93.6 |
+| Training `pos_weight` recorded in the Scenario 2 metrics | 94.0 |
 
-Round to **94** for use in BCEWithLogitsLoss.
+93.6 is the rounded class ratio. The weight used in training is 94.0.
 
 ### Test set adequacy assessment
 
@@ -259,32 +260,13 @@ Round to **94** for use in BCEWithLogitsLoss.
 | Test sites | 4 | ~8 |
 | Test pixel volume vs OSCD | 31% | ~56% |
 | Temporal confound | None | Variable gap (confound) |
-| pos_weight | 93.6 | TBD (~89–100) |
+| Class ratio / training weight | 93.6 rounded ratio; trained weight 94.0 | Not trained |
 
 **Strategy C gives ~1.8× more training data and ~2× larger test set with no zero-positive sites expected.** The cost is a variable 12–26 month temporal gap, which must be disclosed in the paper but does not invalidate the architecture comparison (all three models see the same variable-gap pairs).
 
 ### Final recommendation
 
-**Proceed with Strategy B (2018-03 → 2019-12) as specified.** The 28-site common set is defensible. The small test set (4 sites) is a genuine limitation that must be disclosed. If during training the results are statistically inconclusive due to test-set size, upgrading to Strategy C is a legitimate post-hoc option — but only if the test split is re-locked before any test evaluation.
-
-The split is now locked in `experiments/scenario_2/configs/split_definition.json` and must not be modified after training begins.
-
-
-| Split | Sites | Role |
-|---|---|---|
-| Train | 22 | 70% of 32 |
-| Validation | 5 | 15% |
-| Test | 5 | 15% |
-
-This is smaller than the original 56/12/12 plan. The reduction is due to buildings label unavailability at fixed endpoints. The paper should clearly state that 32 of 80 sites have complete multimodal data at the chosen endpoints.
-
-However: **Strategy C (earliest/latest) gives 59 async sites**, which would allow a closer-to-planned 41/9/9 split. If the variable-interval confound is acceptable to you (and can be controlled for in the paper), Strategy C provides substantially more training data.
-
-**This is the key scientific decision that requires your input:**
-- **Strategy B (2018-03→2019-12): 32 sites, uniform 21-month interval, cleaner comparison.**
-- **Strategy C (earliest/latest): 59 sites, variable 12–26 month interval, more data.**
-
-Both are scientifically defensible with appropriate disclosures.
+**The trained experiment uses Strategy B (2018-03 → 2019-12).** The locked split in `experiments/scenario_2/configs/split_definition.json` is 20 train / 4 validation / 4 test sites, one 21-month interval. Eligibility notes that mention 32 async-eligible sites are not that trained split. Counts of 22/5/5 and 56 sites were not trained. Strategy C was not trained. The four-site test set and the building-probability XOR labels remain limitations. A variable-gap Strategy C run would be a new experiment, not a result of the saved 21-month runs.
 
 ---
 
@@ -296,4 +278,4 @@ Both are scientifically defensible with appropriate disclosures.
 
 3. **S2 bad data rate**: 395 bad S2 timestep indices across 80 sites. The concentration of bad S2 observations in certain sites (e.g. `L15-0571E-1075N_2287_3888_13` has 17/20 bad S2) primarily drives the exclusion from fixed-pair strategies.
 
-4. **pos_weight**: The 89.0 estimate is from 27 Strategy A sites. The final value must be recomputed from whichever 22 sites land in the training split. Do not use 89 as a hard prior without recomputing.
+4. **pos_weight**: The 89.0 estimate is from 27 Strategy A sites and was not used. The trained 20-site split has class ratio 93.6 to one decimal place and training `pos_weight` 94.0.
