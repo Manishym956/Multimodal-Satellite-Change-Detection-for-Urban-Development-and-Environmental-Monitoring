@@ -1,0 +1,1701 @@
+{
+  "title": "RQ2 dataset provenance investigation",
+  "scope": "Read-only provenance investigation. No dataset, loader, split, checkpoints, existing experiment results, or audit classifications were changed. No training or untrained-gap metrics were run.",
+  "evidence_labels": [
+    "Authoritatively documented",
+    "Supported by repository implementation",
+    "Inferred but unverified",
+    "Unresolved"
+  ],
+  "findings": [
+    {
+      "question": "Upstream dataset identity and release",
+      "status": "Authoritatively documented",
+      "conclusion": "Zenodo record 10.5281/zenodo.7794693 identifies the SEN12 Multi-Temporal Urban Mapping Dataset. It describes monthly mean Sentinel-1 SAR and cloud-free Sentinel-2 MSI images for SpaceNet 7 sites and monthly rasterized built-up labels for training sites. The published archive is sen12_mt_urbanmapping.tar.gz, 18.1 GB, with MD5 5d34fc4537c7974c31824baaaea050f5.",
+      "source": "https://zenodo.org/records/7794693",
+      "limits": "The release summary does not define metadata.json field semantics, bad_data.json indexing, or the reason for individual flags."
+    },
+    {
+      "question": "Meaning of metadata s2=false",
+      "status": "Unresolved",
+      "conclusion": "The local inspection note describes s2 as an availability Boolean, but neither the locally present dataset files nor the upstream Zenodo description explains why a specific month is false or whether an extant TIFF is rejected for cloud, quality, processing, or another reason.",
+      "repository_evidence": "docs/SCENARIO_2_DATASET_INSPECTION.md §9; src/training/temporal_pairing_analysis.py:is_s2_usable; experiments/scenario_2_temporal_gap/pair_eligibility_report.json:metadata_rule_evidence",
+      "missing_evidence": [
+        "Author/original processor data dictionary for metadata.json",
+        "Per-record cloud/quality-mask provenance or processing log",
+        "Mapping from released archive member to the current extracted file"
+      ]
+    },
+    {
+      "question": "Meaning of bad S2 indices and their order",
+      "status": "Supported by repository implementation",
+      "conclusion": "The local manifest generator enumerates each site's metadata record list and marks s2_bad when that zero-based enumeration index occurs in bad_data.json[site].S2. The monthly metadata dates are sorted chronologically for all 28 locked sites; dates are unique; generated S2 paths use the same YYYY_MM date. The 85 conflicts map to exactly one metadata record each. This establishes the repository's index/date convention, not the original producer's rationale for each bad entry.",
+      "repository_evidence": "src/training/generate_manifest.py (enumerate(records), s2_bad, YYYY_MM path construction); src/training/temporal_pairing_analysis.py (enumerate and set membership); docs/SCENARIO_2_DATASET_MANIFEST.csv",
+      "missing_evidence": [
+        "Original bad_data.json authoring code or release documentation explaining index origin and badness criteria"
+      ]
+    },
+    {
+      "question": "Meaning of masked=true",
+      "status": "Unresolved",
+      "conclusion": "Repository inspection and pairing code exclude masked timesteps, but the source JSON does not state whether masked means label invalidity, raster nodata, cloud contamination, incomplete coverage, or another exclusion. No authoritative definition was found in locally present materials or the inspected Zenodo release summary.",
+      "repository_evidence": "src/training/temporal_pairing_analysis.py:is_s1_usable/is_s2_usable/is_bld_usable; src/training/inspect_sen12mt.py; docs/SCENARIO_2_DATASET_INSPECTION.md §§9-10",
+      "missing_evidence": [
+        "Dataset data dictionary or release notes defining masked",
+        "Per-record masked-generation code/logs"
+      ]
+    },
+    {
+      "question": "Scenario 2 loader handling",
+      "status": "Supported by repository implementation",
+      "conclusion": "scenario2_dataset.py opens the fixed-date files directly; it does not read metadata.json or bad_data.json. Optical values are loaded without consulting s2, bad-index, or masked fields. This is loader behavior, not evidence that all files are scientifically valid.",
+      "repository_evidence": "src/datasets/scenario2_dataset.py:preprocess_site, _read_s2, _read_s1_with_validity"
+    },
+    {
+      "question": "Source data checksums and release match",
+      "status": "Unresolved",
+      "conclusion": "The upstream Zenodo archive MD5 is published, but no archive, local checksum sidecar, or checksum manifest was found in the project workspace, so the local extracted data cannot be shown to match that release. The local CSV manifest is generated from metadata.json and records paths/presence, not hashes. Local SHA-256 fingerprints of metadata.json and bad_data.json are recorded below for reproducibility only; they do not authenticate against upstream.",
+      "missing_evidence": [
+        "Original archive or trusted archive MD5 verification record",
+        "Per-file checksums from the release or original extraction manifest"
+      ]
+    }
+  ],
+  "conflicting_optical_files": {
+    "count": 85,
+    "flag_combination_counts": {
+      "s2=true, bad_s2_index=false, masked=true": 24,
+      "s2=false, bad_s2_index=true, masked=false": 45,
+      "s2=false, bad_s2_index=true, masked=true": 16
+    },
+    "records": [
+      {
+        "site_id": "L15-0358E-1220N_1433_3310_13",
+        "split": "train",
+        "date": "2018-05",
+        "metadata_record_index_zero_based": 3,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0358E-1220N_1433_3310_13\\s2\\s2_L15-0358E-1220N_1433_3310_13_2018_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7661311,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0358E-1220N_1433_3310_13",
+        "split": "train",
+        "date": "2018-06",
+        "metadata_record_index_zero_based": 4,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0358E-1220N_1433_3310_13\\s2\\s2_L15-0358E-1220N_1433_3310_13_2018_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7644696,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0368E-1245N_1474_3210_13",
+        "split": "train",
+        "date": "2018-08",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0368E-1245N_1474_3210_13\\s2\\s2_L15-0368E-1245N_1474_3210_13_2018_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7331354,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0434E-1218N_1736_3318_13",
+        "split": "train",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0434E-1218N_1736_3318_13\\s2\\s2_L15-0434E-1218N_1736_3318_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7552426,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0434E-1218N_1736_3318_13",
+        "split": "train",
+        "date": "2019-09",
+        "metadata_record_index_zero_based": 20,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0434E-1218N_1736_3318_13\\s2\\s2_L15-0434E-1218N_1736_3318_13_2019_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7536451,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2018-02",
+        "metadata_record_index_zero_based": 1,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2018_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7824194,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2018-05",
+        "metadata_record_index_zero_based": 4,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2018_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7899422,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2018-06",
+        "metadata_record_index_zero_based": 5,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2018_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7937561,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7774231,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2018-08",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2018_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7879989,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2018-11",
+        "metadata_record_index_zero_based": 10,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2018_11.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7874051,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2019-05",
+        "metadata_record_index_zero_based": 16,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2019_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7856560,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2019-06",
+        "metadata_record_index_zero_based": 17,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2019_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7840406,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2019-08",
+        "metadata_record_index_zero_based": 19,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2019_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7790500,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "date": "2019-11",
+        "metadata_record_index_zero_based": 22,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0506E-1204N_2027_3374_13\\s2\\s2_L15-0506E-1204N_2027_3374_13_2019_11.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7709075,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0544E-1228N_2176_3279_13\\s2\\s2_L15-0544E-1228N_2176_3279_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7905960,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 8,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0544E-1228N_2176_3279_13\\s2\\s2_L15-0544E-1228N_2176_3279_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7834766,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "date": "2019-01",
+        "metadata_record_index_zero_based": 12,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0544E-1228N_2176_3279_13\\s2\\s2_L15-0544E-1228N_2176_3279_13_2019_01.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7615490,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "date": "2019-05",
+        "metadata_record_index_zero_based": 16,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0544E-1228N_2176_3279_13\\s2\\s2_L15-0544E-1228N_2176_3279_13_2019_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7886821,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1138E-1216N_4553_3325_13",
+        "split": "train",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1138E-1216N_4553_3325_13\\s2\\s2_L15-1138E-1216N_4553_3325_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7722835,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1138E-1216N_4553_3325_13",
+        "split": "train",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 8,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1138E-1216N_4553_3325_13\\s2\\s2_L15-1138E-1216N_4553_3325_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7689040,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1138E-1216N_4553_3325_13",
+        "split": "train",
+        "date": "2019-03",
+        "metadata_record_index_zero_based": 14,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1138E-1216N_4553_3325_13\\s2\\s2_L15-1138E-1216N_4553_3325_13_2019_03.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7827249,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1209E-1113N_4838_3737_13",
+        "split": "train",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1209E-1113N_4838_3737_13\\s2\\s2_L15-1209E-1113N_4838_3737_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7530314,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1209E-1113N_4838_3737_13",
+        "split": "train",
+        "date": "2019-07",
+        "metadata_record_index_zero_based": 18,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1209E-1113N_4838_3737_13\\s2\\s2_L15-1209E-1113N_4838_3737_13_2019_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7407989,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1335E-1166N_5342_3524_13",
+        "split": "train",
+        "date": "2018-08",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1335E-1166N_5342_3524_13\\s2\\s2_L15-1335E-1166N_5342_3524_13_2018_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7641469,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1439E-1134N_5759_3655_13",
+        "split": "train",
+        "date": "2018-06",
+        "metadata_record_index_zero_based": 4,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1439E-1134N_5759_3655_13\\s2\\s2_L15-1439E-1134N_5759_3655_13_2018_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7714088,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2018-02",
+        "metadata_record_index_zero_based": 0,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2018_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7586538,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2018-08",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2018_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7806066,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7814819,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2018-10",
+        "metadata_record_index_zero_based": 8,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2018_10.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7487560,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2019-05",
+        "metadata_record_index_zero_based": 15,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2019_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7485478,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2019-07",
+        "metadata_record_index_zero_based": 16,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2019_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7748612,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2019-09",
+        "metadata_record_index_zero_based": 18,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2019_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7697647,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2019-10",
+        "metadata_record_index_zero_based": 19,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2019_10.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7671017,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "date": "2019-11",
+        "metadata_record_index_zero_based": 20,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1617E-1207N_6468_3360_13\\s2\\s2_L15-1617E-1207N_6468_3360_13_2019_11.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7690364,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2018-02",
+        "metadata_record_index_zero_based": 1,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2018_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7731922,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2018-04",
+        "metadata_record_index_zero_based": 3,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2018_04.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8000500,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2018-06",
+        "metadata_record_index_zero_based": 5,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2018_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7890919,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7828594,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7991949,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2018-11",
+        "metadata_record_index_zero_based": 9,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2018_11.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7989315,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "date": "2019-07",
+        "metadata_record_index_zero_based": 12,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1669E-1153N_6678_3579_13\\s2\\s2_L15-1669E-1153N_6678_3579_13_2019_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7997374,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1672E-1207N_6691_3363_13",
+        "split": "train",
+        "date": "2018-12",
+        "metadata_record_index_zero_based": 11,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1672E-1207N_6691_3363_13\\s2\\s2_L15-1672E-1207N_6691_3363_13_2018_12.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7515192,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2018-01",
+        "metadata_record_index_zero_based": 0,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2018_01.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7868015,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2018-02",
+        "metadata_record_index_zero_based": 1,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2018_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7918438,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2018-05",
+        "metadata_record_index_zero_based": 4,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2018_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7652484,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2018-08",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2018_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7884706,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 8,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7896072,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2019-02",
+        "metadata_record_index_zero_based": 13,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2019_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7525268,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "date": "2019-08",
+        "metadata_record_index_zero_based": 19,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1703E-1219N_6813_3313_13\\s2\\s2_L15-1703E-1219N_6813_3313_13_2019_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7866369,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 8,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7922966,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2018-10",
+        "metadata_record_index_zero_based": 9,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2018_10.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8030736,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2019-06",
+        "metadata_record_index_zero_based": 17,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2019_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8058143,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2019-07",
+        "metadata_record_index_zero_based": 18,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2019_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8059168,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2019-08",
+        "metadata_record_index_zero_based": 19,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2019_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8051859,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2019-09",
+        "metadata_record_index_zero_based": 20,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2019_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8120546,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2019-10",
+        "metadata_record_index_zero_based": 21,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2019_10.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8046493,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "date": "2019-11",
+        "metadata_record_index_zero_based": 22,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0457E-1135N_1831_3648_13\\s2\\s2_L15-0457E-1135N_1831_3648_13_2019_11.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 8004516,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "date": "2018-05",
+        "metadata_record_index_zero_based": 4,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0487E-1246N_1950_3207_13\\s2\\s2_L15-0487E-1246N_1950_3207_13_2018_05.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7773002,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 8,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0487E-1246N_1950_3207_13\\s2\\s2_L15-0487E-1246N_1950_3207_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7771627,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "date": "2018-10",
+        "metadata_record_index_zero_based": 9,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0487E-1246N_1950_3207_13\\s2\\s2_L15-0487E-1246N_1950_3207_13_2018_10.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7963915,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "date": "2019-01",
+        "metadata_record_index_zero_based": 12,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0487E-1246N_1950_3207_13\\s2\\s2_L15-0487E-1246N_1950_3207_13_2019_01.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7685020,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "date": "2019-02",
+        "metadata_record_index_zero_based": 13,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0487E-1246N_1950_3207_13\\s2\\s2_L15-0487E-1246N_1950_3207_13_2019_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7595185,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "date": "2019-07",
+        "metadata_record_index_zero_based": 18,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0487E-1246N_1950_3207_13\\s2\\s2_L15-0487E-1246N_1950_3207_13_2019_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7736312,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1716E-1211N_6864_3345_13\\s2\\s2_L15-1716E-1211N_6864_3345_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7846725,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1716E-1211N_6864_3345_13\\s2\\s2_L15-1716E-1211N_6864_3345_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7847315,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "date": "2018-11",
+        "metadata_record_index_zero_based": 9,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1716E-1211N_6864_3345_13\\s2\\s2_L15-1716E-1211N_6864_3345_13_2018_11.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7347758,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "date": "2018-12",
+        "metadata_record_index_zero_based": 10,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1716E-1211N_6864_3345_13\\s2\\s2_L15-1716E-1211N_6864_3345_13_2018_12.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7453656,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "date": "2019-02",
+        "metadata_record_index_zero_based": 12,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1716E-1211N_6864_3345_13\\s2\\s2_L15-1716E-1211N_6864_3345_13_2019_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7506311,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "date": "2018-06",
+        "metadata_record_index_zero_based": 5,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0924E-1108N_3699_3757_13\\s2\\s2_L15-0924E-1108N_3699_3757_13_2018_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7365326,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "date": "2018-07",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0924E-1108N_3699_3757_13\\s2\\s2_L15-0924E-1108N_3699_3757_13_2018_07.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7324604,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0924E-1108N_3699_3757_13\\s2\\s2_L15-0924E-1108N_3699_3757_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7160760,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "date": "2019-02",
+        "metadata_record_index_zero_based": 12,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0924E-1108N_3699_3757_13\\s2\\s2_L15-0924E-1108N_3699_3757_13_2019_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7075702,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "date": "2018-01",
+        "metadata_record_index_zero_based": 0,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1298E-1322N_5193_2903_13\\s2\\s2_L15-1298E-1322N_5193_2903_13_2018_01.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7737360,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "date": "2018-02",
+        "metadata_record_index_zero_based": 1,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1298E-1322N_5193_2903_13\\s2\\s2_L15-1298E-1322N_5193_2903_13_2018_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7293420,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "date": "2018-04",
+        "metadata_record_index_zero_based": 3,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1298E-1322N_5193_2903_13\\s2\\s2_L15-1298E-1322N_5193_2903_13_2018_04.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7406318,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "date": "2019-01",
+        "metadata_record_index_zero_based": 11,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1298E-1322N_5193_2903_13\\s2\\s2_L15-1298E-1322N_5193_2903_13_2019_01.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 6957728,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "date": "2019-02",
+        "metadata_record_index_zero_based": 12,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1298E-1322N_5193_2903_13\\s2\\s2_L15-1298E-1322N_5193_2903_13_2019_02.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7133370,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2018-01",
+        "metadata_record_index_zero_based": 0,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": false
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=false",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2018_01.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7611861,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2018-06",
+        "metadata_record_index_zero_based": 5,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2018_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7782790,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2018-08",
+        "metadata_record_index_zero_based": 6,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2018_08.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7807235,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2018-09",
+        "metadata_record_index_zero_based": 7,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2018_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7847824,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2019-04",
+        "metadata_record_index_zero_based": 14,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": true,
+          "bad_s2_index": false,
+          "masked": true
+        },
+        "flag_combination": "s2=true, bad_s2_index=false, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2019_04.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7651687,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2019-06",
+        "metadata_record_index_zero_based": 16,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2019_06.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7789060,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "date": "2019-09",
+        "metadata_record_index_zero_based": 17,
+        "metadata_record_unique_date_match_count": 1,
+        "flags": {
+          "s2": false,
+          "bad_s2_index": true,
+          "masked": true
+        },
+        "flag_combination": "s2=false, bad_s2_index=true, masked=true",
+        "optical_path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-1438E-1134N_5753_3655_13\\s2\\s2_L15-1438E-1134N_5753_3655_13_2019_09.tif",
+        "optical_file_exists": true,
+        "file_size_bytes": 7491593,
+        "provenance_evidence": "Local path and date align with metadata record; no authoritative record-level quality reason or raster checksum is available locally."
+      }
+    ],
+    "interpretation": "All 85 records have a unique metadata date match and their optical paths exist. This is provenance/path alignment only. Neither filename nor readable/plausible raster contents establish quality; all remain governed by existing audit classifications."
+  },
+  "index_and_alignment_checks": {
+    "locked_sites": 28,
+    "site_record_order_chronological_count": 28,
+    "sites_with_duplicate_metadata_dates": 0,
+    "all_85_unique_date_matches": true,
+    "all_85_files_present": true,
+    "record_count_per_site": {
+      "L15-0331E-1257N_1327_3160_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0357E-1223N_1429_3296_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0358E-1220N_1433_3310_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0368E-1245N_1474_3210_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0434E-1218N_1736_3318_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0506E-1204N_2027_3374_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0544E-1228N_2176_3279_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0632E-0892N_2528_4620_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1138E-1216N_4553_3325_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1204E-1204N_4819_3372_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1209E-1113N_4838_3737_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1276E-1107N_5105_3761_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1296E-1198N_5184_3399_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1335E-1166N_5342_3524_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1389E-1284N_5557_3054_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1439E-1134N_5759_3655_13": {
+        "record_count": 18,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1617E-1207N_6468_3360_13": {
+        "record_count": 23,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1669E-1153N_6678_3579_13": {
+        "record_count": 18,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1672E-1207N_6691_3363_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1703E-1219N_6813_3313_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0457E-1135N_1831_3648_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0487E-1246N_1950_3207_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0977E-1187N_3911_3441_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1716E-1211N_6864_3345_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-0924E-1108N_3699_3757_13": {
+        "record_count": 23,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1289E-1169N_5156_3514_13": {
+        "record_count": 25,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1298E-1322N_5193_2903_13": {
+        "record_count": 24,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      },
+      "L15-1438E-1134N_5753_3655_13": {
+        "record_count": 22,
+        "strictly_chronological": true,
+        "duplicate_dates": 0
+      }
+    },
+    "manifest_rows_with_unique_metadata_date": 1889,
+    "manifest_s2_bad_index_matches": 1889,
+    "manifest_s2_filename_date_matches": 1889,
+    "discrepancies": []
+  },
+  "local_source_inventory": {
+    "upstream_original_readme_found": false,
+    "dataset_download_script_found": false,
+    "metadata_generation_script_found": false,
+    "processing_notebook_found": false,
+    "project_inspection_note": "docs/SCENARIO_2_DATASET_INSPECTION.md",
+    "generated_manifest": "docs/SCENARIO_2_DATASET_MANIFEST.csv",
+    "manifest_character": "Derived from local metadata.json; not an upstream manifest and does not contain file hashes.",
+    "matching_archive_or_checksum_candidates": [
+      "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping.tar.gz"
+    ],
+    "metadata_json_sha256": "b10cd5baaae303935bda8966ad7e00ed4086d77dbcb7ea0781addad1a9ae417b",
+    "bad_data_json_sha256": "03d928436771c4ee402448038dbf53b76e232f7d4b130d1cdf9f86a7785491f9",
+    "checksum_caveat": "These local JSON hashes are newly computed file fingerprints, not known release checksums."
+  },
+  "external_sources_checked": [
+    {
+      "url": "https://zenodo.org/records/7794693",
+      "claim_supported": "Dataset identity, broad contents, archive filename, archive size, published MD5, publication/release metadata."
+    }
+  ],
+  "locked_split": {
+    "path": "C:\\Users\\Manishym\\Researchpapers\\satellite‑change‑detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2\\configs\\split_definition.json",
+    "sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "expected_sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "matches": true
+  },
+  "recommendation": "Request the release data dictionary, original metadata/bad-data generation code, and per-record quality provenance from the dataset authors or obtain a checksummed source archive and compare it to the local extraction. Until then, keep s2=false/bad-index/masked conflicts unresolved and do not reinterpret the eligibility audit."
+}

@@ -1,0 +1,441 @@
+{
+  "purpose": "Pair classification for candidate historical optical months on the locked sites. This is an eligibility inventory, not a temporal-gap performance result.",
+  "metadata_rule_evidence": {
+    "metadata_json_fields": [
+      "aoi_id",
+      "year",
+      "month",
+      "s1",
+      "s2",
+      "buildings",
+      "masked"
+    ],
+    "bad_data_json_fields": [
+      "S1",
+      "S2"
+    ],
+    "s2": "Boolean availability flag on each metadata.json timestep. The file does not record why the flag is false.",
+    "bad_s2_index": "Integer position in that site's metadata.json record list, stored in bad_data.json under S2. The repository inspection says these indices must be excluded at load time and attributes the larger S2 count to cloud or mask issues. bad_data.json itself has no reason text.",
+    "masked": "Boolean timestep flag in metadata.json. Pairing and inspection code treat masked=true as excluding the timestep. The JSON does not define the flag as cloud cover, no-data, or label masking.",
+    "cooccurrence_on_locked_sites_all_months": {
+      "records": 670,
+      "s2_false": 64,
+      "s2_false_and_bad_index": 64,
+      "s2_true_and_bad_index": 0,
+      "bad_index": 64,
+      "masked": 40,
+      "masked_and_s2_true": 24,
+      "masked_and_s2_false": 16,
+      "masked_and_bad_index": 16
+    },
+    "inspection_sources": [
+      "datasets/sen12_mt_urbanmapping/multimodal_cd_dataset/metadata.json",
+      "datasets/sen12_mt_urbanmapping/multimodal_cd_dataset/bad_data.json",
+      "docs/SCENARIO_2_DATASET_INSPECTION.md sections 9 and 10",
+      "src/training/temporal_pairing_analysis.py is_s2_usable",
+      "src/datasets/scenario2_dataset.py preprocess_site"
+    ]
+  },
+  "loader_behavior": {
+    "function": "src/datasets/scenario2_dataset.py:preprocess_site",
+    "dates_read": [
+      "2018-03",
+      "2019-12"
+    ],
+    "reads_metadata_json": false,
+    "reads_bad_data_json": false,
+    "other_months": "The loader has no path that opens a candidate month other than March 2018 and December 2019.",
+    "missing_file": "rasterio.open raises if a required GeoTIFF is absent.",
+    "present_file": "A present GeoTIFF at the hardcoded dates is read and accepted. The s2, bad-index, and masked flags are not consulted.",
+    "label_rule": "(buildings_T2 >= 0.5) XOR (buildings_T1 >= 0.5), with both building maps read from the same two hardcoded dates.",
+    "sar_rule": "VV and VH at both hardcoded dates. Validity is NaN absence before zero-fill, not the metadata flags."
+  },
+  "pair_definition": {
+    "name": "moved_t1_async_pair",
+    "historical_date": "candidate month strictly before 2019-12",
+    "target_sar_date": "2019-12",
+    "required_components": [
+      "optical file and optical metadata usable at the candidate month",
+      "SAR file and SAR metadata usable at the candidate month",
+      "SAR file and SAR metadata usable at 2019-12",
+      "building file and building metadata usable at the candidate month",
+      "building file and building metadata usable at 2019-12"
+    ],
+    "confirmed_eligible": "All five components have both the file and the metadata usability flag.",
+    "ambiguous": "No component is missing on both file and metadata, but at least one component disagrees.",
+    "ineligible": "At least one required component is absent as a file and not metadata-usable.",
+    "not_claimed": "A confirmed pair is not a trained gap and is not evidence of temporal-gap sensitivity. Keeping March 2018 SAR and building dates while swapping only the optical file would leave the label interval at 21 months, so that substitution is not counted as eligible."
+  },
+  "counts": {
+    "rows": 644,
+    "confirmed_eligible": 515,
+    "ambiguous": 84,
+    "ineligible": 45
+  },
+  "by_month": [
+    {
+      "historical_optical_date": "2018-01",
+      "gap_months_to_target_sar_2019_12": 23,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 21,
+      "ambiguous": 3,
+      "ineligible": 4,
+      "confirmed_eligible_train": 15,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 2
+    },
+    {
+      "historical_optical_date": "2018-02",
+      "gap_months_to_target_sar_2019_12": 22,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 22,
+      "ambiguous": 5,
+      "ineligible": 1,
+      "confirmed_eligible_train": 15,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2018-03",
+      "gap_months_to_target_sar_2019_12": 21,
+      "role": "existing_trained_interval",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 28,
+      "ambiguous": 0,
+      "ineligible": 0,
+      "confirmed_eligible_train": 20,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 4
+    },
+    {
+      "historical_optical_date": "2018-04",
+      "gap_months_to_target_sar_2019_12": 20,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 26,
+      "ambiguous": 2,
+      "ineligible": 0,
+      "confirmed_eligible_train": 19,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2018-05",
+      "gap_months_to_target_sar_2019_12": 19,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 23,
+      "ambiguous": 4,
+      "ineligible": 1,
+      "confirmed_eligible_train": 16,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 4
+    },
+    {
+      "historical_optical_date": "2018-06",
+      "gap_months_to_target_sar_2019_12": 18,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 22,
+      "ambiguous": 6,
+      "ineligible": 0,
+      "confirmed_eligible_train": 16,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 2
+    },
+    {
+      "historical_optical_date": "2018-07",
+      "gap_months_to_target_sar_2019_12": 17,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 18,
+      "ambiguous": 8,
+      "ineligible": 2,
+      "confirmed_eligible_train": 13,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 2
+    },
+    {
+      "historical_optical_date": "2018-08",
+      "gap_months_to_target_sar_2019_12": 16,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 18,
+      "ambiguous": 6,
+      "ineligible": 4,
+      "confirmed_eligible_train": 13,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 2
+    },
+    {
+      "historical_optical_date": "2018-09",
+      "gap_months_to_target_sar_2019_12": 15,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 17,
+      "ambiguous": 10,
+      "ineligible": 1,
+      "confirmed_eligible_train": 14,
+      "confirmed_eligible_validation": 1,
+      "confirmed_eligible_test": 2
+    },
+    {
+      "historical_optical_date": "2018-10",
+      "gap_months_to_target_sar_2019_12": 14,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 24,
+      "ambiguous": 3,
+      "ineligible": 1,
+      "confirmed_eligible_train": 18,
+      "confirmed_eligible_validation": 2,
+      "confirmed_eligible_test": 4
+    },
+    {
+      "historical_optical_date": "2018-11",
+      "gap_months_to_target_sar_2019_12": 13,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 24,
+      "ambiguous": 3,
+      "ineligible": 1,
+      "confirmed_eligible_train": 17,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 4
+    },
+    {
+      "historical_optical_date": "2018-12",
+      "gap_months_to_target_sar_2019_12": 12,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 24,
+      "ambiguous": 2,
+      "ineligible": 2,
+      "confirmed_eligible_train": 18,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-01",
+      "gap_months_to_target_sar_2019_12": 11,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 23,
+      "ambiguous": 3,
+      "ineligible": 2,
+      "confirmed_eligible_train": 17,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-02",
+      "gap_months_to_target_sar_2019_12": 10,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 17,
+      "ambiguous": 5,
+      "ineligible": 6,
+      "confirmed_eligible_train": 14,
+      "confirmed_eligible_validation": 2,
+      "confirmed_eligible_test": 1
+    },
+    {
+      "historical_optical_date": "2019-03",
+      "gap_months_to_target_sar_2019_12": 9,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 21,
+      "ambiguous": 1,
+      "ineligible": 6,
+      "confirmed_eligible_train": 15,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-04",
+      "gap_months_to_target_sar_2019_12": 8,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 23,
+      "ambiguous": 0,
+      "ineligible": 5,
+      "confirmed_eligible_train": 16,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-05",
+      "gap_months_to_target_sar_2019_12": 7,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 24,
+      "ambiguous": 3,
+      "ineligible": 1,
+      "confirmed_eligible_train": 16,
+      "confirmed_eligible_validation": 4,
+      "confirmed_eligible_test": 4
+    },
+    {
+      "historical_optical_date": "2019-06",
+      "gap_months_to_target_sar_2019_12": 6,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 23,
+      "ambiguous": 3,
+      "ineligible": 2,
+      "confirmed_eligible_train": 17,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-07",
+      "gap_months_to_target_sar_2019_12": 5,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 21,
+      "ambiguous": 5,
+      "ineligible": 2,
+      "confirmed_eligible_train": 16,
+      "confirmed_eligible_validation": 2,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-08",
+      "gap_months_to_target_sar_2019_12": 4,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 23,
+      "ambiguous": 3,
+      "ineligible": 2,
+      "confirmed_eligible_train": 17,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 3
+    },
+    {
+      "historical_optical_date": "2019-09",
+      "gap_months_to_target_sar_2019_12": 3,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 22,
+      "ambiguous": 4,
+      "ineligible": 2,
+      "confirmed_eligible_train": 17,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 2
+    },
+    {
+      "historical_optical_date": "2019-10",
+      "gap_months_to_target_sar_2019_12": 2,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 26,
+      "ambiguous": 2,
+      "ineligible": 0,
+      "confirmed_eligible_train": 19,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 4
+    },
+    {
+      "historical_optical_date": "2019-11",
+      "gap_months_to_target_sar_2019_12": 1,
+      "role": "candidate_untrained",
+      "sites_in_inventory": 28,
+      "confirmed_eligible": 25,
+      "ambiguous": 3,
+      "ineligible": 0,
+      "confirmed_eligible_train": 18,
+      "confirmed_eligible_validation": 3,
+      "confirmed_eligible_test": 4
+    }
+  ],
+  "optical_disagreement": {
+    "count": 85,
+    "reason_group_raster_ranges": {
+      "s2_false_bad_index_unmasked": {
+        "count": 45,
+        "bands": [
+          10
+        ],
+        "nan_fraction_min": 0.0,
+        "nan_fraction_max": 0.0,
+        "all_band_zero_fraction_max": 0.0,
+        "finite_min": 0.002199999988079071,
+        "finite_max": 1.0
+      },
+      "s2_true_not_bad_masked": {
+        "count": 24,
+        "bands": [
+          10
+        ],
+        "nan_fraction_min": 0.0,
+        "nan_fraction_max": 0.0,
+        "all_band_zero_fraction_max": 0.0,
+        "finite_min": 9.999999747378752e-05,
+        "finite_max": 1.0
+      },
+      "s2_false_bad_index_masked": {
+        "count": 16,
+        "bands": [
+          10
+        ],
+        "nan_fraction_min": 0.0,
+        "nan_fraction_max": 0.0,
+        "all_band_zero_fraction_max": 0.0,
+        "finite_min": 9.999999747378752e-05,
+        "finite_max": 1.0
+      },
+      "other": {
+        "count": 0
+      }
+    },
+    "march_2018_reference_rasters": [
+      {
+        "site_id": "L15-0331E-1257N_1327_3160_13",
+        "path": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0331E-1257N_1327_3160_13\\s2\\s2_L15-0331E-1257N_1327_3160_13_2018_03.tif",
+        "bands": 10,
+        "height": 489,
+        "width": 488,
+        "dtype": "float32",
+        "nan_fraction": 0.0,
+        "all_band_zero_fraction": 0.0,
+        "finite_min": 0.014600000344216824,
+        "finite_max": 0.6200000047683716,
+        "finite_mean": 0.1842292994260788
+      },
+      {
+        "site_id": "L15-0357E-1223N_1429_3296_13",
+        "path": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0357E-1223N_1429_3296_13\\s2\\s2_L15-0357E-1223N_1429_3296_13_2018_03.tif",
+        "bands": 10,
+        "height": 488,
+        "width": 488,
+        "dtype": "float32",
+        "nan_fraction": 0.0,
+        "all_band_zero_fraction": 0.0,
+        "finite_min": 0.015200000256299973,
+        "finite_max": 1.0,
+        "finite_mean": 0.15243284404277802
+      },
+      {
+        "site_id": "L15-0358E-1220N_1433_3310_13",
+        "path": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\datasets\\sen12_mt_urbanmapping\\multimodal_cd_dataset\\L15-0358E-1220N_1433_3310_13\\s2\\s2_L15-0358E-1220N_1433_3310_13_2018_03.tif",
+        "bands": 10,
+        "height": 489,
+        "width": 488,
+        "dtype": "float32",
+        "nan_fraction": 0.0,
+        "all_band_zero_fraction": 0.0,
+        "finite_min": 0.02979999966919422,
+        "finite_max": 1.0,
+        "finite_mean": 0.16558079421520233
+      }
+    ],
+    "interpretation": "These ranges describe file contents. They do not decide whether a metadata flag is correct."
+  },
+  "outputs": {
+    "pair_csv": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2_temporal_gap\\pair_eligibility_by_site_month.csv",
+    "pair_json": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2_temporal_gap\\pair_eligibility_report.json",
+    "disagreement_csv": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2_temporal_gap\\optical_disagreement_files.csv"
+  }
+}

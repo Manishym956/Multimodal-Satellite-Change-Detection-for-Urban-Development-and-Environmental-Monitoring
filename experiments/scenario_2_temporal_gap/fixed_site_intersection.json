@@ -1,0 +1,21 @@
+{
+  "months_in_intersection": 22,
+  "definition": "Sites confirmed eligible for every untrained candidate month (excluding the existing 2018-03 trained interval).",
+  "count": 7,
+  "by_split": {
+    "train": [
+      "L15-0331E-1257N_1327_3160_13",
+      "L15-0357E-1223N_1429_3296_13",
+      "L15-0632E-0892N_2528_4620_13",
+      "L15-1204E-1204N_4819_3372_13",
+      "L15-1296E-1198N_5184_3399_13"
+    ],
+    "validation": [
+      "L15-0977E-1187N_3911_3441_13"
+    ],
+    "test": [
+      "L15-1289E-1169N_5156_3514_13"
+    ]
+  },
+  "variable_site_comparison_warning": "Per-gap comparisons with variable sites confound temporal gap with site composition."
+}

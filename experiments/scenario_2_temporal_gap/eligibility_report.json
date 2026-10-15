@@ -1,0 +1,1444 @@
+{
+  "purpose": "File and metadata eligibility inventory for historical optical months on the locked Scenario 2 sites. This is not a performance result and not a temporal-gap sensitivity study.",
+  "existing_experiment": {
+    "name": "Scenario 2 trained interval",
+    "historical_optical_date": "2018-03",
+    "target_sar_date": "2019-12",
+    "also_uses_sar_date": "2018-03",
+    "label_dates": [
+      "2018-03",
+      "2019-12"
+    ],
+    "label_rule": "(buildings_T2 >= 0.5) XOR (buildings_T1 >= 0.5)",
+    "gap_months": 21,
+    "statement": "March 2018 to December 2019 is the existing approximately 21-month experiment. It is not a temporal-gap sweep."
+  },
+  "eligibility_rules": [
+    "Sites are the locked train, validation, and test lists. The split file is read only.",
+    "A candidate historical month is strictly earlier than December 2019.",
+    "Optical file availability is existence of s2_{site}_{year}_{month}.tif with nonzero size.",
+    "Optical metadata usability follows metadata.json s2=true, bad_data.json S2 index absent, and masked=false.",
+    "Bad-data indices follow metadata record order, the same convention as temporal_pairing_analysis.py.",
+    "SAR file availability and building-label file availability are separate columns.",
+    "A SAR file does not make a month optically eligible.",
+    "File presence and metadata usability are both reported. Disagreements are ambiguities, not resolved by this script.",
+    "No model is trained and no detection metric is computed."
+  ],
+  "split": {
+    "path": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2\\configs\\split_definition.json",
+    "sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "expected_sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "hash_matches_published_value": true,
+    "counts": {
+      "train": 20,
+      "validation": 4,
+      "test": 4
+    }
+  },
+  "candidate_historical_months": [
+    "2018-01",
+    "2018-02",
+    "2018-03",
+    "2018-04",
+    "2018-05",
+    "2018-06",
+    "2018-07",
+    "2018-08",
+    "2018-09",
+    "2018-10",
+    "2018-11",
+    "2018-12",
+    "2019-01",
+    "2019-02",
+    "2019-03",
+    "2019-04",
+    "2019-05",
+    "2019-06",
+    "2019-07",
+    "2019-08",
+    "2019-09",
+    "2019-10",
+    "2019-11"
+  ],
+  "counts": {
+    "sites": 28,
+    "candidate_months": 23,
+    "rows": 644,
+    "optical_file_exists": 618,
+    "optical_metadata_usable": 533,
+    "optical_file_and_metadata_usable": 533,
+    "file_present_metadata_not_usable": 85,
+    "metadata_usable_file_missing": 0,
+    "sar_file_without_optical_file": 0
+  },
+  "by_month": [
+    {
+      "historical_optical_date": "2018-01",
+      "gap_months_to_target_sar_2019_12": 23,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 24,
+      "optical_metadata_usable": 21,
+      "optical_file_and_metadata_usable": 21,
+      "sar_file_at_historical_month": 24,
+      "label_file_at_historical_month": 24,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-02",
+      "gap_months_to_target_sar_2019_12": 22,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 23,
+      "optical_file_and_metadata_usable": 23,
+      "sar_file_at_historical_month": 27,
+      "label_file_at_historical_month": 27,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-03",
+      "gap_months_to_target_sar_2019_12": 21,
+      "role": "existing_trained_interval",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 28,
+      "optical_file_and_metadata_usable": 28,
+      "sar_file_at_historical_month": 28,
+      "label_file_at_historical_month": 28,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-04",
+      "gap_months_to_target_sar_2019_12": 20,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 26,
+      "optical_file_and_metadata_usable": 26,
+      "sar_file_at_historical_month": 28,
+      "label_file_at_historical_month": 28,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-05",
+      "gap_months_to_target_sar_2019_12": 19,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 27,
+      "optical_metadata_usable": 23,
+      "optical_file_and_metadata_usable": 23,
+      "sar_file_at_historical_month": 27,
+      "label_file_at_historical_month": 27,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-06",
+      "gap_months_to_target_sar_2019_12": 18,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 22,
+      "optical_file_and_metadata_usable": 22,
+      "sar_file_at_historical_month": 28,
+      "label_file_at_historical_month": 28,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-07",
+      "gap_months_to_target_sar_2019_12": 17,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 26,
+      "optical_metadata_usable": 18,
+      "optical_file_and_metadata_usable": 18,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-08",
+      "gap_months_to_target_sar_2019_12": 16,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 24,
+      "optical_metadata_usable": 18,
+      "optical_file_and_metadata_usable": 18,
+      "sar_file_at_historical_month": 24,
+      "label_file_at_historical_month": 24,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-09",
+      "gap_months_to_target_sar_2019_12": 15,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 27,
+      "optical_metadata_usable": 17,
+      "optical_file_and_metadata_usable": 17,
+      "sar_file_at_historical_month": 27,
+      "label_file_at_historical_month": 27,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-10",
+      "gap_months_to_target_sar_2019_12": 14,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 25,
+      "optical_file_and_metadata_usable": 25,
+      "sar_file_at_historical_month": 27,
+      "label_file_at_historical_month": 27,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-11",
+      "gap_months_to_target_sar_2019_12": 13,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 25,
+      "optical_file_and_metadata_usable": 25,
+      "sar_file_at_historical_month": 27,
+      "label_file_at_historical_month": 27,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2018-12",
+      "gap_months_to_target_sar_2019_12": 12,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 27,
+      "optical_metadata_usable": 25,
+      "optical_file_and_metadata_usable": 25,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-01",
+      "gap_months_to_target_sar_2019_12": 11,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 25,
+      "optical_file_and_metadata_usable": 25,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-02",
+      "gap_months_to_target_sar_2019_12": 10,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 26,
+      "optical_metadata_usable": 21,
+      "optical_file_and_metadata_usable": 21,
+      "sar_file_at_historical_month": 22,
+      "label_file_at_historical_month": 22,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-03",
+      "gap_months_to_target_sar_2019_12": 9,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 27,
+      "optical_metadata_usable": 26,
+      "optical_file_and_metadata_usable": 26,
+      "sar_file_at_historical_month": 22,
+      "label_file_at_historical_month": 22,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-04",
+      "gap_months_to_target_sar_2019_12": 8,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 27,
+      "optical_metadata_usable": 26,
+      "optical_file_and_metadata_usable": 26,
+      "sar_file_at_historical_month": 23,
+      "label_file_at_historical_month": 23,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-05",
+      "gap_months_to_target_sar_2019_12": 7,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 27,
+      "optical_metadata_usable": 24,
+      "optical_file_and_metadata_usable": 24,
+      "sar_file_at_historical_month": 27,
+      "label_file_at_historical_month": 27,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-06",
+      "gap_months_to_target_sar_2019_12": 6,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 26,
+      "optical_metadata_usable": 23,
+      "optical_file_and_metadata_usable": 23,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-07",
+      "gap_months_to_target_sar_2019_12": 5,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 26,
+      "optical_metadata_usable": 21,
+      "optical_file_and_metadata_usable": 21,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-08",
+      "gap_months_to_target_sar_2019_12": 4,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 26,
+      "optical_metadata_usable": 23,
+      "optical_file_and_metadata_usable": 23,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-09",
+      "gap_months_to_target_sar_2019_12": 3,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 26,
+      "optical_metadata_usable": 22,
+      "optical_file_and_metadata_usable": 22,
+      "sar_file_at_historical_month": 26,
+      "label_file_at_historical_month": 26,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-10",
+      "gap_months_to_target_sar_2019_12": 2,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 26,
+      "optical_file_and_metadata_usable": 26,
+      "sar_file_at_historical_month": 28,
+      "label_file_at_historical_month": 28,
+      "sar_file_without_optical_file": 0
+    },
+    {
+      "historical_optical_date": "2019-11",
+      "gap_months_to_target_sar_2019_12": 1,
+      "role": "candidate_untrained",
+      "sites": 28,
+      "optical_file_exists": 28,
+      "optical_metadata_usable": 25,
+      "optical_file_and_metadata_usable": 25,
+      "sar_file_at_historical_month": 28,
+      "label_file_at_historical_month": 28,
+      "sar_file_without_optical_file": 0
+    }
+  ],
+  "fixed_endpoint_checks": [
+    {
+      "site_id": "L15-0331E-1257N_1327_3160_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0357E-1223N_1429_3296_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0358E-1220N_1433_3310_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0368E-1245N_1474_3210_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0434E-1218N_1736_3318_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0506E-1204N_2027_3374_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0544E-1228N_2176_3279_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0632E-0892N_2528_4620_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1138E-1216N_4553_3325_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1204E-1204N_4819_3372_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1209E-1113N_4838_3737_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1276E-1107N_5105_3761_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1296E-1198N_5184_3399_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1335E-1166N_5342_3524_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1389E-1284N_5557_3054_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1439E-1134N_5759_3655_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1617E-1207N_6468_3360_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1669E-1153N_6678_3579_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1672E-1207N_6691_3363_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1703E-1219N_6813_3313_13",
+      "split": "train",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0457E-1135N_1831_3648_13",
+      "split": "validation",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0487E-1246N_1950_3207_13",
+      "split": "validation",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0977E-1187N_3911_3441_13",
+      "split": "validation",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1716E-1211N_6864_3345_13",
+      "split": "validation",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-0924E-1108N_3699_3757_13",
+      "split": "test",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1289E-1169N_5156_3514_13",
+      "split": "test",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1298E-1322N_5193_2903_13",
+      "split": "test",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    },
+    {
+      "site_id": "L15-1438E-1134N_5753_3655_13",
+      "split": "test",
+      "sar_2018_03_file": true,
+      "sar_2018_03_metadata_usable": true,
+      "sar_2019_12_file": true,
+      "sar_2019_12_metadata_usable": true,
+      "optical_2018_03_file": true,
+      "optical_2018_03_metadata_usable": true,
+      "label_2018_03_file": true,
+      "label_2018_03_metadata_usable": true,
+      "label_2019_12_file": true,
+      "label_2019_12_metadata_usable": true
+    }
+  ],
+  "ambiguities": [
+    "Optical GeoTIFF presence and metadata usability disagree for 85 site-months. The reasons can overlap. This inventory does not decide which of those months are valid training inputs."
+  ],
+  "optical_file_metadata_disagreement": {
+    "count": 85,
+    "reason_counts": {
+      "metadata_s2_flag_false": 61,
+      "bad_data_s2_index": 61,
+      "masked": 40,
+      "metadata_record_missing": 0
+    },
+    "site_months": [
+      {
+        "site_id": "L15-0358E-1220N_1433_3310_13",
+        "split": "train",
+        "historical_optical_date": "2018-05",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0358E-1220N_1433_3310_13",
+        "split": "train",
+        "historical_optical_date": "2018-06",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0368E-1245N_1474_3210_13",
+        "split": "train",
+        "historical_optical_date": "2018-08",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0434E-1218N_1736_3318_13",
+        "split": "train",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0434E-1218N_1736_3318_13",
+        "split": "train",
+        "historical_optical_date": "2019-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2018-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2018-05",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2018-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2018-08",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2018-11",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2019-05",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2019-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2019-08",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0506E-1204N_2027_3374_13",
+        "split": "train",
+        "historical_optical_date": "2019-11",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "historical_optical_date": "2019-01",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0544E-1228N_2176_3279_13",
+        "split": "train",
+        "historical_optical_date": "2019-05",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1138E-1216N_4553_3325_13",
+        "split": "train",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1138E-1216N_4553_3325_13",
+        "split": "train",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1138E-1216N_4553_3325_13",
+        "split": "train",
+        "historical_optical_date": "2019-03",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1209E-1113N_4838_3737_13",
+        "split": "train",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1209E-1113N_4838_3737_13",
+        "split": "train",
+        "historical_optical_date": "2019-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1335E-1166N_5342_3524_13",
+        "split": "train",
+        "historical_optical_date": "2018-08",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1439E-1134N_5759_3655_13",
+        "split": "train",
+        "historical_optical_date": "2018-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2018-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2018-08",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2018-10",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2019-05",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2019-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2019-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2019-10",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1617E-1207N_6468_3360_13",
+        "split": "train",
+        "historical_optical_date": "2019-11",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2018-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2018-04",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2018-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2018-11",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1669E-1153N_6678_3579_13",
+        "split": "train",
+        "historical_optical_date": "2019-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1672E-1207N_6691_3363_13",
+        "split": "train",
+        "historical_optical_date": "2018-12",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2018-01",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2018-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2018-05",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2018-08",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2019-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1703E-1219N_6813_3313_13",
+        "split": "train",
+        "historical_optical_date": "2019-08",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2018-10",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2019-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2019-07",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2019-08",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2019-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2019-10",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0457E-1135N_1831_3648_13",
+        "split": "validation",
+        "historical_optical_date": "2019-11",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "historical_optical_date": "2018-05",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "historical_optical_date": "2018-10",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "historical_optical_date": "2019-01",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "historical_optical_date": "2019-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-0487E-1246N_1950_3207_13",
+        "split": "validation",
+        "historical_optical_date": "2019-07",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "historical_optical_date": "2018-11",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "historical_optical_date": "2018-12",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1716E-1211N_6864_3345_13",
+        "split": "validation",
+        "historical_optical_date": "2019-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "historical_optical_date": "2018-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "historical_optical_date": "2018-07",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-0924E-1108N_3699_3757_13",
+        "split": "test",
+        "historical_optical_date": "2019-02",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "historical_optical_date": "2018-01",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "historical_optical_date": "2018-02",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "historical_optical_date": "2018-04",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "historical_optical_date": "2019-01",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1298E-1322N_5193_2903_13",
+        "split": "test",
+        "historical_optical_date": "2019-02",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2018-01",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": false
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2018-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2018-08",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2018-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2019-04",
+        "metadata_s2_flag": true,
+        "bad_index": false,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2019-06",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      },
+      {
+        "site_id": "L15-1438E-1134N_5753_3655_13",
+        "split": "test",
+        "historical_optical_date": "2019-09",
+        "metadata_s2_flag": false,
+        "bad_index": true,
+        "masked": true
+      }
+    ]
+  },
+  "outputs": {
+    "csv": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2_temporal_gap\\eligibility_by_site_month.csv",
+    "json": "C:\\Users\\Manishym\\Researchpapers\\satellite\u2011change\u2011detection\\projects\\multimodal-satellite-change-detection\\experiments\\scenario_2_temporal_gap\\eligibility_report.json"
+  }
+}
