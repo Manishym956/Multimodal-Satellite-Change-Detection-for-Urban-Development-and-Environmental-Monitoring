@@ -1,0 +1,7 @@
+full F1 0.5264 (tau 0.80) | no_o2 F1 0.2300 (tau 1.00) | no_opt F1 0.4706 (tau 0.32)
+full F1 0.5888 (tau 0.79) | no_o2 F1 0.2068 (tau 0.99) | no_opt F1 0.4693 (tau 0.54)
+full F1 0.5011 (tau 0.85) | no_o2 F1 0.1519 (tau 0.99) | no_opt F1 0.4286 (tau 0.66)
+full F1 0.5875 (tau 0.69) | no_o2 F1 0.1343 (tau 0.99) | no_opt F1 0.4469 (tau 0.50)
+full F1 0.4944 (tau 0.73) | no_o2 F1 0.1668 (tau 0.99) | no_opt F1 0.4314 (tau 0.42)
+full F1 0.5340 (tau 0.84) | no_o2 F1 0.1441 (tau 0.95) | no_opt F1 0.4278 (tau 0.61)
+P1 DONE

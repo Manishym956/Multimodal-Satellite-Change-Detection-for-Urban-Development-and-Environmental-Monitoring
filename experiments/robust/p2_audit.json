@@ -1,0 +1,3116 @@
+{
+  "n_checks": 579,
+  "n_failed": 0,
+  "failed": [],
+  "paired": {
+    "at_selected": {
+      "full": {
+        "diffs": [
+          -0.09034104817837407,
+          -0.030048454755977727,
+          0.034823418802155004,
+          0.01224277306195154,
+          0.019439957628681226,
+          -0.030798687491781718,
+          -0.013565893846387511,
+          0.08704931209665423,
+          0.01261573612018485,
+          -0.031875463103540946
+        ],
+        "mean_diff": -0.0030458349666435125,
+        "sd_diff": 0.04783941745761851,
+        "t_p": 0.8449130312202999,
+        "wilcoxon_p": 0.76953125,
+        "b_gt_a": 5,
+        "dz": -0.06366789414486188,
+        "ci95": [
+          -0.037268092623410076,
+          0.031176422690123044
+        ],
+        "holm_p": 0.8449130312202999,
+        "holm_wilcoxon_p": 0.76953125
+      },
+      "no_o2": {
+        "diffs": [
+          0.23252774122466718,
+          0.1550270157574676,
+          0.31946936178745217,
+          0.12383430391025774,
+          0.311323615193683,
+          0.24259122912742112,
+          0.3575713460198494,
+          0.34914873617434,
+          0.12665242799097193,
+          0.18946769886331583
+        ],
+        "mean_diff": 0.2407613476049426,
+        "sd_diff": 0.09025379075819938,
+        "t_p": 1.445486906244024e-05,
+        "wilcoxon_p": 0.001953125,
+        "b_gt_a": 10,
+        "dz": 2.6676037159477417,
+        "ci95": [
+          0.17619767509443807,
+          0.30532502011544715
+        ],
+        "holm_p": 5.781947624976096e-05,
+        "holm_wilcoxon_p": 0.0078125
+      },
+      "o2_copy": {
+        "diffs": [
+          0.0741112022176948,
+          0.04386371357880958,
+          0.12414579273403248,
+          0.0842235705655161,
+          0.1635986961683008,
+          0.17240112027698995,
+          0.2100470280843343,
+          0.15510401023737208,
+          0.11272024774506634,
+          0.0977174206304745
+        ],
+        "mean_diff": 0.12379328022385909,
+        "sd_diff": 0.051199780029366884,
+        "t_p": 3.172098897682814e-05,
+        "wilcoxon_p": 0.001953125,
+        "b_gt_a": 10,
+        "dz": 2.4178478921755997,
+        "ci95": [
+          0.0871671639947676,
+          0.16041939645295059
+        ],
+        "holm_p": 9.516296693048442e-05,
+        "holm_wilcoxon_p": 0.0078125
+      },
+      "no_opt": {
+        "diffs": [
+          -0.018141452724045826,
+          -0.029341940398059263,
+          0.3420407552718803,
+          -0.00416318544939831,
+          0.02764520107923868,
+          0.06875207942632422,
+          0.04152977824449838,
+          0.05019412746967772,
+          -0.010034607731211842,
+          -0.03567423800950659
+        ],
+        "mean_diff": 0.04328065171793975,
+        "sd_diff": 0.11084310589172791,
+        "t_p": 0.2481818325399959,
+        "wilcoxon_p": 0.322265625,
+        "b_gt_a": 5,
+        "dz": 0.39046769187626795,
+        "ci95": [
+          -0.036011729562904674,
+          0.12257303299878416
+        ],
+        "holm_p": 0.4963636650799918,
+        "holm_wilcoxon_p": 0.64453125
+      }
+    },
+    "at_0.5": {
+      "full": {
+        "diffs": [
+          -0.10883047424501252,
+          -0.17997221382095058,
+          -0.08475276046235308,
+          -0.12963405526437966,
+          -0.10072865948314991,
+          -0.21582829137812864,
+          0.0071211402158632975,
+          0.04226672671679821,
+          0.014476057049727764,
+          -0.10108278387522529
+        ],
+        "mean_diff": -0.08569653145468105,
+        "sd_diff": 0.08417951715637763,
+        "t_p": 0.010501743792435328,
+        "wilcoxon_p": 0.02734375,
+        "b_gt_a": 3,
+        "dz": -1.018021180799663,
+        "ci95": [
+          -0.14591493039525974,
+          -0.025478132514102365
+        ],
+        "holm_p": 0.010501743792435328,
+        "holm_wilcoxon_p": 0.02734375
+      },
+      "no_o2": {
+        "diffs": [
+          0.24036211396528795,
+          0.23209236397581423,
+          0.28627154019497,
+          0.19779045801634756,
+          0.19545588885993942,
+          0.21846818039042937,
+          0.33770571813425365,
+          0.3151751950473517,
+          0.1580893267117837,
+          0.27768424683344717
+        ],
+        "mean_diff": 0.24590950321296248,
+        "sd_diff": 0.05716556430004868,
+        "t_p": 2.6284558035321026e-07,
+        "wilcoxon_p": 0.001953125,
+        "b_gt_a": 10,
+        "dz": 4.301706914362657,
+        "ci95": [
+          0.20501572200620213,
+          0.2868032844197228
+        ],
+        "holm_p": 1.051382321412841e-06,
+        "holm_wilcoxon_p": 0.0078125
+      },
+      "o2_copy": {
+        "diffs": [
+          0.014876139492126017,
+          0.17108706087281478,
+          0.31139208683530833,
+          0.05342689903688447,
+          0.2859857501812515,
+          0.28219212950476313,
+          0.3144186378848711,
+          0.2634295272723038,
+          0.13820940534771725,
+          0.1830259791942536
+        ],
+        "mean_diff": 0.20180436156222942,
+        "sd_diff": 0.10767045168232416,
+        "t_p": 0.00022154565484833836,
+        "wilcoxon_p": 0.001953125,
+        "b_gt_a": 10,
+        "dz": 1.8742780252992925,
+        "ci95": [
+          0.12478156038039494,
+          0.2788271627440639
+        ],
+        "holm_p": 0.0006646369645450151,
+        "holm_wilcoxon_p": 0.0078125
+      },
+      "no_opt": {
+        "diffs": [
+          0.2221408794796839,
+          -0.02703912074989412,
+          0.28966652465170195,
+          0.17295369010860656,
+          0.24897137012663906,
+          0.21602322218805303,
+          0.36096551048914927,
+          0.27224892751078655,
+          0.09381864907752327,
+          0.12446041653757609
+        ],
+        "mean_diff": 0.19742100694198256,
+        "sd_diff": 0.11130913267572502,
+        "t_p": 0.00033057029758527064,
+        "wilcoxon_p": 0.00390625,
+        "b_gt_a": 9,
+        "dz": 1.773628112952113,
+        "ci95": [
+          0.11779525018283026,
+          0.27704676370113485
+        ],
+        "holm_p": 0.0006646369645450151,
+        "holm_wilcoxon_p": 0.0078125
+      }
+    }
+  },
+  "checks": [
+    {
+      "check": "p2_full seed 1 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 metrics.json exists",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 1, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 1: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: selected step = validation argmax",
+      "pass": true,
+      "detail": "1900 vs 1900"
+    },
+    {
+      "check": "p2_full seed 1: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 2, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 2: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: selected step = validation argmax",
+      "pass": true,
+      "detail": "1250 vs 1250"
+    },
+    {
+      "check": "p2_full seed 2: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 3, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 3: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: selected step = validation argmax",
+      "pass": true,
+      "detail": "2275 vs 2275"
+    },
+    {
+      "check": "p2_full seed 3: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 4, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 4: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: selected step = validation argmax",
+      "pass": true,
+      "detail": "1800 vs 1800"
+    },
+    {
+      "check": "p2_full seed 4: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 5, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 5: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: selected step = validation argmax",
+      "pass": true,
+      "detail": "2300 vs 2300"
+    },
+    {
+      "check": "p2_full seed 5: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 6, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 6: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: selected step = validation argmax",
+      "pass": true,
+      "detail": "1800 vs 1800"
+    },
+    {
+      "check": "p2_full seed 6: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 7, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 7: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: selected step = validation argmax",
+      "pass": true,
+      "detail": "1375 vs 1375"
+    },
+    {
+      "check": "p2_full seed 7: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 8, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 8: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: selected step = validation argmax",
+      "pass": true,
+      "detail": "1400 vs 1400"
+    },
+    {
+      "check": "p2_full seed 8: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 9, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 9: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: selected step = validation argmax",
+      "pass": true,
+      "detail": "2200 vs 2200"
+    },
+    {
+      "check": "p2_full seed 9: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_full\", \"seed\": 10, \"protocol\": \"holdout\", \"train_conditions\": \"full=1\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_full seed 10: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: val_score = mean val F1 over trained conditions ['full']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: selected step = validation argmax",
+      "pass": true,
+      "detail": "2250 vs 2250"
+    },
+    {
+      "check": "p2_full seed 10: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 1, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 1: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: selected step = validation argmax",
+      "pass": true,
+      "detail": "1125 vs 1125"
+    },
+    {
+      "check": "p2_dropout seed 1: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 2, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 2: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: selected step = validation argmax",
+      "pass": true,
+      "detail": "350 vs 350"
+    },
+    {
+      "check": "p2_dropout seed 2: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 3, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 3: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: selected step = validation argmax",
+      "pass": true,
+      "detail": "1075 vs 1075"
+    },
+    {
+      "check": "p2_dropout seed 3: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 4, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 4: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: selected step = validation argmax",
+      "pass": true,
+      "detail": "825 vs 825"
+    },
+    {
+      "check": "p2_dropout seed 4: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 5, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 5: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: selected step = validation argmax",
+      "pass": true,
+      "detail": "650 vs 650"
+    },
+    {
+      "check": "p2_dropout seed 5: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 6, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 6: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: selected step = validation argmax",
+      "pass": true,
+      "detail": "1000 vs 1000"
+    },
+    {
+      "check": "p2_dropout seed 6: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 7, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 7: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: selected step = validation argmax",
+      "pass": true,
+      "detail": "500 vs 500"
+    },
+    {
+      "check": "p2_dropout seed 7: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 8, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 8: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: selected step = validation argmax",
+      "pass": true,
+      "detail": "1525 vs 1525"
+    },
+    {
+      "check": "p2_dropout seed 8: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 9, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 9: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: selected step = validation argmax",
+      "pass": true,
+      "detail": "1700 vs 1700"
+    },
+    {
+      "check": "p2_dropout seed 9: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: args match pre-registration",
+      "pass": true,
+      "detail": "{\"name\": \"p2_dropout\", \"seed\": 10, \"protocol\": \"holdout\", \"train_conditions\": \"full=0.5,no_o2=0.25,no_opt=0.25\", \"steps\": 2500, \"eval_every\": 25, \"batch_size\": 64, \"crop_size\": 32, \"lr\": 5e-05, \"weight_decay\": 0.0005, \"loss\": \"jaccard\", \"no_augment\": false, \"uniform_crop\": false}"
+    },
+    {
+      "check": "p2_dropout seed 10: train_robust.py sha256 = frozen",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: source hashes equal across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: snapshot present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: split",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: val_score = mean val F1 over trained conditions ['full', 'no_o2', 'no_opt']",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: selected step = validation argmax",
+      "pass": true,
+      "detail": "1025 vs 1025"
+    },
+    {
+      "check": "p2_dropout seed 10: history covers steps 25..2500",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 full: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 full at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 full at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 no_o2: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 no_o2 at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 no_o2 at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 o2_copy: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 o2_copy at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 o2_copy at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 no_opt: test entry present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 no_opt at_selected: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10 no_opt at_0.5: metrics consistent with counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: reeval reproduced exactly (counts at \u03c4 and 0.5; \u03c4 = validation argmax)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full: seeds 1-10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full full at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_o2 at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full o2_copy at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full no_opt at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout: seeds 1-10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout full at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_o2 at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout o2_copy at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_selected tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 f1: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 precision: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 recall: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 iou: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 tp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 fp: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 fn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout no_opt at_0.5 tn: values/mean/sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired: all 4 conditions present",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired full: seeds matched 1-10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired full: diffs, t p, Wilcoxon p, Holm p reproduced",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired no_o2: seeds matched 1-10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired no_o2: diffs, t p, Wilcoxon p, Holm p reproduced",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired o2_copy: seeds matched 1-10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired o2_copy: diffs, t p, Wilcoxon p, Holm p reproduced",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired no_opt: seeds matched 1-10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired no_opt: diffs, t p, Wilcoxon p, Holm p reproduced",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

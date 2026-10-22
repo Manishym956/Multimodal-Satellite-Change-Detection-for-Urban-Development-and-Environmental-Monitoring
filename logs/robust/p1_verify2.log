@@ -1,0 +1,27 @@
+seed4 orphan exited; metrics present: yes
+hafner_full_seed1 reproduced exactly | added ['o2_copy']
+hafner_full_seed2 reproduced exactly | added ['o2_copy']
+hafner_full_seed3 reproduced exactly | added ['o2_copy']
+hafner_full_seed4 reproduced exactly | added []
+holdout_full_s1000_seed1 reproduced exactly | added ['o2_copy']
+holdout_full_s1000_seed2 reproduced exactly | added ['o2_copy']
+holdout_full_s1000_seed3 reproduced exactly | added ['o2_copy']
+holdout_full_s2500_seed1 reproduced exactly | added ['o2_copy']
+holdout_full_s2500_seed2 reproduced exactly | added ['o2_copy']
+holdout_full_s2500_seed3 reproduced exactly | added ['o2_copy']
+holdout_full_seed1 reproduced exactly | added ['o2_copy']
+holdout_full_seed2 reproduced exactly | added ['o2_copy']
+holdout_full_seed3 reproduced exactly | added ['o2_copy']
+full F1 0.5055 (tau 0.72) | no_o2 F1 0.1712 (tau 0.99) | no_opt F1 0.4349 (tau 0.77) | o2_copy F1 0.4430 (tau 0.33)
+full F1 0.6059 (tau 0.51) | no_o2 F1 0.2868 (tau 0.99) | no_opt F1 0.4323 (tau 0.21) | o2_copy F1 0.3905 (tau 0.18)
+full F1 0.5567 (tau 0.72) | no_o2 F1 0.3528 (tau 0.94) | no_opt F1 0.3512 (tau 0.63) | o2_copy F1 0.4108 (tau 0.41)
+full F1 0.5598 (tau 0.64) | no_o2 F1 0.1676 (tau 0.99) | no_opt F1 0.4266 (tau 0.47) | o2_copy F1 0.4124 (tau 0.28)
+full F1 0.5737 (tau 0.66) | no_o2 F1 0.2234 (tau 0.99) | no_opt F1 0.4438 (tau 0.25) | o2_copy F1 0.4359 (tau 0.27)
+full F1 0.5677 (tau 0.88) | no_o2 F1 0.1870 (tau 0.99) | no_opt F1 0.4146 (tau 0.55) | o2_copy F1 0.4086 (tau 0.46)
+hafner_full_seed10 reproduced exactly | added []
+hafner_full_seed5 reproduced exactly | added []
+hafner_full_seed6 reproduced exactly | added []
+hafner_full_seed7 reproduced exactly | added []
+hafner_full_seed8 reproduced exactly | added []
+hafner_full_seed9 reproduced exactly | added []
+P1V DONE

@@ -1,0 +1,41 @@
+== p2_full seed 1
+full F1 0.5720 (tau 0.77) | no_o2 F1 0.1516 (tau 0.99) | no_opt F1 0.4276 (tau 0.84) | o2_copy F1 0.3095 (tau 0.11)
+== p2_dropout seed 1
+full F1 0.4816 (tau 0.89) | no_o2 F1 0.3841 (tau 0.70) | no_opt F1 0.4094 (tau 0.83) | o2_copy F1 0.3836 (tau 0.58)
+== p2_full seed 2
+full F1 0.5696 (tau 0.51) | no_o2 F1 0.2390 (tau 0.99) | no_opt F1 0.4628 (tau 0.37) | o2_copy F1 0.3764 (tau 0.11)
+== p2_dropout seed 2
+full F1 0.5396 (tau 0.87) | no_o2 F1 0.3940 (tau 0.60) | no_opt F1 0.4335 (tau 0.60) | o2_copy F1 0.4203 (tau 0.44)
+== p2_full seed 3
+full F1 0.5194 (tau 0.97) | no_o2 F1 0.1149 (tau 0.98) | no_opt F1 0.1040 (tau 0.99) | o2_copy F1 0.2969 (tau 0.11)
+== p2_dropout seed 3
+full F1 0.5542 (tau 0.97) | no_o2 F1 0.4343 (tau 0.67) | no_opt F1 0.4461 (tau 0.72) | o2_copy F1 0.4211 (tau 0.42)
+== p2_full seed 4
+full F1 0.5363 (tau 0.62) | no_o2 F1 0.2723 (tau 0.99) | no_opt F1 0.4359 (tau 0.79) | o2_copy F1 0.3631 (tau 0.25)
+== p2_dropout seed 4
+full F1 0.5485 (tau 0.92) | no_o2 F1 0.3962 (tau 0.83) | no_opt F1 0.4317 (tau 0.90) | o2_copy F1 0.4473 (tau 0.75)
+== p2_full seed 5
+full F1 0.5597 (tau 0.79) | no_o2 F1 0.1527 (tau 0.93) | no_opt F1 0.4379 (tau 0.07) | o2_copy F1 0.3009 (tau 0.06)
+== p2_dropout seed 5
+full F1 0.5791 (tau 0.93) | no_o2 F1 0.4640 (tau 0.74) | no_opt F1 0.4656 (tau 0.67) | o2_copy F1 0.4645 (tau 0.44)
+== p2_full seed 6
+full F1 0.5939 (tau 0.51) | no_o2 F1 0.1906 (tau 0.99) | no_opt F1 0.3611 (tau 0.05) | o2_copy F1 0.2706 (tau 0.10)
+== p2_dropout seed 6
+full F1 0.5631 (tau 0.97) | no_o2 F1 0.4332 (tau 0.87) | no_opt F1 0.4299 (tau 0.89) | o2_copy F1 0.4430 (tau 0.70)
+== p2_full seed 7
+full F1 0.5545 (tau 0.94) | no_o2 F1 0.0965 (tau 0.67) | no_opt F1 0.4345 (tau 0.90) | o2_copy F1 0.2883 (tau 0.16)
+== p2_dropout seed 7
+full F1 0.5409 (tau 0.66) | no_o2 F1 0.4541 (tau 0.54) | no_opt F1 0.4760 (tau 0.55) | o2_copy F1 0.4983 (tau 0.44)
+== p2_full seed 8
+full F1 0.5045 (tau 0.76) | no_o2 F1 0.1426 (tau 0.99) | no_opt F1 0.4346 (tau 0.08) | o2_copy F1 0.3306 (tau 0.14)
+== p2_dropout seed 8
+full F1 0.5915 (tau 0.84) | no_o2 F1 0.4917 (tau 0.76) | no_opt F1 0.4847 (tau 0.77) | o2_copy F1 0.4857 (tau 0.45)
+== p2_full seed 9
+full F1 0.5549 (tau 0.87) | no_o2 F1 0.2868 (tau 0.90) | no_opt F1 0.4305 (tau 0.05) | o2_copy F1 0.3153 (tau 0.25)
+== p2_dropout seed 9
+full F1 0.5675 (tau 0.89) | no_o2 F1 0.4134 (tau 0.73) | no_opt F1 0.4204 (tau 0.79) | o2_copy F1 0.4281 (tau 0.30)
+== p2_full seed 10
+full F1 0.5920 (tau 0.76) | no_o2 F1 0.2536 (tau 0.98) | no_opt F1 0.4421 (tau 0.14) | o2_copy F1 0.2903 (tau 0.07)
+== p2_dropout seed 10
+full F1 0.5601 (tau 0.79) | no_o2 F1 0.4431 (tau 0.61) | no_opt F1 0.4064 (tau 0.70) | o2_copy F1 0.3880 (tau 0.37)
+P2 DONE

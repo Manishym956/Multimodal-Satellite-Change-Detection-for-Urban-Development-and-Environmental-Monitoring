@@ -1,0 +1,179 @@
+{
+  "args": {
+    "name": "hafner_full",
+    "seed": 9,
+    "protocol": "hafner",
+    "train_conditions": "full=1",
+    "steps": 390,
+    "eval_every": 390,
+    "batch_size": 64,
+    "crop_size": 32,
+    "lr": 5e-05,
+    "weight_decay": 0.0005,
+    "loss": "jaccard",
+    "no_augment": false,
+    "uniform_crop": false
+  },
+  "train_cities": [
+    "aguasclaras",
+    "bercy",
+    "bordeaux",
+    "nantes",
+    "paris",
+    "rennes",
+    "saclay_e",
+    "abudhabi",
+    "cupertino",
+    "pisa",
+    "beihai",
+    "hongkong",
+    "beirut",
+    "mumbai"
+  ],
+  "val_cities": [
+    "aguasclaras",
+    "bercy",
+    "bordeaux",
+    "nantes",
+    "paris",
+    "rennes",
+    "saclay_e",
+    "abudhabi",
+    "cupertino",
+    "pisa",
+    "beihai",
+    "hongkong",
+    "beirut",
+    "mumbai"
+  ],
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "selected_step": 390,
+  "selection_score": 0.552162383946071,
+  "test": {
+    "full": {
+      "selected_threshold": 0.66,
+      "at_selected": {
+        "tp": 91792,
+        "fp": 69126,
+        "fn": 67285,
+        "tn": 2849733,
+        "precision": 0.5704271740886663,
+        "recall": 0.5770287345122174,
+        "f1": 0.5737089642025656,
+        "iou": 0.4022383579532259,
+        "false_alarm_rate": 0.0236825417055089
+      },
+      "at_0.5": {
+        "tp": 107064,
+        "fp": 114250,
+        "fn": 52013,
+        "tn": 2804609,
+        "precision": 0.4837651481605321,
+        "recall": 0.6730325565606593,
+        "f1": 0.5629155263925802,
+        "iou": 0.3917066371050061,
+        "false_alarm_rate": 0.03914200720212933
+      }
+    },
+    "no_o2": {
+      "selected_threshold": 0.99,
+      "at_selected": {
+        "tp": 97362,
+        "fp": 615059,
+        "fn": 61715,
+        "tn": 2303800,
+        "precision": 0.13666357392609146,
+        "recall": 0.6120432243504718,
+        "f1": 0.22343596887198824,
+        "iou": 0.1257685987991774,
+        "false_alarm_rate": 0.210718982999864
+      },
+      "at_0.5": {
+        "tp": 142078,
+        "fp": 1637087,
+        "fn": 16999,
+        "tn": 1281772,
+        "precision": 0.07985656192652171,
+        "recall": 0.8931398002225337,
+        "f1": 0.1466050162982744,
+        "iou": 0.07910079480492872,
+        "false_alarm_rate": 0.5608653929497793
+      }
+    },
+    "no_opt": {
+      "selected_threshold": 0.25,
+      "at_selected": {
+        "tp": 64859,
+        "fp": 68330,
+        "fn": 94218,
+        "tn": 2850529,
+        "precision": 0.48696964464032316,
+        "recall": 0.40772078930329336,
+        "f1": 0.44383541020850864,
+        "iou": 0.2852110972837248,
+        "false_alarm_rate": 0.02340983240368925
+      },
+      "at_0.5": {
+        "tp": 34549,
+        "fp": 18666,
+        "fn": 124528,
+        "tn": 2900193,
+        "precision": 0.6492342384665978,
+        "recall": 0.21718413095544925,
+        "f1": 0.3254856518380344,
+        "iou": 0.19437614983431134,
+        "false_alarm_rate": 0.006394964607745698
+      }
+    },
+    "o2_copy": {
+      "selected_threshold": 0.27,
+      "at_selected": {
+        "tp": 62184,
+        "fp": 64057,
+        "fn": 96893,
+        "tn": 2854802,
+        "precision": 0.4925816493849067,
+        "recall": 0.3909050334114926,
+        "f1": 0.43589258301263856,
+        "iou": 0.27868455726155583,
+        "false_alarm_rate": 0.021945904204348343
+      },
+      "at_0.5": {
+        "tp": 35204,
+        "fp": 19421,
+        "fn": 123873,
+        "tn": 2899438,
+        "precision": 0.6444668192219679,
+        "recall": 0.22130163379998366,
+        "f1": 0.32946813787423607,
+        "iou": 0.197223498302502,
+        "false_alarm_rate": 0.006653627324923883
+      }
+    }
+  },
+  "history": [
+    {
+      "step": 390,
+      "loss": -0.2937673330307007,
+      "val_score": 0.552162383946071,
+      "val_f1_full": 0.552162383946071,
+      "val_f1_no_o2": 0.1364872507448228,
+      "val_f1_no_opt": 0.3225681330348661,
+      "val_f1_o2_copy": 0.30476997586708027
+    }
+  ],
+  "train_seconds": 49.1,
+  "torch": "2.5.1+cu124",
+  "dsunet_source": "repos/2/DS_UNet@8bfa4be utils/networks.py, utils/loss_functions.py"
+}

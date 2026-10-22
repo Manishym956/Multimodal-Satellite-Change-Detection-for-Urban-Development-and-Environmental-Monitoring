@@ -1,0 +1,21 @@
+p2_full_seed1 clean 0.572 | c10 0.275 | c30 0.158 | c60 0.121 | missing 0.119 | c100 0.098 | haze 0.101
+p2_full_seed2 clean 0.570 | c10 0.298 | c30 0.169 | c60 0.125 | missing 0.119 | c100 0.098 | haze 0.099
+p2_full_seed3 clean 0.519 | c10 0.260 | c30 0.157 | c60 0.121 | missing 0.111 | c100 0.098 | haze 0.099
+p2_full_seed4 clean 0.536 | c10 0.298 | c30 0.172 | c60 0.125 | missing 0.136 | c100 0.098 | haze 0.099
+p2_full_seed5 clean 0.560 | c10 0.276 | c30 0.159 | c60 0.120 | missing 0.166 | c100 0.098 | haze 0.099
+p2_full_seed6 clean 0.594 | c10 0.307 | c30 0.175 | c60 0.124 | missing 0.110 | c100 0.098 | haze 0.098
+p2_full_seed7 clean 0.554 | c10 0.275 | c30 0.162 | c60 0.121 | missing 0.102 | c100 0.098 | haze 0.100
+p2_full_seed8 clean 0.504 | c10 0.276 | c30 0.162 | c60 0.122 | missing 0.139 | c100 0.098 | haze 0.104
+p2_full_seed9 clean 0.555 | c10 0.299 | c30 0.173 | c60 0.125 | missing 0.273 | c100 0.098 | haze 0.099
+p2_full_seed10 clean 0.592 | c10 0.287 | c30 0.162 | c60 0.123 | missing 0.147 | c100 0.098 | haze 0.100
+p2_dropout_seed1 clean 0.482 | c10 0.345 | c30 0.223 | c60 0.165 | missing 0.411 | c100 0.128 | haze 0.305
+p2_dropout_seed2 clean 0.540 | c10 0.327 | c30 0.189 | c60 0.131 | missing 0.490 | c100 0.098 | haze 0.137
+p2_dropout_seed3 clean 0.554 | c10 0.323 | c30 0.188 | c60 0.131 | missing 0.510 | c100 0.098 | haze 0.127
+p2_dropout_seed4 clean 0.549 | c10 0.334 | c30 0.194 | c60 0.132 | missing 0.448 | c100 0.099 | haze 0.182
+p2_dropout_seed5 clean 0.579 | c10 0.335 | c30 0.189 | c60 0.131 | missing 0.508 | c100 0.099 | haze 0.127
+p2_dropout_seed6 clean 0.563 | c10 0.327 | c30 0.187 | c60 0.131 | missing 0.485 | c100 0.098 | haze 0.130
+p2_dropout_seed7 clean 0.541 | c10 0.332 | c30 0.193 | c60 0.132 | missing 0.486 | c100 0.099 | haze 0.248
+p2_dropout_seed8 clean 0.592 | c10 0.324 | c30 0.182 | c60 0.128 | missing 0.495 | c100 0.098 | haze 0.170
+p2_dropout_seed9 clean 0.568 | c10 0.321 | c30 0.182 | c60 0.129 | missing 0.469 | c100 0.098 | haze 0.101
+p2_dropout_seed10 clean 0.560 | c10 0.320 | c30 0.183 | c60 0.129 | missing 0.480 | c100 0.099 | haze 0.143
+P3 EVAL DONE

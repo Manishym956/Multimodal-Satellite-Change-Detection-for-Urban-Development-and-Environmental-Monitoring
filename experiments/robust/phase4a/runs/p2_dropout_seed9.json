@@ -1,0 +1,58 @@
+{
+  "run": "p2_dropout_seed9",
+  "arm": "p2_dropout",
+  "seed": 9,
+  "checkpoint_step": 1700,
+  "tau_clean": 0.89,
+  "tau_level_val": {
+    "clean": 0.89,
+    "c10": 0.63,
+    "c30": 0.21,
+    "c60": 0.14,
+    "z10": 0.89,
+    "z30": 0.91,
+    "z60": 0.91
+  },
+  "anchors": {
+    "clean_val_argmax": true,
+    "clean_test": true,
+    "c10_pooled": true,
+    "c10_inside": true,
+    "c10_outside": true,
+    "c10_inside_clean": true,
+    "c10_outside_clean": true,
+    "c30_pooled": true,
+    "c30_inside": true,
+    "c30_outside": true,
+    "c30_inside_clean": true,
+    "c30_outside_clean": true,
+    "c60_pooled": true,
+    "c60_inside": true,
+    "c60_outside": true,
+    "c60_inside_clean": true,
+    "c60_outside_clean": true
+  },
+  "val_cities": [
+    "beihai",
+    "bercy",
+    "aguasclaras",
+    "paris"
+  ],
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "source_sha256": {
+    "eval_phase4a.py": "5d831a81126b97c99778fa835ec35ef068520b30b960756c3c3b97b3ccc70f62",
+    "src/phase3/corruption.py": "6418fde31779dd219f3b2ec7204c54760b2f7b7d70bb9070db86012639fb7d1e",
+    "src/training/train_robust.py": "c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c"
+  }
+}

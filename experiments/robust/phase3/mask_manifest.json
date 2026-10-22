@@ -1,0 +1,926 @@
+[
+  {
+    "split": "val",
+    "city": "beihai",
+    "level": "c10",
+    "seed": 1201881816,
+    "scene": "S2B_MSIL1C_20180812T135109_N0206_R024_T22MCS_20180812T190350",
+    "window_yx_10m": [
+      861,
+      738
+    ],
+    "shape": [
+      902,
+      772
+    ],
+    "attempts": 227,
+    "raw_fraction": 0.09837092011994072,
+    "k": 69634,
+    "fraction": 0.09999942557126937,
+    "agreement_with_raw": 0.9936726675321393,
+    "file": "beihai_c10.npy",
+    "sha256": "e3b34440bcafbdbde1e81ae9fbcbbadb3635de961170b5ab5ffcbb7e32380acf"
+  },
+  {
+    "split": "val",
+    "city": "beihai",
+    "level": "c30",
+    "seed": 3924943895,
+    "scene": "S2A_MSIL1C_20180216T161341_N0206_R140_T17SMU_20180216T212830",
+    "window_yx_10m": [
+      10,
+      256
+    ],
+    "shape": [
+      902,
+      772
+    ],
+    "attempts": 242,
+    "raw_fraction": 0.2750996633847638,
+    "k": 208903,
+    "fraction": 0.2999997127856347,
+    "agreement_with_raw": 0.9750999505991291,
+    "file": "beihai_c30.npy",
+    "sha256": "2c258914670ff178f93beb6765cffd1da5769ee61f5b7ce9d2dc54462bba9c00"
+  },
+  {
+    "split": "val",
+    "city": "beihai",
+    "level": "c60",
+    "seed": 649652399,
+    "scene": "S2B_MSIL1C_20180816T231549_N0206_R087_T01WEM_20180905T112147",
+    "window_yx_10m": [
+      964,
+      519
+    ],
+    "shape": [
+      902,
+      772
+    ],
+    "attempts": 51,
+    "raw_fraction": 0.6001315441793137,
+    "k": 417806,
+    "fraction": 0.5999994255712694,
+    "agreement_with_raw": 0.9966970347988925,
+    "file": "beihai_c60.npy",
+    "sha256": "ff6e9cdf89593898fb2dd895bd78f92ad7c364f7f1cd3f4d5054c3283ba49206"
+  },
+  {
+    "split": "val",
+    "city": "bercy",
+    "level": "c10",
+    "seed": 2064517671,
+    "scene": "S2B_MSIL1C_20180120T053129_N0206_R105_T44UPC_20180120T063333",
+    "window_yx_10m": [
+      491,
+      887
+    ],
+    "shape": [
+      395,
+      360
+    ],
+    "attempts": 108,
+    "raw_fraction": 0.09988045007032349,
+    "k": 14220,
+    "fraction": 0.1,
+    "agreement_with_raw": 0.9953938115330521,
+    "file": "bercy_c10.npy",
+    "sha256": "78a445befb5a2417aafa676ec07e804f0dc2e423778a0fc547d7da797d17b04d"
+  },
+  {
+    "split": "val",
+    "city": "bercy",
+    "level": "c30",
+    "seed": 3407386271,
+    "scene": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+    "window_yx_10m": [
+      1543,
+      1425
+    ],
+    "shape": [
+      395,
+      360
+    ],
+    "attempts": 11,
+    "raw_fraction": 0.32071729957805906,
+    "k": 42660,
+    "fraction": 0.3,
+    "agreement_with_raw": 0.9777918424753868,
+    "file": "bercy_c30.npy",
+    "sha256": "2824463e3268f82f529813b330e78d609cffe64c098839768b659bb5bb378266"
+  },
+  {
+    "split": "val",
+    "city": "bercy",
+    "level": "c60",
+    "seed": 1246525868,
+    "scene": "S2A_MSIL1C_20181112T070221_N0207_R120_T38KRD_20181112T102254",
+    "window_yx_10m": [
+      8,
+      766
+    ],
+    "shape": [
+      395,
+      360
+    ],
+    "attempts": 22,
+    "raw_fraction": 0.5707313642756681,
+    "k": 85320,
+    "fraction": 0.6,
+    "agreement_with_raw": 0.9668073136427566,
+    "file": "bercy_c60.npy",
+    "sha256": "92cabac0e9350cea2d3547d582f796514727f71b7a86d1c38d5cb3c5b47ff915"
+  },
+  {
+    "split": "val",
+    "city": "aguasclaras",
+    "level": "c10",
+    "seed": 274808763,
+    "scene": "S2B_MSIL1C_20180221T144729_N0206_R139_T20PNV_20180221T194330",
+    "window_yx_10m": [
+      1351,
+      580
+    ],
+    "shape": [
+      471,
+      525
+    ],
+    "attempts": 78,
+    "raw_fraction": 0.09478111414417147,
+    "k": 24728,
+    "fraction": 0.1000020220402386,
+    "agreement_with_raw": 0.9914952987564453,
+    "file": "aguasclaras_c10.npy",
+    "sha256": "2cc6cec47f7af8802f7975a2cfbd2c6e3cbf8fb6258810aeb9222b8a121a82b8"
+  },
+  {
+    "split": "val",
+    "city": "aguasclaras",
+    "level": "c30",
+    "seed": 3981586664,
+    "scene": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+    "window_yx_10m": [
+      16,
+      417
+    ],
+    "shape": [
+      471,
+      525
+    ],
+    "attempts": 114,
+    "raw_fraction": 0.31386917399656256,
+    "k": 74182,
+    "fraction": 0.2999979779597614,
+    "agreement_with_raw": 0.98049135577798,
+    "file": "aguasclaras_c30.npy",
+    "sha256": "2459ecbea3f4e7075ebb3146cbc7eea249eede279786f8387150814a66af6cf7"
+  },
+  {
+    "split": "val",
+    "city": "aguasclaras",
+    "level": "c60",
+    "seed": 3059652386,
+    "scene": "S2A_MSIL1C_20181225T015101_N0207_R017_T53SLR_20181225T033606",
+    "window_yx_10m": [
+      1559,
+      852
+    ],
+    "shape": [
+      471,
+      525
+    ],
+    "attempts": 2,
+    "raw_fraction": 0.6095278536042867,
+    "k": 148365,
+    "fraction": 0.6,
+    "agreement_with_raw": 0.9775957941563037,
+    "file": "aguasclaras_c60.npy",
+    "sha256": "105316ae4ea778d11426b9fcb182a85eb1f3be9201e879725c906cfc2de3ccc3"
+  },
+  {
+    "split": "val",
+    "city": "paris",
+    "level": "c10",
+    "seed": 1320539741,
+    "scene": "S2B_MSIL1C_20180720T181919_N0206_R127_T18XWL_20180720T214653",
+    "window_yx_10m": [
+      1300,
+      655
+    ],
+    "shape": [
+      408,
+      390
+    ],
+    "attempts": 6,
+    "raw_fraction": 0.09030920060331825,
+    "k": 15912,
+    "fraction": 0.1,
+    "agreement_with_raw": 0.9903092006033183,
+    "file": "paris_c10.npy",
+    "sha256": "342892a4e567bf38b9ffb169002a38006239ee46619ad8349bd7b7934883f480"
+  },
+  {
+    "split": "val",
+    "city": "paris",
+    "level": "c30",
+    "seed": 3281130742,
+    "scene": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+    "window_yx_10m": [
+      316,
+      1095
+    ],
+    "shape": [
+      408,
+      390
+    ],
+    "attempts": 83,
+    "raw_fraction": 0.32486173956762193,
+    "k": 47736,
+    "fraction": 0.3,
+    "agreement_with_raw": 0.9725364504776269,
+    "file": "paris_c30.npy",
+    "sha256": "252159c8cad368b3d4b4da90b08d04e5482ff7ae2c09586cc5e77eac594a31ea"
+  },
+  {
+    "split": "val",
+    "city": "paris",
+    "level": "c60",
+    "seed": 3673418551,
+    "scene": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+    "window_yx_10m": [
+      892,
+      1527
+    ],
+    "shape": [
+      408,
+      390
+    ],
+    "attempts": 16,
+    "raw_fraction": 0.6588486676721971,
+    "k": 95472,
+    "fraction": 0.6,
+    "agreement_with_raw": 0.9411513323278029,
+    "file": "paris_c60.npy",
+    "sha256": "692795af8b1afa572d3963ab299ba3474fa72925744ddc698d256edc4d702ea7"
+  },
+  {
+    "split": "test",
+    "city": "brasilia",
+    "level": "c10",
+    "seed": 3482931500,
+    "scene": "S2B_MSIL1C_20181230T015059_N0207_R017_T53TPL_20181230T033426",
+    "window_yx_10m": [
+      253,
+      1543
+    ],
+    "shape": [
+      433,
+      469
+    ],
+    "attempts": 58,
+    "raw_fraction": 0.10116359804409165,
+    "k": 20308,
+    "fraction": 0.1000014772721677,
+    "agreement_with_raw": 0.9925840937181463,
+    "file": "brasilia_c10.npy",
+    "sha256": "1cc0b1e7249a027a010cdf058fc40168ee5c284c6dccc099b506f30d1066180b"
+  },
+  {
+    "split": "test",
+    "city": "brasilia",
+    "level": "c30",
+    "seed": 1119171045,
+    "scene": "S2A_MSIL1C_20180718T135111_N0206_R024_T22MEB_20180718T185303",
+    "window_yx_10m": [
+      889,
+      394
+    ],
+    "shape": [
+      433,
+      469
+    ],
+    "attempts": 3,
+    "raw_fraction": 0.2903184506369505,
+    "k": 60923,
+    "fraction": 0.2999995075759441,
+    "agreement_with_raw": 0.9811401586590308,
+    "file": "brasilia_c30.npy",
+    "sha256": "1ab3ce3c6a4f3aa5e1cf13e716f605c15b80e386309ad29d77e7b3ca190a641b"
+  },
+  {
+    "split": "test",
+    "city": "brasilia",
+    "level": "c60",
+    "seed": 2650523412,
+    "scene": "S2B_MSIL1C_20180826T062619_N0206_R077_T40QHL_20180826T092057",
+    "window_yx_10m": [
+      1323,
+      1230
+    ],
+    "shape": [
+      433,
+      469
+    ],
+    "attempts": 32,
+    "raw_fraction": 0.650364147589338,
+    "k": 121846,
+    "fraction": 0.5999990151518882,
+    "agreement_with_raw": 0.9479901712158443,
+    "file": "brasilia_c60.npy",
+    "sha256": "d8da7e12b663df02aa114421999e347fc047a5c7c7dcbbcbe9e403607615ae3c"
+  },
+  {
+    "split": "test",
+    "city": "montpellier",
+    "level": "c10",
+    "seed": 30618948,
+    "scene": "S2B_MSIL1C_20180710T045659_N0206_R119_T47VNL_20180710T073026",
+    "window_yx_10m": [
+      325,
+      300
+    ],
+    "shape": [
+      426,
+      451
+    ],
+    "attempts": 60,
+    "raw_fraction": 0.09614003310327597,
+    "k": 19213,
+    "fraction": 0.10000208196704247,
+    "agreement_with_raw": 0.996085901960172,
+    "file": "montpellier_c10.npy",
+    "sha256": "7992c9803805715d4b86047ca88036a3d41b556284eea9335f7b8098b2fd9e92"
+  },
+  {
+    "split": "test",
+    "city": "montpellier",
+    "level": "c30",
+    "seed": 2647258637,
+    "scene": "S2A_MSIL1C_20180802T230911_N0206_R101_T59LKG_20180803T002614",
+    "window_yx_10m": [
+      1363,
+      37
+    ],
+    "shape": [
+      426,
+      451
+    ],
+    "attempts": 63,
+    "raw_fraction": 0.3237042357619479,
+    "k": 57638,
+    "fraction": 0.3000010409835212,
+    "agreement_with_raw": 0.9732050841635177,
+    "file": "montpellier_c30.npy",
+    "sha256": "d6ff6142516a2d77878569c70df49bfa779710b067c8de17c1c79f7ac9d02866"
+  },
+  {
+    "split": "test",
+    "city": "montpellier",
+    "level": "c60",
+    "seed": 234896047,
+    "scene": "S2B_MSIL1C_20181203T153619_N0207_R068_T18QWH_20181203T202253",
+    "window_yx_10m": [
+      646,
+      707
+    ],
+    "shape": [
+      426,
+      451
+    ],
+    "attempts": 26,
+    "raw_fraction": 0.6343961775085101,
+    "k": 115276,
+    "fraction": 0.6000020819670424,
+    "agreement_with_raw": 0.9647314783006985,
+    "file": "montpellier_c60.npy",
+    "sha256": "ffe4a94a65f09ec2befaf547a0bc753150751a5e5b9750e48900b1eb535d3e35"
+  },
+  {
+    "split": "test",
+    "city": "norcia",
+    "level": "c10",
+    "seed": 3440948040,
+    "scene": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+    "window_yx_10m": [
+      1714,
+      823
+    ],
+    "shape": [
+      241,
+      385
+    ],
+    "attempts": 77,
+    "raw_fraction": 0.09199762892708951,
+    "k": 9278,
+    "fraction": 0.0999946111979307,
+    "agreement_with_raw": 0.9875626448240556,
+    "file": "norcia_c10.npy",
+    "sha256": "9fe7158e149f508252623de6be7ff30f7b774da1fcc894b0a5eb5d246323c8b4"
+  },
+  {
+    "split": "test",
+    "city": "norcia",
+    "level": "c30",
+    "seed": 1539129820,
+    "scene": "S2B_MSIL1C_20181203T153619_N0207_R068_T18QWH_20181203T202253",
+    "window_yx_10m": [
+      721,
+      880
+    ],
+    "shape": [
+      241,
+      385
+    ],
+    "attempts": 51,
+    "raw_fraction": 0.32800560435415205,
+    "k": 27836,
+    "fraction": 0.3000053888020693,
+    "agreement_with_raw": 0.9696718219539796,
+    "file": "norcia_c30.npy",
+    "sha256": "2b0d8f060656956c78b30cb8d2c58bef4ada30a629609353839f65a28772d3cd"
+  },
+  {
+    "split": "test",
+    "city": "norcia",
+    "level": "c60",
+    "seed": 873506116,
+    "scene": "S2B_MSIL1C_20181004T102019_N0206_R065_T32TML_20181004T141056",
+    "window_yx_10m": [
+      816,
+      918
+    ],
+    "shape": [
+      241,
+      385
+    ],
+    "attempts": 33,
+    "raw_fraction": 0.5564908120924719,
+    "k": 55671,
+    "fraction": 0.6,
+    "agreement_with_raw": 0.9564908120924719,
+    "file": "norcia_c60.npy",
+    "sha256": "8fe512bdc05cbbfab4bb3b324f6b7cfb03f17b2668a292af388650462b6a9850"
+  },
+  {
+    "split": "test",
+    "city": "rio",
+    "level": "c10",
+    "seed": 3915069175,
+    "scene": "S2A_MSIL1C_20181107T022901_N0207_R046_T50PNU_20181107T060616",
+    "window_yx_10m": [
+      1435,
+      828
+    ],
+    "shape": [
+      353,
+      426
+    ],
+    "attempts": 6,
+    "raw_fraction": 0.1093777015254891,
+    "k": 15038,
+    "fraction": 0.10000132998177926,
+    "agreement_with_raw": 0.9886552554230007,
+    "file": "rio_c10.npy",
+    "sha256": "9a68154395e43f8a3a444cd4e4ce6d2d0e34d332c09ecf7707c88083da1ea2bc"
+  },
+  {
+    "split": "test",
+    "city": "rio",
+    "level": "c30",
+    "seed": 2641696006,
+    "scene": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+    "window_yx_10m": [
+      1197,
+      1033
+    ],
+    "shape": [
+      353,
+      426
+    ],
+    "attempts": 73,
+    "raw_fraction": 0.30150686935588983,
+    "k": 45113,
+    "fraction": 0.2999973400364415,
+    "agreement_with_raw": 0.9883028102514996,
+    "file": "rio_c30.npy",
+    "sha256": "aae672e20283fb6e20d1d35f6d454255d8c40cb0592b69ef5f5da5f9cc9b056d"
+  },
+  {
+    "split": "test",
+    "city": "rio",
+    "level": "c60",
+    "seed": 3686359061,
+    "scene": "S2B_MSIL1C_20180202T021909_N0206_R003_T51QWF_20180202T035423",
+    "window_yx_10m": [
+      1535,
+      1366
+    ],
+    "shape": [
+      353,
+      426
+    ],
+    "attempts": 53,
+    "raw_fraction": 0.5569298700607802,
+    "k": 90227,
+    "fraction": 0.6000013299817792,
+    "agreement_with_raw": 0.956928540079001,
+    "file": "rio_c60.npy",
+    "sha256": "7e6b6a23ebfea7f8cd7cf258e9781e49fe77d494324c72e3d4649788713b11d2"
+  },
+  {
+    "split": "test",
+    "city": "saclay_w",
+    "level": "c10",
+    "seed": 2340780594,
+    "scene": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+    "window_yx_10m": [
+      265,
+      1301
+    ],
+    "shape": [
+      639,
+      688
+    ],
+    "attempts": 11,
+    "raw_fraction": 0.09897368708374277,
+    "k": 43963,
+    "fraction": 0.09999954507406195,
+    "agreement_with_raw": 0.9933103140808677,
+    "file": "saclay_w_c10.npy",
+    "sha256": "02496201878f1b838a209e47cb2518d1e6037578ddaa01feced530e9a1f5246d"
+  },
+  {
+    "split": "test",
+    "city": "saclay_w",
+    "level": "c30",
+    "seed": 1460518314,
+    "scene": "S2B_MSIL1C_20181111T094229_N0207_R036_T32NKF_20181111T131623",
+    "window_yx_10m": [
+      1340,
+      1244
+    ],
+    "shape": [
+      639,
+      688
+    ],
+    "attempts": 22,
+    "raw_fraction": 0.313921643556429,
+    "k": 131890,
+    "fraction": 0.3000009098518761,
+    "agreement_with_raw": 0.9771718164282854,
+    "file": "saclay_w_c30.npy",
+    "sha256": "d7c858689adc6df1473b2b4eec4c36cc861723a213533200dc54937718269b01"
+  },
+  {
+    "split": "test",
+    "city": "saclay_w",
+    "level": "c60",
+    "seed": 621001812,
+    "scene": "S2A_MSIL1C_20181222T002051_N0207_R116_T54HXD_20181222T014213",
+    "window_yx_10m": [
+      866,
+      1318
+    ],
+    "shape": [
+      639,
+      688
+    ],
+    "attempts": 12,
+    "raw_fraction": 0.6273792626560396,
+    "k": 263779,
+    "fraction": 0.599999545074062,
+    "agreement_with_raw": 0.9726202824180223,
+    "file": "saclay_w_c60.npy",
+    "sha256": "279f84fcadc2ee37f17f497004230971d2ab0ea74a136e60c7e1dac3daee6225"
+  },
+  {
+    "split": "test",
+    "city": "valencia",
+    "level": "c10",
+    "seed": 2661169945,
+    "scene": "S2A_MSIL1C_20180216T161341_N0206_R140_T17SMU_20180216T212830",
+    "window_yx_10m": [
+      787,
+      794
+    ],
+    "shape": [
+      458,
+      476
+    ],
+    "attempts": 8,
+    "raw_fraction": 0.09765696671681773,
+    "k": 21801,
+    "fraction": 0.1000009173975267,
+    "agreement_with_raw": 0.9930231918094748,
+    "file": "valencia_c10.npy",
+    "sha256": "9a8cbd5c4be6107b549f0969832aa9ce9a2a96bc4aebce1c330ad0d20fd17d6d"
+  },
+  {
+    "split": "test",
+    "city": "valencia",
+    "level": "c30",
+    "seed": 2024608602,
+    "scene": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+    "window_yx_10m": [
+      908,
+      532
+    ],
+    "shape": [
+      458,
+      476
+    ],
+    "attempts": 129,
+    "raw_fraction": 0.31653884261128035,
+    "k": 65402,
+    "fraction": 0.2999981652049466,
+    "agreement_with_raw": 0.9822300099078933,
+    "file": "valencia_c30.npy",
+    "sha256": "e5ce9ca0c91e3d3bb75588dcc56429f67ec998d1444dcafd2610c6b011ea3277"
+  },
+  {
+    "split": "test",
+    "city": "valencia",
+    "level": "c60",
+    "seed": 841411610,
+    "scene": "S2A_MSIL1C_20180423T095031_N0206_R079_T31NHG_20180423T133029",
+    "window_yx_10m": [
+      393,
+      505
+    ],
+    "shape": [
+      458,
+      476
+    ],
+    "attempts": 15,
+    "raw_fraction": 0.633729037466515,
+    "k": 130805,
+    "fraction": 0.6000009173975267,
+    "agreement_with_raw": 0.9612078455836484,
+    "file": "valencia_c60.npy",
+    "sha256": "2be4094864030e3548e79290c2ed01b39dd20e505335d474d4743432994ad0a8"
+  },
+  {
+    "split": "test",
+    "city": "dubai",
+    "level": "c10",
+    "seed": 2568778439,
+    "scene": "S2B_MSIL1C_20180417T021339_N0206_R060_T50LRQ_20180417T052932",
+    "window_yx_10m": [
+      541,
+      455
+    ],
+    "shape": [
+      774,
+      634
+    ],
+    "attempts": 235,
+    "raw_fraction": 0.10890616976010564,
+    "k": 49072,
+    "fraction": 0.10000081513543475,
+    "agreement_with_raw": 0.9896437043014696,
+    "file": "dubai_c10.npy",
+    "sha256": "e47fabd6f3d8f7f20beb3d0848a3c8ade960fcd3ce333a9177dac6ddf686a773"
+  },
+  {
+    "split": "test",
+    "city": "dubai",
+    "level": "c30",
+    "seed": 1095883577,
+    "scene": "S2B_MSIL1C_20180131T082149_N0206_R121_T34JDL_20180131T120726",
+    "window_yx_10m": [
+      1202,
+      1156
+    ],
+    "shape": [
+      774,
+      634
+    ],
+    "attempts": 68,
+    "raw_fraction": 0.27154606737909504,
+    "k": 147215,
+    "fraction": 0.3000004075677174,
+    "agreement_with_raw": 0.9712196056374767,
+    "file": "dubai_c30.npy",
+    "sha256": "40dd62722f6bc512862d22b5cd9315f0fef0e9ee3ac3f7846c0202340b511e85"
+  },
+  {
+    "split": "test",
+    "city": "dubai",
+    "level": "c60",
+    "seed": 992915722,
+    "scene": "S2B_MSIL1C_20180327T022549_N0206_R046_T52UFE_20180327T040413",
+    "window_yx_10m": [
+      1076,
+      711
+    ],
+    "shape": [
+      774,
+      634
+    ],
+    "attempts": 26,
+    "raw_fraction": 0.6060735741243407,
+    "k": 294430,
+    "fraction": 0.6000008151354348,
+    "agreement_with_raw": 0.9852786540483701,
+    "file": "dubai_c60.npy",
+    "sha256": "87f69443f726c7bb828a0a49d20134411c8047acb0e5bb6fdef75ffb11ef79ad"
+  },
+  {
+    "split": "test",
+    "city": "lasvegas",
+    "level": "c10",
+    "seed": 2729920295,
+    "scene": "S2A_MSIL1C_20180603T155901_N0206_R097_T17SNA_20180603T194236",
+    "window_yx_10m": [
+      1008,
+      390
+    ],
+    "shape": [
+      824,
+      716
+    ],
+    "attempts": 171,
+    "raw_fraction": 0.09394831046265661,
+    "k": 58998,
+    "fraction": 0.09999932201551229,
+    "agreement_with_raw": 0.9930676086131149,
+    "file": "lasvegas_c10.npy",
+    "sha256": "a941e6a5c7fa5d7585b0bc9872dea34e809dcfdc87eb7ddd137fc0ff9ffbb5bb"
+  },
+  {
+    "split": "test",
+    "city": "lasvegas",
+    "level": "c30",
+    "seed": 1190198007,
+    "scene": "S2A_MSIL1C_20180309T071721_N0206_R006_T37LFE_20180309T110254",
+    "window_yx_10m": [
+      672,
+      437
+    ],
+    "shape": [
+      824,
+      716
+    ],
+    "attempts": 193,
+    "raw_fraction": 0.3129678092965233,
+    "k": 176995,
+    "fraction": 0.29999966100775616,
+    "agreement_with_raw": 0.9849131501871237,
+    "file": "lasvegas_c30.npy",
+    "sha256": "47a2ca702717fd9ca841ac58403d7578b7ae9056753cd44cc729e1c708e5e276"
+  },
+  {
+    "split": "test",
+    "city": "lasvegas",
+    "level": "c60",
+    "seed": 1429853796,
+    "scene": "S2B_MSIL1C_20180625T230019_N0206_R058_T58KHC_20180626T001009",
+    "window_yx_10m": [
+      921,
+      948
+    ],
+    "shape": [
+      824,
+      716
+    ],
+    "attempts": 20,
+    "raw_fraction": 0.563066117047242,
+    "k": 353990,
+    "fraction": 0.5999993220155123,
+    "agreement_with_raw": 0.9626803438737321,
+    "file": "lasvegas_c60.npy",
+    "sha256": "35f13edf45949ccc177810413225c6732a740301fdc4b41377045fd1bb6dce2c"
+  },
+  {
+    "split": "test",
+    "city": "milano",
+    "level": "c10",
+    "seed": 72798490,
+    "scene": "S2B_MSIL1C_20180710T220919_N0206_R129_T01KDB_20180711T010329",
+    "window_yx_10m": [
+      1145,
+      34
+    ],
+    "shape": [
+      545,
+      558
+    ],
+    "attempts": 28,
+    "raw_fraction": 0.0966623918976686,
+    "k": 30411,
+    "fraction": 0.1,
+    "agreement_with_raw": 0.9959850054256684,
+    "file": "milano_c10.npy",
+    "sha256": "440f521b48dc0de12cab1e99d743a14bf8e89f25a89e38e5a8f3773d7beae60e"
+  },
+  {
+    "split": "test",
+    "city": "milano",
+    "level": "c30",
+    "seed": 3836656440,
+    "scene": "S2A_MSIL1C_20180130T194641_N0206_R042_T09UVS_20180130T211225",
+    "window_yx_10m": [
+      113,
+      1385
+    ],
+    "shape": [
+      545,
+      558
+    ],
+    "attempts": 89,
+    "raw_fraction": 0.31987109927328927,
+    "k": 91233,
+    "fraction": 0.3,
+    "agreement_with_raw": 0.9796093518792542,
+    "file": "milano_c30.npy",
+    "sha256": "b65e4b5f5c1f4a46b333f6b4014a44fe3dd1f11c027cce79b3c85755d8775016"
+  },
+  {
+    "split": "test",
+    "city": "milano",
+    "level": "c60",
+    "seed": 315376267,
+    "scene": "S2B_MSIL1C_20180322T031539_N0206_R118_T48NWP_20180322T080731",
+    "window_yx_10m": [
+      616,
+      744
+    ],
+    "shape": [
+      545,
+      558
+    ],
+    "attempts": 21,
+    "raw_fraction": 0.6207161882213673,
+    "k": 182466,
+    "fraction": 0.6,
+    "agreement_with_raw": 0.9759823747985926,
+    "file": "milano_c60.npy",
+    "sha256": "e18840283aa6d2446e1d1e1f3b94d1dce4909a3ea79b4a4606e0ae93fc68afd2"
+  },
+  {
+    "split": "test",
+    "city": "chongqing",
+    "level": "c10",
+    "seed": 4175119550,
+    "scene": "S2B_MSIL1C_20181022T162319_N0206_R040_T17UPV_20181022T200946",
+    "window_yx_10m": [
+      369,
+      1406
+    ],
+    "shape": [
+      730,
+      544
+    ],
+    "attempts": 169,
+    "raw_fraction": 0.09556305398871877,
+    "k": 39712,
+    "fraction": 0.1,
+    "agreement_with_raw": 0.9947119258662369,
+    "file": "chongqing_c10.npy",
+    "sha256": "fe62cc9b85eafb45ddcf7008e082f0f281dad2456212f8994a073dcd2dc9567d"
+  },
+  {
+    "split": "test",
+    "city": "chongqing",
+    "level": "c30",
+    "seed": 264068100,
+    "scene": "S2A_MSIL1C_20181115T151651_N0207_R025_T20UPD_20181115T171551",
+    "window_yx_10m": [
+      725,
+      891
+    ],
+    "shape": [
+      730,
+      544
+    ],
+    "attempts": 15,
+    "raw_fraction": 0.31443896051571313,
+    "k": 119136,
+    "fraction": 0.3,
+    "agreement_with_raw": 0.9843825543916197,
+    "file": "chongqing_c30.npy",
+    "sha256": "00f938dbef6fd7f97a0487ffd0b9c4561c74e8b3c9c2c302ee798d7d648f0ca6"
+  },
+  {
+    "split": "test",
+    "city": "chongqing",
+    "level": "c60",
+    "seed": 596950763,
+    "scene": "S2A_MSIL1C_20180620T054641_N0206_R048_T45VUD_20180620T093922",
+    "window_yx_10m": [
+      197,
+      1471
+    ],
+    "shape": [
+      730,
+      544
+    ],
+    "attempts": 66,
+    "raw_fraction": 0.5902145447219984,
+    "k": 238272,
+    "fraction": 0.6,
+    "agreement_with_raw": 0.9863668412570508,
+    "file": "chongqing_c60.npy",
+    "sha256": "a2a141497551ad830ecaef6843bf13f2942486e6daa778051e73fbb2f66eb1e3"
+  }
+]

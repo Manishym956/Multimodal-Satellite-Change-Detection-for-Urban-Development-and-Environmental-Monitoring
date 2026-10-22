@@ -1,0 +1,89 @@
+{
+  "checkpoint_step": 2275,
+  "reproduction": {
+    "full/at_selected": {
+      "count_diff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact": true
+    },
+    "full/at_0.5": {
+      "count_diff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact": true
+    },
+    "full/threshold_from_val": true,
+    "no_o2/at_selected": {
+      "count_diff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact": true
+    },
+    "no_o2/at_0.5": {
+      "count_diff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact": true
+    },
+    "no_o2/threshold_from_val": true,
+    "no_opt/at_selected": {
+      "count_diff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact": true
+    },
+    "no_opt/at_0.5": {
+      "count_diff": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0
+      },
+      "exact": true
+    },
+    "no_opt/threshold_from_val": true
+  },
+  "added": {
+    "o2_copy": {
+      "selected_threshold": 0.11,
+      "at_selected": {
+        "tp": 71329,
+        "fp": 250072,
+        "fn": 87748,
+        "tn": 2668787,
+        "precision": 0.2219314812337236,
+        "recall": 0.44839291663785463,
+        "f1": 0.29690849529010693,
+        "iou": 0.1743350222046247,
+        "false_alarm_rate": 0.08567457352342131
+      },
+      "at_0.5": {
+        "tp": 12163,
+        "fp": 18607,
+        "fn": 146914,
+        "tn": 2900252,
+        "precision": 0.39528761780955474,
+        "recall": 0.07645982763064428,
+        "f1": 0.12813476114976796,
+        "iou": 0.06845298394903311,
+        "false_alarm_rate": 0.006374751229847006
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+steps 1000 seed 1
+full F1 0.5658 (tau 0.74) | no_o2 F1 0.1119 (tau 0.99) | no_opt F1 0.4300 (tau 0.70)
+steps 1000 seed 2
+full F1 0.5453 (tau 0.86) | no_o2 F1 0.1408 (tau 0.99) | no_opt F1 0.4371 (tau 0.23)
+steps 1000 seed 3
+full F1 0.5777 (tau 0.77) | no_o2 F1 0.1206 (tau 0.99) | no_opt F1 0.4309 (tau 0.55)
+steps 2500 seed 1
+full F1 0.5720 (tau 0.77) | no_o2 F1 0.1516 (tau 0.99) | no_opt F1 0.4276 (tau 0.84)
+steps 2500 seed 2
+full F1 0.5696 (tau 0.51) | no_o2 F1 0.2390 (tau 0.99) | no_opt F1 0.4628 (tau 0.37)
+steps 2500 seed 3
+full F1 0.5194 (tau 0.97) | no_o2 F1 0.1149 (tau 0.98) | no_opt F1 0.1040 (tau 0.99)
+P1S DONE

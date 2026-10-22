@@ -1,0 +1,842 @@
+{
+  "n_checks": 167,
+  "n_failed": 0,
+  "failed": [],
+  "checks": [
+    {
+      "check": "manifest has 14 cities x 3 levels",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "val and test cities disjoint",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "69634 vs 69634.40000000001"
+    },
+    {
+      "check": "mask beihai_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "208903 vs 208903.19999999998"
+    },
+    {
+      "check": "mask beihai_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "417806 vs 417806.39999999997"
+    },
+    {
+      "check": "mask bercy_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "14220 vs 14220.0"
+    },
+    {
+      "check": "mask bercy_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "42660 vs 42660.0"
+    },
+    {
+      "check": "mask bercy_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "85320 vs 85320.0"
+    },
+    {
+      "check": "mask aguasclaras_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "24728 vs 24727.5"
+    },
+    {
+      "check": "mask aguasclaras_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "74182 vs 74182.49999999999"
+    },
+    {
+      "check": "mask aguasclaras_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "148365 vs 148364.99999999997"
+    },
+    {
+      "check": "mask paris_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "15912 vs 15912.000000000002"
+    },
+    {
+      "check": "mask paris_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "47736 vs 47736.0"
+    },
+    {
+      "check": "mask paris_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "95472 vs 95472.0"
+    },
+    {
+      "check": "mask brasilia_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "20308 vs 20307.7"
+    },
+    {
+      "check": "mask brasilia_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "60923 vs 60923.100000000006"
+    },
+    {
+      "check": "mask brasilia_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "121846 vs 121846.20000000001"
+    },
+    {
+      "check": "mask montpellier_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "19213 vs 19212.600000000002"
+    },
+    {
+      "check": "mask montpellier_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "57638 vs 57637.799999999996"
+    },
+    {
+      "check": "mask montpellier_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "115276 vs 115275.59999999999"
+    },
+    {
+      "check": "mask norcia_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "9278 vs 9278.5"
+    },
+    {
+      "check": "mask norcia_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "27836 vs 27835.5"
+    },
+    {
+      "check": "mask norcia_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "55671 vs 55671.0"
+    },
+    {
+      "check": "mask rio_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "15038 vs 15037.800000000001"
+    },
+    {
+      "check": "mask rio_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "45113 vs 45113.399999999994"
+    },
+    {
+      "check": "mask rio_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "90227 vs 90226.79999999999"
+    },
+    {
+      "check": "mask saclay_w_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "43963 vs 43963.200000000004"
+    },
+    {
+      "check": "mask saclay_w_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "131890 vs 131889.6"
+    },
+    {
+      "check": "mask saclay_w_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "263779 vs 263779.2"
+    },
+    {
+      "check": "mask valencia_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "21801 vs 21800.800000000003"
+    },
+    {
+      "check": "mask valencia_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "65402 vs 65402.4"
+    },
+    {
+      "check": "mask valencia_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "130805 vs 130804.8"
+    },
+    {
+      "check": "mask dubai_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "49072 vs 49071.600000000006"
+    },
+    {
+      "check": "mask dubai_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "147215 vs 147214.8"
+    },
+    {
+      "check": "mask dubai_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "294430 vs 294429.6"
+    },
+    {
+      "check": "mask lasvegas_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "58998 vs 58998.4"
+    },
+    {
+      "check": "mask lasvegas_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "176995 vs 176995.19999999998"
+    },
+    {
+      "check": "mask lasvegas_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "353990 vs 353990.39999999997"
+    },
+    {
+      "check": "mask milano_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "30411 vs 30411.0"
+    },
+    {
+      "check": "mask milano_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "91233 vs 91233.0"
+    },
+    {
+      "check": "mask milano_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "182466 vs 182466.0"
+    },
+    {
+      "check": "mask chongqing_c10.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "39712 vs 39712.0"
+    },
+    {
+      "check": "mask chongqing_c30.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "119136 vs 119136.0"
+    },
+    {
+      "check": "mask chongqing_c60.npy: hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60.npy: exact fraction of image pixels",
+      "pass": true,
+      "detail": "238272 vs 238272.0"
+    },
+    {
+      "check": "p2_full seed 1: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: anchors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: eval_phase3.py = pre-registered fixed hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "one source-hash set",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full clean: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout clean: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full missing: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout missing: per-seed F1 at frozen clean threshold, mean, sample SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired c10: diffs/CI/t/Holm/Wilcoxon match summary (threshold = clean)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired c30: diffs/CI/t/Holm/Wilcoxon match summary (threshold = clean)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired c60: diffs/CI/t/Holm/Wilcoxon match summary (threshold = clean)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "paired missing: diffs/CI/t/Holm/Wilcoxon match summary (threshold = clean)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "report primary row c10 matches recomputation",
+      "pass": true,
+      "detail": "| c10 | 0.285 \u00b1 0.015 | 0.329 \u00b1 0.008 | +0.044 [+0.031, +0.057] | 9.6e-05 | 10/10 |"
+    },
+    {
+      "check": "report primary row c30 matches recomputation",
+      "pass": true,
+      "detail": "| c30 | 0.165 \u00b1 0.007 | 0.191 \u00b1 0.012 | +0.026 [+0.015, +0.037] | 0.0010 | 10/10 |"
+    },
+    {
+      "check": "report primary row c60 matches recomputation",
+      "pass": true,
+      "detail": "| c60 | 0.123 \u00b1 0.002 | 0.134 \u00b1 0.011 | +0.011 [+0.003, +0.020] | 0.0144 | 10/10 |"
+    },
+    {
+      "check": "report primary row missing matches recomputation",
+      "pass": true,
+      "detail": "| missing | 0.142 \u00b1 0.050 | 0.478 \u00b1 0.030 | +0.336 [+0.294, +0.378] | 9.5e-08 | 10/10 |"
+    },
+    {
+      "check": "prose: c10 cost A\u22480.27, B\u22480.22",
+      "pass": true,
+      "detail": "(-0.27066592451622673, -0.22387836044906645)"
+    },
+    {
+      "check": "prose: B missing 0.478 vs c10 0.329",
+      "pass": true,
+      "detail": ""
+    }
+  ]
+}

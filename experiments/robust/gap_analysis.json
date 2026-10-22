@@ -1,0 +1,117 @@
+{
+  "runs": [
+    {
+      "run": "hafner_full_seed1",
+      "seed": 1,
+      "evaluated_at": "2026-10-21T14:17:02",
+      "f1_at_train_threshold": 0.5263952419327378,
+      "train_threshold": 0.8,
+      "f1_at_0.66": 0.500962847695001,
+      "f1_at_0.5": 0.4358577757044011
+    },
+    {
+      "run": "hafner_full_seed10",
+      "seed": 10,
+      "evaluated_at": "2026-10-21T14:17:06",
+      "f1_at_train_threshold": 0.5676684912567006,
+      "train_threshold": 0.88,
+      "f1_at_0.66": 0.498693532988292,
+      "f1_at_0.5": 0.4298563149689025
+    },
+    {
+      "run": "hafner_full_seed2",
+      "seed": 2,
+      "evaluated_at": "2026-10-21T14:17:10",
+      "f1_at_train_threshold": 0.5887827768116505,
+      "train_threshold": 0.79,
+      "f1_at_0.66": 0.5915256468385719,
+      "f1_at_0.5": 0.5741222816957038
+    },
+    {
+      "run": "hafner_full_seed3",
+      "seed": 3,
+      "evaluated_at": "2026-10-21T14:17:14",
+      "f1_at_train_threshold": 0.5011192533449998,
+      "train_threshold": 0.85,
+      "f1_at_0.66": 0.4232040235091203,
+      "f1_at_0.5": 0.3717746802278515
+    },
+    {
+      "run": "hafner_full_seed4",
+      "seed": 4,
+      "evaluated_at": "2026-10-21T14:17:18",
+      "f1_at_train_threshold": 0.581730534712558,
+      "train_threshold": 0.88,
+      "f1_at_0.66": 0.5180931466091677,
+      "f1_at_0.5": 0.45438421703762905
+    },
+    {
+      "run": "hafner_full_seed5",
+      "seed": 5,
+      "evaluated_at": "2026-10-21T14:17:22",
+      "f1_at_train_threshold": 0.5054796594575078,
+      "train_threshold": 0.72,
+      "f1_at_0.66": 0.5007562892137323,
+      "f1_at_0.5": 0.4743066124525816
+    },
+    {
+      "run": "hafner_full_seed6",
+      "seed": 6,
+      "evaluated_at": "2026-10-21T14:17:26",
+      "f1_at_train_threshold": 0.6059322577746974,
+      "train_threshold": 0.51,
+      "f1_at_0.66": 0.586782545717907,
+      "f1_at_0.5": 0.6062125236588043
+    },
+    {
+      "run": "hafner_full_seed7",
+      "seed": 7,
+      "evaluated_at": "2026-10-21T14:17:30",
+      "f1_at_train_threshold": 0.5567159004229942,
+      "train_threshold": 0.72,
+      "f1_at_0.66": 0.5682544210872009,
+      "f1_at_0.5": 0.5803027561666968
+    },
+    {
+      "run": "hafner_full_seed8",
+      "seed": 8,
+      "evaluated_at": "2026-10-21T14:17:34",
+      "f1_at_train_threshold": 0.5598287627587966,
+      "train_threshold": 0.64,
+      "f1_at_0.66": 0.5603929067023355,
+      "f1_at_0.5": 0.5439727267884729
+    },
+    {
+      "run": "hafner_full_seed9",
+      "seed": 9,
+      "evaluated_at": "2026-10-21T14:17:38",
+      "f1_at_train_threshold": 0.5737089642025656,
+      "train_threshold": 0.66,
+      "f1_at_0.66": 0.5737089642025656,
+      "f1_at_0.5": 0.5629155263925802
+    }
+  ],
+  "aggregate": {
+    "f1_at_train_threshold": {
+      "mean": 0.5567361842675208,
+      "sd": 0.035166520484645726,
+      "min": 0.5011192533449998,
+      "max": 0.6059322577746974,
+      "n": 10
+    },
+    "f1_at_0.66": {
+      "mean": 0.5322374324563894,
+      "sd": 0.05321111433916141,
+      "min": 0.4232040235091203,
+      "max": 0.5915256468385719,
+      "n": 10
+    },
+    "f1_at_0.5": {
+      "mean": 0.5033705415093623,
+      "sd": 0.07973508085630504,
+      "min": 0.3717746802278515,
+      "max": 0.6062125236588043,
+      "n": 10
+    }
+  }
+}

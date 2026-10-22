@@ -1,0 +1,19 @@
+# Robustness study (Phases 2–4B): store these files byte-for-byte (no line-ending conversion), so the sha256 values
+# recorded in pre-registrations, run files and snapshots still match after a checkout on any platform.
+experiments/robust/** -text
+logs/robust/** -text
+src/phase3/** -text
+src/training/train_robust.py -text
+src/training/train_spatial.py -text
+src/datasets/oscd_dataset.py -text
+/analyze_phase*.py -text
+/audit_p*.py -text
+/build_phase*.py -text
+/build_robust_report.py -text
+/build_spatial_mask_bank.py -text
+/eval_phase*.py -text
+/smoke_phase4b.py -text
+/gap_analysis_robust.py -text
+/reeval_robust.py -text
+/summarize_robust.py -text
+/hash_robust_artifacts.py -text

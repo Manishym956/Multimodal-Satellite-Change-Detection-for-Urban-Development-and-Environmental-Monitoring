@@ -1,0 +1,6697 @@
+{
+  "n_checks": 1338,
+  "n_failed": 0,
+  "failed": [],
+  "checks": [
+    {
+      "check": "registered hash src/phase3/mask_errors.py",
+      "pass": true,
+      "detail": "src/phase3/mask_errors.py"
+    },
+    {
+      "check": "registered hash build_phase4abis_masks.py",
+      "pass": true,
+      "detail": "build_phase4abis_masks.py"
+    },
+    {
+      "check": "registered hash eval_phase4abis.py",
+      "pass": true,
+      "detail": "eval_phase4abis.py"
+    },
+    {
+      "check": "registered hash analyze_phase4abis.py",
+      "pass": true,
+      "detail": "analyze_phase4abis.py"
+    },
+    {
+      "check": "registered hash eval_phase4a.py",
+      "pass": true,
+      "detail": "eval_phase4a.py"
+    },
+    {
+      "check": "registered hash phase4abis/mask_manifest.json",
+      "pass": true,
+      "detail": "phase4abis/mask_manifest.json"
+    },
+    {
+      "check": "manifest: 14 cities x 3 levels x 9 variants",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask beihai_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask bercy_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask aguasclaras_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask paris_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask brasilia_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask montpellier_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask norcia_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask rio_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask saclay_w_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask valencia_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask dubai_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask lasvegas_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask milano_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c10_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c30_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_erode2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_erode4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_erode8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_dilate2.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_dilate4.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_dilate8.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_miss10.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_miss25.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "mask chongqing_c60_miss50.npy: hash, construction, error fractions",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 1: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 2: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 3: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 4: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 5: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 6: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 7: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 8: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 9: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full seed 10: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 2: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 3: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 4: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 5: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 6: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 7: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 8: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 9: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: anchors true",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: eval_phase4abis.py = registered hash",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: frozen threshold = Phase 2 clean-validation threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 10: references equal stored Step 4A counts (val and test)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "one source-hash set across runs",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full clean f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full clean precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full clean recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full clean false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z30 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z30 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z30 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z30 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z60 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z60 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z60 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full z60 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__erode8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__dilate8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss25 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss25 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss25 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss25 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss50 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss50 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss50 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c10__miss50 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__erode8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__dilate8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss25 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss25 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss25 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss25 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss50 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss50 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss50 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c30__miss50 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__erode8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__dilate8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss25 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss25 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss25 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss25 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss50 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss50 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss50 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_full c60__miss50 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c10__miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c30__miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_full c60__miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout clean f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout clean precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout clean recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout clean false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z30 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z30 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z30 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z30 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z60 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z60 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z60 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z60 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss25 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss25 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss25 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss25 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss50 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss50 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss50 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss50 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss25 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss25 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss25 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss25 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss50 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss50 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss50 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss50 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate2 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate2 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate2 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate2 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate4 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate4 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate4 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate4 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate8 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate8 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate8 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate8 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss10 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss10 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss10 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss10 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss25 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss25 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss25 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss25 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss50 f1: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss50 precision: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss50 recall: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss50 false_alarm_rate: per-seed values, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c10__miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c30__miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "retained gain p2_dropout c60__miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full clean: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full c10: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full c30: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full c60: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full z10: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full z30: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_full z60: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout clean: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout c10: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout c30: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout c60: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout z10: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout z30: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout z60: per-seed F1 equals Step 4A summary",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary has exactly the registered families (1 primary + 6 secondary)",
+      "pass": true,
+      "detail": "['primary_B_c30_imperfect_minus_oracle', 'secondary_B_minus_A_c30', 'secondary_p2_dropout_c10_imperfect_minus_oracle', 'secondary_p2_dropout_c60_imperfect_minus_oracle', 'secondary_p2_full_c10_imperfect_minus_oracle', 'secondary_p2_full_c30_imperfect_minus_oracle', 'secondary_p2_full_c60_imperfect_m"
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary_B_c30_imperfect_minus_oracle miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c10_imperfect_minus_oracle miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c30_imperfect_minus_oracle miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_full_c60_imperfect_minus_oracle miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c10_imperfect_minus_oracle miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_p2_dropout_c60_imperfect_minus_oracle miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 erode2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 erode4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 erode8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 dilate2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 dilate4",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 dilate8",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 miss10",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 miss25",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family secondary_B_minus_A_c30 miss50",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__erode8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__dilate8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss10 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss25 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c10__miss50 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__erode8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__dilate8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss10 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss25 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c30__miss50 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__erode8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__dilate8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss10 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss25 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_full c60__miss50 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__erode8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__dilate8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss10 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss25 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c10__miss50 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__erode8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__dilate8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss10 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss25 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c30__miss50 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__erode8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate2 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate4 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__dilate8 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss10 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss25 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 missed_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 missed_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 missed_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 missed_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 over_clean_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 over_clean_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 over_input_false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "region p2_dropout c60__miss50 over_input_recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__erode2 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__erode4 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__erode8 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__dilate2 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__dilate4 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__dilate8 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__miss10 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__miss25 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c10__miss50 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__erode2 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__erode4 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__erode8 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__dilate2 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__dilate4 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__dilate8 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__miss10 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__miss25 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c30__miss50 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__erode2 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__erode4 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__erode8 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__dilate2 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__dilate4 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__dilate8 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__miss10 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__miss25 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "error stats c60__miss50 (10 test cities)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "report primary row erode2",
+      "pass": true,
+      "detail": "| erode2 | 0.116 | 0.000 | 0.416 \u00b1 0.050 | -0.100 | [-0.141, -0.060] | -1.79 | 0/10 | 3.1e-04 | 0.0176 | 0.70 |"
+    },
+    {
+      "check": "report primary row erode4",
+      "pass": true,
+      "detail": "| erode4 | 0.232 | 0.000 | 0.329 \u00b1 0.029 | -0.187 | [-0.220, -0.153] | -3.98 | 0/10 | 1.5e-06 | 0.0176 | 0.43 |"
+    },
+    {
+      "check": "report primary row erode8",
+      "pass": true,
+      "detail": "| erode8 | 0.431 | 0.000 | 0.273 \u00b1 0.018 | -0.243 | [-0.272, -0.213] | -5.87 | 0/10 | 1.2e-07 | 0.0176 | 0.26 |"
+    },
+    {
+      "check": "report primary row dilate2",
+      "pass": true,
+      "detail": "| dilate2 | 0.000 | 0.051 | 0.513 \u00b1 0.028 | -0.003 | [-0.003, -0.002] | -2.48 | 0/10 | 5.1e-05 | 0.0176 | 0.99 (most) |"
+    },
+    {
+      "check": "report primary row dilate4",
+      "pass": true,
+      "detail": "| dilate4 | 0.000 | 0.107 | 0.511 \u00b1 0.028 | -0.005 | [-0.006, -0.005] | -4.27 | 0/10 | 1.2e-06 | 0.0176 | 0.98 (most) |"
+    },
+    {
+      "check": "report primary row dilate8",
+      "pass": true,
+      "detail": "| dilate8 | 0.000 | 0.214 | 0.506 \u00b1 0.028 | -0.010 | [-0.012, -0.009] | -4.37 | 0/10 | 1.2e-06 | 0.0176 | 0.97 (most) |"
+    },
+    {
+      "check": "report primary row miss10",
+      "pass": true,
+      "detail": "| miss10 | 0.100 | 0.000 | 0.426 \u00b1 0.013 | -0.090 | [-0.103, -0.077] | -5.00 | 0/10 | 4.3e-07 | 0.0176 | 0.73 |"
+    },
+    {
+      "check": "report primary row miss25",
+      "pass": true,
+      "detail": "| miss25 | 0.250 | 0.000 | 0.348 \u00b1 0.007 | -0.168 | [-0.188, -0.149] | -6.17 | 0/10 | 9.0e-08 | 0.0176 | 0.49 |"
+    },
+    {
+      "check": "report primary row miss50",
+      "pass": true,
+      "detail": "| miss50 | 0.500 | 0.000 | 0.266 \u00b1 0.010 | -0.250 | [-0.276, -0.225] | -7.03 | 0/10 | 3.2e-08 | 0.0176 | 0.23 |"
+    }
+  ]
+}

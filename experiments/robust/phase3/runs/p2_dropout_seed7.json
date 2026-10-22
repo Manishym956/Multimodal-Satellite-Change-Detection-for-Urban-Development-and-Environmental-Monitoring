@@ -1,0 +1,46 @@
+{
+  "run": "p2_dropout_seed7",
+  "arm": "p2_dropout",
+  "seed": 7,
+  "checkpoint_step": 500,
+  "tau_clean": 0.66,
+  "tau_level_val": {
+    "clean": 0.66,
+    "c10": 0.45,
+    "c30": 0.25,
+    "c60": 0.19,
+    "missing": 0.54,
+    "c100": 0.99,
+    "haze": 0.99
+  },
+  "anchors": {
+    "clean_val_argmax": true,
+    "clean_test_at_selected": true,
+    "clean_test_at_0.5": true,
+    "missing_test_at_selected": true,
+    "missing_test_at_0.5": true
+  },
+  "val_cities": [
+    "beihai",
+    "bercy",
+    "aguasclaras",
+    "paris"
+  ],
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "source_sha256": {
+    "eval_phase3.py": "5e28cf475e3f89c75601f11094bd817691c22b4f54273fd6a152f01368a673b3",
+    "src/phase3/corruption.py": "6418fde31779dd219f3b2ec7204c54760b2f7b7d70bb9070db86012639fb7d1e",
+    "src/training/train_robust.py": "c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c"
+  }
+}

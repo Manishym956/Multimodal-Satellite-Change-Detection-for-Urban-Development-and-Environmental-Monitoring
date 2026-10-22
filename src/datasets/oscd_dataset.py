@@ -201,6 +201,7 @@ class OSCDDataset(Dataset):
             SENTINEL2_BANDS, sentinel2_bands or list(SENTINEL2_BANDS)
         )
         self._cache: dict[tuple[str, int], dict[str, np.ndarray]] = {}
+        self._tensor_cache: dict[tuple[str, int], tuple[torch.Tensor, torch.Tensor, torch.Tensor]] = {}
 
     def __len__(self) -> int:
         return len(self.cities)
@@ -218,6 +219,21 @@ class OSCDDataset(Dataset):
         else:
             orbit = self.fixed_orbit
 
+        # The tensors are a pure function of (city, orbit); converting the full city once
+        # instead of once per crop gives identical values and is ~10x faster in training.
+        key = (city, orbit)
+        if key not in self._tensor_cache:
+            self._tensor_cache[key] = self._tensors(city, orbit)
+        t1_tensor, t2_tensor, label_tensor = self._tensor_cache[key]
+        return {
+            "t1_img": t1_tensor,
+            "t2_img": t2_tensor,
+            "label": label_tensor,
+            "city": city,
+            "orbit": orbit,
+        }
+
+    def _tensors(self, city: str, orbit: int) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         arrays = self._arrays(city, orbit)
         sentinel1_t1 = arrays["sentinel1_t1"][:, :, self.s1_band_selection].astype(np.float32)
         sentinel1_t2 = arrays["sentinel1_t2"][:, :, self.s1_band_selection].astype(np.float32)
@@ -233,10 +249,4 @@ class OSCDDataset(Dataset):
             t1_image = np.concatenate((sentinel1_t1, sentinel2_t1), axis=2)
             t2_image = np.concatenate((sentinel1_t2, sentinel2_t2), axis=2)
 
-        return {
-            "t1_img": TF.to_tensor(t1_image),
-            "t2_img": TF.to_tensor(t2_image),
-            "label": TF.to_tensor(label),
-            "city": city,
-            "orbit": orbit,
-        }
+        return TF.to_tensor(t1_image), TF.to_tensor(t2_image), TF.to_tensor(label)
