@@ -1,0 +1,25 @@
+b55f8f8893619e3b5e3bf2fe7b3836ab6873ec4b8cac451975bb90c028e2bf07 *smoke_phase4b.py
+2026-10-22T13:57:12+05:30
+ok   bank: shape (N, 32, 32) bool
+ok   bank: every fraction in [0.05, 0.95]
+ok   bank: file hash = bank json
+ok   bank: excluded scenes = all Phase 3 mask scenes (val + test, current + superseded)
+ok   sampler: spatial=0 draws the same sequence as train_robust (B mixture)
+ok   sampler: C mixture frequencies within 0.005
+ok   split: validation cities are the registered four
+ok   spatial: S2 t2 is exactly 0 under the mask in all 13 bands
+ok   spatial: S2 t2 unchanged outside the mask
+ok   spatial: S1 t2 and all of t1 unchanged
+ok   spatial: mask non-trivial (some pixels zeroed, some kept)
+ok   spatial: input tensors not mutated
+ok   dataset: cached tensors not mutated by crop/augment/spatial
+ok   condition full: identical to train_robust.apply_condition
+ok   condition no_o2: identical to train_robust.apply_condition
+ok   condition no_opt: identical to train_robust.apply_condition
+ok   alignment: crop + augmentation keep t1, t2, label and all channels aligned (50 draws)
+ok   pipeline: 3 spatial training steps, finite loss and gradients
+ok   pipeline: evaluate() leaves the model in eval mode
+ok   pipeline: checkpoint round trip gives identical validation counts
+ok   eval path: p2_dropout_seed1 validation counts = stored 4A-bis counts, all 33 conditions
+21 checks, 0 failed
+exit 0

@@ -6,6 +6,11 @@ c30__miss25; paired t-test, Holm over these 7; claim "C better at X" only if Hol
 difference is reported as a cost/benefit whatever its sign.
 Secondary (descriptive, own Holm families): C - B for all other 4A-bis conditions (cloud no-fill, other mask errors);
 C - B on the Phase 2 conditions (full, no_o2, no_opt, o2_copy) at each run's validation-selected threshold from metrics.json.
+Pre-specified labels per primary condition: "C better" (Holm p < 0.05, Δ > 0), "C worse" (Holm p < 0.05, Δ < 0), otherwise
+"no detectable difference"; the clean difference is labelled a "substantial clean regression" if mean Δ < -0.02 F1,
+whatever its p-value.
+Descriptive (no tests): precision, recall, IoU and false-alarm rate for the primary conditions; metrics inside / outside the
+true cloud mask M at 30% (B from the 4A-bis exploratory addendum runs, C from eval_phase4b.py), same partition and threshold.
 
 Writes experiments/robust/phase4b/{summary.json, tables.md, curves.png}.
 
@@ -66,6 +71,26 @@ def main() -> None:
     out["primary"] = family(PRIMARY, getter)
     out["secondary_other_conditions"] = family([c for c in CONDITIONS if c not in PRIMARY], getter)
     out["secondary_phase2_conditions"] = family(P2_CONDITIONS, lambda arm, c: [runs[(arm, s)][2]["test"][c]["at_selected"]["f1"] for s in SEEDS])
+    for c, r in out["primary"].items():
+        r["label"] = ("C better" if r["holm_p"] < 0.05 and r["mean_diff"] > 0 else
+                      "C worse" if r["holm_p"] < 0.05 and r["mean_diff"] < 0 else "no detectable difference")
+    out["substantial_clean_regression"] = bool(out["primary"]["clean"]["mean_diff"] < -0.02)
+
+    def rate(arm, s, key, m):
+        doc, arr, _ = runs[(arm, s)]
+        return rates_at(arr[key], round(doc["tau_clean"] * 100))[m] or 0.0
+
+    out["metrics"] = {arm: {c: {m: describe([rate(arm, s, f"test__{c}", m) for s in SEEDS])
+                                for m in ("f1", "precision", "recall", "iou", "false_alarm_rate")} for c in PRIMARY} for arm in ARMS}
+    io_conds = ("clean@c30", "c30", "z30", *(f"c30__{v}" for v in VARIANTS))
+    io = {"p2_dropout": [np.load(ROOT / "phase4abis" / "addendum_inside_outside" / "runs" / f"p2_dropout_seed{s}.npz") for s in SEEDS],
+          "p4b_spatial": [np.load(ROOT / "phase4b" / "runs" / f"p4b_spatial_seed{s}.npz") for s in SEEDS]}
+    prefix = {"p2_dropout": "", "p4b_spatial": "io_"}
+    out["inside_outside"] = {arm: {c: {f"{part}_{m}": describe([rates_at(torch.from_numpy(a[f"{prefix[arm]}{part}__{c}"]),
+                                                                          round(runs[(arm, s)][0]["tau_clean"] * 100))[m] or 0.0
+                                                                 for a, s in zip(io[arm], SEEDS)])
+                                       for part in ("inside", "outside") for m in ("f1", "recall", "false_alarm_rate")}
+                                   for c in io_conds} for arm in ARMS}
     (ROOT / "phase4b" / "summary.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     (ROOT / "phase4b" / "tables.md").write_text(tables(out), encoding="utf-8")
     plot(out)
@@ -85,6 +110,20 @@ def family_table(rows: dict, title: str, out: dict, phase2: bool = False) -> lis
 
 def tables(out: dict) -> str:
     L = family_table(out["primary"], "### PRIMARY: paired C − B test F1, frozen clean threshold, Holm over 7", out)
+    L += ["Pre-specified labels: " + "; ".join(f"{c}: **{r['label']}**" for c, r in out["primary"].items())
+          + f". Substantial clean regression (mean Δ < −0.02): **{'yes' if out['substantial_clean_regression'] else 'no'}**.", ""]
+    L += ["### Primary conditions: F1 / precision / recall / IoU / false-alarm rate at the frozen clean threshold (mean ± SD)", "",
+          "| arm | condition | F1 | precision | recall | IoU | false-alarm rate |", "|---|---|---|---|---|---|---|"]
+    for arm, (_, name) in ARMS.items():
+        for c in PRIMARY:
+            e = out["metrics"][arm][c]
+            L.append(f"| {name} | {c} | " + " | ".join(ms(e[m]) for m in ("f1", "precision", "recall", "iou", "false_alarm_rate")) + " |")
+    L += ["", "### Descriptive: 30% cloud, inside / outside the true cloud mask M, frozen clean threshold (mean ± SD; no tests)", "",
+          "| arm | condition | F1 in M | recall in M | FAR in M | F1 outside M | recall outside M | FAR outside M |", "|---|---|---|---|---|---|---|---|"]
+    for arm, (_, name) in ARMS.items():
+        for c, e in out["inside_outside"][arm].items():
+            L.append(f"| {name} | {c} | " + " | ".join(ms(e[f"{p}_{m}"]) for p in ("inside", "outside") for m in ("f1", "recall", "false_alarm_rate")) + " |")
+    L.append("")
     L += family_table(out["secondary_other_conditions"], "### Secondary: other 4A-bis conditions, frozen clean threshold (own Holm family)", out)
     L += family_table(out["secondary_phase2_conditions"], "### Secondary: Phase 2 conditions at each run's validation-selected threshold (own Holm family)", out, True)
     L += ["### Phase 2 conditions, precision / recall / IoU at the validation-selected threshold (mean ± SD)", "",

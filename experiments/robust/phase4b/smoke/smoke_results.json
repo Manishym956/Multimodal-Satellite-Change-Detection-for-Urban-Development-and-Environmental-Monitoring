@@ -1,0 +1,114 @@
+{
+  "n_checks": 21,
+  "n_failed": 0,
+  "checks": [
+    {
+      "check": "bank: shape (N, 32, 32) bool",
+      "pass": true,
+      "detail": "(20000, 32, 32)"
+    },
+    {
+      "check": "bank: every fraction in [0.05, 0.95]",
+      "pass": true,
+      "detail": "(0.05078125, 0.94921875)"
+    },
+    {
+      "check": "bank: file hash = bank json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "bank: excluded scenes = all Phase 3 mask scenes (val + test, current + superseded)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "sampler: spatial=0 draws the same sequence as train_robust (B mixture)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "sampler: C mixture frequencies within 0.005",
+      "pass": true,
+      "detail": "{'full': 0.49884375, 'no_o2': 0.1249, 'no_opt': 0.12560625, 'o2_copy': 0.0, 'spatial': 0.25065}"
+    },
+    {
+      "check": "split: validation cities are the registered four",
+      "pass": true,
+      "detail": "['beihai', 'bercy', 'aguasclaras', 'paris']"
+    },
+    {
+      "check": "spatial: S2 t2 is exactly 0 under the mask in all 13 bands",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "spatial: S2 t2 unchanged outside the mask",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "spatial: S1 t2 and all of t1 unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "spatial: mask non-trivial (some pixels zeroed, some kept)",
+      "pass": true,
+      "detail": "426"
+    },
+    {
+      "check": "spatial: input tensors not mutated",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "dataset: cached tensors not mutated by crop/augment/spatial",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "condition full: identical to train_robust.apply_condition",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "condition no_o2: identical to train_robust.apply_condition",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "condition no_opt: identical to train_robust.apply_condition",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "alignment: crop + augmentation keep t1, t2, label and all channels aligned (50 draws)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "pipeline: 3 spatial training steps, finite loss and gradients",
+      "pass": true,
+      "detail": "0.4900750517845154"
+    },
+    {
+      "check": "pipeline: evaluate() leaves the model in eval mode",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "pipeline: checkpoint round trip gives identical validation counts",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "eval path: p2_dropout_seed1 validation counts = stored 4A-bis counts, all 33 conditions",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "smoke_sha256": "b55f8f8893619e3b5e3bf2fe7b3836ab6873ec4b8cac451975bb90c028e2bf07",
+  "torch": "2.5.1+cu124",
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU"
+}
