@@ -1,0 +1,1 @@
+{"p2_dropout": {"val_refs_r0_equal_stored": true, "val_argmax": true, "deterministic": true, "eval_mode": true}, "p4b_spatial": {"val_refs_r0_equal_stored": true, "val_argmax": true, "deterministic": true, "eval_mode": true}, "dilation_monotone": true, "r0_is_4abis_mask": true, "n_conditions": 169, "n_failed": 0, "seconds": 279}
