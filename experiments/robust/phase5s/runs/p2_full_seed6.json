@@ -1,0 +1,19 @@
+{
+  "run": "p2_full_seed6",
+  "arm": "p2_full",
+  "seed": 6,
+  "tau_clean": 0.51,
+  "anchors": {
+    "refs_and_r0_val_equal_stored": true,
+    "refs_and_r0_test_equal_stored": true,
+    "clean_val_argmax": true
+  },
+  "source_sha256": {
+    "eval_phase5s.py": "35326afa26a61ff8249a5e4a4753b4100e9175d65bdbbec775a782d475141bbb",
+    "eval_phase4a.py": "5d831a81126b97c99778fa835ec35ef068520b30b960756c3c3b97b3ccc70f62",
+    "src/phase3/corruption.py": "6418fde31779dd219f3b2ec7204c54760b2f7b7d70bb9070db86012639fb7d1e",
+    "src/phase3/mask_errors.py": "7758b8cc436c83de02784a39adaf8725b15fe60b6a2437d0b2429f8807f667bd",
+    "src/training/train_robust.py": "c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c",
+    "src/datasets/oscd_dataset.py": "bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43"
+  }
+}
