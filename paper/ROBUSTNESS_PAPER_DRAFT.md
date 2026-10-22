@@ -1,4 +1,4 @@
-# Clouds Are Not Missing Data: A Pre-Registered Robustness Study of SAR–Optical Urban Change Detection on OSCD
+# Clouds Are Not Missing Data: A Staged Robustness Study of SAR–Optical Urban Change Detection on OSCD with Pre-Specified Analyses
 
 **Manish Y. M.**
 *[Institution]*
@@ -6,7 +6,8 @@ manishym946@gmail.com
 
 *Draft, 2026-10-22. Every number in this draft is taken from the audited study reports in `experiments/robust/`
 (`REPORT.md`, `PHASE3_REPORT.md`, `PHASE4A_REPORT.md`, `PHASE4ABIS_REPORT.md`, `PHASE4B_REPORT.md`) and checked against them by
-`paper/check_robustness_paper_numbers.py`. Items marked [verify] need checking before submission.*
+`paper/check_robustness_paper_numbers.py` (every number occurs in a source) and `paper/check_robustness_paper_tables.py` (every
+results-table cell matches its source value). Items marked [verify] need checking before submission.*
 
 ---
 
@@ -14,12 +15,14 @@ manishym946@gmail.com
 
 SAR–optical change detectors are usually trained and tested with all images present, yet in practice the post-change
 optical image is often partly cloudy rather than absent. We study this gap with the dual-stream U-Net (DS-UNet) of Hafner et al. on the
-OSCD urban change benchmark (Sentinel-1 VV and Sentinel-2), in five pre-registered steps, each with 10 paired training seeds,
+OSCD urban change benchmark (Sentinel-1 VV and Sentinel-2), in five steps. For each step, hypotheses, test conditions and the primary
+analysis were written down before its test evaluation (an internal pre-registration; §3.5), and each uses 10 paired training seeds,
 a frozen validation-only selection protocol and an independent audit of every reported number.
-(1) Whole-modality dropout training (B) does not cost F1 on full input (Δ = −0.003, 95% CI [−0.037, +0.031]) and improves F1
-with the post-change optical image zero-filled by +0.241 relative to full-input training (A).
+(1) Whole-modality dropout training (B) shows no detectable full-input cost at a validation-selected threshold (Δ = −0.003, 95% CI
+[−0.037, +0.031]; at a fixed 0.5 threshold it costs 0.086) and improves F1 with the post-change optical image zero-filled by +0.241
+relative to full-input training (A).
 (2) Under simulated opaque clouds with real cloud shapes, both models fail: 10% cloud cover reduces B's F1 from 0.553 to 0.329,
-and at 30% cover B's F1 is 0.191, close to the 0.098 of a detector that labels everything as change. Cloud-valued pixels are
+and at 30% cover B's F1 is 0.191, against 0.098 for a detector that labels every pixel as change. Cloud-valued pixels are
 read as change (false-alarm rate under the cloud 0.96–1.00).
 (3) Zero-filling the cloud pixels with an oracle mask restores B to 0.539 / 0.516 / 0.499 F1 at 10 / 30 / 60% cover,
 recovering 87–94% of the loss; the full-input model A recovers only 16–40%.
@@ -27,8 +30,9 @@ recovering 87–94% of the loss; the full-input model A recovers only 16–40%.
 under-masking is expensive (−0.090 to −0.250 for missed clouds, −0.100 to −0.243 for eroded edges).
 (5) Training with cloud-shaped spatial zero-fill (C) gives no detectable difference from whole-modality dropout on any of the 7
 primary conditions (all |Δ| < 0.02 F1, Holm p ≥ 0.55), and does not reduce the under-masking failure.
-The results point to the cloud mask, not the fusion architecture, as the limiting factor in this setting: a recall-biased
-cloud mask plus modality-dropout training is the cheapest effective remedy we found. All corruption is simulated, the 10 seeds
+For this architecture and this simulated corruption, the main remaining error comes from cloud pixels that the mask lets through,
+not from how the modalities are fused: a recall-biased cloud mask plus modality-dropout training is the cheapest effective remedy we
+found. We did not compare against SAR-to-optical feature reconstruction [19]. All corruption is simulated, the 10 seeds
 are training replicates on the same 10 test cities, and none of these results establishes robustness to real cloudy acquisitions.
 
 **Keywords:** change detection, SAR–optical fusion, cloud cover, missing modality, modality dropout, cloud masking, OSCD,
@@ -54,8 +58,13 @@ et al. [1], and asks four questions in sequence, each pre-registered before its 
 - **Q4 (Step 4B):** does training with cloud-shaped spatial zero-fill improve on whole-modality dropout?
 
 The answers are, in order: yes, at no detectable full-input cost; no; yes with a good mask, and the mask must err toward
-over-masking; and no detectable improvement. The practical conclusion is that, in this setting, a new architecture is not yet
-warranted. The bottleneck is whether cloud-valued pixels reach the model.
+over-masking; and no detectable improvement. The practical conclusion is that, in this setting, a new fusion architecture is not yet
+warranted: in our experiments, the dominant remaining error is cloud-valued pixels reaching the model.
+
+**Contributions.** This is a measurement study, not a new method. We contribute (i) a controlled, multi-seed separation of the
+*missing* and *partly cloudy* cases for one published SAR–optical architecture; (ii) evidence that inference-time zero-fill under a cloud
+mask works only for a dropout-trained model; (iii) a quantification of the asymmetric cost of over- and under-masking; and (iv) a
+null result for cloud-shaped spatial dropout training. Each step's analysis was fixed in advance and every reported number was audited.
 
 Because OSCD is small (24 cities), we report every result with 10 paired seeds, 95% confidence intervals and Holm-corrected
 tests, select every checkpoint and threshold on validation cities only, and treat the 10 seeds explicitly as training replicates
@@ -69,13 +78,15 @@ report urban change detection on OSCD [13]. Siamese fully convolutional networks
 optical baselines; reviews [6] cover the broader field.
 
 **Missing modalities.** Modality dropout, randomly removing an input modality during training, was introduced for multimodal
-gesture recognition [18] and is widely used to make fusion models usable when one input is absent. For urban mapping with
-missing optical data, Hafner and Ban proposed reconstructing optical features from SAR [19, verify]; we do not compare with that
-method here.
+gesture recognition [18] and is widely used to make fusion models usable when one input is absent. Closest to our setting, Hafner and
+Ban [19] address multi-temporal urban mapping with an optical modality partly missing because of clouds. They reconstruct optical
+features from SAR when optical input is absent, and report that this outperforms a zero-fill baseline and a SAR-only model. Our study
+examines the zero-fill route in more detail (dropout training, cloud-valued vs zero-filled input, mask errors) and does not compare with
+reconstruction; whether reconstruction also degrades under imperfect cloud masks is an open question.
 
 **Clouds.** Real cloud masks for Sentinel-2 are available in the Sentinel-2 Cloud Mask Catalogue [20], which we use for cloud
-shapes. Operational cloud detectors (e.g. scene classification layers or s2cloudless [verify citation]) are imperfect, missing
-thin cloud and cloud edges; we model their errors only synthetically.
+shapes. Operational cloud detectors such as s2cloudless [22] are imperfect; an intercomparison of ten cloud-masking algorithms on four
+reference datasets [23] documents substantial errors. We model detector errors only synthetically.
 
 **Evaluation practice.** Seed variance can reverse model rankings in small benchmarks [16, 17]. We follow a pre-registration
 discipline: each step's hypotheses, conditions, test family and decision rule were written down and hashed before any test output
@@ -149,8 +160,12 @@ attainable p with n = 10 is 0.0020). Secondary analyses form their own Holm fami
 the minimum detectable effect at 80% power is 1.00 SD of the paired differences at α = 0.05 and 1.41 SD at α = 0.05/7,
 roughly 0.04–0.07 F1 here; non-significant results are not evidence of equivalence.
 
-Each step was pre-registered (hypotheses, conditions, primary family, decision guidance, and sha256 hashes of all code and
-inputs) before its first test evaluation. Each evaluation enforces anchors, for example that re-evaluated clean counts equal the
+**Pre-specification and its evidence.** For each step, a pre-registration file (hypotheses, conditions, primary family, decision guidance,
+and sha256 hashes of the code and inputs) was written before that step's first test evaluation. These are internal files in the project
+repository, not entries in a public registry. The evidence for their timing differs by step: the Step 4B pre-registration was committed
+to version control before the first training run; for Phases 2–4A-bis, the evidence is file modification times relative to the first run
+files, and the code hashes recorded in every run file. The Step 4A and 4A-bis pre-registrations cite validation-only smoke tests for which
+no log exists. Each evaluation enforces anchors, for example that re-evaluated clean counts equal the
 training-time counts exactly. An independent audit script recomputes every reported statistic from raw counts (Phase 2: 579 checks;
 Phase 3: 167; Step 4A-bis: 1338; Step 4B: 432; all with 0 failures). Before Step 4B training, a parity run of the spatial-dropout
 code with the spatial share set to zero reproduced a B checkpoint bit-for-bit. Deviations are listed in Appendix A.
@@ -280,18 +295,19 @@ transfer to a partly corrupted one. A dropout-trained model learns that a zero-f
 does not learn that a bright, flat, cloud-valued patch is not a change. In this model, cloud-valued pixels act as strong evidence
 of change, both under the cloud and, through the receptive field, in clear pixels nearby.
 
-**The remedy is in the input, not in the architecture.** Zero-filling cloud pixels turns the cloud problem back into the missing-data
+**In these experiments, the input-side remedy did most of the work.** Zero-filling cloud pixels turns the cloud problem back into the missing-data
 problem that dropout training already solves. With a perfect mask this recovers 87–94% of the cloud loss. With an imperfect mask, the
 outcome depends almost entirely on the direction of the error: a mask that covers 21% of the clear scene in addition to the cloud
 costs B only 0.010 F1, while a mask that misses a quarter of the cloud costs 0.168. This asymmetry is a design requirement for the
 cloud detector: it should be tuned for recall (e.g. dilated) rather than for balanced accuracy. That requirement holds only for a
 model trained with dropout; the full-input model reads zero-filled clear pixels as change, so over-masking hurts it.
 
-**Training-time augmentation has reached its limit here.** Spatial dropout teaches the model about zero-filled regions with cloud
+**Zero-fill augmentation did not add robustness.** Spatial dropout teaches the model about zero-filled regions with cloud
 shapes, but B already handles zero-filled regions well, and the residual failure is cloud values that the mask lets through. C never
-sees cloud values in training, so the null result is what the Step 4B pre-registration expected. Closing the remaining gap requires the
+sees cloud values in training, so the null result is what the Step 4B pre-registration expected. We expect that closing the remaining gap requires the
 model to see or be told about cloud-valued pixels, for example training that includes cloud-valued corruption, or an explicit
-per-pixel validity channel.
+per-pixel validity channel. Neither was tested here, and this study cannot rule out that a different architecture would be less
+sensitive to unmasked cloud.
 
 **Architecture decision.** Under the pre-specified decision guidance, these results do not justify a new fusion architecture now.
 The next steps, each to be pre-registered separately, are (i) a recall-biased cloud detector evaluated with B, preferably on real cloudy
@@ -316,11 +332,15 @@ clean thresholds range from 0.50 to 0.97). Deployments should calibrate the thre
 - **Small benchmark, limited power.** OSCD has 24 cities; checkpoints and thresholds are selected on 4 validation cities. Effects below
   about 0.04–0.07 F1 can be missed in the Step 4B comparison.
 - **Confounded Step 4B contrast.** C differs from B both by adding spatial dropout and by halving whole-image dropout.
+- **Checkpoint selection differs between arms by design.** A selects its checkpoint on full-input validation F1, B and C on the mean over
+  full, `no_o2` and `no_opt`. Part of the A–B difference may come from the selection rule rather than the training mixture.
+- **Internal pre-registration.** The pre-registrations are repository files, not public registrations, and for Phases 2–4A-bis their
+  timing rests on file times (§3.5).
+- **Single benchmark and single fill strategy.** Only OSCD and only zero-fill were studied; reconstruction-based methods [19] may behave differently.
 - **One architecture, one dropout mixture per arm.** The mixtures were fixed a priori and not tuned. The results may differ for other
   fusion designs (e.g. early fusion or attention-based models).
 - **Baseline gap.** Our reproduction of the official DS-UNet protocol (0.557 ± 0.035) is below the published 0.600, and two small code
   differences from the official training loop remain (batch sampling with replacement; first-orbit SAR at evaluation).
-- **No comparison with SAR-to-optical reconstruction** methods [19].
 
 ## 7. Conclusion
 
@@ -349,12 +369,14 @@ re-verified with `verify_prereg_hashes.py`. Training is bitwise deterministic on
 2. **Phase 3 masks.** The first mask build used an absolute cloud-fraction tolerance (±0.05), which could nearly double a small cloud.
    The masks were rebuilt with a relative tolerance before any model saw a mask; the superseded masks are kept and unused. A missing
    `model.eval()` in the Phase 3 evaluation script was fixed after a validation-only smoke test, before any test evaluation.
-3. **Step 4A-bis.** The pre-registration cites a validation-only smoke test for which no log exists; that claim is unverified. The
-   evaluation printed per-seed test F1 while running; the analysis script's hash equals the registered hash. The analysis crashed on
+3. **Steps 4A and 4A-bis.** Both pre-registrations cite a validation-only smoke test for which no log exists; those claims are unverified.
+   In both steps, the evaluation anchors (exact reproduction of stored counts and thresholds) are the available evidence that the pipeline
+   was correct. In Step 4A-bis, the evaluation printed per-seed test F1 while running; the analysis script's hash equals the registered hash. The analysis crashed on
    its final console print and was re-run unchanged. Two source files were hashed in every run file but missing from the pre-registration's
    hash table; their hashes are unchanged since Phase 3. Inside/outside-mask metrics and IoU were added as a labelled exploratory addendum.
 4. **Phase 3 report wording.** `PHASE3_REPORT.md` describes the all-change F1 (≈ 0.098) as "the change prevalence". The prevalence
-   is 0.052; 0.098 is the F1 of the all-change detector. The report is left unchanged; this draft uses the correct terms.
+   is 0.052; 0.098 is the F1 of the all-change detector. The report is left unchanged; the correction is recorded in
+   `experiments/robust/PHASE3_REPORT_ERRATA.md`, and this draft uses the correct terms.
 5. **Step 4B.** Test F1 was printed at the end of each training run and during evaluation, as pre-specified; nothing was changed after
    it. The pre-registration's text says "33" evaluation conditions but lists 34; all 34 were evaluated. No run failed or was excluded.
 
@@ -374,12 +396,16 @@ re-verified with `verify_prereg_hashes.py`. Training is bitwise deterministic on
 
 [17] Y. M., M. (2026). What does a missing post-change optical image cost? A multi-seed study of SAR–optical urban change detection on OSCD. Manuscript (`paper/RESEARCH_PAPER_FINAL.md`).
 
-[18] Neverova, N., Wolf, C., Taylor, G., & Nebout, F. (2016). ModDrop: Adaptive multi-modal gesture recognition. *IEEE Transactions on Pattern Analysis and Machine Intelligence, 38*(8), 1692–1706. [verify]
+[18] Neverova, N., Wolf, C., Taylor, G. W., & Nebout, F. (2016). ModDrop: Adaptive multi-modal gesture recognition. *IEEE Transactions on Pattern Analysis and Machine Intelligence, 38*(8), 1692–1706. arXiv:1501.00102. [verify volume and pages on IEEE Xplore]
 
-[19] Hafner, S., & Ban, Y. (2023). Multi-modal deep learning for multi-temporal urban mapping with a partly missing optical modality. [verify title, venue and DOI]
+[19] Hafner, S., & Ban, Y. (2023). Multi-modal deep learning for multi-temporal urban mapping with a partly missing optical modality. In *Proc. IEEE International Geoscience and Remote Sensing Symposium (IGARSS)*, 6843–6846. arXiv:2306.00640. [add DOI]
 
 [20] Francis, A., Mrziglod, J., Sidiropoulos, P., & Muller, J.-P. (2020). Sentinel-2 Cloud Mask Catalogue (Version 1). Zenodo. https://doi.org/10.5281/zenodo.4172871
 
 [21] Holm, S. (1979). A simple sequentially rejective multiple test procedure. *Scandinavian Journal of Statistics, 6*(2), 65–70.
+
+[22] Sentinel Hub (2017). Improving cloud detection with machine learning. Sentinel Hub blog (s2cloudless). [add URL]
+
+[23] Skakun, S., et al. (2022). Cloud Mask Intercomparison eXercise (CMIX): An evaluation of cloud masking algorithms for Landsat 8 and Sentinel-2. *Remote Sensing of Environment, 274*, 112990. https://doi.org/10.1016/j.rse.2022.112990 [verify full author list, title and volume]
 
 Reference numbers follow the companion manuscript [17] where shared; unused numbers are omitted.
