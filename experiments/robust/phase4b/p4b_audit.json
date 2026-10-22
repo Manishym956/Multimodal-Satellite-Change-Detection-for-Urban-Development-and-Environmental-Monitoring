@@ -1,0 +1,2167 @@
+{
+  "n_checks": 432,
+  "n_failed": 0,
+  "failed": [],
+  "checks": [
+    {
+      "check": "C seed 1: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 1, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 1: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 1: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 1: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 1: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 1: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 1: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 1: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 2, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 2: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 2: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 3, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 3: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 3: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 4, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 4: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 4: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 5, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 5: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 5: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 6, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 6: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 6: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 7, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 7: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 7: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 8, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 8: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 8: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 9, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 9: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 9: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: arguments = registered",
+      "pass": true,
+      "detail": "{'name': 'p4b_spatial', 'seed': 10, 'train_conditions': 'full=0.5,spatial=0.25,no_o2=0.125,no_opt=0.125', 'steps': 2500, 'eval_every': 25, 'batch_size': 64, 'crop_size': 32, 'lr': 5e-05, 'weight_decay': 0.0005, 'protocol': 'holdout', 'loss': 'jaccard', 'no_augment': False, 'uniform_crop': False}"
+    },
+    {
+      "check": "C seed 10: source hashes = registered",
+      "pass": true,
+      "detail": "{'train_spatial.py': '749c98f8f7f311795ddc042a59949da168709eb8036f3c47437a29f96a06e1c7', 'train_robust.py': 'c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c', 'oscd_dataset.py': 'bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43', 'networks.py': 'a3e7216b6054fe85cb379"
+    },
+    {
+      "check": "C seed 10: snapshot = registered train_spatial.py",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: city split = Phase 2",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: 100 validation points every 25 steps",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: selection score = mean val F1 over full/no_o2/no_opt",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: selected step = first argmax of validation score",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: checkpoint step and thresholds = metrics.json",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout seed 1: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 2: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 3: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 4: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 5: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 6: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 7: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 8: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 9: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p2_dropout seed 10: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test': True, 'c10_test': True, 'c30_test': True, 'c60_test': True, 'z10_test': True, 'z30_test': True, 'z60_test': True, 'clean_val': True, 'c10_val': True, 'c30_val': True, 'c60_val': True, 'z10_val': True, 'z30_val': True, 'z60_val': True}"
+    },
+    {
+      "check": "p4b_spatial seed 1: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 2: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 3: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 4: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 5: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 6: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 7: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 8: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 9: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "p4b_spatial seed 10: eval anchors true",
+      "pass": true,
+      "detail": "{'clean_val_argmax': True, 'clean_test_at_selected': True, 'clean_test_at_0.5': True, 'inside_outside_pass_equals_pooled': True, 'inside_plus_outside_equals_pooled': True}"
+    },
+    {
+      "check": "C eval: one source-hash set; eval_phase4b.py = registered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 1: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 2: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 3: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 4: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 5: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 6: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 7: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 8: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 9: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "C seed 10: frozen threshold = training clean threshold",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout clean: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z30: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout z60: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__erode8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__dilate8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss25: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c10__miss50: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__erode8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__dilate8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss25: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c30__miss50: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__erode8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__dilate8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss25: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p2_dropout c60__miss50: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial clean: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial z10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial z30: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial z60: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__erode2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__erode4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__erode8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__dilate2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__dilate4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__dilate8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__miss10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__miss25: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c10__miss50: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__erode2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__erode4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__erode8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__dilate2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__dilate4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__dilate8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__miss10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__miss25: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c30__miss50: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__erode2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__erode4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__erode8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__dilate2: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__dilate4: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__dilate8: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__miss10: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__miss25: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "summary p4b_spatial c60__miss50: per-seed F1, mean, SD",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "family primary clean",
+      "pass": true,
+      "detail": "({'diffs': [0.07068859911210523, 0.020762188834321127, 0.05032118274916597, 0.032664175346269864, -0.047978050400296124, -0.015909197639179418, 0.010519467867028287, -0.08792129647127156, 0.045330288670289653, 0.030374984044124975], 'mean_diff': 0.010885234211255802, 'sd_diff': 0.04855182485339758, "
+    },
+    {
+      "check": "family primary z10",
+      "pass": true,
+      "detail": "({'diffs': [0.07199228126974483, 0.014131326753686446, 0.04518356929341849, 0.040024091707738574, -0.0443923167786503, -0.011282864194563036, 0.01688988173929773, -0.07957288580536348, 0.056031245613139435, 0.03495853635346302], 'mean_diff': 0.014396286595191172, 'sd_diff': 0.04717606261532022, 'ci9"
+    },
+    {
+      "check": "family primary z30",
+      "pass": true,
+      "detail": "({'diffs': [0.05973874784820937, -0.008661824726877931, 0.03215158725238565, 0.053677894114459834, -0.042571886046704366, -0.009797980541020657, 0.022891291896940502, -0.07521219279856195, 0.06850671818108756, 0.032312266684413116], 'mean_diff': 0.013303462186433112, 'sd_diff': 0.04668507866401313, "
+    },
+    {
+      "check": "family primary z60",
+      "pass": true,
+      "detail": "({'diffs': [0.0627457295527864, -0.01953178502011005, 0.0016220855743152018, 0.05334445344809374, -0.04197771174821063, -0.006516125301500808, 0.017933552902393957, -0.06833174808192793, 0.07093870859383683, 0.015057426876904756], 'mean_diff': 0.008528458679658147, 'sd_diff': 0.045330744746282375, '"
+    },
+    {
+      "check": "family primary c30__erode4",
+      "pass": true,
+      "detail": "({'diffs': [-0.026312163926494547, -0.030290321338240833, -0.019119121799315075, -0.05416981796263026, -0.08842727737629597, -0.0012309118600881686, -0.045128047529174764, 0.03225846341198546, -0.01670516491117252, 0.07326372684817933], 'mean_diff': -0.017586063644324735, 'sd_diff': 0.04516848835048"
+    },
+    {
+      "check": "family primary c30__dilate4",
+      "pass": true,
+      "detail": "({'diffs': [0.05868301158393757, -0.01030407411478812, 0.024682859436026883, 0.05285949343109497, -0.04152539493165408, -0.009297626022944261, 0.022308710450612335, -0.07240343832431478, 0.06497438117117937, 0.02428369315482426], 'mean_diff': 0.011426161583397414, 'sd_diff': 0.044733502708590195, 'c"
+    },
+    {
+      "check": "family primary c30__miss25",
+      "pass": true,
+      "detail": "({'diffs': [-0.0037986825277276925, -0.01024947471208687, -0.010925284600263874, 0.0017448528533909324, -0.02824384141515557, -0.018425111400746985, -0.009004105325842005, -0.003749172739451523, 0.00770114781305592, 0.005949073477778233], 'mean_diff': -0.006900059857704944, 'sd_diff': 0.011019217986"
+    },
+    {
+      "check": "family secondary_other_conditions c10",
+      "pass": true,
+      "detail": "({'diffs': [-0.022102902102660416, -0.00430955116670495, -0.006148067806762136, -0.004927637245899896, -0.025647712775015652, -0.011055308213229142, -0.006297887716839923, -0.0005984529130607652, -0.004034073021535189, 0.006665875722015435], 'mean_diff': -0.007845571723969264, 'sd_diff': 0.009628748"
+    },
+    {
+      "check": "family secondary_other_conditions c30",
+      "pass": true,
+      "detail": "({'diffs': [-0.03652455247520253, -0.004981384619285656, -0.009311731966948206, -0.007043815737702408, -0.009952140190991887, -0.0072360101590071, -0.0075328076757376905, 0.012186075863260426, -0.0031808078581226917, 0.0014290773678206636], 'mean_diff': -0.007214809745191708, 'sd_diff': 0.0122177211"
+    },
+    {
+      "check": "family secondary_other_conditions c60",
+      "pass": true,
+      "detail": "({'diffs': [-0.035011376195589694, -0.0014396844665385267, -0.0043640687442480786, -0.0022938376121046378, -0.0028218191138167925, -0.003531978996557883, -0.0019130033549566161, 0.005872932492679145, -0.0031514080619405582, 0.00011867009359994851], 'mean_diff': -0.004853557395947369, 'sd_diff': 0.01"
+    },
+    {
+      "check": "family secondary_other_conditions c10__erode2",
+      "pass": true,
+      "detail": "({'diffs': [0.04252584095504891, -0.024228812708661174, -0.0007921559672927625, -0.05435818540737142, -0.11528975173037198, -0.001599981418318519, -0.013176434191056907, -0.004000039106025033, 0.028489147127203962, 0.09629656702210337], 'mean_diff': -0.004613380542474154, 'sd_diff': 0.05647679503366"
+    },
+    {
+      "check": "family secondary_other_conditions c10__erode4",
+      "pass": true,
+      "detail": "({'diffs': [0.020407743322117866, -0.014552567521740334, -0.004308656973808944, -0.03546237283578063, -0.08696844721649866, -0.006382462091874375, -0.024294369842304875, -0.002099649171185547, -0.008469499276957893, 0.0688572455534267], 'mean_diff': -0.009327303605460668, 'sd_diff': 0.03950574634016"
+    },
+    {
+      "check": "family secondary_other_conditions c10__erode8",
+      "pass": true,
+      "detail": "({'diffs': [-0.0026235713432091745, -0.010080558746733914, -0.007541821647355562, -0.0259251152174787, -0.058023636300202575, -0.005846193003016975, -0.028368113485195467, 0.00047712033001490184, -0.012122295263466698, 0.0297064042415624], 'mean_diff': -0.012034778043508176, 'sd_diff': 0.02266777198"
+    },
+    {
+      "check": "family secondary_other_conditions c10__dilate2",
+      "pass": true,
+      "detail": "({'diffs': [0.07194496851763332, 0.012546235357298152, 0.043850458494437916, 0.041505687465922536, -0.04457679282789584, -0.01158063478034188, 0.017306575534474566, -0.07877755189891172, 0.056845499405044686, 0.03335034002718906], 'mean_diff': 0.01424147852948508, 'sd_diff': 0.04704743704788045, 'ci"
+    },
+    {
+      "check": "family secondary_other_conditions c10__dilate4",
+      "pass": true,
+      "detail": "({'diffs': [0.0717511273563895, 0.011250780850289854, 0.042451587889976605, 0.04187067177369286, -0.04444339249438911, -0.01240996740137068, 0.017563308726409432, -0.07887148519553028, 0.056500815697441475, 0.031512814939217204], 'mean_diff': 0.013717626214212686, 'sd_diff': 0.046894876791769506, 'c"
+    },
+    {
+      "check": "family secondary_other_conditions c10__dilate8",
+      "pass": true,
+      "detail": "({'diffs': [0.07059733655790307, 0.007155060464820506, 0.03871670389788329, 0.04293866475233321, -0.04443837247316951, -0.014397699260166985, 0.018256440844446886, -0.07917332917978842, 0.05507080621490379, 0.02864292590864126], 'mean_diff': 0.01233685377278071, 'sd_diff': 0.04653899032016137, 'ci95"
+    },
+    {
+      "check": "family secondary_other_conditions c10__miss10",
+      "pass": true,
+      "detail": "({'diffs': [0.05470502353740819, 0.0068153720756647385, 0.029203566029616934, 0.025151727195512286, -0.04695304855868426, -0.01022124488252496, 0.007707278032609177, -0.060351749012566624, 0.03915612469124097, 0.03225366949807362], 'mean_diff': 0.007746671860635007, 'sd_diff': 0.03728082163158681, '"
+    },
+    {
+      "check": "family secondary_other_conditions c10__miss25",
+      "pass": true,
+      "detail": "({'diffs': [0.027815035352735773, 0.002693780561062342, 0.014447812187952713, 0.012072031995383814, -0.043344335825504565, -0.010846941368844898, 0.0006328516562509323, -0.03687279795856274, 0.022698327876591595, 0.02722015088612395], 'mean_diff': 0.0016515915363188916, 'sd_diff': 0.0252117044054593"
+    },
+    {
+      "check": "family secondary_other_conditions c10__miss50",
+      "pass": true,
+      "detail": "({'diffs': [0.007991228294951858, -0.0024782320719929363, 0.0036944438020534154, 0.0024064301036128555, -0.03474465896962842, -0.012243469581717792, -0.0032704593297234186, -0.017563195038553858, 0.006515787385020011, 0.015427693068834902], 'mean_diff': -0.003426443233714338, 'sd_diff': 0.0146392199"
+    },
+    {
+      "check": "family secondary_other_conditions c30__erode2",
+      "pass": true,
+      "detail": "({'diffs': [-0.0013796489025884595, -0.05657132941489307, -0.028737451942943415, -0.10298660423073314, -0.16804266111000404, 0.0150153055635171, -0.03935051788382421, 0.04744628741652479, 0.01723558543710324, 0.14945312694938812], 'mean_diff': -0.016791790811845307, 'sd_diff': 0.08609514731006064, '"
+    },
+    {
+      "check": "family secondary_other_conditions c30__erode8",
+      "pass": true,
+      "detail": "({'diffs': [-0.03595580749432764, -0.01775541104056333, -0.018233326408867545, -0.03597245170447699, -0.04578654484196823, -0.0026595872065632298, -0.040892841974217664, 0.026362554509531788, -0.015129500852494787, 0.022891653767545483], 'mean_diff': -0.016313126324640215, 'sd_diff': 0.0253793108838"
+    },
+    {
+      "check": "family secondary_other_conditions c30__dilate2",
+      "pass": true,
+      "detail": "({'diffs': [0.05869994679953722, -0.010100756611338135, 0.027852457630133776, 0.05451171761983786, -0.04125873474630237, -0.00998861770974413, 0.022590052390792148, -0.0733955959247754, 0.0668915770757521, 0.029804722337831935], 'mean_diff': 0.0125606768861725, 'sd_diff': 0.04567928530771225, 'ci95'"
+    },
+    {
+      "check": "family secondary_other_conditions c30__dilate8",
+      "pass": true,
+      "detail": "({'diffs': [0.056699305182229986, -0.01647696728984449, 0.016616761057770546, 0.05073692519817652, -0.04192060387610186, -0.011457154379694634, 0.020435922933431327, -0.07053794120575257, 0.06144632457909577, 0.015609138317949856], 'mean_diff': 0.008115171051726044, 'sd_diff': 0.043434780595815875, "
+    },
+    {
+      "check": "family secondary_other_conditions c30__miss10",
+      "pass": true,
+      "detail": "({'diffs': [0.017853281486971406, -0.013919299375712124, -0.0011489871893132775, 0.016665404982534715, -0.038112373325596416, -0.017320975743484512, -0.0021660285415843195, -0.0266293332555253, 0.025606734288426913, 0.01319971252182417], 'mean_diff': -0.0025971864151458747, 'sd_diff': 0.021135562971"
+    },
+    {
+      "check": "family secondary_other_conditions c30__miss50",
+      "pass": true,
+      "detail": "({'diffs': [-0.03112994644772482, -0.008760246718983067, -0.012686858054816202, -0.007865997669427915, -0.018603897145612336, -0.013915333579055833, -0.012381576679783235, 0.01026965059672963, -0.0011717702541754194, 0.0020953668675553483], 'mean_diff': -0.009415060908529385, 'sd_diff': 0.0114818036"
+    },
+    {
+      "check": "family secondary_other_conditions c60__erode2",
+      "pass": true,
+      "detail": "({'diffs': [0.007830485309955226, -0.052662683369825214, -0.04666673618138756, -0.11089818145471958, -0.16105307276291309, 0.014004986782628959, -0.043756645595331656, 0.058162147856469726, 0.0191618938004412, 0.12111107936647453], 'mean_diff': -0.019476672624820744, 'sd_diff': 0.08163893472538808, "
+    },
+    {
+      "check": "family secondary_other_conditions c60__erode4",
+      "pass": true,
+      "detail": "({'diffs': [-0.02105269677536714, -0.027086669237340488, -0.03367753158596265, -0.06442446373327898, -0.09165643608336832, -0.008300426641393077, -0.05340763944264937, 0.03999949309503553, -0.018846539151228525, 0.06267800115851246], 'mean_diff': -0.021577490839704054, 'sd_diff': 0.04596081527585627"
+    },
+    {
+      "check": "family secondary_other_conditions c60__erode8",
+      "pass": true,
+      "detail": "({'diffs': [-0.03886835549031631, -0.014205299951936284, -0.027980414537609744, -0.043579027599068426, -0.04615502562534676, -0.011047849785954078, -0.050184597267625336, 0.032345638809360394, -0.017475188931497215, 0.010910684291387335], 'mean_diff': -0.02062394360886064, 'sd_diff': 0.0266304027127"
+    },
+    {
+      "check": "family secondary_other_conditions c60__dilate2",
+      "pass": true,
+      "detail": "({'diffs': [0.061405387894720276, -0.02208364528218898, -0.003214704840860838, 0.05239557045644566, -0.04274052224115582, -0.008439226111697284, 0.0163801153847718, -0.06817267810547506, 0.06957505356667687, 0.008391970380256408], 'mean_diff': 0.006349732110149303, 'sd_diff': 0.04513640615830285, 'c"
+    },
+    {
+      "check": "family secondary_other_conditions c60__dilate4",
+      "pass": true,
+      "detail": "({'diffs': [0.05997916430631428, -0.024642749286568066, -0.006431147498556333, 0.05119144581366519, -0.042961772914328566, -0.011553705210424314, 0.015099858211831574, -0.06805317443601738, 0.06616538296561014, 0.0009016677878396218], 'mean_diff': 0.003969496973936615, 'sd_diff': 0.04462962789736932"
+    },
+    {
+      "check": "family secondary_other_conditions c60__dilate8",
+      "pass": true,
+      "detail": "({'diffs': [0.05957106253188582, -0.03139956632336505, -0.013209619530516359, 0.04750603040098378, -0.044231032204516185, -0.01608402625208094, 0.011729700412918598, -0.06705857015949562, 0.06293853838310798, -0.010806188878195011], 'mean_diff': -0.000104367161927299, 'sd_diff': 0.04458874228854576,"
+    },
+    {
+      "check": "family secondary_other_conditions c60__miss10",
+      "pass": true,
+      "detail": "({'diffs': [0.00035176284210047815, -0.008843353302140422, -0.025863355283329503, -0.0027071282280450304, -0.027191306646908997, -0.02764157176827825, -0.01670707006478228, -0.00411931869301263, 0.011135335304935046, -0.011844622833835805], 'mean_diff': -0.01134306286732974, 'sd_diff': 0.01304576976"
+    },
+    {
+      "check": "family secondary_other_conditions c60__miss25",
+      "pass": true,
+      "detail": "({'diffs': [-0.04128370276923354, -0.003134047182769162, -0.02058707461380746, -0.010704571008875341, -0.012520224898357024, -0.021729171526279928, -0.016177528843370204, 0.01166155380999806, -0.0037424873099261846, -0.014924856006384185], 'mean_diff': -0.013314211034900497, 'sd_diff': 0.01391751268"
+    },
+    {
+      "check": "family secondary_other_conditions c60__miss50",
+      "pass": true,
+      "detail": "({'diffs': [-0.03804536012641732, -0.0001890681658263671, -0.015883598319735986, -0.009681105883571406, -0.006645831266136604, -0.015654826302939906, -0.012549410083938284, 0.014367537463278846, -0.004362621661448657, -0.00961231523375683], 'mean_diff': -0.009825659958049252, 'sd_diff': 0.0133026534"
+    },
+    {
+      "check": "family secondary_phase2_conditions full",
+      "pass": true,
+      "detail": "({'diffs': [0.07068859911210523, 0.020762188834321127, 0.05032118274916597, 0.032664175346269864, -0.047978050400296124, -0.015909197639179418, 0.010519467867028287, -0.08792129647127156, 0.045330288670289653, 0.030374984044124975], 'mean_diff': 0.010885234211255802, 'sd_diff': 0.04855182485339758, "
+    },
+    {
+      "check": "family secondary_phase2_conditions no_o2",
+      "pass": true,
+      "detail": "({'diffs': [0.026926033224186907, 0.022899650673940675, 0.0580082319065211, -0.027033829281307153, -0.03309240789743789, -0.04995788721663652, -0.05358383629497049, -0.0842595086475208, 0.03416377180765562, -0.06786668910837257], 'mean_diff': -0.017379647083394113, 'sd_diff': 0.04905723176175999, 'c"
+    },
+    {
+      "check": "family secondary_phase2_conditions no_opt",
+      "pass": true,
+      "detail": "({'diffs': [-0.03318593025310396, -0.03022233685699499, 0.04377215552904434, -0.014217523077125371, -0.0406339138678925, -0.045452912319403516, -0.0743142514620923, -0.06966172454490899, 0.013740230659750996, -0.02918895074917338], 'mean_diff': -0.027936515694189968, 'sd_diff': 0.03568625770136354, "
+    },
+    {
+      "check": "family secondary_phase2_conditions o2_copy",
+      "pass": true,
+      "detail": "({'diffs': [-0.017816261577282055, -0.0125330392846143, -0.05311182349210675, -0.09546960354073292, -0.06172342271809467, 0.011572776006879504, -0.14069998394098948, -0.06902496151676257, 0.008482139153369539, 0.03617432355384809], 'mean_diff': -0.03941498573564856, 'sd_diff': 0.05452783739511236, '"
+    },
+    {
+      "check": "label clean",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "label z10",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "label z30",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "label z60",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "label c30__erode4",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "label c30__dilate4",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "label c30__miss25",
+      "pass": true,
+      "detail": "('no detectable difference', 'no detectable difference')"
+    },
+    {
+      "check": "clean-regression flag (mean \u0394 < -0.02)",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout clean precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout clean recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout clean iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout clean false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z10 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z10 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z10 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z10 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z30 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z30 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z30 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z30 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z60 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z60 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z60 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout z60 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__erode4 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__erode4 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__erode4 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__erode4 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__dilate4 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__dilate4 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__dilate4 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__dilate4 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__miss25 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__miss25 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__miss25 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p2_dropout c30__miss25 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial clean precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial clean recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial clean iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial clean false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z10 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z10 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z10 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z10 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z30 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z30 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z30 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z30 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z60 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z60 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z60 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial z60 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__erode4 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__erode4 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__erode4 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__erode4 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__dilate4 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__dilate4 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__dilate4 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__dilate4 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__miss25 precision",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__miss25 recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__miss25 iou",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "metric p4b_spatial c30__miss25 false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout clean@c30 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout clean@c30 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout clean@c30 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout clean@c30 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout clean@c30 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout clean@c30 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout z30 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout z30 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout z30 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout z30 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout z30 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout z30 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode2 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode2 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode2 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode2 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode2 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode2 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode4 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode4 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode4 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode4 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode4 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode4 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode8 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode8 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode8 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode8 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode8 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__erode8 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate2 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate2 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate2 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate2 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate2 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate2 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate4 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate4 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate4 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate4 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate4 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate4 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate8 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate8 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate8 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate8 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate8 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__dilate8 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss10 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss10 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss10 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss10 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss10 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss10 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss25 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss25 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss25 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss25 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss25 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss25 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss50 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss50 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss50 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss50 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss50 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p2_dropout c30__miss50 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial clean@c30 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial clean@c30 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial clean@c30 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial clean@c30 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial clean@c30 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial clean@c30 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial z30 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial z30 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial z30 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial z30 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial z30 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial z30 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode2 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode2 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode2 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode2 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode2 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode2 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode4 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode4 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode4 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode4 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode4 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode4 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode8 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode8 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode8 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode8 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode8 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__erode8 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate2 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate2 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate2 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate2 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate2 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate2 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate4 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate4 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate4 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate4 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate4 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate4 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate8 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate8 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate8 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate8 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate8 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__dilate8 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss10 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss10 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss10 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss10 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss10 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss10 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss25 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss25 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss25 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss25 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss25 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss25 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss50 inside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss50 inside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss50 inside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss50 outside f1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss50 outside recall",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "inside/outside p4b_spatial c30__miss50 outside false_alarm_rate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "report primary row clean",
+      "pass": true,
+      "detail": "| clean | 0.553 \u00b1 0.030 | 0.564 \u00b1 0.034 | +0.011 | [-0.024, +0.046] | +0.22 | 7/10 | 1.0e+00 | 1.0000 | no detectable difference |"
+    },
+    {
+      "check": "report primary row z10",
+      "pass": true,
+      "detail": "| z10 | 0.539 \u00b1 0.028 | 0.553 \u00b1 0.033 | +0.014 | [-0.019, +0.048] | +0.31 | 7/10 | 1.0e+00 | 1.0000 | no detectable difference |"
+    },
+    {
+      "check": "report primary row z30",
+      "pass": true,
+      "detail": "| z30 | 0.516 \u00b1 0.028 | 0.529 \u00b1 0.032 | +0.013 | [-0.020, +0.047] | +0.28 | 6/10 | 1.0e+00 | 1.0000 | no detectable difference |"
+    },
+    {
+      "check": "report primary row z60",
+      "pass": true,
+      "detail": "| z60 | 0.499 \u00b1 0.030 | 0.508 \u00b1 0.028 | +0.009 | [-0.024, +0.041] | +0.19 | 6/10 | 1.0e+00 | 1.0000 | no detectable difference |"
+    },
+    {
+      "check": "report primary row c30__erode4",
+      "pass": true,
+      "detail": "| c30__erode4 | 0.329 \u00b1 0.029 | 0.312 \u00b1 0.034 | -0.018 | [-0.050, +0.015] | -0.39 | 2/10 | 1.0e+00 | 1.0000 | no detectable difference |"
+    },
+    {
+      "check": "report primary row c30__dilate4",
+      "pass": true,
+      "detail": "| c30__dilate4 | 0.511 \u00b1 0.028 | 0.522 \u00b1 0.030 | +0.011 | [-0.021, +0.043] | +0.26 | 6/10 | 1.0e+00 | 1.0000 | no detectable difference |"
+    },
+    {
+      "check": "report primary row c30__miss25",
+      "pass": true,
+      "detail": "| c30__miss25 | 0.348 \u00b1 0.007 | 0.341 \u00b1 0.006 | -0.007 | [-0.015, +0.001] | -0.63 | 3/10 | 5.5e-01 | 0.5879 | no detectable difference |"
+    }
+  ]
+}
