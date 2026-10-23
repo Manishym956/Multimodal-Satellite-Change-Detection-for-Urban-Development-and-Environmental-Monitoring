@@ -1,0 +1,39 @@
+ok   pools reproduce the manifest 
+ok   pools disjoint 
+ok   no difficulty-5 scene in a pool 
+ok   bank flags recorded on every composite 
+ok   bank sources verified by replay (sha256 equals the recorded bank) 
+ok   126 composites (36 val, 90 test) 
+ok   composite files match manifest sha256 
+ok   every composite fraction within ±10% of its level 
+ok   val and test composites share no scene 
+ok   composite scenes come from their split's pool 
+ok   composite: SAR unchanged 
+ok   composite: outside M unchanged 
+ok   composite: inside M equals catalogue bands 
+ok   composite: values in [0, 1] 
+ok   detector input equals composite bands in s2cloudless order 
+ok   detector input stores M 
+ok   detector outputs for every validation input 
+ok   probability map in [0, 1], image shape 
+ok   detector info: s2cloudless 1.7.3, library defaults 
+ok   detector mask r = 0 is prob >= t 
+ok   detector mask dilation equals Euclidean disk 
+ok   grid complete 
+ok   rb95 follows the rule 
+ok   bal is the max mask F1 
+ok   operating points used validation composites only 
+ok   p2_dropout: clean val counts equal stored 
+ok   p2_dropout: clean val argmax equals stored threshold 
+ok   p2_dropout: inside + outside equals pooled 
+ok   p2_dropout: outside M unchanged in every composite 
+ok   p2_dropout: deterministic 
+ok   p2_dropout: model in eval mode after evaluate 
+ok   p4b_spatial: clean val counts equal stored 
+ok   p4b_spatial: clean val argmax equals stored threshold 
+ok   p4b_spatial: inside + outside equals pooled 
+ok   p4b_spatial: outside M unchanged in every composite 
+ok   p4b_spatial: deterministic 
+ok   p4b_spatial: model in eval mode after evaluate 
+ok   catalogue masks present 
+38 checks, 0 failed

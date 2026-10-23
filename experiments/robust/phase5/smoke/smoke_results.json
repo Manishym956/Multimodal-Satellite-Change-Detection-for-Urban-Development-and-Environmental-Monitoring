@@ -1,0 +1,196 @@
+{
+  "n_checks": 38,
+  "n_failed": 0,
+  "results": [
+    {
+      "check": "pools reproduce the manifest",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "pools disjoint",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no difficulty-5 scene in a pool",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bank flags recorded on every composite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bank sources verified by replay (sha256 equals the recorded bank)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "126 composites (36 val, 90 test)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "composite files match manifest sha256",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "every composite fraction within \u00b110% of its level",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "val and test composites share no scene",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "composite scenes come from their split's pool",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "composite: SAR unchanged",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "composite: outside M unchanged",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "composite: inside M equals catalogue bands",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "composite: values in [0, 1]",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "detector input equals composite bands in s2cloudless order",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "detector input stores M",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "detector outputs for every validation input",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "probability map in [0, 1], image shape",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "detector info: s2cloudless 1.7.3, library defaults",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "detector mask r = 0 is prob >= t",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "detector mask dilation equals Euclidean disk",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "grid complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "rb95 follows the rule",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "bal is the max mask F1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "operating points used validation composites only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout: clean val counts equal stored",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout: clean val argmax equals stored threshold",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout: inside + outside equals pooled",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout: outside M unchanged in every composite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout: deterministic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p2_dropout: model in eval mode after evaluate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p4b_spatial: clean val counts equal stored",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p4b_spatial: clean val argmax equals stored threshold",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p4b_spatial: inside + outside equals pooled",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p4b_spatial: outside M unchanged in every composite",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p4b_spatial: deterministic",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p4b_spatial: model in eval mode after evaluate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "catalogue masks present",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

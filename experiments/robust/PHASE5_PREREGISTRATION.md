@@ -246,3 +246,41 @@ when this file was written); concatenated hashes per arm are below.
 
 To be appended: operating-point selection result (validation only), smoke-test result (validation only), test detector run, and
 the hashes of `operating_points.json`, `detector_outputs/test/detector_info.json` and `smoke_phase5.py`.
+
+### §12 appended 2026-10-23 (after commit `d9e29ff`, before any test evaluation of a change model)
+
+**Operating points (validation composites only; `select_phase5_operating_points.py`, log `logs/robust/p5_select.log`).**
+Pooled over the 36 validation composites against M:
+
+| point | t | r | cloud recall | precision | mask F1 | clear pixels masked | target reached |
+|---|---|---|---|---|---|---|---|
+| rb95 (primary) | 0.25 | 8 | 0.954 | 0.502 | 0.658 | 0.458 | yes |
+| rb90 | 0.55 | 12 | 0.902 | 0.655 | 0.759 | 0.230 | yes |
+| rb99 | 0.05 | 16 | 0.986 | 0.325 | 0.489 | 0.993 | **no**: highest-recall fallback (§5), flagged |
+| bal | 0.65 | 6 | 0.791 | 0.887 | 0.836 | 0.049 | — |
+
+Noted before any test evaluation: rb95 reaches its recall target only by masking 46% of clear validation pixels; rb99 does not
+reach 0.99 at any grid point, and its fallback is at the grid boundary (t 0.05, r 16) and masks almost every clear pixel. Both
+follow the registered rule; neither is a protocol change. rb99 is a secondary condition.
+
+**Smoke test (validation only; `smoke_phase5.py`, log `logs/robust/p5_smoke.log`):** **38 checks, 0 failed**: pools reproduce the
+manifest and are disjoint; composite files match the manifest; composite construction (SAR and outside-M unchanged, inside-M equal
+to the catalogue bands); detector-input band order; detector outputs and library defaults; detector-mask rule (dilation equals a
+Euclidean disk); rb95 and bal follow the selection rule; operating points used validation composites only; and for
+p2_dropout_seed1 and p4b_spatial_seed1 on the validation cities: clean counts equal the stored counts, clean argmax equals the stored
+threshold, inside + outside M equals pooled, outside M unchanged, deterministic, eval mode. `smoke_phase5.py` is unchanged since
+`d9e29ff`.
+
+**Test detector (`detect_phase5.py test`, log `logs/robust/p5_detect_test.log`):** 100 files (10 clean + 90 composites); detector
+configuration identical to the validation run (same library version, defaults and model sha256). No change model was run.
+
+| file | sha256 |
+|---|---|
+| `phase5/operating_points.json` | `ae0ec54611d0a076b8f6474fd1bf088cdc51b4127ddfb812273542458d582619` |
+| `phase5/detector_outputs/test/detector_info.json` | `c92d58dcf34040ce5644b1434687cebb493964756b66499a6d33d572f42c4957` |
+| `phase5/detector_outputs/test/*.npz (100, concatenated, sorted)` | `357bf292a41021dac1391fa35d91f6b5dc8657063a1b5a7384a817a9bfd305c1` |
+| `smoke_phase5.py` | `f4a5157a2dd0506dea9ed1c8b569a91bfc21edb02edca129dd21573d335cbdc7` |
+| `phase5/smoke/smoke_results.json` | `9cbe6c6d7dfccb4b4980cef9d702f3ce0a2fed7ca89294a8f4c032d5950868fa` |
+| `logs/robust/p5_select.log` | `2c5dc90aff6de9adb4894ba384ec905c2cf813c72615a3e12b315157ef0c020f` |
+| `logs/robust/p5_smoke.log` | `75af0e3bea4efe327c2d0751adb67ebfaffacf75db67a4e04e03417eaf72d0ec` |
+| `logs/robust/p5_detect_test.log` | `d6bf6fdf9b2796586bced0faf6df6a98cdfe3ca10339c36f7456ed94ebc5d0fb` |
