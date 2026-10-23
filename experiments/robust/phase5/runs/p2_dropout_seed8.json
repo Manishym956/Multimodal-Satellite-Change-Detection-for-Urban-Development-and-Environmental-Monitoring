@@ -1,0 +1,53 @@
+{
+  "run": "p2_dropout_seed8",
+  "arm": "p2_dropout",
+  "seed": 8,
+  "tau_clean": 0.84,
+  "tau_level_val": {
+    "clean": 0.84,
+    "clean__rb95": 0.81,
+    "clean__rb90": 0.83,
+    "clean__rb99": 0.76,
+    "clean__bal": 0.84,
+    "clean__default": 0.87,
+    "c10__cloud": 0.89,
+    "c10__oracle": 0.87,
+    "c10__rb95": 0.85,
+    "c10__rb90": 0.84,
+    "c10__rb99": 0.76,
+    "c10__bal": 0.9,
+    "c10__default": 0.9,
+    "c30__cloud": 0.69,
+    "c30__oracle": 0.89,
+    "c30__rb95": 0.82,
+    "c30__rb90": 0.83,
+    "c30__rb99": 0.76,
+    "c30__bal": 0.91,
+    "c30__default": 0.92,
+    "c60__cloud": 0.77,
+    "c60__oracle": 0.83,
+    "c60__rb95": 0.81,
+    "c60__rb90": 0.81,
+    "c60__rb99": 0.76,
+    "c60__bal": 0.9,
+    "c60__default": 0.92
+  },
+  "anchors": {
+    "clean_val_equals_stored": true,
+    "clean_test_equals_stored": true,
+    "clean_val_argmax": true,
+    "inside_plus_outside_equals_pooled": true,
+    "outside_mask_identical": true
+  },
+  "source_sha256": {
+    "eval_phase5.py": "823e49f747ec0aaa2d7a97000378b9d8ee0f8931d7b44da39f22c3ae132e0ecd",
+    "src/phase5/composite.py": "33fcd2875289a412cba2c0ee6449ea8105f8b5b12edaa55d8d033ebd34328fe6",
+    "eval_phase4a.py": "5d831a81126b97c99778fa835ec35ef068520b30b960756c3c3b97b3ccc70f62",
+    "src/training/train_robust.py": "c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c",
+    "src/datasets/oscd_dataset.py": "bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43",
+    "experiments/robust/phase5/operating_points.json": "ae0ec54611d0a076b8f6474fd1bf088cdc51b4127ddfb812273542458d582619",
+    "experiments/robust/phase5/composite_manifest.json": "b98fc7c28c43b7e93602b4d129aee4ca4c602590f244caa8ab8411a30c4b01b8",
+    "detector_info_val.json": "117ad9bbee4e229626c7906507c04a397ec324c725bc07dfbdc5efa4ebcbee2c",
+    "detector_info_test.json": "c92d58dcf34040ce5644b1434687cebb493964756b66499a6d33d572f42c4957"
+  }
+}

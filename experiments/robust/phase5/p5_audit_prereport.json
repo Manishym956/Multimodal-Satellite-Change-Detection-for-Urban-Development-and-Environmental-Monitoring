@@ -1,0 +1,11 @@
+{
+  "n_checks": 723,
+  "n_failed": 1,
+  "failed": [
+    {
+      "check": "PHASE5_REPORT.md exists (report checks skipped)",
+      "ok": false,
+      "detail": "not written yet"
+    }
+  ]
+}
