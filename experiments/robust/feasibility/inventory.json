@@ -1,0 +1,2364 @@
+{
+  "s1": [
+    {
+      "city": "aguasclaras",
+      "orbit": 24,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "aguasclaras",
+      "orbit": 24,
+      "t": 2,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "bercy",
+      "orbit": 59,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "bercy",
+      "orbit": 59,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "bercy",
+      "orbit": 8,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "bercy",
+      "orbit": 8,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "bercy",
+      "orbit": 110,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "bercy",
+      "orbit": 110,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "bordeaux",
+      "orbit": 30,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "bordeaux",
+      "orbit": 30,
+      "t": 2,
+      "n": 16,
+      "n_vv": 16,
+      "n_vh": 16,
+      "n_vv_vh": 16
+    },
+    {
+      "city": "bordeaux",
+      "orbit": 8,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "bordeaux",
+      "orbit": 8,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "bordeaux",
+      "orbit": 81,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "bordeaux",
+      "orbit": 81,
+      "t": 2,
+      "n": 12,
+      "n_vv": 12,
+      "n_vh": 12,
+      "n_vv_vh": 12
+    },
+    {
+      "city": "nantes",
+      "orbit": 30,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "nantes",
+      "orbit": 30,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "nantes",
+      "orbit": 81,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "nantes",
+      "orbit": 81,
+      "t": 2,
+      "n": 12,
+      "n_vv": 12,
+      "n_vh": 12,
+      "n_vv_vh": 12
+    },
+    {
+      "city": "paris",
+      "orbit": 59,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "paris",
+      "orbit": 59,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "paris",
+      "orbit": 8,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "paris",
+      "orbit": 8,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "paris",
+      "orbit": 110,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "paris",
+      "orbit": 110,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "rennes",
+      "orbit": 30,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "rennes",
+      "orbit": 30,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "rennes",
+      "orbit": 81,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "rennes",
+      "orbit": 81,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "saclay_e",
+      "orbit": 59,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "saclay_e",
+      "orbit": 59,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "saclay_e",
+      "orbit": 8,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "saclay_e",
+      "orbit": 8,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "abudhabi",
+      "orbit": 130,
+      "t": 1,
+      "n": 4,
+      "n_vv": 4,
+      "n_vh": 1,
+      "n_vv_vh": 1
+    },
+    {
+      "city": "abudhabi",
+      "orbit": 130,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "cupertino",
+      "orbit": 35,
+      "t": 1,
+      "n": 5,
+      "n_vv": 5,
+      "n_vh": 3,
+      "n_vv_vh": 3
+    },
+    {
+      "city": "cupertino",
+      "orbit": 35,
+      "t": 2,
+      "n": 1,
+      "n_vv": 1,
+      "n_vh": 1,
+      "n_vv_vh": 1
+    },
+    {
+      "city": "cupertino",
+      "orbit": 115,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 4,
+      "n_vv_vh": 4
+    },
+    {
+      "city": "cupertino",
+      "orbit": 115,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "cupertino",
+      "orbit": 42,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 3,
+      "n_vv_vh": 3
+    },
+    {
+      "city": "cupertino",
+      "orbit": 42,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "pisa",
+      "orbit": 15,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "pisa",
+      "orbit": 15,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "pisa",
+      "orbit": 168,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "pisa",
+      "orbit": 168,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "beihai",
+      "orbit": 157,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "beihai",
+      "orbit": 157,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "hongkong",
+      "orbit": 11,
+      "t": 1,
+      "n": 5,
+      "n_vv": 5,
+      "n_vh": 5,
+      "n_vv_vh": 5
+    },
+    {
+      "city": "hongkong",
+      "orbit": 11,
+      "t": 2,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "hongkong",
+      "orbit": 113,
+      "t": 1,
+      "n": 5,
+      "n_vv": 5,
+      "n_vh": 5,
+      "n_vv_vh": 5
+    },
+    {
+      "city": "hongkong",
+      "orbit": 113,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "beirut",
+      "orbit": 14,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "beirut",
+      "orbit": 14,
+      "t": 2,
+      "n": 20,
+      "n_vv": 20,
+      "n_vh": 20,
+      "n_vv_vh": 20
+    },
+    {
+      "city": "beirut",
+      "orbit": 87,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "beirut",
+      "orbit": 87,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "mumbai",
+      "orbit": 34,
+      "t": 1,
+      "n": 2,
+      "n_vv": 2,
+      "n_vh": 2,
+      "n_vv_vh": 2
+    },
+    {
+      "city": "mumbai",
+      "orbit": 34,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "brasilia",
+      "orbit": 24,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "brasilia",
+      "orbit": 24,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "montpellier",
+      "orbit": 59,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "montpellier",
+      "orbit": 59,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "montpellier",
+      "orbit": 37,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "montpellier",
+      "orbit": 37,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "norcia",
+      "orbit": 117,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "norcia",
+      "orbit": 117,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "norcia",
+      "orbit": 44,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "norcia",
+      "orbit": 44,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "norcia",
+      "orbit": 22,
+      "t": 1,
+      "n": 5,
+      "n_vv": 5,
+      "n_vh": 5,
+      "n_vv_vh": 5
+    },
+    {
+      "city": "norcia",
+      "orbit": 22,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "norcia",
+      "orbit": 95,
+      "t": 1,
+      "n": 5,
+      "n_vv": 5,
+      "n_vh": 5,
+      "n_vv_vh": 5
+    },
+    {
+      "city": "norcia",
+      "orbit": 95,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "rio",
+      "orbit": 155,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "rio",
+      "orbit": 155,
+      "t": 2,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "saclay_w",
+      "orbit": 59,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "saclay_w",
+      "orbit": 59,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "saclay_w",
+      "orbit": 8,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "saclay_w",
+      "orbit": 8,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "saclay_w",
+      "orbit": 110,
+      "t": 1,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "saclay_w",
+      "orbit": 110,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "valencia",
+      "orbit": 30,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "valencia",
+      "orbit": 30,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "valencia",
+      "orbit": 103,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "valencia",
+      "orbit": 103,
+      "t": 2,
+      "n": 14,
+      "n_vv": 14,
+      "n_vh": 14,
+      "n_vv_vh": 14
+    },
+    {
+      "city": "valencia",
+      "orbit": 8,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "valencia",
+      "orbit": 8,
+      "t": 2,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "valencia",
+      "orbit": 110,
+      "t": 1,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "valencia",
+      "orbit": 110,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "dubai",
+      "orbit": 130,
+      "t": 1,
+      "n": 3,
+      "n_vv": 3,
+      "n_vh": 1,
+      "n_vv_vh": 1
+    },
+    {
+      "city": "dubai",
+      "orbit": 130,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "dubai",
+      "orbit": 166,
+      "t": 1,
+      "n": 3,
+      "n_vv": 3,
+      "n_vh": 0,
+      "n_vv_vh": 0
+    },
+    {
+      "city": "dubai",
+      "orbit": 166,
+      "t": 2,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    },
+    {
+      "city": "lasvegas",
+      "orbit": 166,
+      "t": 1,
+      "n": 3,
+      "n_vv": 3,
+      "n_vh": 0,
+      "n_vv_vh": 0
+    },
+    {
+      "city": "lasvegas",
+      "orbit": 166,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "lasvegas",
+      "orbit": 173,
+      "t": 1,
+      "n": 4,
+      "n_vv": 4,
+      "n_vh": 0,
+      "n_vv_vh": 0
+    },
+    {
+      "city": "lasvegas",
+      "orbit": 173,
+      "t": 2,
+      "n": 7,
+      "n_vv": 7,
+      "n_vh": 7,
+      "n_vv_vh": 7
+    },
+    {
+      "city": "milano",
+      "orbit": 66,
+      "t": 1,
+      "n": 21,
+      "n_vv": 21,
+      "n_vh": 21,
+      "n_vv_vh": 21
+    },
+    {
+      "city": "milano",
+      "orbit": 66,
+      "t": 2,
+      "n": 16,
+      "n_vv": 16,
+      "n_vh": 16,
+      "n_vv_vh": 16
+    },
+    {
+      "city": "milano",
+      "orbit": 168,
+      "t": 1,
+      "n": 13,
+      "n_vv": 13,
+      "n_vh": 13,
+      "n_vv_vh": 13
+    },
+    {
+      "city": "milano",
+      "orbit": 168,
+      "t": 2,
+      "n": 15,
+      "n_vv": 15,
+      "n_vh": 15,
+      "n_vv_vh": 15
+    },
+    {
+      "city": "chongqing",
+      "orbit": 55,
+      "t": 1,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 5,
+      "n_vv_vh": 5
+    },
+    {
+      "city": "chongqing",
+      "orbit": 55,
+      "t": 2,
+      "n": 8,
+      "n_vv": 8,
+      "n_vh": 8,
+      "n_vv_vh": 8
+    },
+    {
+      "city": "chongqing",
+      "orbit": 164,
+      "t": 1,
+      "n": 5,
+      "n_vv": 5,
+      "n_vh": 3,
+      "n_vv_vh": 3
+    },
+    {
+      "city": "chongqing",
+      "orbit": 164,
+      "t": 2,
+      "n": 6,
+      "n_vv": 6,
+      "n_vh": 6,
+      "n_vv_vh": 6
+    }
+  ],
+  "s2": [
+    {
+      "city": "aguasclaras",
+      "tag": "oscd_t1",
+      "target": "2015-09-16",
+      "n_scenes": 3,
+      "n_days": 3,
+      "min_cloud": 0.079146,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "aguasclaras",
+      "tag": "gap01",
+      "target": "2017-09-15",
+      "n_scenes": 28,
+      "n_days": 28,
+      "min_cloud": 0.028543,
+      "n_days_cloud_le10": 18,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "aguasclaras",
+      "tag": "gap03",
+      "target": "2017-07-15",
+      "n_scenes": 23,
+      "n_days": 23,
+      "min_cloud": 0.038101,
+      "n_days_cloud_le10": 17,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "aguasclaras",
+      "tag": "gap06",
+      "target": "2017-04-15",
+      "n_scenes": 13,
+      "n_days": 13,
+      "min_cloud": 2.579169,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "aguasclaras",
+      "tag": "gap12",
+      "target": "2016-10-15",
+      "n_scenes": 11,
+      "n_days": 11,
+      "min_cloud": 7.882644,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "aguasclaras",
+      "tag": "gap18",
+      "target": "2016-04-15",
+      "n_scenes": 13,
+      "n_days": 13,
+      "min_cloud": 0.048358,
+      "n_days_cloud_le10": 10,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bercy",
+      "tag": "oscd_t1",
+      "target": "2016-11-30",
+      "n_scenes": 15,
+      "n_days": 15,
+      "min_cloud": 0.13363,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "bercy",
+      "tag": "gap01",
+      "target": "2017-07-28",
+      "n_scenes": 28,
+      "n_days": 28,
+      "min_cloud": 0.187879,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bercy",
+      "tag": "gap03",
+      "target": "2017-05-28",
+      "n_scenes": 20,
+      "n_days": 20,
+      "min_cloud": 0.261827,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bercy",
+      "tag": "gap06",
+      "target": "2017-02-28",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 0.083829,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bercy",
+      "tag": "gap12",
+      "target": "2016-08-28",
+      "n_scenes": 17,
+      "n_days": 17,
+      "min_cloud": 1.743263,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "bercy",
+      "tag": "gap18",
+      "target": "2016-02-28",
+      "n_scenes": 12,
+      "n_days": 12,
+      "min_cloud": 0.3163,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "bordeaux",
+      "tag": "oscd_t1",
+      "target": "2016-05-04",
+      "n_scenes": 24,
+      "n_days": 24,
+      "min_cloud": 0.005693,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "bordeaux",
+      "tag": "gap01",
+      "target": "2017-09-26",
+      "n_scenes": 13,
+      "n_days": 13,
+      "min_cloud": 0.316187,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bordeaux",
+      "tag": "gap03",
+      "target": "2017-07-26",
+      "n_scenes": 13,
+      "n_days": 13,
+      "min_cloud": 0.146254,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bordeaux",
+      "tag": "gap06",
+      "target": "2017-04-26",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.262514,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bordeaux",
+      "tag": "gap12",
+      "target": "2016-10-26",
+      "n_scenes": 10,
+      "n_days": 10,
+      "min_cloud": 0.156838,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "bordeaux",
+      "tag": "gap18",
+      "target": "2016-04-26",
+      "n_scenes": 25,
+      "n_days": 25,
+      "min_cloud": 0.005693,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "nantes",
+      "tag": "oscd_t1",
+      "target": "2015-08-21",
+      "n_scenes": 24,
+      "n_days": 13,
+      "min_cloud": 0.054024,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "nantes",
+      "tag": "gap01",
+      "target": "2017-09-14",
+      "n_scenes": 62,
+      "n_days": 32,
+      "min_cloud": 0.048105,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "nantes",
+      "tag": "gap03",
+      "target": "2017-07-14",
+      "n_scenes": 50,
+      "n_days": 26,
+      "min_cloud": 0.091093,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "nantes",
+      "tag": "gap06",
+      "target": "2017-04-14",
+      "n_scenes": 35,
+      "n_days": 19,
+      "min_cloud": 0.158029,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "nantes",
+      "tag": "gap12",
+      "target": "2016-10-14",
+      "n_scenes": 36,
+      "n_days": 18,
+      "min_cloud": 0.182286,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "nantes",
+      "tag": "gap18",
+      "target": "2016-04-14",
+      "n_scenes": 36,
+      "n_days": 20,
+      "min_cloud": 0.130666,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "paris",
+      "tag": "oscd_t1",
+      "target": "2016-11-30",
+      "n_scenes": 15,
+      "n_days": 15,
+      "min_cloud": 0.13363,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "paris",
+      "tag": "gap01",
+      "target": "2017-10-07",
+      "n_scenes": 30,
+      "n_days": 30,
+      "min_cloud": 0.159496,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "paris",
+      "tag": "gap03",
+      "target": "2017-08-07",
+      "n_scenes": 30,
+      "n_days": 30,
+      "min_cloud": 0.187879,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "paris",
+      "tag": "gap06",
+      "target": "2017-05-07",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.126996,
+      "n_days_cloud_le10": 6,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "paris",
+      "tag": "gap12",
+      "target": "2016-11-07",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 0.13363,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "paris",
+      "tag": "gap18",
+      "target": "2016-05-07",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 1.860314,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "rennes",
+      "tag": "oscd_t1",
+      "target": "2015-08-21",
+      "n_scenes": 24,
+      "n_days": 13,
+      "min_cloud": 0.073762,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "rennes",
+      "tag": "gap01",
+      "target": "2017-05-21",
+      "n_scenes": 36,
+      "n_days": 19,
+      "min_cloud": 0.187216,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rennes",
+      "tag": "gap03",
+      "target": "2017-03-21",
+      "n_scenes": 35,
+      "n_days": 18,
+      "min_cloud": 0.187216,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rennes",
+      "tag": "gap06",
+      "target": "2016-12-21",
+      "n_scenes": 28,
+      "n_days": 14,
+      "min_cloud": 0.608382,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rennes",
+      "tag": "gap12",
+      "target": "2016-06-21",
+      "n_scenes": 41,
+      "n_days": 24,
+      "min_cloud": 0.080105,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rennes",
+      "tag": "gap18",
+      "target": "2015-12-21",
+      "n_scenes": 30,
+      "n_days": 17,
+      "min_cloud": 4.626731,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_e",
+      "tag": "oscd_t1",
+      "target": "2016-03-15",
+      "n_scenes": 28,
+      "n_days": 14,
+      "min_cloud": 0.403761,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "saclay_e",
+      "tag": "gap01",
+      "target": "2017-07-28",
+      "n_scenes": 57,
+      "n_days": 31,
+      "min_cloud": 0.167068,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_e",
+      "tag": "gap03",
+      "target": "2017-05-28",
+      "n_scenes": 40,
+      "n_days": 20,
+      "min_cloud": 0.155839,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_e",
+      "tag": "gap06",
+      "target": "2017-02-28",
+      "n_scenes": 32,
+      "n_days": 16,
+      "min_cloud": 0.083829,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_e",
+      "tag": "gap12",
+      "target": "2016-08-28",
+      "n_scenes": 35,
+      "n_days": 18,
+      "min_cloud": 0.052706,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_e",
+      "tag": "gap18",
+      "target": "2016-02-28",
+      "n_scenes": 24,
+      "n_days": 12,
+      "min_cloud": 0.216328,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "abudhabi",
+      "tag": "oscd_t1",
+      "target": "2016-01-20",
+      "n_scenes": 40,
+      "n_days": 11,
+      "min_cloud": 0.348,
+      "n_days_cloud_le10": 6,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "abudhabi",
+      "tag": "gap01",
+      "target": "2018-02-28",
+      "n_scenes": 135,
+      "n_days": 34,
+      "min_cloud": 0.143757,
+      "n_days_cloud_le10": 25,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "abudhabi",
+      "tag": "gap03",
+      "target": "2017-12-28",
+      "n_scenes": 111,
+      "n_days": 28,
+      "min_cloud": 0.232668,
+      "n_days_cloud_le10": 21,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "abudhabi",
+      "tag": "gap06",
+      "target": "2017-09-28",
+      "n_scenes": 70,
+      "n_days": 18,
+      "min_cloud": 0.181631,
+      "n_days_cloud_le10": 16,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "abudhabi",
+      "tag": "gap12",
+      "target": "2017-03-28",
+      "n_scenes": 35,
+      "n_days": 9,
+      "min_cloud": 6.09869,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "abudhabi",
+      "tag": "gap18",
+      "target": "2016-09-28",
+      "n_scenes": 40,
+      "n_days": 10,
+      "min_cloud": 0.220608,
+      "n_days_cloud_le10": 9,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "cupertino",
+      "tag": "oscd_t1",
+      "target": "2015-09-18",
+      "n_scenes": 2,
+      "n_days": 2,
+      "min_cloud": 0.392308,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "cupertino",
+      "tag": "gap01",
+      "target": "2018-02-26",
+      "n_scenes": 17,
+      "n_days": 17,
+      "min_cloud": 0.382507,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "cupertino",
+      "tag": "gap03",
+      "target": "2017-12-26",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.329944,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "cupertino",
+      "tag": "gap06",
+      "target": "2017-09-26",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 0.360694,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "cupertino",
+      "tag": "gap12",
+      "target": "2017-03-26",
+      "n_scenes": 8,
+      "n_days": 8,
+      "min_cloud": 0.682591,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "cupertino",
+      "tag": "gap18",
+      "target": "2016-09-26",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 7.111818,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "pisa",
+      "tag": "oscd_t1",
+      "target": "2015-07-04",
+      "n_scenes": 12,
+      "n_days": 6,
+      "min_cloud": 0.125376,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "pisa",
+      "tag": "gap01",
+      "target": "2018-01-11",
+      "n_scenes": 71,
+      "n_days": 36,
+      "min_cloud": 1.040178,
+      "n_days_cloud_le10": 7,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "pisa",
+      "tag": "gap03",
+      "target": "2017-11-11",
+      "n_scenes": 66,
+      "n_days": 33,
+      "min_cloud": 0.08113,
+      "n_days_cloud_le10": 9,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "pisa",
+      "tag": "gap06",
+      "target": "2017-08-11",
+      "n_scenes": 62,
+      "n_days": 32,
+      "min_cloud": 0.113137,
+      "n_days_cloud_le10": 18,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "pisa",
+      "tag": "gap12",
+      "target": "2017-02-11",
+      "n_scenes": 33,
+      "n_days": 17,
+      "min_cloud": 0.109049,
+      "n_days_cloud_le10": 7,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "pisa",
+      "tag": "gap18",
+      "target": "2016-08-11",
+      "n_scenes": 36,
+      "n_days": 18,
+      "min_cloud": 0.125473,
+      "n_days_cloud_le10": 12,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beihai",
+      "tag": "oscd_t1",
+      "target": "2016-12-09",
+      "n_scenes": 12,
+      "n_days": 6,
+      "min_cloud": 0.185709,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "beihai",
+      "tag": "gap01",
+      "target": "2018-02-09",
+      "n_scenes": 30,
+      "n_days": 15,
+      "min_cloud": 0.220971,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beihai",
+      "tag": "gap03",
+      "target": "2017-12-09",
+      "n_scenes": 27,
+      "n_days": 14,
+      "min_cloud": 0.220971,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beihai",
+      "tag": "gap06",
+      "target": "2017-09-09",
+      "n_scenes": 17,
+      "n_days": 9,
+      "min_cloud": 3.675343,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beihai",
+      "tag": "gap12",
+      "target": "2017-03-09",
+      "n_scenes": 9,
+      "n_days": 5,
+      "min_cloud": 1.481488,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beihai",
+      "tag": "gap18",
+      "target": "2016-09-09",
+      "n_scenes": 10,
+      "n_days": 5,
+      "min_cloud": 25.328009,
+      "n_days_cloud_le10": 0,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "hongkong",
+      "tag": "oscd_t1",
+      "target": "2016-09-27",
+      "n_scenes": 36,
+      "n_days": 18,
+      "min_cloud": 0.859646,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "hongkong",
+      "tag": "gap01",
+      "target": "2018-02-23",
+      "n_scenes": 70,
+      "n_days": 35,
+      "min_cloud": 0.072391,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "hongkong",
+      "tag": "gap03",
+      "target": "2017-12-23",
+      "n_scenes": 69,
+      "n_days": 35,
+      "min_cloud": 0.072391,
+      "n_days_cloud_le10": 7,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "hongkong",
+      "tag": "gap06",
+      "target": "2017-09-23",
+      "n_scenes": 64,
+      "n_days": 33,
+      "min_cloud": 0.177376,
+      "n_days_cloud_le10": 7,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "hongkong",
+      "tag": "gap12",
+      "target": "2017-03-23",
+      "n_scenes": 30,
+      "n_days": 17,
+      "min_cloud": 0.598831,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "hongkong",
+      "tag": "gap18",
+      "target": "2016-09-23",
+      "n_scenes": 36,
+      "n_days": 18,
+      "min_cloud": 0.859646,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "beirut",
+      "tag": "oscd_t1",
+      "target": "2015-08-20",
+      "n_scenes": 5,
+      "n_days": 5,
+      "min_cloud": 0.10201,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "beirut",
+      "tag": "gap01",
+      "target": "2017-09-03",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.023059,
+      "n_days_cloud_le10": 18,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beirut",
+      "tag": "gap03",
+      "target": "2017-07-03",
+      "n_scenes": 14,
+      "n_days": 14,
+      "min_cloud": 0.040255,
+      "n_days_cloud_le10": 12,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beirut",
+      "tag": "gap06",
+      "target": "2017-04-03",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.679835,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beirut",
+      "tag": "gap12",
+      "target": "2016-10-03",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.021247,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "beirut",
+      "tag": "gap18",
+      "target": "2016-04-03",
+      "n_scenes": 8,
+      "n_days": 8,
+      "min_cloud": 0.914184,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "mumbai",
+      "tag": "oscd_t1",
+      "target": "2015-11-30",
+      "n_scenes": 2,
+      "n_days": 2,
+      "min_cloud": 0.026028,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "mumbai",
+      "tag": "gap01",
+      "target": "2018-02-19",
+      "n_scenes": 15,
+      "n_days": 15,
+      "min_cloud": 0.016271,
+      "n_days_cloud_le10": 12,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "mumbai",
+      "tag": "gap03",
+      "target": "2017-12-19",
+      "n_scenes": 13,
+      "n_days": 12,
+      "min_cloud": 0.023805,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "mumbai",
+      "tag": "gap06",
+      "target": "2017-09-19",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.953082,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "mumbai",
+      "tag": "gap12",
+      "target": "2017-03-19",
+      "n_scenes": 6,
+      "n_days": 6,
+      "min_cloud": 0.011284,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "mumbai",
+      "tag": "gap18",
+      "target": "2016-09-19",
+      "n_scenes": 5,
+      "n_days": 5,
+      "min_cloud": 1.901901,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "brasilia",
+      "tag": "oscd_t1",
+      "target": "2015-09-16",
+      "n_scenes": 4,
+      "n_days": 4,
+      "min_cloud": 0.079146,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "brasilia",
+      "tag": "gap01",
+      "target": "2017-09-17",
+      "n_scenes": 35,
+      "n_days": 35,
+      "min_cloud": 0.024997,
+      "n_days_cloud_le10": 22,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "brasilia",
+      "tag": "gap03",
+      "target": "2017-07-17",
+      "n_scenes": 30,
+      "n_days": 30,
+      "min_cloud": 0.031821,
+      "n_days_cloud_le10": 24,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "brasilia",
+      "tag": "gap06",
+      "target": "2017-04-17",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 2.579169,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "brasilia",
+      "tag": "gap12",
+      "target": "2016-10-17",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 0.405408,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "brasilia",
+      "tag": "gap18",
+      "target": "2016-04-17",
+      "n_scenes": 13,
+      "n_days": 13,
+      "min_cloud": 0.048358,
+      "n_days_cloud_le10": 10,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "montpellier",
+      "tag": "oscd_t1",
+      "target": "2015-08-12",
+      "n_scenes": 7,
+      "n_days": 7,
+      "min_cloud": 0.117282,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "montpellier",
+      "tag": "gap01",
+      "target": "2017-09-28",
+      "n_scenes": 17,
+      "n_days": 17,
+      "min_cloud": 0.160371,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "montpellier",
+      "tag": "gap03",
+      "target": "2017-07-28",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 0.160371,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "montpellier",
+      "tag": "gap06",
+      "target": "2017-04-28",
+      "n_scenes": 10,
+      "n_days": 10,
+      "min_cloud": 0.5168,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "montpellier",
+      "tag": "gap12",
+      "target": "2016-10-28",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.255713,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "montpellier",
+      "tag": "gap18",
+      "target": "2016-04-28",
+      "n_scenes": 25,
+      "n_days": 25,
+      "min_cloud": 0.041446,
+      "n_days_cloud_le10": 7,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "norcia",
+      "tag": "oscd_t1",
+      "target": "2015-07-11",
+      "n_scenes": 5,
+      "n_days": 5,
+      "min_cloud": 0.046432,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "norcia",
+      "tag": "gap01",
+      "target": "2017-09-18",
+      "n_scenes": 17,
+      "n_days": 17,
+      "min_cloud": 0.02826,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "norcia",
+      "tag": "gap03",
+      "target": "2017-07-18",
+      "n_scenes": 14,
+      "n_days": 14,
+      "min_cloud": 0.102462,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "norcia",
+      "tag": "gap06",
+      "target": "2017-04-18",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 8.027525,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "norcia",
+      "tag": "gap12",
+      "target": "2016-10-18",
+      "n_scenes": 10,
+      "n_days": 10,
+      "min_cloud": 4.033237,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "norcia",
+      "tag": "gap18",
+      "target": "2016-04-18",
+      "n_scenes": 16,
+      "n_days": 16,
+      "min_cloud": 7.270804,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rio",
+      "tag": "oscd_t1",
+      "target": "2016-04-24",
+      "n_scenes": 3,
+      "n_days": 3,
+      "min_cloud": 0.128745,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "rio",
+      "tag": "gap01",
+      "target": "2017-09-11",
+      "n_scenes": 7,
+      "n_days": 7,
+      "min_cloud": 0.123533,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rio",
+      "tag": "gap03",
+      "target": "2017-07-11",
+      "n_scenes": 7,
+      "n_days": 7,
+      "min_cloud": 0.12981,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rio",
+      "tag": "gap06",
+      "target": "2017-04-11",
+      "n_scenes": 3,
+      "n_days": 3,
+      "min_cloud": 3.597374,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rio",
+      "tag": "gap12",
+      "target": "2016-10-11",
+      "n_scenes": 5,
+      "n_days": 5,
+      "min_cloud": 0.170278,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "rio",
+      "tag": "gap18",
+      "target": "2016-04-11",
+      "n_scenes": 3,
+      "n_days": 3,
+      "min_cloud": 0.128745,
+      "n_days_cloud_le10": 1,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "saclay_w",
+      "tag": "oscd_t1",
+      "target": "2016-03-15",
+      "n_scenes": 28,
+      "n_days": 14,
+      "min_cloud": 0.403761,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "saclay_w",
+      "tag": "gap01",
+      "target": "2017-07-28",
+      "n_scenes": 57,
+      "n_days": 31,
+      "min_cloud": 0.167068,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_w",
+      "tag": "gap03",
+      "target": "2017-05-28",
+      "n_scenes": 40,
+      "n_days": 20,
+      "min_cloud": 0.155839,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_w",
+      "tag": "gap06",
+      "target": "2017-02-28",
+      "n_scenes": 32,
+      "n_days": 16,
+      "min_cloud": 0.083829,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_w",
+      "tag": "gap12",
+      "target": "2016-08-28",
+      "n_scenes": 35,
+      "n_days": 18,
+      "min_cloud": 0.052706,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "saclay_w",
+      "tag": "gap18",
+      "target": "2016-02-28",
+      "n_scenes": 24,
+      "n_days": 12,
+      "min_cloud": 0.216328,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "valencia",
+      "tag": "oscd_t1",
+      "target": "2016-07-30",
+      "n_scenes": 24,
+      "n_days": 12,
+      "min_cloud": 0.145899,
+      "n_days_cloud_le10": 6,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "valencia",
+      "tag": "gap01",
+      "target": "2017-10-07",
+      "n_scenes": 34,
+      "n_days": 18,
+      "min_cloud": 0.144558,
+      "n_days_cloud_le10": 10,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "valencia",
+      "tag": "gap03",
+      "target": "2017-08-07",
+      "n_scenes": 35,
+      "n_days": 18,
+      "min_cloud": 0.209804,
+      "n_days_cloud_le10": 10,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "valencia",
+      "tag": "gap06",
+      "target": "2017-05-07",
+      "n_scenes": 18,
+      "n_days": 10,
+      "min_cloud": 0.275815,
+      "n_days_cloud_le10": 6,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "valencia",
+      "tag": "gap12",
+      "target": "2016-11-07",
+      "n_scenes": 16,
+      "n_days": 8,
+      "min_cloud": 0.667655,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "valencia",
+      "tag": "gap18",
+      "target": "2016-05-07",
+      "n_scenes": 32,
+      "n_days": 16,
+      "min_cloud": 0.125018,
+      "n_days_cloud_le10": 6,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "dubai",
+      "tag": "oscd_t1",
+      "target": "2015-12-11",
+      "n_scenes": 7,
+      "n_days": 7,
+      "min_cloud": 2.693181,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "dubai",
+      "tag": "gap01",
+      "target": "2018-02-28",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.159999,
+      "n_days_cloud_le10": 12,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "dubai",
+      "tag": "gap03",
+      "target": "2017-12-28",
+      "n_scenes": 17,
+      "n_days": 17,
+      "min_cloud": 0.179595,
+      "n_days_cloud_le10": 12,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "dubai",
+      "tag": "gap06",
+      "target": "2017-09-28",
+      "n_scenes": 13,
+      "n_days": 13,
+      "min_cloud": 0.158745,
+      "n_days_cloud_le10": 13,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "dubai",
+      "tag": "gap12",
+      "target": "2017-03-28",
+      "n_scenes": 8,
+      "n_days": 8,
+      "min_cloud": 0.196661,
+      "n_days_cloud_le10": 3,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "dubai",
+      "tag": "gap18",
+      "target": "2016-09-28",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.199488,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "lasvegas",
+      "tag": "oscd_t1",
+      "target": "2015-08-20",
+      "n_scenes": 11,
+      "n_days": 6,
+      "min_cloud": 0.000594,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "lasvegas",
+      "tag": "gap01",
+      "target": "2018-01-05",
+      "n_scenes": 33,
+      "n_days": 17,
+      "min_cloud": 0.295095,
+      "n_days_cloud_le10": 9,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "lasvegas",
+      "tag": "gap03",
+      "target": "2017-11-05",
+      "n_scenes": 31,
+      "n_days": 16,
+      "min_cloud": 0.313013,
+      "n_days_cloud_le10": 10,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "lasvegas",
+      "tag": "gap06",
+      "target": "2017-08-05",
+      "n_scenes": 27,
+      "n_days": 16,
+      "min_cloud": 0.228928,
+      "n_days_cloud_le10": 7,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "lasvegas",
+      "tag": "gap12",
+      "target": "2017-02-05",
+      "n_scenes": 18,
+      "n_days": 9,
+      "min_cloud": 3.122431,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "lasvegas",
+      "tag": "gap18",
+      "target": "2016-08-05",
+      "n_scenes": 20,
+      "n_days": 10,
+      "min_cloud": 0.299949,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "milano",
+      "tag": "oscd_t1",
+      "target": "2016-12-28",
+      "n_scenes": 8,
+      "n_days": 8,
+      "min_cloud": 0.089562,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "milano",
+      "tag": "gap01",
+      "target": "2017-12-22",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.428235,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "milano",
+      "tag": "gap03",
+      "target": "2017-10-22",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.428235,
+      "n_days_cloud_le10": 5,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "milano",
+      "tag": "gap06",
+      "target": "2017-07-22",
+      "n_scenes": 15,
+      "n_days": 15,
+      "min_cloud": 1.251144,
+      "n_days_cloud_le10": 8,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "milano",
+      "tag": "gap12",
+      "target": "2017-01-22",
+      "n_scenes": 9,
+      "n_days": 9,
+      "min_cloud": 0.089562,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "milano",
+      "tag": "gap18",
+      "target": "2016-07-22",
+      "n_scenes": 14,
+      "n_days": 14,
+      "min_cloud": 0.455746,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "chongqing",
+      "tag": "oscd_t1",
+      "target": "2017-04-14",
+      "n_scenes": 7,
+      "n_days": 7,
+      "min_cloud": 0.256502,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "chongqing",
+      "tag": "gap01",
+      "target": "2018-03-02",
+      "n_scenes": 33,
+      "n_days": 33,
+      "min_cloud": 0.740313,
+      "n_days_cloud_le10": 4,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "chongqing",
+      "tag": "gap03",
+      "target": "2018-01-02",
+      "n_scenes": 28,
+      "n_days": 28,
+      "min_cloud": 16.1984,
+      "n_days_cloud_le10": 0,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "chongqing",
+      "tag": "gap06",
+      "target": "2017-10-02",
+      "n_scenes": 18,
+      "n_days": 18,
+      "min_cloud": 0.333224,
+      "n_days_cloud_le10": 6,
+      "before_oscd_t1": false
+    },
+    {
+      "city": "chongqing",
+      "tag": "gap12",
+      "target": "2017-04-02",
+      "n_scenes": 7,
+      "n_days": 7,
+      "min_cloud": 0.256502,
+      "n_days_cloud_le10": 2,
+      "before_oscd_t1": true
+    },
+    {
+      "city": "chongqing",
+      "tag": "gap18",
+      "target": "2016-10-02",
+      "n_scenes": 11,
+      "n_days": 11,
+      "min_cloud": 12.60664,
+      "n_days_cloud_le10": 0,
+      "before_oscd_t1": true
+    }
+  ]
+}

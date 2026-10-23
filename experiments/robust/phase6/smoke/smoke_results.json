@@ -1,0 +1,96 @@
+{
+  "n_checks": 18,
+  "n_failed": 0,
+  "checks": [
+    {
+      "check": "p6_unet_sar losses finite",
+      "ok": true,
+      "detail": "0.4655042290687561"
+    },
+    {
+      "check": "p6_unet_sar val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_unet_sar conditions identical",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_unet_sar model eval mode after evaluate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_unet_opt losses finite",
+      "ok": true,
+      "detail": "0.32997578382492065"
+    },
+    {
+      "check": "p6_unet_opt val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_unet_opt model eval mode after evaluate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_unet_fusion losses finite",
+      "ok": true,
+      "detail": "0.43807846307754517"
+    },
+    {
+      "check": "p6_unet_fusion val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_unet_fusion model eval mode after evaluate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_async losses finite",
+      "ok": true,
+      "detail": "0.4164455533027649"
+    },
+    {
+      "check": "p6_async val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "p6_async model eval mode after evaluate",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "summary families",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "primary_rq4 has 3, primary_rq1 has 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "audit statistics agree with analysis on stand-in data",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "audit ran its statistical checks",
+      "ok": true,
+      "detail": "1042"
+    },
+    {
+      "check": "stand-in analysis refuses to overwrite",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

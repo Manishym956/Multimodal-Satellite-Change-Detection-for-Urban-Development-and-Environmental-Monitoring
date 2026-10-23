@@ -31,6 +31,7 @@ Thumbs.db
 .vscode/
 .idea/
 .venv_cloud/
+.venv_gee/
 
 # Tooling
 .claude/
