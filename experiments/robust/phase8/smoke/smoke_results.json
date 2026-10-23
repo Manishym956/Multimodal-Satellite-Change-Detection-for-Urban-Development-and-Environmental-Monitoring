@@ -1,0 +1,70 @@
+{
+  "n_checks": 8,
+  "n_failed": 0,
+  "checks": [
+    {
+      "check": "manifest covers 24 cities x 6 tags",
+      "ok": true,
+      "detail": "144"
+    },
+    {
+      "check": "primary test cities >= 8",
+      "ok": true,
+      "detail": "['brasilia', 'montpellier', 'norcia', 'rio', 'saclay_w', 'valencia', 'dubai', 'lasvegas', 'milano']"
+    },
+    {
+      "check": "alignment: median band correlation >= 0.90",
+      "ok": true,
+      "detail": "0.9404126343487991"
+    },
+    {
+      "check": "alignment: median |shift| <= 1 px",
+      "ok": true,
+      "detail": "0.2689071060954523"
+    },
+    {
+      "check": "validation: every tag with a scene evaluated",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "check": "validation: land-cover counts sum",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "summary families",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "audit statistics agree with analysis on synthetic data",
+      "ok": true,
+      "detail": "[]"
+    }
+  ],
+  "primary_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano"
+  ],
+  "available_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "no_scene": []
+}

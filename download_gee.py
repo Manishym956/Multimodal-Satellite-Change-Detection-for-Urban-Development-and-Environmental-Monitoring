@@ -73,9 +73,7 @@ def grid(city, orbit):
         return {"crs": "EPSG:4326", "crs_transform": [t.a, t.b, t.c, t.d, t.e, t.f], "dimensions": f"{src.width}x{src.height}"}, src.profile
 
 
-def download(image, g, profile, path, descriptions):
-    if path.exists():
-        raise SystemExit(f"{path} exists; refusing to overwrite")
+def fetch(image, g, profile):
     for attempt in range(6):  # Earth Engine returns transient 429/5xx under load
         url = image.getDownloadURL({**g, "format": "GEO_TIFF"})
         r = requests.get(url, timeout=600)
@@ -89,8 +87,16 @@ def download(image, g, profile, path, descriptions):
         with zipfile.ZipFile(io.BytesIO(data)) as z:
             data = z.read(z.namelist()[0])
     with rasterio.MemoryFile(data) as mem, mem.open() as src:
-        arr = src.read()
         assert (src.width, src.height) == (profile["width"], profile["height"]) and src.transform.almost_equals(profile["transform"])
+        return src.read()
+
+
+def download(image, g, profile, path, descriptions, bands=None):
+    """Fetch image (or its bands in groups, to stay under Earth Engine's 48 MB request limit) and write a GeoTIFF."""
+    if path.exists():
+        raise SystemExit(f"{path} exists; refusing to overwrite")
+    groups = [bands[i:i + 4] for i in range(0, len(bands), 4)] if bands else [None]
+    arr = np.concatenate([fetch(image if grp is None else image.select(grp), g, profile) for grp in groups])
     path.parent.mkdir(parents=True, exist_ok=True)
     with rasterio.open(path, "w", driver="GTiff", width=profile["width"], height=profile["height"], count=arr.shape[0],
                        dtype=arr.dtype, crs=profile["crs"], transform=profile["transform"], compress="deflate") as dst:
@@ -178,7 +184,7 @@ def s2(city, manifest):
         if stale.exists():  # no manifest row yet, so this file is from an interrupted download
             stale.unlink()
         download(image, g, profile, OUT["s2"] / f"{city}_{tag}.tif", ["B01", "B02", "B03", "B04", "B05", "B06", "B07", "B08", "B8A",
-                                                                     "B09", "B10", "B11", "B12"])
+                                                                     "B09", "B10", "B11", "B12"], bands=S2_BANDS)
         manifest.append({"city": city, "tag": tag, "target": str(target), "day": best["day"], "cloud": best["cloud"],
                          "valid": best["valid"], "candidates": len(rows), "oscd_t1": str(d1), "oscd_t2": str(d2)})
         save_manifest(manifest)
