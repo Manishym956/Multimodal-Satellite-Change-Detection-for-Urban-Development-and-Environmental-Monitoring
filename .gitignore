@@ -30,3 +30,17 @@ secrets.json
 Thumbs.db
 .vscode/
 .idea/
+.venv_cloud/
+
+# Tooling
+.claude/
+graphify-out/
+
+# Large arrays are hashed in ARTIFACT_SHA256_*.txt, never committed
+*.npz
+*.npy
+
+# Working notes, not registered documents (commit the filled PHASE5_PREREGISTRATION.md instead)
+/HANDOFF*.md
+/DIAGNOSIS_REPORT.md
+/PHASE5_PREREGISTRATION.template.md

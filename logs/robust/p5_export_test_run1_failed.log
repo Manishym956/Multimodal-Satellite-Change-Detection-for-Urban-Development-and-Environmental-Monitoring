@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\Users\Manishym\Researchpapers\satellite‑change‑detection\projects\multimodal-satellite-change-detection\export_phase5_detector_inputs.py", line 55, in <module>
+    assert manifest[name]["split"] == split and abs(float(m.float().mean()) - manifest[name]["fraction"]) < 1e-12
+AssertionError

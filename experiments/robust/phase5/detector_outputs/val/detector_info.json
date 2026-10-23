@@ -1,0 +1,172 @@
+{
+  "s2cloudless": "1.7.3",
+  "numpy": "2.4.6",
+  "threshold": 0.4,
+  "average_over": 1,
+  "dilation_size": 1,
+  "all_bands": false,
+  "model_file": "pixel_s2_cloud_detector_lightGBM_v0.1.txt",
+  "model_sha256": "0f92b6822cc0ad42982f55bab9b1688329e119451ad9a9e0a56384b9f37bc61d",
+  "files": {
+    "aguasclaras_c10_k0.npz": {
+      "input_sha256": "467b9125e56830d199fa3b39af3c97c7a182a6ba8a548d8a97c008e00225c44e",
+      "output_sha256": "692c380481bf7b77a7a835f17d87070a652d582068a07a4bf09fe7fa024d2cdd"
+    },
+    "aguasclaras_c10_k1.npz": {
+      "input_sha256": "c665f4bdc4f464927a326d8d7ad8530c619de050e4cad2f42345d12fac4060ad",
+      "output_sha256": "af60e6a8d6dc4f0ecad3cb37933cabc0e957037422febfcfe1321064f977dd32"
+    },
+    "aguasclaras_c10_k2.npz": {
+      "input_sha256": "41d58f7b67388a79fce7201140e53638d4f87287d037e528b72089ce6af4029d",
+      "output_sha256": "bfa841e3e919db98154acc86e32b95278615037a32619322b32bd3c53b71563e"
+    },
+    "aguasclaras_c30_k0.npz": {
+      "input_sha256": "6406d4317e0b2dcbe1246e4f615b433a888ffca6aa94012ced3b257fe8d503bc",
+      "output_sha256": "2f59dec7f7e0ce2cdbdf36c59e1499a9d6c28ba79e300e38f8c6f68988f89b29"
+    },
+    "aguasclaras_c30_k1.npz": {
+      "input_sha256": "4a9761bb7f1f37acdaf19aec188393d0a151f9d1435b4d97e3b466e233ed0c6d",
+      "output_sha256": "5b1883959991a6d3aedfe2ca99f909f9a8ecf2c470c0fed07c891388cccc853f"
+    },
+    "aguasclaras_c30_k2.npz": {
+      "input_sha256": "87272d6ab0ee39cb0ec797fda63dcb8c8b126fe5120dd327b751b58e525e8b50",
+      "output_sha256": "31082fce5d3c2bb600c5ca3f788ebc90d5562b4aa098bc4b5f989b7b45fc7cf2"
+    },
+    "aguasclaras_c60_k0.npz": {
+      "input_sha256": "4266f833120fb2d7633d021ce0c56710810fef4805686dd2009396a8d44a6404",
+      "output_sha256": "2b5ce10ea10130b14e1eac82e0178415fc8c1e86fe9afbc15add6934391e18b9"
+    },
+    "aguasclaras_c60_k1.npz": {
+      "input_sha256": "48fea359c2b3886c802340fb8cb35d16ef08d1541e851c3b1b239b9ef495f749",
+      "output_sha256": "59d0081292a8a3a4873ecd216e456f686084a2f7e469141dfd8b0586195197cc"
+    },
+    "aguasclaras_c60_k2.npz": {
+      "input_sha256": "da70225a0b9f3042d63ba47fb689c45569810613f79debd36a59f6f0b333aa55",
+      "output_sha256": "27dbcc99ae8553a9dafd3e201ca37806dbd2ec00e0984ed7edfe0007740a1989"
+    },
+    "aguasclaras_clean.npz": {
+      "input_sha256": "62798122d881bdb58eff68922e0fa757fcb1f659be4b37de107ed9021265058e",
+      "output_sha256": "a3483bca8536992160d6897b25e325adfa1f03eae4d6ac0fed37245b4883bd76"
+    },
+    "beihai_c10_k0.npz": {
+      "input_sha256": "860d5ed4fcce1829ed490959cb5ac1e0199c52b69c990d8bf23181760570410e",
+      "output_sha256": "df2c8a4fafdb000fecc6b696a03ce8b6f9f497b84383c9df6cbeee20a1bb9fc8"
+    },
+    "beihai_c10_k1.npz": {
+      "input_sha256": "4d3395a104284b446177c653e1e93b5214a834019537904700bc733d5274f994",
+      "output_sha256": "67316c9f517457a5cd60a4ceb270fafeb84b42f11628e2141cf52e9e74c44e76"
+    },
+    "beihai_c10_k2.npz": {
+      "input_sha256": "55b88e69fbc73c4ee801d542a15512bde1036f2ec7569a249e32badbb4bc8c06",
+      "output_sha256": "34b0c8238c5b1f1883e53fd7627b481ec3e1fa67e5a7c3f227ded7f586c5d2fe"
+    },
+    "beihai_c30_k0.npz": {
+      "input_sha256": "eabe6650fe812b0b8800410883fc98d206c640a386e7ee1d06fc7aa05ca17764",
+      "output_sha256": "979a9b737d56b5a3962e2225abafe055cba14534f0e1478767d9ecb66e765180"
+    },
+    "beihai_c30_k1.npz": {
+      "input_sha256": "f3103fe508be17909c3a1f7155fa72615f1c8c3e777e9f2de5b550628279660a",
+      "output_sha256": "67ea3b43757829257b11519985323cac85da6aefc16dd88ca3794bf8351f9d15"
+    },
+    "beihai_c30_k2.npz": {
+      "input_sha256": "a0365c6f00dc178f503985b5e301bd587c6258ec515acf80341b530d15323247",
+      "output_sha256": "8f28c3857a4fdb9301b2dddaeef7f5bce65b39f88f98f970bcf2fe03fe373d84"
+    },
+    "beihai_c60_k0.npz": {
+      "input_sha256": "04f7013780ded601776e11b04ec68c313623389ffd5d3943aa4c978fc82403e8",
+      "output_sha256": "8c37ad1deffdb5337f40f011c86508df73216066d6b208a62db56650b9a1ceb0"
+    },
+    "beihai_c60_k1.npz": {
+      "input_sha256": "f9a75f1021680cca787fe3764cef8bf0189c1a815bfeda7633ddd54027f5ffd7",
+      "output_sha256": "f58ce87ffc3a89951f34b4c3d181a162a5897e4536d4e138502b750efa9dd0f0"
+    },
+    "beihai_c60_k2.npz": {
+      "input_sha256": "334f224aeee21e179cdb20e59ece6c71e07ae04f012f7eac84ccfad71a5c31fd",
+      "output_sha256": "e4cc38d42b2660edf60bd1d7d82b6bfdc829272eb92fc9d44032842d2d78a4a6"
+    },
+    "beihai_clean.npz": {
+      "input_sha256": "0c7dc314ed2f95766e997f3a55052c424db2846bc1b7fa94fa32e9caccb16792",
+      "output_sha256": "13aa60114783299b103d0540dca48b1d7f590e5f1757a60941b72f92557f8fef"
+    },
+    "bercy_c10_k0.npz": {
+      "input_sha256": "153bd79c6e2b5e7727794d4609c82018e9881a86d4233a8658cab25a559b825d",
+      "output_sha256": "ab8ae5043af0bfead0de3c233e58afafba83a590e3f6cb5cf93d3985f6a8f1ad"
+    },
+    "bercy_c10_k1.npz": {
+      "input_sha256": "6964e7bd7a793af4a19dcfdad584fe5779a8b3b8159f384f0fca05d59b8d3c2b",
+      "output_sha256": "eec9527190954c87f39b0ddd874dc8fa75e31f21bd2603d38623bae188ff14ee"
+    },
+    "bercy_c10_k2.npz": {
+      "input_sha256": "6dc624f9872665cf4244e28f08399112ed2529ea087f6bb9e6747bb03ec3804a",
+      "output_sha256": "d4f9596ecf1120b29124a884cd1d521e20d0fd2d5a5d9d5b2076ceaa412d60d0"
+    },
+    "bercy_c30_k0.npz": {
+      "input_sha256": "dd72fb09f024cba693dbb99e5eb684793164f23c62a79a8ec87370622ed2536f",
+      "output_sha256": "550f3be490dc3478e47d5029c1ac6f4a13af655a6df6c9315b1cdae1d982ec4b"
+    },
+    "bercy_c30_k1.npz": {
+      "input_sha256": "a5ed70302d920e0695f5f8108ff8b2d79d35e30954a8257ca3a15d60c3ab0d5a",
+      "output_sha256": "be2eb2186e72fbddd445a736a540adcdb461f3c224eb52378345eeab39a8d612"
+    },
+    "bercy_c30_k2.npz": {
+      "input_sha256": "e618649bc96ab6a943b7ab7c1acce54c977a4490a7b06bbd0c1e8794881da12c",
+      "output_sha256": "8a73a06aaf8c16aa0dbf21136ef13fcc5382f7aaad10220748abc91e3edfb08b"
+    },
+    "bercy_c60_k0.npz": {
+      "input_sha256": "206d5ce27f0c7109dc9aa3cfd7758e77880ec838701481f2ac4caec754deef75",
+      "output_sha256": "91fcfdb155f04b7953563f2ddeed1395516e0fe80829ffdc83a9c3ffdb28ca1d"
+    },
+    "bercy_c60_k1.npz": {
+      "input_sha256": "427bd3630f90c835fc283c98ad7a85f500b36296afbd351d578cd57db810b640",
+      "output_sha256": "1bfa6c497ced9d4665fddd45f8c921b56da73607c299fa6c08db38c56d320786"
+    },
+    "bercy_c60_k2.npz": {
+      "input_sha256": "2a8334614a3dd3ddfef10c8807833727acc3ba1db91f2c2e2de90781f6aa58b1",
+      "output_sha256": "da53a9b14ab9dd85efee3b9bc204d1fca8584b44e379e5d353597ad52b454064"
+    },
+    "bercy_clean.npz": {
+      "input_sha256": "2c0d99ff785055bc2ce906039d9d19dcd42c0e014bd72a1756c6196f94a6200f",
+      "output_sha256": "e383da75641c789c4436c546f361b83d66949aa06146bc8a0fcdefe6a6e131c8"
+    },
+    "paris_c10_k0.npz": {
+      "input_sha256": "1fbf81160c5eb7ccd951eec6e6fa57b53812929e5662e8830ceb3028a8bfcdd7",
+      "output_sha256": "107d4c502bccbd714e9ab5a2191d36f889ce55b870f400a18ce08999fb809bc7"
+    },
+    "paris_c10_k1.npz": {
+      "input_sha256": "90e69d1acd37e7d794b9b8cca64845f62af8ed10fa801ddc670073cf72c8fb48",
+      "output_sha256": "8e5e857cbfcb871ef55913062e6b0d30f0fb5737708ec78a71d708f590e03412"
+    },
+    "paris_c10_k2.npz": {
+      "input_sha256": "597cc5b3b230aa81e00c942d0125d188cd6037607ed6819eaae95262ab033259",
+      "output_sha256": "3c169ac27aabc009df809d54ff0baff5126ba1b580ce442d445a4d7b3b49e91c"
+    },
+    "paris_c30_k0.npz": {
+      "input_sha256": "76ad118bdc86ad47256be2ab737af1535911f51fd74f19ff73a4793eeb9755f4",
+      "output_sha256": "78989faeeb9d9c02910a0dcf6212bae9b8de00763dd4fdf4a6681ca6f3859cb4"
+    },
+    "paris_c30_k1.npz": {
+      "input_sha256": "7b384c7001692e6436b395639985260736f1d8cad444cb8e502f0009222016a6",
+      "output_sha256": "5ee5e4966f1c07dc70038575aef140bd663f2160f35412966736e78db8ace1b0"
+    },
+    "paris_c30_k2.npz": {
+      "input_sha256": "ff214017a6168b6870b729b6801636aa4fdd1dfebc4541b049f4f75290ab3b28",
+      "output_sha256": "b6ad50a7dfd5bfbc01877a0891d56f24b99af8b5ea287b2f79533c5afb93e484"
+    },
+    "paris_c60_k0.npz": {
+      "input_sha256": "424abc05dbfaa9cc871984d45323ab6e264984539792526f90107cf79a75999d",
+      "output_sha256": "a7b0f9bc2598046d336dec33ad83f845a00febfd729421f22a69c19361ce1a52"
+    },
+    "paris_c60_k1.npz": {
+      "input_sha256": "b3ce369369941492832900e365d4a9ace9c0390f94c4f443b0262ae9992d6251",
+      "output_sha256": "335a14262debb4fb8ade2663bf74f56368bdbcbbb56f7b1d24f2c823b5227f4d"
+    },
+    "paris_c60_k2.npz": {
+      "input_sha256": "ec938feeb4e446c76fb5b7418b78894b9e99173d32ff317918ab8e0da4bb1ed1",
+      "output_sha256": "7ddb462af2506d8c3aa17dd9df02f1aa1d4c8a89b5fcabfeffa696c9da56f7ec"
+    },
+    "paris_clean.npz": {
+      "input_sha256": "ffd6c09b5089b7059e778153decd9f7fb95180905b47e48a0ea9c145966ead6c",
+      "output_sha256": "4635566e159871141ff54854dc2fcef796db4adb03f5ef89ceb6cb982bc723f3"
+    }
+  }
+}
