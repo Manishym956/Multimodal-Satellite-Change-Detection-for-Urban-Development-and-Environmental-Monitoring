@@ -96,6 +96,7 @@ def run(model, arch, ck, ds, device):
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    torch.backends.cudnn.deterministic, torch.backends.cudnn.benchmark = True, False  # as training and every earlier eval
     (OUT / "runs").mkdir(parents=True, exist_ok=True)
     source_sha256 = {f: hashlib.sha256((tr.PROJECT_ROOT / f).read_bytes()).hexdigest() for f in SOURCES}
     ds = rrd.RRDDataset("test", "hafner_vv")
@@ -108,6 +109,7 @@ def main():
             model = rrd.build_model(arch, 1)
             model.load_state_dict(ck["model_state_dict"])
             model.to(device)
+            model.eval()
             counts, missing = run(model, arch, ck, ds, device)
             stored = json.loads((R / f"{arm}_seed{s}" / "metrics.json").read_text(encoding="utf-8"))["test"]
             cond, tag = ("full", "oscd") if arch == "unet_sar" else ("no_o2", "oscd")

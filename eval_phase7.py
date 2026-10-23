@@ -63,6 +63,7 @@ def city_counts(model, ds, n_s1, device, k_full):
 
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    torch.backends.cudnn.deterministic, torch.backends.cudnn.benchmark = True, False  # as training and every earlier eval
     (OUT / "runs").mkdir(parents=True, exist_ok=True)
     source_sha256 = {f: hashlib.sha256((tr.PROJECT_ROOT / f).read_bytes()).hexdigest() for f in SOURCES}
     for arm, (arch, sar) in ARMS.items():
@@ -76,6 +77,7 @@ def main():
             model = rrd.build_model(arch, n_s1)
             model.load_state_dict(ck["model_state_dict"])
             model.to(device)
+            model.eval()
             k_full = ck["thresholds"]["full"]
             counts = city_counts(model, ds, n_s1, device, k_full)
             stored = json.loads((R / f"{arm}_seed{s}" / "metrics.json").read_text(encoding="utf-8"))["test"]

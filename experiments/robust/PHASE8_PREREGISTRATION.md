@@ -83,8 +83,8 @@ evaluates every tag and its land-cover counts sum; analysis and audit agree on s
 
 | file | sha256 |
 |---|---|
-| `eval_phase8.py` | `547e0fb0f838b559507cecbe518ea0114d8d24166c44de6b615ebf37c0c14c16` |
-| `eval_phase7.py` | `e89089bc0e761bfaa379d9498d65c56df7bd0da9b059e61435a3d6b0eb4c352f` |
+| `eval_phase8.py` | `eb8e5295183cbbe99601d89e946c4d315e2bcc2f63b6867b53c64f81b60a5453` |
+| `eval_phase7.py` | `a17599a62035be979cffbf2c6cc9dc83b7b7368f3b516e593e12d150e13180a7` |
 | `analyze_phase8.py` | `ae85ed7789c5967638de02c6db455100954c847039bebb548cac74eabfbe384a` |
 | `analyze_phase7.py` | `0a9b402302fd4fab33265c1c13fdd26de4acbe104547d50352a8020bb2c555f4` |
 | `analyze_phase3.py` | `96bd2cc6811321ad00438f45cb81d3e01cc485d4406c2aa5fc7e770a6354a04b` |
@@ -106,3 +106,24 @@ evaluates every tag and its land-cover counts sum; analysis and audit agree on s
 | `../../checkpoints/robust/p6_async_seed*.pt (10, concatenated, sorted)` | `b579af2b594ca9a0ab2b30fc660f2ac748f441fc032702717699bc27e4167abe` |
 | `../../checkpoints/robust/p2_full_seed*.pt (10, concatenated, sorted)` | `5817ec427596daa2062c84902eed54e727681457e33aae4d4129b59c504b844e` |
 | `../../checkpoints/robust/p6_unet_sar_seed*.pt (10, concatenated, sorted)` | `5fd758a336d0edc85eac387912a3a668e7f706384af2e7dee675213c5d75b03a` |
+
+## 8. Deviation (2026-10-23, before any Step 8 result was saved or read)
+
+**What happened.** The first run of `logs/robust/p8_run.sh` (22:52 IST; log kept as
+`logs/robust/p8_run_run1_anchor_failed.log`) stopped at the first checkpoint: `ANCHOR FAILED p2_dropout seed 1` (tag
+`oscd` and the full-input pass did not reproduce the stored test counts). The run was not saved (`phase8/runs` empty);
+nothing was printed or analysed. Its test outputs for that one checkpoint were computed in memory with the defect below and
+discarded unseen.
+
+**Cause.** `eval_phase8.py` (and `eval_phase7.py`, which it imports from and which Step 7 uses) did not put the model in
+evaluation mode and did not set cuDNN to deterministic, unlike training and every earlier evaluator (`eval_phase4b.py`,
+`eval_phase5.py`, `eval_phase5s.py`). Diagnosed on the **validation cities only**: with `model.eval()` and
+`torch.backends.cudnn.deterministic = True, benchmark = False`, `eval_phase8.run` reproduces the validation F1 that
+`p2_dropout_seed1` stored at training time exactly (no_o2 0.3009471929753242, full 0.3651203112445553); without them it
+does not.
+
+**Change (approved by the author before it was made).** Those two lines were added to both evaluators; nothing else
+changed (conditions, tags, thresholds, cities, analysis, audit). Hashes: `eval_phase8.py` 547e0fb0… → eb8e5295…,
+`eval_phase7.py` e89089bc… → a17599a6… (rows above updated). The smoke test is unaffected (it compares no stored counts);
+it is not re-run. The anchors are the check that the fix is right. Same deviation recorded in
+`PHASE7_PREREGISTRATION.md` §10.

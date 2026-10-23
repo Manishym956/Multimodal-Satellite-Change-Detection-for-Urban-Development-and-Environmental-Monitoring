@@ -94,7 +94,7 @@ runs).
 | `src/training/train_rrd.py` | `cf918eb7481f8cd98352a4702f16913f03f373cb9d5cd077d9fe6f4b0adcbb32` |
 | `src/training/train_robust.py` | `c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c` |
 | `src/datasets/oscd_dataset.py` | `bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43` |
-| `eval_phase7.py` | `e89089bc0e761bfaa379d9498d65c56df7bd0da9b059e61435a3d6b0eb4c352f` |
+| `eval_phase7.py` | `a17599a62035be979cffbf2c6cc9dc83b7b7368f3b516e593e12d150e13180a7` |
 | `analyze_phase7.py` | `0a9b402302fd4fab33265c1c13fdd26de4acbe104547d50352a8020bb2c555f4` |
 | `analyze_phase3.py` | `96bd2cc6811321ad00438f45cb81d3e01cc485d4406c2aa5fc7e770a6354a04b` |
 | `audit_p7.py` | `ce5bdb73a7a838bc119e446051a2e718f79e6875f95b29a110eb5924f1441606` |
@@ -107,3 +107,12 @@ runs).
 | `../../datasets/oscd_wc_gee/*.tif (24, concatenated, sorted)` | `f614a129457f84c0c5b49c7a1a88ddfab94818c2bd96b1cb26f9e4c0155493e9` |
 | `../../checkpoints/robust/p2_full_seed*.pt (10, concatenated, sorted)` | `5817ec427596daa2062c84902eed54e727681457e33aae4d4129b59c504b844e` |
 | `../../docs/final/FINAL_RESEARCH_PLAN.md` | `770163f6294825ce28a6325aa72f5cb2a4c5b8c61e6ebcf52db51397c9278f1c` |
+
+## 10. Deviation (2026-10-23, during Step 7 training, before `eval_phase7.py` ran)
+
+`eval_phase7.py` lacked `model.eval()` and cuDNN determinism (unlike every earlier evaluator). Found when Step 8's
+anchor failed (`PHASE8_PREREGISTRATION.md` §8, diagnosed on validation cities only). The two lines were added before
+`eval_phase7.py` ran on any checkpoint; nothing else changed. Hash `e89089bc…` → `a17599a6…` (row above updated). Step 7
+training is unaffected (it does not use this script). `p7_run.sh` verified the hashes once, at its start (22:46, old
+hash); when training ends it runs `eval_phase7.py` as it is on disk then, i.e. the fixed version, and every saved
+evaluation file records the source hash it ran with (checked by `audit_p7.py`).

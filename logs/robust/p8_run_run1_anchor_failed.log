@@ -1,0 +1,4 @@
+23 hashes, 0 failed
+== eval 2026-10-23T22:52:50+05:30
+ANCHOR FAILED p2_dropout seed 1: ['oscd at_selected', 'oscd at_0.5', 'full at_selected', 'full at_0.5']
+STOP: eval_phase8 failed (anchor or error)
