@@ -8,9 +8,11 @@ s1   Hafner's recipe (repos/2/DS_UNet/sentinel1_download.ipynb): COPERNICUS/S1_G
      5-10 dB lower than VV; registered in PHASE7_PREREGISTRATION.md). Output datasets/oscd_s1_gee/sentinel1_{city}_{orbit}_t{1,2}.tif
      with band descriptions VV, VH.
 s2   COPERNICUS/S2_HARMONIZED (L1C, 13 bands, DN = reflectance x 10000) for each target date (OSCD date 1, and date 2
-     minus each gap in GAPS months). Scene rule (fixed before any download): among acquisition days within +-WINDOW days
-     of the target, the day with the lowest cloud fraction over the city box (COPERNICUS/S2_CLOUD_PROBABILITY >= 40),
-     ties nearest to the target; same-day tiles are mosaicked. Output datasets/oscd_s2_gee/{city}_{tag}.tif (13 bands,
+     minus each gap in GAPS months). Scene rule (fixed before any model saw a downloaded scene): among acquisition days
+     within +-WINDOW days of the target with full coverage and a cloud-probability image, the day nearest to the target
+     whose cloud fraction over the city box (COPERNICUS/S2_CLOUD_PROBABILITY >= 40) is <= CLEAR; if none, the day with the
+     lowest cloud fraction, ties nearest. Same-day tiles are mosaicked. For OSCD date 1 (the same-date control) OSCD's own
+     acquisition day is used when it has full coverage. Output datasets/oscd_s2_gee/{city}_{tag}.tif (13 bands,
      B01..B12 order as OSCD) plus a manifest row (date, cloud fraction, valid fraction). Grid: the first listed orbit's raster.
 wc   ESA/WorldCover/v100 (2020), nearest neighbour, datasets/oscd_wc_gee/{city}_worldcover.tif.
 Refuses to overwrite any file.
@@ -23,6 +25,7 @@ import argparse
 import datetime as dt
 import io
 import json
+import time
 import zipfile
 from pathlib import Path
 
@@ -46,6 +49,7 @@ S2_BANDS = ["B1", "B2", "B3", "B4", "B5", "B6", "B7", "B8", "B8A", "B9", "B10", 
 GAPS = (1, 3, 6, 12, 18)  # months before OSCD date 2
 WINDOW = 45  # days either side of the target date
 CLOUD_PROB = 40
+CLEAR = 0.02  # cloud fraction over the city box below which a day counts as clear
 
 
 def oscd_dates(city):
@@ -72,8 +76,13 @@ def grid(city, orbit):
 def download(image, g, profile, path, descriptions):
     if path.exists():
         raise SystemExit(f"{path} exists; refusing to overwrite")
-    url = image.getDownloadURL({**g, "format": "GEO_TIFF"})
-    r = requests.get(url, timeout=600)
+    for attempt in range(6):  # Earth Engine returns transient 429/5xx under load
+        url = image.getDownloadURL({**g, "format": "GEO_TIFF"})
+        r = requests.get(url, timeout=600)
+        if r.status_code < 500 and r.status_code != 429 or attempt == 5:
+            break
+        print("retry after HTTP", r.status_code, flush=True)
+        time.sleep(30 * (attempt + 1))
     r.raise_for_status()
     data = r.content
     if data[:2] == b"PK":  # some responses are zipped
@@ -97,6 +106,10 @@ def s1(city):
     for orbit in ORBITS[city]:
         g, profile = grid(city, orbit)
         for t, rng in ((1, r1), (2, r2)):
+            path = OUT["s1"] / f"sentinel1_{city}_{orbit}_t{t}.tif"
+            if path.exists():  # resume: a file is written only after its download completed
+                print(city, orbit, f"t{t}", "exists, skipped", flush=True)
+                continue
             bands = []
             for pol in ("VV", "VH"):
                 lo, hi = S1_RANGE[pol]
@@ -105,9 +118,11 @@ def s1(city):
                        .filter(ee.Filter.listContains("transmitterReceiverPolarisation", pol)).select(pol))
                 n = col.size().getInfo()
                 col = col.map(lambda img, lo=lo: img.updateMask(img.gte(lo)).copyProperties(img))
-                bands.append(col.mean().unitScale(lo, hi).clamp(0, 1).unmask().float().rename(pol))
+                # no scene in the window: all zero, which is what unmask() gives a fully masked mean
+                band = col.mean().unitScale(lo, hi).clamp(0, 1).unmask() if n else ee.Image.constant(0)
+                bands.append(band.float().rename(pol))
                 print(city, orbit, f"t{t}", pol, "images", n, flush=True)
-            download(ee.Image.cat(bands), g, profile, OUT["s1"] / f"sentinel1_{city}_{orbit}_t{t}.tif", ["VV", "VH"])
+            download(ee.Image.cat(bands), g, profile, path, ["VV", "VH"])
 
 
 def add_months(d, months):
@@ -122,30 +137,57 @@ def s2(city, manifest):
     roi = box(city)
     targets = {"oscd_t1": d1, **{f"gap{m:02d}": add_months(d2, -m) for m in GAPS}}
     for tag, target in targets.items():
+        if any(r["city"] == city and r["tag"] == tag for r in manifest):  # resume: already decided
+            continue
         lo, hi = target - dt.timedelta(days=WINDOW), target + dt.timedelta(days=WINDOW)
         col = ee.ImageCollection("COPERNICUS/S2_HARMONIZED").filterBounds(roi).filterDate(str(lo), str(hi + dt.timedelta(days=1)))
         prob = ee.ImageCollection("COPERNICUS/S2_CLOUD_PROBABILITY").filterBounds(roi).filterDate(str(lo), str(hi + dt.timedelta(days=1)))
-        days = sorted(set(col.aggregate_array("system:time_start").map(lambda t: ee.Date(t).format("YYYY-MM-dd")).getInfo()))
+        day_list = lambda c: set(c.aggregate_array("system:time_start").map(lambda t: ee.Date(t).format("YYYY-MM-dd")).getInfo())
+        # a day without a cloud-probability image cannot be judged clear, so it is not a candidate
+        # days nearest the target first (ties: earlier day; for oscd_t1, OSCD's own day first). The rule below picks the
+        # nearest full-coverage clear day, so the scan can stop at the first one; otherwise every day is evaluated.
+        dist_day = lambda d: abs((dt.date.fromisoformat(d) - target).days)
+        days = sorted(day_list(col) & day_list(prob), key=lambda d: (not (tag == "oscd_t1" and d == str(d1)), dist_day(d), d))
         rows = []
         for day in days:
             nxt = str(dt.date.fromisoformat(day) + dt.timedelta(days=1))
             img, cp = col.filterDate(day, nxt).mosaic(), prob.filterDate(day, nxt).mosaic()
             stats = ee.Image.cat(cp.gte(CLOUD_PROB).rename("cloud"), img.select("B2").mask().rename("valid")).reduceRegion(
                 ee.Reducer.mean(), roi, scale=20, maxPixels=1e9).getInfo()
-            rows.append({"day": day, "cloud": stats.get("cloud"), "valid": stats.get("valid")})
+            r = {"day": day, "cloud": stats.get("cloud"), "valid": stats.get("valid")}
+            rows.append(r)
+            full = r["cloud"] is not None and r["valid"] is not None and r["valid"] >= 0.99
+            if full and (r["cloud"] <= CLEAR or (tag == "oscd_t1" and day == str(d1))):
+                break
         ok = [r for r in rows if r["cloud"] is not None and r["valid"] is not None and r["valid"] >= 0.99]
+        if tag == "oscd_t1":  # same-date control: OSCD's own acquisition day when available
+            ok = [r for r in ok if r["day"] == str(d1)] or ok
         if not ok:
             manifest.append({"city": city, "tag": tag, "target": str(target), "day": None, "reason": "no full-coverage scene"})
+            save_manifest(manifest)
             print(city, tag, "NO SCENE", flush=True)
             continue
-        best = min(ok, key=lambda r: (r["cloud"], abs((dt.date.fromisoformat(r["day"]) - target).days)))
+        dist = lambda r: abs((dt.date.fromisoformat(r["day"]) - target).days)
+        clear = [r for r in ok if r["cloud"] <= CLEAR]
+        # nearest essentially clear day, so the realised gap stays close to the nominal one; else the clearest day
+        best = min(clear, key=dist) if clear else min(ok, key=lambda r: (r["cloud"], dist(r)))
         nxt = str(dt.date.fromisoformat(best["day"]) + dt.timedelta(days=1))
-        image = col.filterDate(best["day"], nxt).mosaic().select(S2_BANDS).toFloat()
+        # L1C DN (reflectance x 10000) are integers: uint16 is exact and keeps large cities under the 48 MB request limit
+        image = col.filterDate(best["day"], nxt).mosaic().select(S2_BANDS).toUint16()
+        stale = OUT["s2"] / f"{city}_{tag}.tif"
+        if stale.exists():  # no manifest row yet, so this file is from an interrupted download
+            stale.unlink()
         download(image, g, profile, OUT["s2"] / f"{city}_{tag}.tif", ["B01", "B02", "B03", "B04", "B05", "B06", "B07", "B08", "B8A",
                                                                      "B09", "B10", "B11", "B12"])
         manifest.append({"city": city, "tag": tag, "target": str(target), "day": best["day"], "cloud": best["cloud"],
                          "valid": best["valid"], "candidates": len(rows), "oscd_t1": str(d1), "oscd_t2": str(d2)})
+        save_manifest(manifest)
         print(city, tag, target, "->", best["day"], f"cloud {best['cloud']:.3f}", flush=True)
+
+
+def save_manifest(manifest):
+    OUT["s2"].mkdir(parents=True, exist_ok=True)
+    (OUT["s2"] / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
 
 def wc(city):
@@ -162,10 +204,7 @@ if __name__ == "__main__":
     p.add_argument("--cities", nargs="*", default=list(ORBITS))
     a = p.parse_args()
     ee.Initialize(project=a.project)
-    manifest = []
+    f = OUT["s2"] / "manifest.json"
+    manifest = json.loads(f.read_text(encoding="utf-8")) if f.exists() else []  # s2 resumes from the saved manifest
     for c in a.cities:
         {"s1": s1, "s2": lambda c: s2(c, manifest), "wc": wc}[a.what](c)
-    if a.what == "s2":
-        f = OUT["s2"] / "manifest.json"
-        old = json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
-        f.write_text(json.dumps(old + manifest, indent=2), encoding="utf-8")

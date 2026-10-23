@@ -1,0 +1,243 @@
+phase7 summary written
+500 checks, 240 failed
+FAIL p6_unet_sar 1 pooled = stored 
+FAIL p6_unet_sar 1 brasilia land cover sums 
+FAIL p6_unet_sar 1 montpellier land cover sums 
+FAIL p6_unet_sar 1 norcia land cover sums 
+FAIL p6_unet_sar 1 rio land cover sums 
+FAIL p6_unet_sar 1 saclay_w land cover sums 
+FAIL p6_unet_sar 1 valencia land cover sums 
+FAIL p6_unet_sar 1 dubai land cover sums 
+FAIL p6_unet_sar 1 milano land cover sums 
+FAIL p6_unet_sar 1 chongqing land cover sums 
+FAIL p6_unet_sar 1 lasvegas land cover sums 
+FAIL p6_unet_sar 2 pooled = stored 
+FAIL p6_unet_sar 2 brasilia land cover sums 
+FAIL p6_unet_sar 2 montpellier land cover sums 
+FAIL p6_unet_sar 2 norcia land cover sums 
+FAIL p6_unet_sar 2 rio land cover sums 
+FAIL p6_unet_sar 2 saclay_w land cover sums 
+FAIL p6_unet_sar 2 valencia land cover sums 
+FAIL p6_unet_sar 2 dubai land cover sums 
+FAIL p6_unet_sar 2 milano land cover sums 
+FAIL p6_unet_sar 2 chongqing land cover sums 
+FAIL p6_unet_sar 2 lasvegas land cover sums 
+FAIL p6_unet_sar 3 pooled = stored 
+FAIL p6_unet_sar 3 brasilia land cover sums 
+FAIL p6_unet_sar 3 montpellier land cover sums 
+FAIL p6_unet_sar 3 norcia land cover sums 
+FAIL p6_unet_sar 3 rio land cover sums 
+FAIL p6_unet_sar 3 saclay_w land cover sums 
+FAIL p6_unet_sar 3 valencia land cover sums 
+FAIL p6_unet_sar 3 dubai land cover sums 
+FAIL p6_unet_sar 3 milano land cover sums 
+FAIL p6_unet_sar 3 chongqing land cover sums 
+FAIL p6_unet_sar 3 lasvegas land cover sums 
+FAIL p6_unet_sar 4 pooled = stored 
+FAIL p6_unet_sar 4 brasilia land cover sums 
+FAIL p6_unet_sar 4 montpellier land cover sums 
+FAIL p6_unet_sar 4 norcia land cover sums 
+FAIL p6_unet_sar 4 rio land cover sums 
+FAIL p6_unet_sar 4 saclay_w land cover sums 
+FAIL p6_unet_sar 4 valencia land cover sums 
+FAIL p6_unet_sar 4 dubai land cover sums 
+FAIL p6_unet_sar 4 milano land cover sums 
+FAIL p6_unet_sar 4 chongqing land cover sums 
+FAIL p6_unet_sar 4 lasvegas land cover sums 
+FAIL p6_unet_sar 5 pooled = stored 
+FAIL p6_unet_sar 5 brasilia land cover sums 
+FAIL p6_unet_sar 5 montpellier land cover sums 
+FAIL p6_unet_sar 5 norcia land cover sums 
+FAIL p6_unet_sar 5 rio land cover sums 
+FAIL p6_unet_sar 5 saclay_w land cover sums 
+FAIL p6_unet_sar 5 valencia land cover sums 
+FAIL p6_unet_sar 5 dubai land cover sums 
+FAIL p6_unet_sar 5 milano land cover sums 
+FAIL p6_unet_sar 5 chongqing land cover sums 
+FAIL p6_unet_sar 5 lasvegas land cover sums 
+FAIL p6_unet_sar 6 pooled = stored 
+FAIL p6_unet_sar 6 brasilia land cover sums 
+FAIL p6_unet_sar 6 montpellier land cover sums 
+FAIL p6_unet_sar 6 norcia land cover sums 
+FAIL p6_unet_sar 6 rio land cover sums 
+FAIL p6_unet_sar 6 saclay_w land cover sums 
+FAIL p6_unet_sar 6 valencia land cover sums 
+FAIL p6_unet_sar 6 dubai land cover sums 
+FAIL p6_unet_sar 6 milano land cover sums 
+FAIL p6_unet_sar 6 chongqing land cover sums 
+FAIL p6_unet_sar 6 lasvegas land cover sums 
+FAIL p6_unet_sar 7 pooled = stored 
+FAIL p6_unet_sar 7 brasilia land cover sums 
+FAIL p6_unet_sar 7 montpellier land cover sums 
+FAIL p6_unet_sar 7 norcia land cover sums 
+FAIL p6_unet_sar 7 rio land cover sums 
+FAIL p6_unet_sar 7 saclay_w land cover sums 
+FAIL p6_unet_sar 7 valencia land cover sums 
+FAIL p6_unet_sar 7 dubai land cover sums 
+FAIL p6_unet_sar 7 milano land cover sums 
+FAIL p6_unet_sar 7 chongqing land cover sums 
+FAIL p6_unet_sar 7 lasvegas land cover sums 
+FAIL p6_unet_sar 8 pooled = stored 
+FAIL p6_unet_sar 8 brasilia land cover sums 
+FAIL p6_unet_sar 8 montpellier land cover sums 
+FAIL p6_unet_sar 8 norcia land cover sums 
+FAIL p6_unet_sar 8 rio land cover sums 
+FAIL p6_unet_sar 8 saclay_w land cover sums 
+FAIL p6_unet_sar 8 valencia land cover sums 
+FAIL p6_unet_sar 8 dubai land cover sums 
+FAIL p6_unet_sar 8 milano land cover sums 
+FAIL p6_unet_sar 8 chongqing land cover sums 
+FAIL p6_unet_sar 8 lasvegas land cover sums 
+FAIL p6_unet_sar 9 source metrics.json exists 
+FAIL p6_unet_sar 10 source metrics.json exists 
+FAIL p7_unet_vh 1 source metrics.json exists 
+FAIL p7_unet_vh 2 source metrics.json exists 
+FAIL p7_unet_vh 3 source metrics.json exists 
+FAIL p7_unet_vh 4 source metrics.json exists 
+FAIL p7_unet_vh 5 source metrics.json exists 
+FAIL p7_unet_vh 6 source metrics.json exists 
+FAIL p7_unet_vh 7 source metrics.json exists 
+FAIL p7_unet_vh 8 source metrics.json exists 
+FAIL p7_unet_vh 9 source metrics.json exists 
+FAIL p7_unet_vh 10 source metrics.json exists 
+FAIL p7_unet_vvvh 1 source metrics.json exists 
+FAIL p7_unet_vvvh 2 source metrics.json exists 
+FAIL p7_unet_vvvh 3 source metrics.json exists 
+FAIL p7_unet_vvvh 4 source metrics.json exists 
+FAIL p7_unet_vvvh 5 source metrics.json exists 
+FAIL p7_unet_vvvh 6 source metrics.json exists 
+FAIL p7_unet_vvvh 7 source metrics.json exists 
+FAIL p7_unet_vvvh 8 source metrics.json exists 
+FAIL p7_unet_vvvh 9 source metrics.json exists 
+FAIL p7_unet_vvvh 10 source metrics.json exists 
+FAIL p2_full 1 pooled = stored 
+FAIL p2_full 1 brasilia land cover sums 
+FAIL p2_full 1 montpellier land cover sums 
+FAIL p2_full 1 norcia land cover sums 
+FAIL p2_full 1 rio land cover sums 
+FAIL p2_full 1 saclay_w land cover sums 
+FAIL p2_full 1 valencia land cover sums 
+FAIL p2_full 1 dubai land cover sums 
+FAIL p2_full 1 milano land cover sums 
+FAIL p2_full 1 chongqing land cover sums 
+FAIL p2_full 1 lasvegas land cover sums 
+FAIL p2_full 2 pooled = stored 
+FAIL p2_full 2 brasilia land cover sums 
+FAIL p2_full 2 montpellier land cover sums 
+FAIL p2_full 2 norcia land cover sums 
+FAIL p2_full 2 rio land cover sums 
+FAIL p2_full 2 saclay_w land cover sums 
+FAIL p2_full 2 valencia land cover sums 
+FAIL p2_full 2 dubai land cover sums 
+FAIL p2_full 2 milano land cover sums 
+FAIL p2_full 2 chongqing land cover sums 
+FAIL p2_full 2 lasvegas land cover sums 
+FAIL p2_full 3 pooled = stored 
+FAIL p2_full 3 brasilia land cover sums 
+FAIL p2_full 3 montpellier land cover sums 
+FAIL p2_full 3 norcia land cover sums 
+FAIL p2_full 3 rio land cover sums 
+FAIL p2_full 3 saclay_w land cover sums 
+FAIL p2_full 3 valencia land cover sums 
+FAIL p2_full 3 dubai land cover sums 
+FAIL p2_full 3 milano land cover sums 
+FAIL p2_full 3 chongqing land cover sums 
+FAIL p2_full 3 lasvegas land cover sums 
+FAIL p2_full 4 pooled = stored 
+FAIL p2_full 4 brasilia land cover sums 
+FAIL p2_full 4 montpellier land cover sums 
+FAIL p2_full 4 norcia land cover sums 
+FAIL p2_full 4 rio land cover sums 
+FAIL p2_full 4 saclay_w land cover sums 
+FAIL p2_full 4 valencia land cover sums 
+FAIL p2_full 4 dubai land cover sums 
+FAIL p2_full 4 milano land cover sums 
+FAIL p2_full 4 chongqing land cover sums 
+FAIL p2_full 4 lasvegas land cover sums 
+FAIL p2_full 5 pooled = stored 
+FAIL p2_full 5 brasilia land cover sums 
+FAIL p2_full 5 montpellier land cover sums 
+FAIL p2_full 5 norcia land cover sums 
+FAIL p2_full 5 rio land cover sums 
+FAIL p2_full 5 saclay_w land cover sums 
+FAIL p2_full 5 valencia land cover sums 
+FAIL p2_full 5 dubai land cover sums 
+FAIL p2_full 5 milano land cover sums 
+FAIL p2_full 5 chongqing land cover sums 
+FAIL p2_full 5 lasvegas land cover sums 
+FAIL p2_full 6 pooled = stored 
+FAIL p2_full 6 brasilia land cover sums 
+FAIL p2_full 6 montpellier land cover sums 
+FAIL p2_full 6 norcia land cover sums 
+FAIL p2_full 6 rio land cover sums 
+FAIL p2_full 6 saclay_w land cover sums 
+FAIL p2_full 6 valencia land cover sums 
+FAIL p2_full 6 dubai land cover sums 
+FAIL p2_full 6 milano land cover sums 
+FAIL p2_full 6 chongqing land cover sums 
+FAIL p2_full 6 lasvegas land cover sums 
+FAIL p2_full 7 pooled = stored 
+FAIL p2_full 7 brasilia land cover sums 
+FAIL p2_full 7 montpellier land cover sums 
+FAIL p2_full 7 norcia land cover sums 
+FAIL p2_full 7 rio land cover sums 
+FAIL p2_full 7 saclay_w land cover sums 
+FAIL p2_full 7 valencia land cover sums 
+FAIL p2_full 7 dubai land cover sums 
+FAIL p2_full 7 milano land cover sums 
+FAIL p2_full 7 chongqing land cover sums 
+FAIL p2_full 7 lasvegas land cover sums 
+FAIL p2_full 8 pooled = stored 
+FAIL p2_full 8 brasilia land cover sums 
+FAIL p2_full 8 montpellier land cover sums 
+FAIL p2_full 8 norcia land cover sums 
+FAIL p2_full 8 rio land cover sums 
+FAIL p2_full 8 saclay_w land cover sums 
+FAIL p2_full 8 valencia land cover sums 
+FAIL p2_full 8 dubai land cover sums 
+FAIL p2_full 8 milano land cover sums 
+FAIL p2_full 8 chongqing land cover sums 
+FAIL p2_full 8 lasvegas land cover sums 
+FAIL p2_full 9 pooled = stored 
+FAIL p2_full 9 brasilia land cover sums 
+FAIL p2_full 9 montpellier land cover sums 
+FAIL p2_full 9 norcia land cover sums 
+FAIL p2_full 9 rio land cover sums 
+FAIL p2_full 9 saclay_w land cover sums 
+FAIL p2_full 9 valencia land cover sums 
+FAIL p2_full 9 dubai land cover sums 
+FAIL p2_full 9 milano land cover sums 
+FAIL p2_full 9 chongqing land cover sums 
+FAIL p2_full 9 lasvegas land cover sums 
+FAIL p2_full 10 pooled = stored 
+FAIL p2_full 10 brasilia land cover sums 
+FAIL p2_full 10 montpellier land cover sums 
+FAIL p2_full 10 norcia land cover sums 
+FAIL p2_full 10 rio land cover sums 
+FAIL p2_full 10 saclay_w land cover sums 
+FAIL p2_full 10 valencia land cover sums 
+FAIL p2_full 10 dubai land cover sums 
+FAIL p2_full 10 milano land cover sums 
+FAIL p2_full 10 chongqing land cover sums 
+FAIL p2_full 10 lasvegas land cover sums 
+FAIL p7_dsunet_vh 1 source metrics.json exists 
+FAIL p7_dsunet_vh 2 source metrics.json exists 
+FAIL p7_dsunet_vh 3 source metrics.json exists 
+FAIL p7_dsunet_vh 4 source metrics.json exists 
+FAIL p7_dsunet_vh 5 source metrics.json exists 
+FAIL p7_dsunet_vh 6 source metrics.json exists 
+FAIL p7_dsunet_vh 7 source metrics.json exists 
+FAIL p7_dsunet_vh 8 source metrics.json exists 
+FAIL p7_dsunet_vh 9 source metrics.json exists 
+FAIL p7_dsunet_vh 10 source metrics.json exists 
+FAIL p7_dsunet_vvvh 1 source metrics.json exists 
+FAIL p7_dsunet_vvvh 2 source metrics.json exists 
+FAIL p7_dsunet_vvvh 3 source metrics.json exists 
+FAIL p7_dsunet_vvvh 4 source metrics.json exists 
+FAIL p7_dsunet_vvvh 5 source metrics.json exists 
+FAIL p7_dsunet_vvvh 6 source metrics.json exists 
+FAIL p7_dsunet_vvvh 7 source metrics.json exists 
+FAIL p7_dsunet_vvvh 8 source metrics.json exists 
+FAIL p7_dsunet_vvvh 9 source metrics.json exists 
+FAIL p7_dsunet_vvvh 10 source metrics.json exists 
+17 checks, 0 failed

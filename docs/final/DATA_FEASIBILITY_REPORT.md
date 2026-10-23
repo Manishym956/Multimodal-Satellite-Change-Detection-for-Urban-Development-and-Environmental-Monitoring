@@ -35,8 +35,11 @@ design the plan prefers.
 | OSCD date 1 | 24/24 | — | 24/24 |
 
 **Decisions.**
-1. Scene rule (fixed in `download_gee.py`): the day with the lowest cloud fraction over the city box within ±45 days,
-   s2cloudless probability ≥ 40, full coverage required.
+1. Scene rule (fixed in `download_gee.py` before any model saw a downloaded scene): within ±45 days of the target,
+   full coverage and a cloud-probability image required; the day nearest the target whose cloud fraction over the city
+   box (s2cloudless probability ≥ 40) is ≤ 0.02, else the clearest day. For OSCD date 1, OSCD's own acquisition day.
+   (A first rule, "clearest day, ties nearest", was replaced after the first city downloaded (aguasclaras, a validation city) showed it could move a 6-month target
+   to 4.6 months for a negligible cloud difference; its scenes were deleted and no model saw them.)
 2. Primary analysis set: test cities whose selected scene has cloud fraction ≤ 0.10 over the box at **every** gap.
    From the inventory this is expected to be 9 test cities (chongqing excluded); the GEE manifest decides. The 10-city
    analysis with whatever scene is clearest is reported as a sensitivity check.

@@ -1,0 +1,91 @@
+{
+  "n_checks": 17,
+  "n_failed": 0,
+  "checks": [
+    {
+      "check": "102 GEE files (one per city, orbit, date)",
+      "ok": true,
+      "detail": "102"
+    },
+    {
+      "check": "GEE VV equals DS-UNet VV in every file",
+      "ok": true,
+      "detail": "102/102 equal"
+    },
+    {
+      "check": "empty VH files are the inventory's VH-less windows",
+      "ok": true,
+      "detail": "['sentinel1_dubai_166_t1', 'sentinel1_lasvegas_166_t1', 'sentinel1_lasvegas_173_t1']"
+    },
+    {
+      "check": "unet_sar vh losses finite",
+      "ok": true,
+      "detail": "0.4464964270591736"
+    },
+    {
+      "check": "unet_sar vh val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unet_sar vh land cover sums (validation)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dsunet vh losses finite",
+      "ok": true,
+      "detail": "0.34616512060165405"
+    },
+    {
+      "check": "dsunet vh val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dsunet vh land cover sums (validation)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unet_sar vvvh losses finite",
+      "ok": true,
+      "detail": "0.4224410653114319"
+    },
+    {
+      "check": "unet_sar vvvh val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unet_sar vvvh land cover sums (validation)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dsunet vvvh losses finite",
+      "ok": true,
+      "detail": "0.34702420234680176"
+    },
+    {
+      "check": "dsunet vvvh val counts complete",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dsunet vvvh land cover sums (validation)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "summary families",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "audit statistics agree with analysis on synthetic data",
+      "ok": true,
+      "detail": "[]"
+    }
+  ]
+}
