@@ -1,0 +1,64 @@
+Primary cities (scene cloud <= 0.1 at every gap): brasilia, montpellier, norcia, rio, saclay_w, valencia, dubai, lasvegas, milano
+
+### PRIMARY (RQ2): B, slope of test F1 against the gap (no_o2, frozen threshold)
+
+mean slope +0.0083 F1 per year (+0.00069 per month), 95% CI [-0.0021, +0.0187] per year; negative in 2/10 seeds; t p 0.1045, Wilcoxon p 0.0488: **no detectable effect of the gap**
+
+### Secondary (RQ1 by gap): B − SAR-only, Holm over 5
+
+| contrast | mean Δ | 95% CI | d_z | Δ > 0 | Holm p (t) | Holm p (Wilcoxon) | label |
+|---|---|---|---|---|---|---|---|
+| B@gap01 - SAR-only | -0.017 | [-0.063, +0.029] | -0.27 | 5/10 | 1.0000 | 1.0000 | no detectable difference |
+| B@gap03 - SAR-only | +0.016 | [-0.017, +0.048] | +0.35 | 6/10 | 1.0000 | 1.0000 | no detectable difference |
+| B@gap06 - SAR-only | +0.003 | [-0.031, +0.037] | +0.06 | 5/10 | 1.0000 | 1.0000 | no detectable difference |
+| B@gap12 - SAR-only | +0.011 | [-0.020, +0.041] | +0.25 | 6/10 | 1.0000 | 1.0000 | no detectable difference |
+| B@gap18 - SAR-only | +0.005 | [-0.027, +0.037] | +0.12 | 5/10 | 1.0000 | 1.0000 | no detectable difference |
+
+### Secondary: async − SAR-only, Holm over 5
+
+| contrast | mean Δ | 95% CI | d_z | Δ > 0 | Holm p (t) | Holm p (Wilcoxon) | label |
+|---|---|---|---|---|---|---|---|
+| async@gap01 - SAR-only | -0.058 | [-0.093, -0.022] | -1.15 | 1/10 | 0.0268 | 0.0195 | async lower |
+| async@gap03 - SAR-only | +0.010 | [-0.030, +0.049] | +0.18 | 4/10 | 0.7855 | 0.7695 | no detectable difference |
+| async@gap06 - SAR-only | -0.037 | [-0.084, +0.011] | -0.55 | 3/10 | 0.4580 | 0.5234 | no detectable difference |
+| async@gap12 - SAR-only | +0.016 | [-0.024, +0.056] | +0.29 | 6/10 | 0.7855 | 0.7500 | no detectable difference |
+| async@gap18 - SAR-only | -0.023 | [-0.067, +0.021] | -0.38 | 2/10 | 0.7855 | 0.5234 | no detectable difference |
+
+### Secondary: async, slope against the gap
+
+mean slope +0.0161 F1 per year (+0.00134 per month), 95% CI [-0.0001, +0.0322] per year; negative in 2/10 seeds; t p 0.0510, Wilcoxon p 0.0488: **no detectable effect of the gap**
+
+### Secondary: source control and native historical optical (own Holm family)
+
+| contrast | mean Δ | 95% CI | d_z | Δ > 0 | Holm p (t) | Holm p (Wilcoxon) | label |
+|---|---|---|---|---|---|---|---|
+| B@gee_t1 - B@oscd | +0.000 | [-0.000, +0.001] | +0.29 | 6/10 | 0.6948 | 0.9844 | no detectable difference |
+| B@oscd - SAR-only | +0.014 | [-0.017, +0.044] | +0.31 | 6/10 | 0.6948 | 0.9844 | no detectable difference |
+
+### Sensitivity: B slope on all cities with a scene at every gap
+
+mean slope +0.0042 F1 per year (+0.00035 per month), 95% CI [-0.0002, +0.0086] per year; negative in 2/10 seeds; t p 0.0570, Wilcoxon p 0.0645: **no detectable effect of the gap**
+
+### RQ5: false-alarm rate by WorldCover class, B@oscd − SAR-only (own Holm family)
+
+| contrast | mean Δ | 95% CI | d_z | Δ > 0 | Holm p (t) | Holm p (Wilcoxon) | label |
+|---|---|---|---|---|---|---|---|
+| B@oscd - SAR-only, tree cover | -0.001 | [-0.003, -0.000] | -0.93 | 3/10 | 0.0973 | 0.2930 | no detectable difference |
+| B@oscd - SAR-only, shrubland | -0.006 | [-0.010, -0.003] | -1.38 | 1/10 | 0.0127 | 0.0410 | B lower |
+| B@oscd - SAR-only, grassland | +0.002 | [-0.002, +0.006] | +0.40 | 5/10 | 0.9703 | 1.0000 | no detectable difference |
+| B@oscd - SAR-only, cropland | -0.015 | [-0.034, +0.004] | -0.57 | 2/10 | 0.5354 | 0.3223 | no detectable difference |
+| B@oscd - SAR-only, built-up | -0.004 | [-0.015, +0.008] | -0.23 | 4/10 | 0.9804 | 1.0000 | no detectable difference |
+| B@oscd - SAR-only, bare | -0.025 | [-0.077, +0.027] | -0.34 | 4/10 | 0.9703 | 1.0000 | no detectable difference |
+| B@oscd - SAR-only, water | +0.001 | [-0.008, +0.011] | +0.09 | 4/10 | 0.9804 | 1.0000 | no detectable difference |
+
+### Test F1 by historical image (no_o2), mean ± SD over 10 seeds
+
+| arm | oscd | gee_t1 | gap01 | gap03 | gap06 | gap12 | gap18 |
+|---|---|---|---|---|---|---|---|
+| B dropout | 0.420 ± 0.039 | 0.420 ± 0.039 | 0.389 ± 0.044 | 0.422 ± 0.038 | 0.409 ± 0.035 | 0.417 ± 0.037 | 0.412 ± 0.033 |
+| async | 0.405 ± 0.067 | 0.407 ± 0.066 | 0.349 ± 0.059 | 0.416 ± 0.061 | 0.370 ± 0.072 | 0.422 ± 0.057 | 0.383 ± 0.066 |
+| A full-only | 0.180 ± 0.069 | 0.181 ± 0.071 | 0.185 ± 0.080 | 0.197 ± 0.088 | 0.192 ± 0.078 | 0.193 ± 0.072 | 0.181 ± 0.075 |
+| SAR-only U-Net (reference) | 0.406 ± 0.048 |
+
+Scenes: brasilia__oscd_t1 2015-09-16 (cloud 0.000); brasilia__gap01 2017-09-17 (cloud 0.000); brasilia__gap03 2017-07-17 (cloud 0.000); brasilia__gap06 2017-04-18 (cloud 0.001); brasilia__gap12 2016-10-17 (cloud 0.002); brasilia__gap18 2016-04-23 (cloud 0.001); montpellier__oscd_t1 2015-08-12 (cloud 0.002); montpellier__gap01 2017-10-05 (cloud 0.001); montpellier__gap03 2017-07-27 (cloud 0.004); montpellier__gap06 2017-04-23 (cloud 0.004); montpellier__gap12 2016-10-15 (cloud 0.007); montpellier__gap18 2016-04-28 (cloud 0.001); norcia__oscd_t1 2015-07-11 (cloud 0.000); norcia__gap01 2017-09-18 (cloud 0.002); norcia__gap03 2017-07-20 (cloud 0.001); norcia__gap06 2017-04-21 (cloud 0.001); norcia__gap12 2016-09-03 (cloud 0.001); norcia__gap18 2016-03-27 (cloud 0.011); rio__oscd_t1 2016-04-24 (cloud 0.010); rio__gap01 2017-09-06 (cloud 0.008); rio__gap03 2017-07-28 (cloud 0.012); rio__gap06 2017-05-09 (cloud 0.017); rio__gap12 2016-11-10 (cloud 0.015); rio__gap18 2016-04-24 (cloud 0.010); saclay_w__oscd_t1 2016-03-15 (cloud 0.002); saclay_w__gap01 2017-08-27 (cloud 0.005); saclay_w__gap03 2017-05-26 (cloud 0.001); saclay_w__gap06 2017-02-15 (cloud 0.003); saclay_w__gap12 2016-08-22 (cloud 0.000); saclay_w__gap18 2016-03-12 (cloud 0.007); valencia__oscd_t1 2016-07-30 (cloud 0.004); valencia__gap01 2017-10-08 (cloud 0.002); valencia__gap03 2017-08-04 (cloud 0.006); valencia__gap06 2017-05-06 (cloud 0.004); valencia__gap12 2016-11-07 (cloud 0.005); valencia__gap18 2016-05-01 (cloud 0.004); dubai__oscd_t1 2015-12-11 (cloud 0.060); dubai__gap01 2018-03-05 (cloud 0.016); dubai__gap03 2017-12-30 (cloud 0.017); dubai__gap06 2017-10-16 (cloud 0.016); dubai__gap12 2017-04-14 (cloud 0.030); dubai__gap18 2016-08-27 (cloud 0.059); lasvegas__oscd_t1 2015-08-20 (cloud 0.013); lasvegas__gap01 2018-01-11 (cloud 0.011); lasvegas__gap03 2017-11-07 (cloud 0.008); lasvegas__gap06 2017-08-09 (cloud 0.010); lasvegas__gap12 2017-01-11 (cloud 0.018); lasvegas__gap18 2016-08-14 (cloud 0.007); milano__oscd_t1 2016-12-28 (cloud 0.029); milano__gap01 2018-01-02 (cloud 0.026); milano__gap03 2017-10-09 (cloud 0.010); milano__gap06 2017-07-26 (cloud 0.004); milano__gap12 2017-02-16 (cloud 0.002); milano__gap18 2016-07-21 (cloud 0.011); chongqing__oscd_t1 2017-04-14 (cloud 0.012); chongqing__gap01 2018-03-08 (cloud 0.008); chongqing__gap03 2018-01-14 (cloud 0.977); chongqing__gap06 2017-08-20 (cloud 0.007); chongqing__gap12 2017-04-14 (cloud 0.012); chongqing__gap18 2016-08-20 (cloud 0.214)
+
