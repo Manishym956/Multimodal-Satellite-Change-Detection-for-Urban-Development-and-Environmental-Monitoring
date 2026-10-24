@@ -1,0 +1,70 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "n_seeds": 3,
+  "std_convention": "sample std (n-1)",
+  "per_seed": {
+    "42": {
+      "final_test_f1": 0.1615374880145177,
+      "final_test_precision": 0.09738381303011376,
+      "final_test_recall": 0.47339967437153074,
+      "final_test_iou": 0.0878655327271603,
+      "final_test_far": 0.23913248293254316,
+      "validation_best_epoch": 37
+    },
+    "43": {
+      "final_test_f1": 0.1814033724315024,
+      "final_test_precision": 0.10291131014033592,
+      "final_test_recall": 0.7644976960842862,
+      "final_test_iou": 0.09974909756323619,
+      "final_test_far": 0.36319740007996276,
+      "validation_best_epoch": 19
+    },
+    "44": {
+      "final_test_f1": 0.2526624256317506,
+      "final_test_precision": 0.15009839726001475,
+      "final_test_recall": 0.7978274672014182,
+      "final_test_iou": 0.14459851910590363,
+      "final_test_far": 0.24620442440008236,
+      "validation_best_epoch": 50
+    }
+  },
+  "final_test_f1_values": [
+    0.1615374880145177,
+    0.1814033724315024,
+    0.2526624256317506
+  ],
+  "final_test_f1_mean": 0.19853442869259025,
+  "final_test_f1_std": 0.04791704686645,
+  "final_test_precision_values": [
+    0.09738381303011376,
+    0.10291131014033592,
+    0.15009839726001475
+  ],
+  "final_test_precision_mean": 0.11679784014348814,
+  "final_test_precision_std": 0.028971255310724232,
+  "final_test_recall_values": [
+    0.47339967437153074,
+    0.7644976960842862,
+    0.7978274672014182
+  ],
+  "final_test_recall_mean": 0.6785749458857451,
+  "final_test_recall_std": 0.17846676845110063,
+  "final_test_iou_values": [
+    0.0878655327271603,
+    0.09974909756323619,
+    0.14459851910590363
+  ],
+  "final_test_iou_mean": 0.11073771646543337,
+  "final_test_iou_std": 0.02992023136434548,
+  "final_test_far_values": [
+    0.23913248293254316,
+    0.36319740007996276,
+    0.24620442440008236
+  ],
+  "final_test_far_mean": 0.28284476913752943,
+  "final_test_far_std": 0.06967719902204915
+}

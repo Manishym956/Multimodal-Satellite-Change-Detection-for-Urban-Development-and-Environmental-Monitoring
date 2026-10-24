@@ -1,0 +1,70 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "n_seeds": 3,
+  "std_convention": "sample std (n-1)",
+  "per_seed": {
+    "42": {
+      "final_test_f1": 0.3520101545146093,
+      "final_test_precision": 0.287733496147139,
+      "final_test_recall": 0.4532647711485633,
+      "final_test_iou": 0.2135997108713555,
+      "final_test_far": 0.061150264538300754,
+      "validation_best_epoch": 46
+    },
+    "43": {
+      "final_test_f1": 0.39581597132911495,
+      "final_test_precision": 0.4354982340688864,
+      "final_test_recall": 0.3627614299993085,
+      "final_test_iou": 0.24673975320466227,
+      "final_test_far": 0.025626794579662805,
+      "validation_best_epoch": 46
+    },
+    "44": {
+      "final_test_f1": 0.3799531575708718,
+      "final_test_precision": 0.306121037198166,
+      "final_test_recall": 0.5007197772148079,
+      "final_test_iou": 0.2345322046374678,
+      "final_test_far": 0.06185567716700258,
+      "validation_best_epoch": 46
+    }
+  },
+  "final_test_f1_values": [
+    0.3520101545146093,
+    0.39581597132911495,
+    0.3799531575708718
+  ],
+  "final_test_f1_mean": 0.37592642780486535,
+  "final_test_f1_std": 0.022178780650721933,
+  "final_test_precision_values": [
+    0.287733496147139,
+    0.4354982340688864,
+    0.306121037198166
+  ],
+  "final_test_precision_mean": 0.3431175891380638,
+  "final_test_precision_std": 0.08053051027313708,
+  "final_test_recall_values": [
+    0.4532647711485633,
+    0.3627614299993085,
+    0.5007197772148079
+  ],
+  "final_test_recall_mean": 0.43891532612089323,
+  "final_test_recall_std": 0.07008963062436316,
+  "final_test_iou_values": [
+    0.2135997108713555,
+    0.24673975320466227,
+    0.2345322046374678
+  ],
+  "final_test_iou_mean": 0.23162388957116187,
+  "final_test_iou_std": 0.01676034975342154,
+  "final_test_far_values": [
+    0.061150264538300754,
+    0.025626794579662805,
+    0.06185567716700258
+  ],
+  "final_test_far_mean": 0.049544245428322045,
+  "final_test_far_std": 0.020716122780764408
+}

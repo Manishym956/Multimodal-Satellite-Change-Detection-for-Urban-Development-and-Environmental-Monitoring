@@ -1,0 +1,70 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "n_seeds": 3,
+  "std_convention": "sample std (n-1)",
+  "per_seed": {
+    "42": {
+      "final_test_f1": 0.20520827405679165,
+      "final_test_precision": 0.23629096329786797,
+      "final_test_recall": 0.18135242681217273,
+      "final_test_iou": 0.11433542460139744,
+      "final_test_far": 0.03194467427169315,
+      "validation_best_epoch": 46
+    },
+    "43": {
+      "final_test_f1": 0.3033756835656428,
+      "final_test_precision": 0.2254027121398655,
+      "final_test_recall": 0.46382569447500266,
+      "final_test_iou": 0.17881134947023528,
+      "final_test_far": 0.08686921841719658,
+      "validation_best_epoch": 28
+    },
+    "44": {
+      "final_test_f1": 0.38276156829079494,
+      "final_test_precision": 0.4596123348017621,
+      "final_test_recall": 0.32792924181371286,
+      "final_test_iou": 0.23667602796593637,
+      "final_test_far": 0.02101300542437987,
+      "validation_best_epoch": 23
+    }
+  },
+  "final_test_f1_values": [
+    0.20520827405679165,
+    0.3033756835656428,
+    0.38276156829079494
+  ],
+  "final_test_f1_mean": 0.2971151753044098,
+  "final_test_f1_std": 0.08894205161847438,
+  "final_test_precision_values": [
+    0.23629096329786797,
+    0.2254027121398655,
+    0.4596123348017621
+  ],
+  "final_test_precision_mean": 0.3071020034131652,
+  "final_test_precision_std": 0.13218997461424475,
+  "final_test_recall_values": [
+    0.18135242681217273,
+    0.46382569447500266,
+    0.32792924181371286
+  ],
+  "final_test_recall_mean": 0.3243691210336294,
+  "final_test_recall_std": 0.14127028201644454,
+  "final_test_iou_values": [
+    0.11433542460139744,
+    0.17881134947023528,
+    0.23667602796593637
+  ],
+  "final_test_iou_mean": 0.17660760067918968,
+  "final_test_iou_std": 0.06120006690723781,
+  "final_test_far_values": [
+    0.03194467427169315,
+    0.08686921841719658,
+    0.02101300542437987
+  ],
+  "final_test_far_mean": 0.046608966037756536,
+  "final_test_far_std": 0.035292227008067736
+}

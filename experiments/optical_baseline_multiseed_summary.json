@@ -1,0 +1,70 @@
+{
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "n_seeds": 3,
+  "std_convention": "sample std (n-1)",
+  "per_seed": {
+    "42": {
+      "final_test_f1": 0.26632950327551275,
+      "final_test_precision": 0.25148292541248224,
+      "final_test_recall": 0.2830390314124606,
+      "final_test_iou": 0.15362175440990822,
+      "final_test_far": 0.045912803598940545,
+      "validation_best_epoch": 50
+    },
+    "43": {
+      "final_test_f1": 0.18259469427636923,
+      "final_test_precision": 0.3378144413891435,
+      "final_test_recall": 0.12510922383499815,
+      "final_test_iou": 0.10046999076172831,
+      "final_test_far": 0.013365496586166033,
+      "validation_best_epoch": 43
+    },
+    "44": {
+      "final_test_f1": 0.1621246461995597,
+      "final_test_precision": 0.5897668547082725,
+      "final_test_recall": 0.09397964507754107,
+      "final_test_iou": 0.08821308031815714,
+      "final_test_far": 0.0035626935045509223,
+      "validation_best_epoch": 49
+    }
+  },
+  "final_test_f1_values": [
+    0.26632950327551275,
+    0.18259469427636923,
+    0.1621246461995597
+  ],
+  "final_test_f1_mean": 0.20368294791714722,
+  "final_test_f1_std": 0.05521049620106932,
+  "final_test_precision_values": [
+    0.25148292541248224,
+    0.3378144413891435,
+    0.5897668547082725
+  ],
+  "final_test_precision_mean": 0.3930214071699661,
+  "final_test_precision_std": 0.17576934035261524,
+  "final_test_recall_values": [
+    0.2830390314124606,
+    0.12510922383499815,
+    0.09397964507754107
+  ],
+  "final_test_recall_mean": 0.16737596677499994,
+  "final_test_recall_std": 0.10136923132490072,
+  "final_test_iou_values": [
+    0.15362175440990822,
+    0.10046999076172831,
+    0.08821308031815714
+  ],
+  "final_test_iou_mean": 0.1141016084965979,
+  "final_test_iou_std": 0.03476980605586455,
+  "final_test_far_values": [
+    0.045912803598940545,
+    0.013365496586166033,
+    0.0035626935045509223
+  ],
+  "final_test_far_mean": 0.0209469978965525,
+  "final_test_far_std": 0.02216962624496124
+}

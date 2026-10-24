@@ -1,0 +1,87 @@
+experiment: Transformer Self-Attention baseline
+research_question: Can historical Sentinel-2 optical imagery improve Sentinel-1-based
+  urban change detection when contemporaneous Sentinel-2 imagery is unavailable?
+seed: 42
+pytorch_version: 2.5.1+cu124
+cuda_available: true
+gpu_name: NVIDIA GeForce RTX 4060 Laptop GPU
+device: cuda
+learning_rate: 0.0001
+batch_size: 64
+epochs: 50
+crop_size: 32
+crops_per_city: 64
+loss_function: BCEWithLogitsLoss(pos_weight=41.0)
+pos_weight: 41.0
+pos_weight_rationale: '10 training cities: 126,312 change pixels / 5,146,327 no-change
+  pixels = 40.7, rounded to 41. Applied only during training; evaluation threshold
+  unchanged at 0.5.'
+optimizer: Adam
+model: TransformerSelfAttention (src/models/transformer_self_attention.py)
+modality: 'Asynchronous multimodal: S1 VV (T1+T2, 2 ch) and historical S2 (T1 only,
+  13 ch)'
+sar_input_channels: 2
+optical_input_channels: 13
+total_input_channels: 15
+embed_dim: 128
+patch_stride: 4
+num_blocks_per_modality: 2
+num_heads: 4
+mlp_ratio: 4
+channel_order:
+- sentinel1_t1_vv
+- sentinel1_t2_vv
+- sentinel2_t1_B01
+- sentinel2_t1_B02
+- sentinel2_t1_B03
+- sentinel2_t1_B04
+- sentinel2_t1_B05
+- sentinel2_t1_B06
+- sentinel2_t1_B07
+- sentinel2_t1_B08
+- sentinel2_t1_B8A
+- sentinel2_t1_B09
+- sentinel2_t1_B10
+- sentinel2_t1_B11
+- sentinel2_t1_B12
+optical_t2_handling: S2 T2 never loaded or used; optical encoder receives 13 historical
+  S2 T1 bands only
+output_channels: 1
+parameter_count: 1358081
+threshold: 0.5
+false_alarm_rate: 'FAR = FP / (FP + TN): the fraction of unchanged pixels predicted
+  as change.'
+validation_split_seed: 42
+train_cities:
+- bordeaux
+- nantes
+- rennes
+- saclay_e
+- abudhabi
+- cupertino
+- pisa
+- hongkong
+- beirut
+- mumbai
+validation_cities:
+- beihai
+- bercy
+- aguasclaras
+- paris
+test_cities:
+- brasilia
+- montpellier
+- norcia
+- rio
+- saclay_w
+- valencia
+- dubai
+- lasvegas
+- milano
+- chongqing
+training_orbit: np.random.choice of ORBITS[city], after seed is set
+evaluation_orbit: first orbit listed for each city
+checkpoint_selection: highest validation F1 on full validation-city images
+test_metric_aggregation: pixel counts pooled across the official test cities, once,
+  after training
+city_summary: unweighted mean and sample standard deviation, omitting undefined rates
