@@ -1,0 +1,13 @@
+16 hashes, 0 failed
+== p7_unet_vh seed 1 2026-10-23T22:46:07+05:30
+full F1 0.3439 (tau 0.99) | no_o2 F1 0.3439 (tau 0.99) | no_opt F1 0.3439 (tau 0.99) | o2_copy F1 0.3439 (tau 0.99)
+== p7_unet_vvvh seed 1 2026-10-23T22:50:17+05:30
+full F1 0.2259 (tau 0.90) | no_o2 F1 0.2259 (tau 0.90) | no_opt F1 0.2259 (tau 0.90) | o2_copy F1 0.2259 (tau 0.90)
+== p7_dsunet_vh seed 1 2026-10-23T22:54:21+05:30
+full F1 0.5482 (tau 0.82) | no_o2 F1 0.1051 (tau 0.99) | no_opt F1 0.2494 (tau 0.17) | o2_copy F1 0.2721 (tau 0.16)
+== p7_dsunet_vvvh seed 1 2026-10-23T23:00:53+05:30
+full F1 0.5476 (tau 0.94) | no_o2 F1 0.1758 (tau 0.99) | no_opt F1 0.2259 (tau 0.20) | o2_copy F1 0.2463 (tau 0.27)
+== p7_unet_vh seed 2 2026-10-23T23:07:10+05:30
+full F1 0.3497 (tau 0.99) | no_o2 F1 0.3497 (tau 0.99) | no_opt F1 0.3497 (tau 0.99) | o2_copy F1 0.3497 (tau 0.99)
+== p7_unet_vvvh seed 2 2026-10-23T23:10:50+05:30
+step 1925 loss -0.2677 val 0.1623

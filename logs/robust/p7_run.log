@@ -1,0 +1,142 @@
+16 hashes, 0 failed
+p7_unet_vh seed 1 exists, skip
+p7_unet_vvvh seed 1 exists, skip
+p7_dsunet_vh seed 1 exists, skip
+p7_dsunet_vvvh seed 1 exists, skip
+p7_unet_vh seed 2 exists, skip
+== p7_unet_vvvh seed 2 2026-10-24T13:36:02+05:30
+full F1 0.2062 (tau 0.88) | no_o2 F1 0.2062 (tau 0.88) | no_opt F1 0.2062 (tau 0.88) | o2_copy F1 0.2062 (tau 0.88)
+== p7_dsunet_vh seed 2 2026-10-24T13:39:53+05:30
+full F1 0.5677 (tau 0.56) | no_o2 F1 0.1562 (tau 0.99) | no_opt F1 0.2599 (tau 0.21) | o2_copy F1 0.2556 (tau 0.18)
+== p7_dsunet_vvvh seed 2 2026-10-24T13:46:18+05:30
+full F1 0.5753 (tau 0.82) | no_o2 F1 0.1170 (tau 0.99) | no_opt F1 0.1890 (tau 0.06) | o2_copy F1 0.2085 (tau 0.13)
+== p7_unet_vh seed 3 2026-10-24T13:52:41+05:30
+full F1 0.2739 (tau 0.92) | no_o2 F1 0.2739 (tau 0.92) | no_opt F1 0.2739 (tau 0.92) | o2_copy F1 0.2739 (tau 0.92)
+== p7_unet_vvvh seed 3 2026-10-24T13:56:24+05:30
+full F1 0.3058 (tau 0.71) | no_o2 F1 0.3058 (tau 0.71) | no_opt F1 0.3058 (tau 0.71) | o2_copy F1 0.3058 (tau 0.71)
+== p7_dsunet_vh seed 3 2026-10-24T14:02:48+05:30
+full F1 0.4254 (tau 0.92) | no_o2 F1 0.0928 (tau 0.10) | no_opt F1 0.1514 (tau 0.98) | o2_copy F1 0.2303 (tau 0.03)
+== p7_dsunet_vvvh seed 3 2026-10-24T14:13:13+05:30
+full F1 0.5823 (tau 0.94) | no_o2 F1 0.2115 (tau 1.00) | no_opt F1 0.3164 (tau 0.78) | o2_copy F1 0.2911 (tau 0.35)
+== p7_unet_vh seed 4 2026-10-24T14:24:06+05:30
+full F1 0.2067 (tau 0.94) | no_o2 F1 0.2067 (tau 0.94) | no_opt F1 0.2067 (tau 0.94) | o2_copy F1 0.2067 (tau 0.94)
+== p7_unet_vvvh seed 4 2026-10-24T14:32:34+05:30
+full F1 0.2332 (tau 0.95) | no_o2 F1 0.2332 (tau 0.95) | no_opt F1 0.2332 (tau 0.95) | o2_copy F1 0.2332 (tau 0.95)
+== p7_dsunet_vh seed 4 2026-10-24T14:40:54+05:30
+full F1 0.5359 (tau 0.67) | no_o2 F1 0.0971 (tau 0.95) | no_opt F1 0.2772 (tau 0.92) | o2_copy F1 0.2763 (tau 0.14)
+== p7_dsunet_vvvh seed 4 2026-10-24T14:48:18+05:30
+full F1 0.5216 (tau 0.79) | no_o2 F1 0.1158 (tau 0.99) | no_opt F1 0.2794 (tau 0.16) | o2_copy F1 0.2734 (tau 0.25)
+== p7_unet_vh seed 5 2026-10-24T14:54:34+05:30
+full F1 0.3557 (tau 0.99) | no_o2 F1 0.3557 (tau 0.99) | no_opt F1 0.3557 (tau 0.99) | o2_copy F1 0.3557 (tau 0.99)
+== p7_unet_vvvh seed 5 2026-10-24T14:58:08+05:30
+full F1 0.2065 (tau 0.77) | no_o2 F1 0.2065 (tau 0.77) | no_opt F1 0.2065 (tau 0.77) | o2_copy F1 0.2065 (tau 0.77)
+== p7_dsunet_vh seed 5 2026-10-24T15:01:49+05:30
+full F1 0.5255 (tau 0.83) | no_o2 F1 0.0805 (tau 0.97) | no_opt F1 0.1709 (tau 0.07) | o2_copy F1 0.2165 (tau 0.12)
+== p7_dsunet_vvvh seed 5 2026-10-24T15:08:04+05:30
+full F1 0.5312 (tau 0.77) | no_o2 F1 0.1909 (tau 0.29) | no_opt F1 0.2518 (tau 0.07) | o2_copy F1 0.2276 (tau 0.17)
+== p7_unet_vh seed 6 2026-10-24T15:14:19+05:30
+full F1 0.3128 (tau 0.97) | no_o2 F1 0.3128 (tau 0.97) | no_opt F1 0.3128 (tau 0.97) | o2_copy F1 0.3128 (tau 0.97)
+== p7_unet_vvvh seed 6 2026-10-24T15:17:54+05:30
+full F1 0.2138 (tau 0.72) | no_o2 F1 0.2138 (tau 0.72) | no_opt F1 0.2138 (tau 0.72) | o2_copy F1 0.2138 (tau 0.72)
+== p7_dsunet_vh seed 6 2026-10-24T15:21:36+05:30
+full F1 0.5191 (tau 0.86) | no_o2 F1 0.1241 (tau 0.99) | no_opt F1 0.2689 (tau 0.03) | o2_copy F1 0.2633 (tau 0.18)
+== p7_dsunet_vvvh seed 6 2026-10-24T15:27:51+05:30
+full F1 0.2344 (tau 0.97) | no_o2 F1 0.1187 (tau 1.00) | no_opt F1 0.1385 (tau 0.06) | o2_copy F1 0.1324 (tau 0.63)
+== p7_unet_vh seed 7 2026-10-24T15:34:08+05:30
+full F1 0.2733 (tau 0.98) | no_o2 F1 0.2733 (tau 0.98) | no_opt F1 0.2733 (tau 0.98) | o2_copy F1 0.2733 (tau 0.98)
+== p7_unet_vvvh seed 7 2026-10-24T15:37:45+05:30
+full F1 0.2383 (tau 0.91) | no_o2 F1 0.2383 (tau 0.91) | no_opt F1 0.2383 (tau 0.91) | o2_copy F1 0.2383 (tau 0.91)
+== p7_dsunet_vh seed 7 2026-10-24T15:41:22+05:30
+full F1 0.4774 (tau 0.88) | no_o2 F1 0.1384 (tau 0.82) | no_opt F1 0.1646 (tau 0.86) | o2_copy F1 0.1491 (tau 0.33)
+== p7_dsunet_vvvh seed 7 2026-10-24T15:47:36+05:30
+full F1 0.5671 (tau 0.72) | no_o2 F1 0.2046 (tau 0.96) | no_opt F1 0.2215 (tau 0.02) | o2_copy F1 0.1632 (tau 0.19)
+== p7_unet_vh seed 8 2026-10-24T15:53:52+05:30
+full F1 0.3220 (tau 0.99) | no_o2 F1 0.3220 (tau 0.99) | no_opt F1 0.3220 (tau 0.99) | o2_copy F1 0.3220 (tau 0.99)
+== p7_unet_vvvh seed 8 2026-10-24T15:57:30+05:30
+full F1 0.2076 (tau 0.91) | no_o2 F1 0.2076 (tau 0.91) | no_opt F1 0.2076 (tau 0.91) | o2_copy F1 0.2076 (tau 0.91)
+== p7_dsunet_vh seed 8 2026-10-24T16:01:12+05:30
+full F1 0.5448 (tau 0.75) | no_o2 F1 0.1737 (tau 0.99) | no_opt F1 0.2203 (tau 0.10) | o2_copy F1 0.2798 (tau 0.20)
+== p7_dsunet_vvvh seed 8 2026-10-24T16:07:27+05:30
+full F1 0.2435 (tau 0.75) | no_o2 F1 0.1741 (tau 0.99) | no_opt F1 0.1815 (tau 0.11) | o2_copy F1 0.1936 (tau 0.21)
+== p7_unet_vh seed 9 2026-10-24T16:13:44+05:30
+full F1 0.3138 (tau 0.99) | no_o2 F1 0.3138 (tau 0.99) | no_opt F1 0.3138 (tau 0.99) | o2_copy F1 0.3138 (tau 0.99)
+== p7_unet_vvvh seed 9 2026-10-24T16:17:22+05:30
+full F1 0.1947 (tau 0.80) | no_o2 F1 0.1947 (tau 0.80) | no_opt F1 0.1947 (tau 0.80) | o2_copy F1 0.1947 (tau 0.80)
+== p7_dsunet_vh seed 9 2026-10-24T16:21:03+05:30
+full F1 0.5269 (tau 0.87) | no_o2 F1 0.1455 (tau 0.92) | no_opt F1 0.2426 (tau 0.07) | o2_copy F1 0.2962 (tau 0.12)
+== p7_dsunet_vvvh seed 9 2026-10-24T16:27:18+05:30
+full F1 0.5385 (tau 0.91) | no_o2 F1 0.2115 (tau 0.99) | no_opt F1 0.2668 (tau 0.07) | o2_copy F1 0.2393 (tau 0.10)
+== p7_unet_vh seed 10 2026-10-24T16:33:35+05:30
+full F1 0.2562 (tau 0.99) | no_o2 F1 0.2562 (tau 0.99) | no_opt F1 0.2562 (tau 0.99) | o2_copy F1 0.2562 (tau 0.99)
+== p7_unet_vvvh seed 10 2026-10-24T16:37:13+05:30
+full F1 0.2107 (tau 0.66) | no_o2 F1 0.2107 (tau 0.66) | no_opt F1 0.2107 (tau 0.66) | o2_copy F1 0.2107 (tau 0.66)
+== p7_dsunet_vh seed 10 2026-10-24T16:40:52+05:30
+full F1 0.5307 (tau 0.82) | no_o2 F1 0.0970 (tau 0.99) | no_opt F1 0.2522 (tau 0.05) | o2_copy F1 0.2632 (tau 0.08)
+== p7_dsunet_vvvh seed 10 2026-10-24T16:47:07+05:30
+full F1 0.5121 (tau 0.74) | no_o2 F1 0.1658 (tau 0.96) | no_opt F1 0.2537 (tau 0.05) | o2_copy F1 0.2270 (tau 0.13)
+== eval 2026-10-24T16:53:22+05:30
+p6_unet_sar 1 done
+p6_unet_sar 2 done
+p6_unet_sar 3 done
+p6_unet_sar 4 done
+p6_unet_sar 5 done
+p6_unet_sar 6 done
+p6_unet_sar 7 done
+p6_unet_sar 8 done
+p6_unet_sar 9 done
+p6_unet_sar 10 done
+p7_unet_vh 1 done
+p7_unet_vh 2 done
+p7_unet_vh 3 done
+p7_unet_vh 4 done
+p7_unet_vh 5 done
+p7_unet_vh 6 done
+p7_unet_vh 7 done
+p7_unet_vh 8 done
+p7_unet_vh 9 done
+p7_unet_vh 10 done
+p7_unet_vvvh 1 done
+p7_unet_vvvh 2 done
+p7_unet_vvvh 3 done
+p7_unet_vvvh 4 done
+p7_unet_vvvh 5 done
+p7_unet_vvvh 6 done
+p7_unet_vvvh 7 done
+p7_unet_vvvh 8 done
+p7_unet_vvvh 9 done
+p7_unet_vvvh 10 done
+p2_full 1 done
+p2_full 2 done
+p2_full 3 done
+p2_full 4 done
+p2_full 5 done
+p2_full 6 done
+p2_full 7 done
+p2_full 8 done
+p2_full 9 done
+p2_full 10 done
+p7_dsunet_vh 1 done
+p7_dsunet_vh 2 done
+p7_dsunet_vh 3 done
+p7_dsunet_vh 4 done
+p7_dsunet_vh 5 done
+p7_dsunet_vh 6 done
+p7_dsunet_vh 7 done
+p7_dsunet_vh 8 done
+p7_dsunet_vh 9 done
+p7_dsunet_vh 10 done
+p7_dsunet_vvvh 1 done
+p7_dsunet_vvvh 2 done
+p7_dsunet_vvvh 3 done
+p7_dsunet_vvvh 4 done
+p7_dsunet_vvvh 5 done
+p7_dsunet_vvvh 6 done
+p7_dsunet_vvvh 7 done
+p7_dsunet_vvvh 8 done
+p7_dsunet_vvvh 9 done
+p7_dsunet_vvvh 10 done
+P7 EVAL DONE
+== analyze 2026-10-24T16:57:04+05:30
+== audit 2026-10-24T16:57:14+05:30
+994 checks, 0 failed
+P7 DONE 2026-10-24T16:57:16+05:30
