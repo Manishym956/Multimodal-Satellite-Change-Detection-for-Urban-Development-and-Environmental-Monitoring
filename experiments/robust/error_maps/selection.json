@@ -1,0 +1,113 @@
+{
+  "rule": "(committed before this script first ran):\n- Models, seed 1 each: SAR-only U-Net `p6_unet_sar` (VV, full input), DS-UNet B `p2_dropout` without the post-change\n  optical image (`no_o2`: SAR t1+t2 and OSCD's own date-1 optical), DS-UNet A `p2_full` (full input). Each at its frozen\n  validation threshold for that input.\n- Cities: the 10 OSCD test cities ranked by A's per-city test F1 (full input, frozen threshold) averaged over seeds 1-10,\n  from the registered Step 7 counts (`phase7/runs/p2_full_seed*.npz`); best, median (6th lowest of 10) and worst.\n  Ties are broken by city name.\n- Anchor (failure: no figure written): each map's TP/FP/FN/TN equal that city's saved counts at the same threshold\n  (`phase7/runs` for SAR-only and A, `phase8/runs` tag `oscd` for B).",
+  "seed": 1,
+  "mean_f1_A_by_city": {
+    "brasilia": 0.4180684813815345,
+    "montpellier": 0.6584753578688902,
+    "norcia": 0.29369449679676535,
+    "rio": 0.4214832311901061,
+    "saclay_w": 0.28468275875200644,
+    "valencia": 0.05224684976425471,
+    "dubai": 0.5605398087330269,
+    "lasvegas": 0.6841555255630556,
+    "milano": 0.21337100595435077,
+    "chongqing": 0.5133130514347777
+  },
+  "chosen": {
+    "worst": "valencia",
+    "median": "rio",
+    "best": "lasvegas"
+  },
+  "panels": {
+    "p6_unet_sar lasvegas": {
+      "threshold_bin": 82,
+      "tp_fp_fn_tn": [
+        35894,
+        106581,
+        9376,
+        438133
+      ],
+      "f1": 0.3823697035873126
+    },
+    "p6_unet_sar rio": {
+      "threshold_bin": 82,
+      "tp_fp_fn_tn": [
+        5864,
+        10166,
+        2688,
+        131660
+      ],
+      "f1": 0.4770970628915467
+    },
+    "p6_unet_sar valencia": {
+      "threshold_bin": 82,
+      "tp_fp_fn_tn": [
+        6,
+        952,
+        963,
+        216087
+      ],
+      "f1": 0.006227296315516347
+    },
+    "p2_dropout lasvegas": {
+      "threshold_bin": 70,
+      "tp_fp_fn_tn": [
+        35250,
+        167090,
+        10020,
+        377624
+      ],
+      "f1": 0.2847219417632567
+    },
+    "p2_dropout rio": {
+      "threshold_bin": 70,
+      "tp_fp_fn_tn": [
+        5530,
+        8838,
+        3022,
+        132988
+      ],
+      "f1": 0.4825479930191972
+    },
+    "p2_dropout valencia": {
+      "threshold_bin": 70,
+      "tp_fp_fn_tn": [
+        15,
+        1868,
+        954,
+        215171
+      ],
+      "f1": 0.010518934081346423
+    },
+    "p2_full lasvegas": {
+      "threshold_bin": 77,
+      "tp_fp_fn_tn": [
+        32239,
+        20725,
+        13031,
+        523989
+      ],
+      "f1": 0.6563715210619541
+    },
+    "p2_full rio": {
+      "threshold_bin": 77,
+      "tp_fp_fn_tn": [
+        3685,
+        3408,
+        4867,
+        138418
+      ],
+      "f1": 0.4710770214125919
+    },
+    "p2_full valencia": {
+      "threshold_bin": 77,
+      "tp_fp_fn_tn": [
+        124,
+        5426,
+        845,
+        211613
+      ],
+      "f1": 0.03804264457738917
+    }
+  }
+}
