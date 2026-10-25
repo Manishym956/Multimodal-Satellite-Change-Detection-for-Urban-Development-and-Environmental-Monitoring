@@ -1,0 +1,51 @@
+{
+  "arm": "p7_unet_vh",
+  "seed": 6,
+  "arch": "unet_sar",
+  "sar": "vh",
+  "thresholds": {
+    "full": 97,
+    "no_o2": 97,
+    "no_opt": 97,
+    "o2_copy": 97
+  },
+  "selected_step": 1125,
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "anchors": {
+    "brasilia land-cover counts sum to full counts": true,
+    "montpellier land-cover counts sum to full counts": true,
+    "norcia land-cover counts sum to full counts": true,
+    "rio land-cover counts sum to full counts": true,
+    "saclay_w land-cover counts sum to full counts": true,
+    "valencia land-cover counts sum to full counts": true,
+    "dubai land-cover counts sum to full counts": true,
+    "lasvegas land-cover counts sum to full counts": true,
+    "milano land-cover counts sum to full counts": true,
+    "chongqing land-cover counts sum to full counts": true,
+    "full at_selected": true,
+    "full at_0.5": true,
+    "no_o2 at_selected": true,
+    "no_o2 at_0.5": true,
+    "no_opt at_selected": true,
+    "no_opt at_0.5": true,
+    "o2_copy at_selected": true,
+    "o2_copy at_0.5": true
+  },
+  "source_sha256": {
+    "eval_phase7.py": "a17599a62035be979cffbf2c6cc9dc83b7b7368f3b516e593e12d150e13180a7",
+    "src/training/train_rrd.py": "cf918eb7481f8cd98352a4702f16913f03f373cb9d5cd077d9fe6f4b0adcbb32",
+    "src/training/train_robust.py": "c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c",
+    "src/datasets/oscd_dataset.py": "bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43"
+  }
+}

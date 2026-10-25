@@ -1,0 +1,46 @@
+{
+  "arm": "p6_unet_sar",
+  "seed": 2,
+  "thresholds": {
+    "full": 66,
+    "no_o2": 66,
+    "no_opt": 66,
+    "o2_copy": 66
+  },
+  "selected_step": 350,
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "missing": [],
+  "anchors": {
+    "oscd at_selected": true,
+    "oscd at_0.5": true,
+    "brasilia__oscd land cover sums": true,
+    "montpellier__oscd land cover sums": true,
+    "norcia__oscd land cover sums": true,
+    "rio__oscd land cover sums": true,
+    "saclay_w__oscd land cover sums": true,
+    "valencia__oscd land cover sums": true,
+    "dubai__oscd land cover sums": true,
+    "lasvegas__oscd land cover sums": true,
+    "milano__oscd land cover sums": true,
+    "chongqing__oscd land cover sums": true
+  },
+  "source_sha256": {
+    "eval_phase8.py": "eb8e5295183cbbe99601d89e946c4d315e2bcc2f63b6867b53c64f81b60a5453",
+    "eval_phase7.py": "a17599a62035be979cffbf2c6cc9dc83b7b7368f3b516e593e12d150e13180a7",
+    "src/training/train_rrd.py": "cf918eb7481f8cd98352a4702f16913f03f373cb9d5cd077d9fe6f4b0adcbb32",
+    "src/training/train_robust.py": "c7d812e3fd8dcf2c9bd8c7f4d3faeb1bee0c97fc256f83a76ee2194e15a6436c",
+    "src/datasets/oscd_dataset.py": "bc9b64bc2fb9808efb2d8b6767a594f19385e52f4514c09633b3a7af8486fc43",
+    "datasets/oscd_s2_gee/manifest.json": "e352a76502bfc4afc23ca2fe12a6be6a61a0b1c9a5d9811576caf60e6a91428e"
+  }
+}

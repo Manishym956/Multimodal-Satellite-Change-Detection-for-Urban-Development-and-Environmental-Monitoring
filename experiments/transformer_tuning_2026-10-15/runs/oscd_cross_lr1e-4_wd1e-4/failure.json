@@ -1,0 +1,6 @@
+{
+  "status": "invalidated",
+  "reason": "Interrupted at epoch 22 after the same validation-mode defect was identified; invalid for model selection. Test was not evaluated.",
+  "not_used_for_selection": true,
+  "test_evaluated": false
+}

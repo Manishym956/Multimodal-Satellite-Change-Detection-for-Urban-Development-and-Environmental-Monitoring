@@ -1,0 +1,26 @@
+{
+  "run_id": "oscd_self_lr3e-4_wd0_valid",
+  "dataset": "oscd",
+  "architecture": "self",
+  "seed": 42,
+  "lr": 0.0003,
+  "weight_decay": 0.0,
+  "best_epoch": 22,
+  "validation_at_0_5": {
+    "tp": 11692,
+    "tn": 1118466,
+    "fp": 103595,
+    "fn": 11186,
+    "precision": 0.10141646499605332,
+    "recall": 0.5110586589736865,
+    "f1": 0.16924691492056598,
+    "iou": 0.09244660915768584,
+    "false_alarm_rate": 0.08477072748414359
+  },
+  "training_seconds": 310.6357650000009,
+  "peak_vram_mb": 803.0,
+  "best_checkpoint": "best.pt",
+  "test_evaluated": false,
+  "end_utc": "2026-10-15T06:57:11.794591+00:00",
+  "parameters": 1358081
+}

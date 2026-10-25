@@ -1,0 +1,26 @@
+{
+  "run_id": "s2_cross_lr1e-4_wd1e-4_valid",
+  "dataset": "s2",
+  "architecture": "cross",
+  "seed": 42,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "best_epoch": 37,
+  "validation_at_0_5": {
+    "tp": 5279,
+    "tn": 899629,
+    "fp": 45560,
+    "fn": 4549,
+    "precision": 0.10383760498829639,
+    "recall": 0.5371387871387872,
+    "f1": 0.1740320108131274,
+    "iou": 0.09530945331118654,
+    "false_alarm_rate": 0.04820199981167787
+  },
+  "training_seconds": 331.95263890000024,
+  "peak_vram_mb": 294.6,
+  "best_checkpoint": "best.pt",
+  "test_evaluated": false,
+  "end_utc": "2026-10-15T07:25:38.980696+00:00",
+  "parameters": 1154945
+}

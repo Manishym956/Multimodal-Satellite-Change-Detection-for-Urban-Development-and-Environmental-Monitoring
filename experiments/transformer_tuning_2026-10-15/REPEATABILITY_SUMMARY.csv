@@ -1,0 +1,7 @@
+dataset,architecture,metric,protocol,n,seeds,mean,sample_std
+oscd,self,test F1,common_threshold_0.5,3,42;43;44,0.2115463632356028,0.024372760181246997
+oscd,self,test F1,per_seed_validation_selected,3,42;43;44,0.21313020765988944,0.011004098492173677
+oscd,cross,test F1,common_threshold_0.5,3,42;43;44,0.23071616421363084,0.06465185623846012
+oscd,cross,test F1,per_seed_validation_selected,3,42;43;44,0.280255016468748,0.04026370403759451
+s2,cross,test F1,common_threshold_0.5,3,42;43;44,0.07313447857312605,0.01040350909184727
+s2,cross,test F1,per_seed_validation_selected,3,42;43;44,0.07485256687989995,0.014555085486334931

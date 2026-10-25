@@ -104,6 +104,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--num-heads",        type=int,   default=4)
     parser.add_argument("--mlp-ratio",        type=int,   default=4)
     parser.add_argument("--num-workers",      type=int,   default=0)
+    parser.add_argument("--pos-weight",       type=float, default=41.0,
+                        help="BCEWithLogitsLoss pos_weight. Default 41 (original). "
+                             "Use 1 for controlled CNN comparison.")
     parser.add_argument(
         "--verify-only",
         action="store_true",
@@ -483,6 +486,14 @@ def main() -> None:
     set_seed(args.seed)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+    # When pos_weight != 41, redirect outputs to a separate experiment dir so
+    # the controlled comparison (pw=1) never overwrites the original results.
+    global EXPERIMENT_DIR, CHECKPOINT_PATH
+    if args.pos_weight != 41.0:
+        pw = int(args.pos_weight)
+        EXPERIMENT_DIR = PROJECT_ROOT / "experiments" / f"transformer_cross_attention_pw{pw}"
+        CHECKPOINT_PATH = PROJECT_ROOT / "checkpoints" / f"transformer_cross_attention_pw{pw}" / "best.pt"
+
     # Datasets
     official_train = TransformerAsyncDataset(split="train")
     official_test  = TransformerAsyncDataset(split="test")
@@ -526,10 +537,9 @@ def main() -> None:
         print("Verify-only flag set. Exiting before training.")
         return
 
-    # pos_weight balances the 2.4% change / 97.6% no-change class ratio in the
-    # 10 training cities (126,312 change / 5,146,327 no-change = 40.7, rounded to 41).
-    # Does not affect the evaluation threshold, which remains 0.5.
-    pos_weight = torch.tensor([41.0]).to(device)
+    # pos_weight balances class imbalance. Default 41 (original). Pass --pos-weight 1
+    # for a controlled comparison against CNN baselines (which use pos_weight=1).
+    pos_weight = torch.tensor([args.pos_weight]).to(device)
     criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 

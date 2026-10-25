@@ -1,0 +1,18 @@
+run_id,status,dataset,architecture,seed,lr,weight_decay,dropout,loss,pos_weight,epochs_requested,parameters,best_epoch,validation_f1_at_0_5,training_seconds,peak_vram_mb,test_evaluated,failure_reason
+oscd_cross_lr1e-4_wd1e-4,invalidated_before_final_selection,oscd,cross,42,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,,,,,,False,Interrupted at epoch 22 after the same validation-mode defect was identified; invalid for model selection. Test was not evaluated.
+oscd_cross_lr1e-4_wd1e-4_valid,valid,oscd,cross,42,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1156993,45,0.148239090781535,329.30429520000143,482.5,True,
+oscd_cross_lr3e-4_wd0,invalidated_before_final_selection,oscd,cross,42,0.0003,0.0,0.0,BCEWithLogitsLoss,41.0,50,1156993,44,0.06069067665430352,332.7516841000006,482.5,False,Invalid for model selection: the training driver failed to call model.eval() for validation; BatchNorm ran in training mode. Test was not evaluated.
+oscd_cross_lr3e-4_wd0_valid,valid,oscd,cross,42,0.0003,0.0,0.0,BCEWithLogitsLoss,41.0,50,1156993,44,0.06069067665430352,352.10461380000015,482.5,False,
+oscd_cross_selected_seed43,valid,oscd,cross,43,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1156993,44,0.13438802415582207,309.6921663000012,482.5,True,
+oscd_cross_selected_seed44,valid,oscd,cross,44,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1156993,46,0.061425217634966646,324.89821719999964,482.5,True,
+oscd_self_lr1e-4_wd1e-4,invalidated_before_final_selection,oscd,self,42,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1358081,38,0.19648894433295366,324.66654030000063,803.0,False,Invalid for model selection: the training driver failed to call model.eval() for validation; BatchNorm ran in training mode. Test was not evaluated.
+oscd_self_lr1e-4_wd1e-4_valid,valid,oscd,self,42,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1358081,38,0.19648894433295366,307.27517439999974,803.0,True,
+oscd_self_lr3e-4_wd0,failed_before_checkpoint_selection,oscd,self,42,0.0003,0.0,0.0,BCEWithLogitsLoss,41.0,50,,,,,,False,driver exception while formatting an undefined validation F1 after the first epoch; no checkpoint was selected and test split was not evaluated
+oscd_self_lr3e-4_wd0_retry1,invalidated_before_final_selection,oscd,self,42,0.0003,0.0,0.0,BCEWithLogitsLoss,41.0,50,1358081,22,0.16924691492056598,290.7726007000001,803.0,False,Invalid for model selection: the training driver failed to call model.eval() for validation; BatchNorm ran in training mode. Test was not evaluated.
+oscd_self_lr3e-4_wd0_valid,valid,oscd,self,42,0.0003,0.0,0.0,BCEWithLogitsLoss,41.0,50,1358081,22,0.16924691492056598,310.6357650000009,803.0,False,
+oscd_self_selected_seed43,valid,oscd,self,43,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1358081,29,0.20206533740339028,337.28201179999996,803.0,True,
+oscd_self_selected_seed44,valid,oscd,self,44,0.0001,0.0001,0.0,BCEWithLogitsLoss,41.0,50,1358081,42,0.17596697185033378,300.77224059999935,803.0,True,
+s2_cross_lr1e-4_wd1e-4_valid,valid,s2,cross,42,0.0001,0.0001,0.0,BCEWithLogitsLoss,94.0,50,1154945,37,0.1740320108131274,331.95263890000024,294.6,False,
+s2_cross_lr3e-4_wd0_valid,valid,s2,cross,42,0.0003,0.0,0.0,BCEWithLogitsLoss,94.0,50,1154945,42,0.23996626133408305,326.4913498999995,294.6,True,
+s2_cross_selected_seed43,valid,s2,cross,43,0.0003,0.0,0.0,BCEWithLogitsLoss,94.0,50,1154945,35,0.2590913773565468,336.6941501000001,294.6,True,
+s2_cross_selected_seed44,valid,s2,cross,44,0.0003,0.0,0.0,BCEWithLogitsLoss,94.0,50,1154945,35,0.23277947627276352,330.6295654000005,294.6,True,

@@ -1,0 +1,6 @@
+{
+  "status": "invalidated",
+  "reason": "Invalid for model selection: the training driver failed to call model.eval() for validation; BatchNorm ran in training mode. Test was not evaluated.",
+  "not_used_for_selection": true,
+  "test_evaluated": false
+}

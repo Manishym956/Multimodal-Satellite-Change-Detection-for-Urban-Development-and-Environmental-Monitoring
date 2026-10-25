@@ -1,0 +1,96 @@
+{
+  "validation_passed": true,
+  "locked_split": {
+    "path": "experiments/scenario_2/configs/split_definition.json",
+    "expected_sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "actual_sha256": "5d0841adf0c651166cb18ecea310c6ef8cce69172065fc2d699a29083c272e27",
+    "unchanged": true
+  },
+  "original_baseline_artifacts": {
+    "oscd_self_attention": {
+      "checkpoint": {
+        "path": "checkpoints/transformer_self_attention/best.pt",
+        "expected_sha256": "41433bc92a7eed43c3d6035e69728de47ebbb78c8b91000e2db8951fccf53ce4",
+        "actual_sha256": "41433bc92a7eed43c3d6035e69728de47ebbb78c8b91000e2db8951fccf53ce4",
+        "unchanged": true
+      },
+      "metrics_json": {
+        "path": "experiments/transformer_self_attention/metrics.json",
+        "expected_sha256": "870456c1176546fd32aad7e1ee20943e5c967512c54ff8442fc3685155cfb674",
+        "actual_sha256": "870456c1176546fd32aad7e1ee20943e5c967512c54ff8442fc3685155cfb674",
+        "unchanged": true
+      },
+      "training_history_csv": {
+        "path": "experiments/transformer_self_attention/training_history.csv",
+        "expected_sha256": "d1229975a9b806ee9541a549a666a82451d46ac09deae35425c5a1aeb3045401",
+        "actual_sha256": "d1229975a9b806ee9541a549a666a82451d46ac09deae35425c5a1aeb3045401",
+        "unchanged": true
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/transformer_self_attention/per_city_metrics.csv",
+        "expected_sha256": "e8044e84a86485e41ba099390a3ec1aae75f312ef922c14530b1d1da48f1654d",
+        "actual_sha256": "e8044e84a86485e41ba099390a3ec1aae75f312ef922c14530b1d1da48f1654d",
+        "unchanged": true
+      }
+    },
+    "oscd_cross_attention": {
+      "checkpoint": {
+        "path": "checkpoints/transformer_cross_attention/best.pt",
+        "expected_sha256": "470c4ba04a72f0483f255c623e7adbc792ea80b75feb75fc3a116c680f52acc6",
+        "actual_sha256": "470c4ba04a72f0483f255c623e7adbc792ea80b75feb75fc3a116c680f52acc6",
+        "unchanged": true
+      },
+      "metrics_json": {
+        "path": "experiments/transformer_cross_attention/metrics.json",
+        "expected_sha256": "5a9a5e324623e6085663be613ff6b213b3ef21e1010e1821236a3f7447036b48",
+        "actual_sha256": "5a9a5e324623e6085663be613ff6b213b3ef21e1010e1821236a3f7447036b48",
+        "unchanged": true
+      },
+      "training_history_csv": {
+        "path": "experiments/transformer_cross_attention/training_history.csv",
+        "expected_sha256": "f188bb4216dd45380ee73c56402878d9f5a15e474512b2a600233e26c437f9b7",
+        "actual_sha256": "f188bb4216dd45380ee73c56402878d9f5a15e474512b2a600233e26c437f9b7",
+        "unchanged": true
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/transformer_cross_attention/per_city_metrics.csv",
+        "expected_sha256": "81ebde026155272bde9e7d1920815007596d9a79627badb9b4461ea4b9537488",
+        "actual_sha256": "81ebde026155272bde9e7d1920815007596d9a79627badb9b4461ea4b9537488",
+        "unchanged": true
+      }
+    },
+    "scenario2_cross_attention": {
+      "checkpoint": {
+        "path": "checkpoints/scenario_2/cross_attention/best.pt",
+        "expected_sha256": "e197fd54b92e172e05f91d7bf2662f98a98ae4cdc7548da384de1255b7647334",
+        "actual_sha256": "e197fd54b92e172e05f91d7bf2662f98a98ae4cdc7548da384de1255b7647334",
+        "unchanged": true
+      },
+      "metrics_json": {
+        "path": "experiments/scenario_2/cross_attention/metrics.json",
+        "expected_sha256": "d5ba867470fc7e0c19edc5c02da254ba0ed09fc7ca773a39ab3afd810a8512dc",
+        "actual_sha256": "d5ba867470fc7e0c19edc5c02da254ba0ed09fc7ca773a39ab3afd810a8512dc",
+        "unchanged": true
+      },
+      "training_history_csv": {
+        "path": "experiments/scenario_2/cross_attention/training_history.csv",
+        "expected_sha256": "68f19cfb3c79a852ce2ef310456b8904dac75728306e490286aaa6e48a35b6d4",
+        "actual_sha256": "68f19cfb3c79a852ce2ef310456b8904dac75728306e490286aaa6e48a35b6d4",
+        "unchanged": true
+      },
+      "per_city_metrics_csv": {
+        "path": "experiments/scenario_2/cross_attention/per_city_metrics.csv",
+        "expected_sha256": "25fe53186bdc4d83880f99b173b5f1ead1f5ebae2520fccbaa3c2a1b4d612e32",
+        "actual_sha256": "25fe53186bdc4d83880f99b173b5f1ead1f5ebae2520fccbaa3c2a1b4d612e32",
+        "unchanged": true
+      }
+    }
+  },
+  "table_rows": {
+    "FINAL_TUNING_RESULTS.csv": 24,
+    "REPEATABILITY_SUMMARY.csv": 6,
+    "TRAINING_RUNS.csv": 17
+  },
+  "plot_exists": true,
+  "report_exists": true
+}

@@ -1,0 +1,26 @@
+{
+  "run_id": "oscd_cross_lr3e-4_wd0",
+  "dataset": "oscd",
+  "architecture": "cross",
+  "seed": 42,
+  "lr": 0.0003,
+  "weight_decay": 0.0,
+  "best_epoch": 44,
+  "validation_at_0_5": {
+    "tp": 4999,
+    "tn": 1085201,
+    "fp": 136860,
+    "fn": 17879,
+    "precision": 0.03523921640502189,
+    "recall": 0.2185068624879797,
+    "f1": 0.06069067665430352,
+    "iou": 0.03129499555522167,
+    "false_alarm_rate": 0.11199113628534091
+  },
+  "training_seconds": 332.7516841000006,
+  "peak_vram_mb": 482.5,
+  "best_checkpoint": "best.pt",
+  "test_evaluated": false,
+  "end_utc": "2026-10-15T06:48:57.997713+00:00",
+  "parameters": 1156993
+}

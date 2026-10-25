@@ -1,0 +1,4 @@
+{
+  "reason": "driver exception while formatting an undefined validation F1 after the first epoch; no checkpoint was selected and test split was not evaluated",
+  "epochs_completed": 1
+}
