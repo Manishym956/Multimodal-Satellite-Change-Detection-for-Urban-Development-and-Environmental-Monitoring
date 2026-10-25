@@ -9,7 +9,9 @@ manishym946@gmail.com
 adds Steps 6–8. Every number is taken from the audited reports in `experiments/robust/` (Phases 2–5, Steps 6–8), the error-map
 record `experiments/robust/error_maps/selection.json` or, for Appendix A, `experiments/paper_statistics.json`, and is checked
 by `paper/check_final_paper_numbers.py` (every number occurs in a source) and `paper/check_final_paper_tables.py` (every
-results-table cell matches its source value). Items marked [verify] or [author] need action before submission.*
+results-table cell matches its source value). Revised the same day after an internal review (scope of null results, RQ2
+framed as acquisition timing, RQ3 and cloud conclusions bounded, references completed). [Institution] and items marked
+[author] need the author's decision before submission.*
 
 ---
 
@@ -22,15 +24,15 @@ protocol: 10 paired training seeds, validation-only selection, an internal pre-r
 every step. With full input, DS-UNet beats SAR-only, optical-only and input-fusion U-Nets (test F1 0.556 against 0.418,
 0.498 and 0.495; RQ4). Without the post-change optical image, adding the pre-change (historical) optical image to
 bitemporal SAR gives no detectable gain over a SAR-only U-Net, either in a modality-dropout DS-UNet (+0.013) or in a DS-UNet
-trained only on SAR and historical optical (−0.016; RQ1). Replacing that image by Sentinel-2 scenes taken 1 to 18 months
-before the post-change date shows no detectable effect of its age (slope +0.0083 F1 per year, p = 0.105), and at no age
-does it beat SAR alone (RQ2); a recent image may already show the change, which this design cannot separate from age. For a
-SAR-only U-Net, adding VH to VV lowers F1 (−0.044) and VH alone lowers it more (−0.070); with optical input, polarisation
-makes no detectable difference (RQ3). By land cover, the historical optical image lowers the false-alarm rate detectably
-only in shrubland, 1.3% of the pixels (RQ5). A seven-step robustness study shows that modality dropout handles a missing
-post-change image but not a partly cloudy one, that zero-filling cloud pixels recovers most of the loss for the dropout
-model, and that unmasked cloud pixels are the main remaining error. All results concern one benchmark with 10 test cities;
-seeds are training replicates, not geographic replicates.
+trained only on SAR and historical optical (−0.016; RQ1). Replacing that image by Sentinel-2 scenes acquired 1 to 18
+months before the post-change date shows no detectable effect of acquisition timing (slope +0.0083 F1 per year, p =
+0.105), and at no timing does it beat SAR alone (RQ2); images acquired after OSCD's first date may already show the
+labelled change, so this is not a clean test of image age. For a SAR-only U-Net, adding VH to VV lowers F1 (−0.044); with
+optical input, polarisation makes no detectable difference (RQ3). By land cover, the historical optical image lowers the
+false-alarm rate detectably only in shrubland, 1.3% of the pixels (RQ5). With simulated and composite clouds, modality
+dropout handles a missing post-change image but not a partly cloudy one, and zero-filling cloud pixels recovers most of the
+loss for the dropout model. Results concern one benchmark (9–10 test cities), one architecture and one recipe; seeds are
+training replicates, and an undetected difference is not evidence of no effect.
 
 **Keywords:** change detection, SAR–optical fusion, Sentinel-1, Sentinel-2, missing modality, historical optical imagery,
 temporal gap, polarisation, cloud cover, OSCD, pre-registration, reproducibility
@@ -61,12 +63,14 @@ This paper answers the five research questions of the project's Research Require
   benefit?
 
 We answer them with the official DS-UNet code [1] on OSCD [3] enriched with Sentinel-1, in a measurement study rather than
-with a new method. The answers, in short: RQ4, the dual-stream design beats every U-Net baseline with full input; RQ1, the
-historical optical image gives no measurable gain over bitemporal SAR alone; RQ2, its age has no detectable effect, and
-recent images are, if anything, the least useful; RQ3, VH does not help, and for SAR alone it hurts; RQ5, the historical
-image changes false alarms detectably in only one small land-cover class. A seven-step robustness study (§5) adds that a
-partly cloudy post-change image is a different and worse problem than a missing one, and measures how far cloud masking
-with zero-fill repairs it.
+with a new method. The answers, in short, all for OSCD under one protocol: RQ4, the dual-stream design beats every U-Net
+baseline with full input; RQ1, the historical optical image gives no detectable gain over bitemporal SAR alone; RQ2, its
+acquisition timing (1–18 months before the post-change date) has no detectable effect, and recent images are, if
+anything, the least useful, but timing is confounded with how much labelled change an image already shows; RQ3, adding VH
+gives no detectable gain, and for SAR alone it lowers F1, without evidence about the cause of false alarms; RQ5, the
+historical image changes false alarms detectably in only one small land-cover class. A seven-step robustness study (§5)
+adds that, with simulated and composite clouds, a partly cloudy post-change image is a different and worse problem than a
+missing one, and measures how far cloud masking with zero-fill repairs it.
 
 **Contributions.** (i) A controlled, multi-seed answer to RQ1–RQ5 on a public urban benchmark under one audited protocol,
 including null results. (ii) A test of the temporal-gap and VH findings of Song et al. [2] in a different setting, with the
@@ -91,8 +95,12 @@ change. All of these assume both modalities at the dates compared, or address a 
 **Historical optical guidance and temporal gap.** Song et al. [2] monitor construction-ready bare land in Guangzhou with
 Sentinel-1 VH change screening and a historical cloud-free Sentinel-2 image instead of a synchronous one. Varying the age
 of that image (1, 3, 6 and 12 months before the target date) lowered F1 from 83.99% to 78.31% (their §5.4); they chose VH
-over VV from backscatter physics rather than from a model ablation (§5.1). [verify: whether the gap results are single
-runs.] Our RQ2 and RQ3 experiments test these two findings for urban change on a public benchmark.
+over VV from backscatter physics rather than from a model ablation (§5.1). The sections we read (§2, §5.1, §5.4 and Table
+4) report no repeated runs, seeds or intervals for the gap results. Our RQ2 and RQ3 experiments test these two findings in
+a different setting: urban change of all kinds rather than one change type, 9–10 cities on four continents rather than one
+region, VV and VH as 3-month means rather than VH change screening, and one dual-stream network with decision-level fusion
+rather than their two-stage framework with asymmetric cross-modal attention. A different outcome in our setting therefore
+does not contradict their result.
 
 **Missing modalities and clouds.** Modality dropout, randomly removing an input modality during training, was introduced
 for gesture recognition [11]. Hafner and Ban [12] address multi-temporal urban mapping with a partly missing optical
@@ -246,11 +254,17 @@ same result as OSCD's own (Δ +0.000).
 The companion study (Appendix A) had reported 0.309 for its missing-optical model against 0.241 for SAR alone under a
 weaker protocol; under the shared protocol the SAR-only U-Net reaches 0.418, and the margin does not survive.
 
-**Answer to RQ1.** Under this protocol, historical Sentinel-2 optical information gives no measurable improvement over
-bitemporal Sentinel-1 VV when the post-change optical image is unavailable. The minimum detectable effect is about 1.14 SD
-of the paired differences, so a small benefit cannot be excluded.
+**Answer to RQ1.** On OSCD, with this architecture and recipe, historical Sentinel-2 optical information gives no detectable
+improvement over bitemporal Sentinel-1 VV when the post-change optical image is unavailable. This is not evidence that it
+never helps: the minimum detectable effect is about 1.14 SD of the paired differences, so a small benefit cannot be
+excluded, and other cities, change types or architectures may behave differently.
 
-### 4.3 RQ2: temporal gap between the historical optical image and the target date
+### 4.3 RQ2: acquisition timing of the historical optical image
+
+RQ2 asks about the temporal gap. Under OSCD's label definition (change between two fixed dates), varying the gap varies
+two things at once: the image's age and whether it was acquired before or after OSCD's first date, and hence how much of
+the labelled change it may already show. This experiment therefore measures the effect of the historical image's
+acquisition timing under that label definition; it is not a clean causal test of image age (see "The confound" below).
 
 B, setting `no_o2`, test F1 at the frozen `no_o2` threshold, 9 primary cities, mean ± SD over 10 seeds (Step 8):
 
@@ -272,12 +286,15 @@ different at 3–18 months.
 **The confound.** OSCD labels mark change between date 1 and date 2. An image taken 1–6 months before date 2 lies after date
 1 and may already show part of the labelled change, which the pre-change slot would then hide. The 1-month image gives the
 lowest F1 for both B and async, which is consistent with this confound, but how much change each image shows was not
-measured, so the design cannot separate the image's age from it.
+measured, so the design cannot separate the image's age from it. Separating them requires either labels dated at the
+historical image or historical images that all precede the change, which OSCD does not provide for 1–6 month gaps.
 
 **Answer to RQ2.** On OSCD, the decline with age reported by Song et al. [2] (F1 83.99% at 1 month to 78.31% at 12 months,
-for construction-ready bare land) is not reproduced: the age of the historical optical image has no detectable effect on
-F1 between 1 and 18 months, and at no age does the image beat SAR alone. If anything, the most recent image is the least
-useful, plausibly because it already contains part of the change.
+for construction-ready bare land) is not reproduced: the acquisition timing of the historical optical image (1–18 months
+before the post-change date) has no detectable effect on F1, and at no timing does the image beat SAR alone. If anything,
+the most recent image is the least useful, which is consistent with it already containing part of the change; the
+positive slope is not established (registered t-test p 0.105). Because timing and exposure to the labelled change are
+confounded, this result does not show that image age is irrelevant.
 
 ### 4.4 RQ3: VV and VH polarisation
 
@@ -312,15 +329,19 @@ Including Las Vegas, whose VH band at date 1 is all zero, the VV+VH SAR-only mod
 rate 0.194 ± 0.051) on 10 cities, against 0.418 ± 0.043 for VV. A model trained with a second polarisation depends on that
 band being present.
 
-**Answer to RQ3.** Under this protocol, VH does not improve SAR-based urban change detection on OSCD, alone or with VV, and
-it does not improve the discrimination of pseudo-change as measured by false alarms per land-cover class. This does not test
-the physical argument of Song et al. [2] for VH on bare land.
+**Answer to RQ3.** The answer is arm-specific. For the SAR-only U-Net on OSCD, adding VH to VV lowered F1, and VH alone
+lowered it more; for DS-UNet with optical input, neither VH nor VV+VH differed detectably from VV. These are results for
+3-month mean backscatter, this recipe and these two architectures, not a general property of VH. On pseudo-change, the
+evidence is limited to false-alarm rates stratified by land cover: VV+VH's lower false-alarm rates come with lower recall,
+and OSCD has no labels for the cause of a false alarm, so the experiment cannot show whether VH discriminates urban
+development from environmental or agricultural change. It does not test the physical argument of Song et al. [2] for VH on
+bare land.
 
 ### 4.5 RQ5: conditions in which historical optical information helps most
 
-**Temporal conditions.** From §4.3: no gap between 1 and 18 months gives B a detectable gain over SAR alone, and the
-1-month image scores lowest. For images older than OSCD date 1 (4 of the 9 primary cities at 18 months), the design cannot
-separate age from city.
+**Temporal conditions.** From §4.3: no acquisition timing between 1 and 18 months gives B a detectable gain over SAR
+alone, and the 1-month image scores lowest. For images older than OSCD date 1 (4 of the 9 primary cities at 18 months),
+the design cannot separate timing from city.
 
 **Environmental conditions.** False-alarm rate by WorldCover class, B with OSCD's date-1 image minus the SAR-only U-Net, 9
 primary cities (Step 8; Holm over the 7 classes with ≥ 1% of the pixels):
@@ -335,8 +356,9 @@ primary cities (Step 8; Holm over the 7 classes with ≥ 1% of the pixels):
 | bare | 24.6% | −0.025 | [−0.077, +0.027] | 4/10 | 0.9703 | no detectable difference |
 | water | 1.7% | +0.001 | [−0.008, +0.011] | 4/10 | 0.9804 | no detectable difference |
 
-The historical optical image lowers the false-alarm rate detectably only in shrubland, a class covering 1.3% of the
-pixels; in built-up areas, the largest class, there is no detectable difference. The mean differences in cropland and bare
+The historical optical image lowers the false-alarm rate detectably only in shrubland, by 0.006, in a class covering 1.3%
+of the pixels; this is a small, class-specific result, not a broad environmental benefit. In built-up areas, the largest
+class, there is no detectable difference. The mean differences in cropland and bare
 land are negative but not detectable.
 
 **Error maps.** Figure 1 shows, for seed 1, the SAR-only U-Net, B without the post-change optical image, and A with full
@@ -348,9 +370,10 @@ are close (0.48, 0.48, 0.47); in Valencia, whose labelled changes are small and 
 
 ![Figure 1. Error maps for the best (Las Vegas), median (Rio) and worst (Valencia) OSCD test city by DS-UNet A's mean per-city F1; seed 1, frozen thresholds. Blue: true positive; orange: false positive; green: false negative.](../figures/paper/fig13_error_maps.png)
 
-**Answer to RQ5.** Within the conditions tested (image ages of 1–18 months, seven land-cover classes, OSCD urban change),
-historical optical information gives no detectable benefit in F1 under any temporal condition, and its only detectable
-effect on false alarms is a small reduction in shrubland. We found no condition in which it helps materially.
+**Answer to RQ5.** Within the conditions tested (acquisition timings of 1–18 months, seven land-cover classes, OSCD urban
+change), historical optical information gives no detectable benefit in F1 under any temporal condition, and its only
+detectable effect on false alarms is a small reduction in shrubland. Among these conditions we detected none in which it
+gives a material benefit; conditions outside OSCD, or effects below the minimum detectable size, remain untested.
 
 ## 5. Robustness to a missing or cloudy post-change optical image
 
@@ -538,9 +561,10 @@ pre-change image, not evidence that the detector locates cloud well. For A, rb95
 ## 6. Discussion
 
 **What the historical optical image does and does not do.** In this setting the post-change information comes from SAR,
-and the pre-change optical image adds no measurable change evidence: B scores the same with and without it, the model
-trained only with it scores higher, descriptively, when it is removed, and neither beats a SAR-only U-Net trained with the same recipe
-(RQ1). Its age does not matter between 1 and 18 months (RQ2). Two explanations fit, and the design cannot separate them:
+and we detected no added change evidence from the pre-change optical image: B scores the same with and without it, the
+model trained only with it scores higher, descriptively, when it is removed, and neither is detectably better than a
+SAR-only U-Net trained with the same recipe (RQ1). Its acquisition timing between 1 and 18 months has no detectable effect
+(RQ2). Two explanations fit, and the design cannot separate them:
 OSCD's urban changes may be visible in the bitemporal SAR at least as clearly as their context is in the pre-change optical
 image, or the dual-stream network with decision-level fusion may not exploit optical context without a post-change optical
 image. The comparison with Song et al. [2] differs in change type, region, sensor configuration and architecture, so our null
@@ -553,10 +577,10 @@ change was already there. This is a property of the task definition (labels betw
 satellite: a historical image is useful as context only if it precedes the change. A study of the gap that avoids the
 confound needs labels dated at the historical image or images that all precede the change.
 
-**Polarisation.** The polarisation result is clear for SAR alone: VV carries the urban change signal in OSCD, and adding VH,
-with its lower backscatter and range, makes the SAR-only model more conservative and less accurate (RQ3). With optical
-input the difference vanishes. VH is also a robustness risk: one city with a missing VH acquisition nearly halved the pooled
-F1 of the VV+VH model.
+**Polarisation.** For the SAR-only U-Net, VV gives the highest F1 on OSCD, and adding VH, with its lower backscatter and
+range, makes the model more conservative and less accurate (RQ3). With optical input, no difference is detectable. Both
+statements concern these two architectures with 3-month mean backscatter. VH is also a robustness risk: one city with a
+missing VH acquisition nearly halved the pooled F1 of the VV+VH model.
 
 **Dual-stream fusion with full input.** The dual-stream gain over input fusion (RQ4) and the absence of any input-fusion
 gain over optical alone agree with Hafner et al. [1]: SAR helps only when it is encoded separately.
@@ -566,13 +590,16 @@ dropout-trained model learns that a zero-filled optical image carries no informa
 cloud-valued patch is not a change. Zero-filling cloud pixels turns the cloud problem back into the missing-data problem,
 and the outcome then depends on the direction of the mask error: a mask that covers 21% of the clear scene costs B 0.010
 F1, a mask that misses a quarter of the cloud costs 0.168. With a real detector on composites, the recall-biased mask helps
-B mainly by discarding most of the post-change image. Combined with RQ1, this gives a simple practical reading: for this
-architecture on OSCD, a cloudy post-change optical image is best removed, and a model that falls back on bitemporal SAR
-loses little relative to what the historical image could add.
+B mainly by discarding most of the post-change image. Combined with RQ1, this suggests a practical reading that is limited
+to the tested corruptions (opaque synthetic clouds and composites of real cloud pixels, without shadows, haze or real
+atmospheric effects) and to the DS-UNet configuration studied: there, removing the cloud-affected optical pixels and
+letting a dropout-trained model fall back on bitemporal SAR worked better than passing them through. Whether this holds for
+real cloudy acquisitions, thin cloud, haze or cloud shadow was not tested.
 
 **Operating point.** Dropout-trained and U-Net baseline models shift their output probabilities and need their decision
 threshold chosen on validation data (B loses 0.086 F1 on full input at 0.5; baseline thresholds range from 0.58 to 0.99).
-Deployments should calibrate the threshold on held-out data from the target region.
+Threshold selection is not probability calibration, which we did not evaluate. Deployments should select the threshold on
+held-out data from the target region.
 
 ## 7. Limitations and threats to validity
 
@@ -584,8 +611,11 @@ Deployments should calibrate the threshold on held-out data from the target regi
 - **No pseudo-change labels.** OSCD does not label agricultural, seasonal or environmental change. RQ3 and RQ5 are answered
   through false-alarm rates by WorldCover class; WorldCover (2020) post-dates OSCD date 2, so classes are a stratification,
   not ground truth for the cause of a false alarm.
-- **Temporal-gap confound.** In Step 8 the image's age is confounded with how much of the labelled change it already shows;
-  frozen models trained with OSCD's own date-1 image were evaluated with older images, and no model was trained on them.
+- **Temporal-gap confound.** In Step 8 the image's age is confounded with how much of the labelled change it already shows,
+  so RQ2 is answered for acquisition timing under OSCD's label definition, not for age as such; frozen models trained with
+  OSCD's own date-1 image were evaluated with older images, and no model was trained on them.
+- **Audit gaps.** The Step 4A and 4A-bis smoke-test logs do not exist, Step 4A has no audit of its own, and the Step 5S
+  smoke-test script was not committed (Appendix C).
 - **One architecture and one recipe.** All arms use the official DS-UNet or its U-Net with one recipe and one dropout mixture
   per arm; attention-based or reconstruction-based models [2, 12] may behave differently. The U-Net baselines are not tuned
   separately. Checkpoint selection rules differ between arms by design.
@@ -600,31 +630,37 @@ Deployments should calibrate the threshold on held-out data from the target regi
   126 composites were kept from interrupted builds and verified by mask, shape, data type and value range, not byte for byte.
 - **Internal pre-registration.** The pre-registrations are repository files, not public registrations, and for Phases 2–4A-bis
   their timing rests on file times.
-- **Baseline gap.** Our reproduction of the official DS-UNet protocol (0.557 ± 0.035) is below the published 0.600 [1].
+- **Baseline gap.** Our reproduction of the official DS-UNet protocol (0.557 ± 0.035) is below the published 0.600 [1], and
+  whether 0.600 is a single run or a mean is unresolved. Our conclusions rest on comparisons under the shared protocol, not on
+  reproducing the published number.
 - **Not studied.** Small-change analysis, broader transitions such as demolition and urban renewal, InSAR coherence and other
   SAR features listed in the RRD are outside this study.
 
 ## 8. Conclusion
 
-Under one audited, multi-seed protocol on OSCD: (RQ4) the dual-stream DS-UNet outperforms SAR-only, optical-only and
-input-fusion U-Nets with full input; (RQ1) without the post-change optical image, a historical optical image gives no
-measurable gain over bitemporal SAR alone; (RQ2) its age between 1 and 18 months has no detectable effect, and the most
-recent image, which may already show the change, scores lowest; (RQ3) VH does not help, and for SAR alone it lowers F1; (RQ5)
-the historical image changes false alarms detectably only in shrubland. The robustness study adds that a partly cloudy
-post-change image is worse than a missing one, that zero-fill under a cloud mask with modality-dropout training recovers most
-of the loss, and that unmasked cloud pixels are the main remaining error. For urban change on OSCD, the practical
-configuration is a modality-dropout DS-UNet with a validation-calibrated threshold, which matches the full-input model when
-the post-change optical image is present and falls back on SAR when it is missing or masked. Whether historical optical
-imagery helps for other change types, with labels dated to avoid the temporal confound, or on real cloudy acquisitions, are
-the main open questions.
+Under one audited, multi-seed protocol on OSCD (9–10 test cities, the official DS-UNet and its U-Net, one recipe):
+(RQ4) the dual-stream DS-UNet outperforms SAR-only, optical-only and input-fusion U-Nets with full input; (RQ1) without the
+post-change optical image, a historical optical image gives no detectable gain over bitemporal SAR alone; (RQ2) its
+acquisition timing between 1 and 18 months has no detectable effect, and the most recent image, which may already show the
+change, scores lowest, so this experiment does not isolate image age; (RQ3) adding VH lowers F1 for the SAR-only U-Net and
+makes no detectable difference with optical input, and the land-cover analysis cannot establish discrimination of
+pseudo-change; (RQ5) the historical image lowers false alarms detectably only in shrubland, 1.3% of the pixels. None of
+these null results shows that an effect is absent. The robustness study adds that, with simulated and composite clouds, a
+partly cloudy post-change image is worse than a missing one, that zero-fill under a cloud mask with modality-dropout
+training recovers most of the loss, and that unmasked cloud pixels are the main remaining error. Among the configurations
+tested on OSCD, the most practical is a modality-dropout DS-UNet with a threshold selected on validation data, which
+matches the full-input model when the post-change optical image is present and falls back on SAR when it is missing or
+masked. Whether historical optical imagery helps for other change types, with labels dated to separate age from the
+labelled change, or on real cloudy acquisitions, are the main open questions.
 
 ## Declarations
 
 **Data availability.** OSCD [3] and the Cloud Mask Catalogue [14] are public; the Sentinel-1 VV rasters are from the public
 DS-UNet repository [1]; Sentinel-1, Sentinel-2 and ESA WorldCover [19] were exported from Google Earth Engine [18] with the
-scripts in the repository. Code, pre-registrations, run files, analysis tables, audits and reports are in the project
-repository (branch `robust-phase4`); checkpoints and raw count arrays are listed with sha256 hashes in
-`experiments/robust/ARTIFACT_SHA256_*.txt`. [author: the repository is not yet public; state where it will be released.]
+scripts in the project repository. Code, pre-registrations, run files, analysis tables, audits and reports are kept in that
+repository (branch `robust-phase4`), and checkpoints and raw count arrays are listed with sha256 hashes in
+`experiments/robust/ARTIFACT_SHA256_*.txt`. The repository is not yet publicly accessible, so the study cannot currently be
+reproduced by others. [author: state where and when code, pre-registrations and checkpoints will be released.]
 
 **Ethics.** The study uses public satellite imagery and labels only; no human participants or personal data are involved.
 
@@ -644,7 +680,7 @@ checked and is responsible for the content.
 
 [1] Hafner, S., Nascetti, A., Azizpour, H., & Ban, Y. (2022). Sentinel-1 and Sentinel-2 data fusion for urban change detection using a dual stream U-Net. *IEEE Geoscience and Remote Sensing Letters, 19*, 4019907. https://doi.org/10.1109/LGRS.2021.3119856
 
-[2] Song, Lv, Ding, Hong, & Qi (2026). A dual-modal framework integrating SAR-based change screening and optical-scene-informed identification for high-frequency monitoring of construction-ready bare land. *Remote Sensing, 18*(8), 1103. https://doi.org/10.3390/rs18081103 [verify: authors' initials]
+[2] Song, W., Lv, Q., Ding, Z., Hong, S., & Qi, Z. (2026). A dual-modal framework integrating SAR-based change screening and optical-scene-informed identification for high-frequency monitoring of construction-ready bare land. *Remote Sensing, 18*(8), 1103. https://doi.org/10.3390/rs18081103
 
 [3] Daudt, R. C., Le Saux, B., Boulch, A., & Gousseau, Y. (2018). Urban change detection for multispectral earth observation using convolutional neural networks. In *Proc. IEEE IGARSS*, 2115–2118. https://doi.org/10.1109/IGARSS.2018.8518015
 
@@ -660,7 +696,7 @@ checked and is responsible for the content.
 
 [9] Saha, S., Ebel, P., & Zhu, X. X. (2022). Self-supervised multisensor change detection. *IEEE Transactions on Geoscience and Remote Sensing, 60*, 4405710. https://doi.org/10.1109/TGRS.2021.3109957
 
-[10] Jiang et al. (2022). DSNUNet: An improved forest change detection network by combining Sentinel-1 and Sentinel-2 images. *Remote Sensing, 14*(19), 5046. https://doi.org/10.3390/rs14195046 [verify: full author list]
+[10] Jiang, J., Xing, Y., Wei, W., Yan, E., Xiang, J., & Mo, D. (2022). DSNUNet: An improved forest change detection network by combining Sentinel-1 and Sentinel-2 images. *Remote Sensing, 14*(19), 5046. https://doi.org/10.3390/rs14195046
 
 [11] Neverova, N., Wolf, C., Taylor, G. W., & Nebout, F. (2016). ModDrop: Adaptive multi-modal gesture recognition. *IEEE Transactions on Pattern Analysis and Machine Intelligence, 38*(8), 1692–1706.
 
@@ -670,9 +706,9 @@ checked and is responsible for the content.
 
 [14] Francis, A., Mrziglod, J., Sidiropoulos, P., & Muller, J.-P. (2020). Sentinel-2 Cloud Mask Catalogue (Version 1). Zenodo. https://doi.org/10.5281/zenodo.4172871
 
-[15] Zupanc, A. (Sentinel Hub). Improving cloud detection with machine learning (s2cloudless). Sentinel Hub blog. https://medium.com/sentinel-hub/improving-cloud-detection-with-machine-learning-c09dc5d7cf13 (software: s2cloudless 1.7.3). [verify: publication year]
+[15] Sinergise EO research team (2024). s2cloudless: Sentinel Hub's cloud detector for Sentinel-2 imagery (Version 1.7.3) [Software]. https://github.com/sentinel-hub/sentinel2-cloud-detector
 
-[16] Skakun, S., Wevers, J., Brockmann, C., et al. (2022). Cloud Mask Intercomparison eXercise (CMIX): An evaluation of cloud masking algorithms for Landsat 8 and Sentinel-2. *Remote Sensing of Environment, 274*, 112990. https://doi.org/10.1016/j.rse.2022.112990 [verify: full author list]
+[16] Skakun, S., Wevers, J., Brockmann, C., Doxani, G., Aleksandrov, M., Batič, M., Frantz, D., Gascon, F., Gómez-Chova, L., Hagolle, O., López-Puigdollers, D., Louis, J., Lubej, M., Mateo-García, G., Osman, J., Peressutti, D., Pflug, B., Puc, J., Richter, R., Roger, J.-C., Scaramuzza, P., Vermote, E., Vesel, N., Zupanc, A., & Žust, L. (2022). Cloud Mask Intercomparison eXercise (CMIX): An evaluation of cloud masking algorithms for Landsat 8 and Sentinel-2. *Remote Sensing of Environment, 274*, 112990. https://doi.org/10.1016/j.rse.2022.112990
 
 [17] Bouthillier, X., Delaunay, P., Bronzi, M., Trofimov, A., Nichyporuk, B., Szeto, J., et al. (2021). Accounting for variance in machine learning benchmarks. In *Proceedings of Machine Learning and Systems (MLSys), 3*.
 
