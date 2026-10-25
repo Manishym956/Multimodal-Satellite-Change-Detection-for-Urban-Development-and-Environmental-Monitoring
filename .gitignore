@@ -45,3 +45,33 @@ graphify-out/
 /HANDOFF*.md
 /DIAGNOSIS_REPORT.md
 /PHASE5_PREREGISTRATION.template.md
+
+# Non-technical or superseded material (kept on disk, not versioned)
+*.docx
+~$*
+/artifacts/
+/figures/_superseded_*/
+/experiments/_pre_rerun_summaries/
+/experiments/research_finalization_2026-10-15/
+/experiments/research_finalization_v2_2026-10-15/
+/logs/laneA.log
+/logs/laneB.log
+/logs/laneB_chain.sh
+
+# Old working notes, drafts and companion-study figures
+/docs/SCENARIO_2_*.md
+/docs/paper/
+/docs/RESEARCH_STATUS_AUDIT.md
+/docs/PAPER_DRAFTING_FOUNDATION.md
+/docs/GPU_DEVICE_AUDIT.md
+/docs/final/MENTOR_BRIEF.md
+/docs/final/RESEARCH_AUDIT.md
+/paper/MANUSCRIPT_AUDIT.md
+/results/FIGURE_INDEX.md
+/results/RESULTS_AUDIT.md
+/results/scenario_2/DATASET_AUDIT_SUMMARY.md
+/experiments/asynchronous_data_feasibility.md
+/experiments/baseline_comparison.md
+/experiments/scenario_2_temporal_gap/provenance_investigation.md
+/experiments/scenario_2_temporal_gap/rq2_decision_memo.md
+/results/figures/*.pdf
