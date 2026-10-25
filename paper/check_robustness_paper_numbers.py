@@ -17,7 +17,8 @@ ROOT = Path(__file__).resolve().parent.parent
 R = ROOT / "experiments" / "robust"
 SOURCES = [R / n for n in ("REPORT.md", "PHASE2_PREREGISTRATION.md", "PHASE3_PREREGISTRATION.md", "PHASE3_REPORT.md",
                            "PHASE4A_PREREGISTRATION.md", "PHASE4A_REPORT.md", "PHASE4ABIS_PREREGISTRATION.md",
-                           "PHASE4ABIS_REPORT.md", "PHASE4B_PREREGISTRATION.md", "PHASE4B_REPORT.md")]
+                           "PHASE4ABIS_REPORT.md", "PHASE4B_PREREGISTRATION.md", "PHASE4B_REPORT.md",
+                           "PHASE5S_PREREGISTRATION.md", "PHASE5S_REPORT.md", "PHASE5_PREREGISTRATION.md", "PHASE5_REPORT.md")]
 NUM = re.compile(r"(?<![\w.§])[+\-−]?(\d+\.\d+(?:e[+\-]\d+)?)(?![\w.])")
 
 
