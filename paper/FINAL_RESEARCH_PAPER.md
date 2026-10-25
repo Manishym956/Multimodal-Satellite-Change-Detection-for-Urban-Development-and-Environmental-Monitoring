@@ -153,8 +153,10 @@ fusion by 1×1 convolution; `jaccard_like_loss`), loaded at run time from commit
 official DS-UNet single-stream U-Net with the same recipe. Training: Adam, learning rate 5e-5, weight decay 5e-4, batch 64,
 32×32 importance crops (20 candidates weighted by changed pixels + 5), random flips and 90° rotations, 2500 steps,
 validation every 25 steps. The step budget was chosen on validation score only (390 steps: 0.354; 1000: 0.382; 2500:
-0.405; mean of 3 seeds; Appendix C, item 1). Training is bitwise deterministic on our hardware (PyTorch 2.5.1+cu124, cuDNN
-deterministic, one RTX 4060 laptop GPU). As a reference point, the official 390-step protocol on all 14 training cities
+0.405; mean of 3 seeds; Appendix C, item 1). Training runs with cuDNN determinism (PyTorch 2.5.1+cu124, one RTX 4060
+laptop GPU). Repeat training was checked twice and gave bit-identical weights: a Phase 2 run retrained after a code change,
+and Step 6's parity run, which also matched the validation history, selection and test counts of `p2_dropout_seed1`. The
+Step 7 retrain was checked more weakly, against its last logged line only (Appendix C, item 10). As a reference point, the official 390-step protocol on all 14 training cities
 gives test F1 0.557 ± 0.035 (10 seeds), below the published 0.600 [1]; we could not establish whether 0.600 is a single run
 or a mean, so our conclusions concern differences between arms under one shared protocol.
 
@@ -802,13 +804,16 @@ not used. RQ2 is answered by Step 8 on OSCD (§4.3).
 7. **Step 5.** The scene pools were redesigned before any composite was built (arm C reported as flagged); the composite build
    was interrupted twice and resumed (89 files verified, not byte for byte); a float32/float64 comparison in an export check
    was corrected. The rb99 operating point uses the pre-specified fallback.
-8. **Step 6.** No deviation. The machine slept once during training; training is deterministic and resumed unchanged.
+8. **Step 6.** No deviation. The machine slept once during training (about 21:04–21:29 IST); the runs were suspended, not
+   restarted, and all 40 finished. We did not check separately that the pause left the weights unchanged.
 9. **Steps 7 and 8 (one deviation, `0e49c87`).** The Step 7 and Step 8 evaluators lacked `model.eval()` and cuDNN determinism.
    This was found when Step 8's anchor failed on its first checkpoint, diagnosed on validation cities only, and fixed with the
    author's approval before any Step 7 or Step 8 result was saved or read; nothing else changed.
 10. **Steps 7 and 8, interruption.** Both were stopped by the author on 2026-10-23 and resumed the next day. Step 8 was re-run
     from scratch and reproduced the 16 files of the interrupted run byte for byte; in Step 7, 5 completed runs were kept and the
-    interrupted run was retrained from scratch, reproducing the interrupted log's last line.
+    interrupted run was retrained from scratch. That retrain was checked only against the interrupted log's last line: at
+    step 1925 its loss (−0.2677) and validation score (0.1623) match to the four decimals the log keeps. Weights were not
+    compared, so this is not a bit-identity check.
 11. **Error maps.** The selection rule was committed (`afa354e`) before the script first ran; no deviation.
 
 ## Appendix D: Reproducibility
@@ -818,4 +823,5 @@ Each step's pre-registration, report and audit are in `experiments/robust/`: Pha
 `2c74a73`); Step 7 (`1ff4251`, `6374275`); Step 8 (`7989248`, `f50d73b`); evaluator deviation `0e49c87`; error maps (`afa354e`,
 `b49bd87`); preliminary study per-seed results (`7cca91e`). Each pre-registration's hash table can be re-verified with
 `verify_prereg_hashes.py`, and each report is rebuilt from its summary by `build_phase{6,7,8}_report.py`, which refuses to
-build if a stated claim is not supported. Training is bitwise deterministic on the hardware used.
+build if a stated claim is not supported. Repeat training gave bit-identical weights in the two runs where this was checked
+(§3.2; Appendix C, item 10 for the weaker Step 7 check).
