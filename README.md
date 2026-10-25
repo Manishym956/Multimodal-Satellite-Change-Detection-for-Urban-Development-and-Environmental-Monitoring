@@ -1,114 +1,104 @@
 # Multimodal Satellite Change Detection for Urban Development and Environmental Monitoring
 
-## 1. Overview
+Urban change detection from Sentinel-1 SAR and Sentinel-2 optical imagery on the Onera Satellite Change Detection
+(OSCD) benchmark, with a focus on the common case where the post-change optical image is missing or cloudy.
 
-This project studies urban change detection from Sentinel-1 SAR and Sentinel-2 optical imagery on the Onera Satellite Change Detection (OSCD) benchmark.
+The manuscript is [`paper/FINAL_RESEARCH_PAPER.md`](paper/FINAL_RESEARCH_PAPER.md)
+([PDF](paper/FINAL_RESEARCH_PAPER.pdf)). It answers the five research questions of the Research Requirement Document
+(`Research Requirement Document.pdf`) and reports a robustness study on missing and cloudy optical input.
 
-The working baselines ask how well a standard U-Net can detect pixel-level change from SAR alone and from optical imagery alone. Both models use the same city split, the same loss, and the same full-image test evaluation. These runs are reference points for later multimodal experiments.
+## Research questions and findings
 
-The preprocessing follows the numeric steps used by the DS-UNet OSCD pipeline. The network itself is a single-stream U-Net written for this project. It is not the DS-UNet architecture.
+All results: official DS-UNet [Hafner et al. 2022] and U-Net baselines, 10 paired training seeds, thresholds chosen on
+validation cities only, paired t-tests with Holm correction. "No detectable difference" means the test did not detect
+one, not that there is none.
 
-## 2. Research Question
+| RQ | Question | Finding |
+| --- | --- | --- |
+| RQ1 | Does historical optical imagery improve SAR-based detection when the post-change optical image is missing? | No detectable gain over a SAR-only U-Net (+0.013 modality-dropout DS-UNet, −0.016 DS-UNet trained on SAR + historical optical) |
+| RQ2 | How does the temporal gap of the historical image affect performance? | No detectable effect over 1–18 months (slope +0.0083 F1/yr, p = 0.105); images after OSCD date 1 may already show the change, so this is not a clean test of image age |
+| RQ3 | Do VV and VH polarisations differ? | SAR-only U-Net: adding VH to VV lowers F1 (−0.044); with optical input, no detectable difference |
+| RQ4 | How does DS-UNet compare with SAR-only, optical-only and input-fusion U-Nets? | DS-UNet is best with full input (test F1 0.556 vs 0.418, 0.498, 0.495) |
+| RQ5 | Where does historical optical information help most? | Lower false-alarm rate detectably only in shrubland (1.3% of pixels) |
 
-Can historical Sentinel-2 optical imagery improve Sentinel-1 SAR-based urban change detection when synchronous optical imagery is unavailable, and how does the temporal gap between the historical optical image and target SAR observation affect detection performance?
+Robustness (paper §5): modality dropout handles a missing post-change image but not a partly cloudy one; zero-filling
+cloud pixels recovers most of the loss for the dropout model. Clouds were simulated or composited from other scenes, not
+real cloudy acquisitions.
 
-## 3. Current Research Status
+## How the study was run
 
-The repository currently contains:
+Each step (Phases 2–5, Steps 6–8 in `experiments/robust/`) follows the same procedure:
 
-- DS-UNet-faithful OSCD preprocessing for the benchmark split used in this study
-- a completed SAR-only U-Net baseline
-- a completed optical-only U-Net baseline
-- tracked experiment summaries and comparison tables under `experiments/` and `results/`
-- a draft figure gallery for the completed baseline runs
+1. A pre-registration (`PHASE*_PREREGISTRATION.md`) fixes hypotheses, analysis and a sha256 table of the code, committed
+   before any test evaluation. `verify_prereg_hashes.py` re-checks the table.
+2. Training and evaluation; anchors check that re-evaluation reproduces stored counts exactly.
+3. An independent audit (`audit_p*.py` → `p*_audit.json`).
+4. A report (`PHASE*_REPORT.md`) built from a template by `build_phase*_report.py`, which refuses to build if a stated
+   claim is not supported by the results.
 
-The codebase has moved beyond the single-stream baselines and is now oriented toward multimodal fusion and asynchronous historical-optical experiments. SAR and optical fusion is not yet completed, and the asynchronous historical-optical experiment is not yet completed.
+Deviations are listed in the paper's Appendix C. Two checkers tie the paper to the results:
+`paper/check_final_paper_numbers.py` (every number traced to a source) and `paper/check_final_paper_tables.py` (every
+table cell against the summary files).
 
-## 4. Dataset
+## Data
 
-The benchmark is OSCD: 24 cities, bitemporal Sentinel-2 imagery, and pixel-level urban change masks. The official OSCD division has 14 training cities and 10 test cities. Section 6 records how those 14 training cities are divided for the baselines.
+- **OSCD**: 24 cities, bitemporal Sentinel-2 (13 bands), pixel-level change masks; 14 training / 10 test cities. Our
+  validation split holds out 4 training cities (beihai, bercy, aguasclaras, paris).
+- **Sentinel-1 VV**: the rasters released with DS-UNet.
+- **Sentinel-1 VH, historical Sentinel-2, ESA WorldCover**: exported from Google Earth Engine with `download_gee.py`.
+- **Sentinel-2 Cloud Mask Catalogue** (Francis et al. 2020): source of the cloud shapes used in the robustness study
+  (paper §5).
 
-Sentinel-1 VV imagery aligned to those cities is used by the same preprocessing pipeline. Sentinel-2 contributes 13 optical bands at each date.
+Datasets, checkpoints and raw count arrays (`*.npz`) are not in Git. Their sha256 hashes are in
+`experiments/robust/ARTIFACT_SHA256_*.txt`; checkpoints are available on request.
 
-The imagery, masks, and Sentinel-1 GeoTIFFs are not included in this Git repository.
+## Repository layout
 
-## 5. Preprocessing
-
-`src/datasets/oscd_dataset.py` reproduces the current baseline preprocessing.
-
-- Sentinel-2 uses 13 rectified bands, divided by 10000 and clipped to [0, 1].
-- Sentinel-1 uses the VV band, resized to the change-mask width and height with bicubic interpolation.
-- This preprocessing step does not reproject coordinates.
-- Raw mask values 1 and 2 become 0 and 1 after subtracting 1.
-- Training samples random 32×32 crops.
-- Validation and the final test pass score each city on the full image.
-
-## 6. Experimental Split
-
-Four of the 14 official OSCD training cities are held out as validation. The selection is fixed with seed 42. Cities are not split by pixel or by crop.
-
-**Train:** bordeaux, nantes, rennes, saclay_e, abudhabi, cupertino, pisa, hongkong, beirut, mumbai
-
-**Validation:** beihai, bercy, aguasclaras, paris
-
-**Test:** brasilia, montpellier, norcia, rio, saclay_w, valencia, dubai, lasvegas, milano, chongqing
-
-The checkpoint is the epoch with the highest validation F1. The 10 official test cities are evaluated once after that checkpoint is selected.
-
-## 7. Baselines
-
-These figures are the current pooled test results. They are not the final answer to the research question.
-
-**SAR-only U-Net.** Input is Sentinel-1 T1 concatenated with T2 (2 channels). Best validation epoch: 21. Validation F1: 0.0662. Final pooled test F1: 0.3558.
-
-**Optical-only U-Net.** Input is Sentinel-2 T1 concatenated with T2 (26 channels). Best validation epoch: 50. Validation F1: 0.2387. Final pooled test F1: 0.2663.
-
-Both models use BCEWithLogitsLoss, Adam, seed 42, 50 epochs, batch size 64, learning rate 1e-4, and 64 crops of 32×32 per training city per epoch.
-
-## 8. Repository Structure
-
-| Path | Role |
+| Path | Contents |
 | --- | --- |
-| `src/` | Dataset loading, U-Net, metrics, and baseline training |
-| `configs/` | Reserved for experiment configuration |
-| `experiments/` | Metrics, histories, and config records for completed baselines |
-| `results/` | Summary tables, figure indexes, and result-level documentation for the tracked runs |
-| `figures/` | Prediction figures for one test city per baseline |
-| `paper/` | Reserved for manuscript material |
-| `notebooks/` | Reserved for notebooks |
+| `src/datasets/`, `src/models/`, `src/training/`, `src/evaluation/` | Data loading, models, training (`train_robust.py`, `train_rrd.py`) and metrics |
+| `eval_phase*.py`, `analyze_phase*.py`, `audit_p*.py`, `build_phase*_report.py` | Per-step evaluation, analysis, audit and report builders |
+| `smoke_phase*.py` | Validation-only smoke tests run before each step |
+| `make_error_maps.py` | Qualitative error maps (best, median and worst test city) |
+| `experiments/robust/` | Pre-registrations, reports, audits, per-run results, summaries |
+| `experiments/` (other folders) | Preliminary study (paper Appendix A): baselines and Transformer runs |
+| `logs/robust/` | Run scripts (`p*_run.sh`) and their logs |
+| `paper/` | Manuscript, PDF and the paper checkers |
+| `figures/paper/` | Figures used by the manuscript |
+| `docs/final/` | Research plan, data feasibility report and literature review |
 
-`datasets/`, `checkpoints/`, `.venv/`, `outputs/`, and large runtime artifacts are excluded from Git.
+## Setup
 
-## 9. Environment
+- Python 3.11, PyTorch 2.5.1+cu124, one NVIDIA RTX 4060 laptop GPU; `pip install -r requirements.txt` into `.venv`.
+- The DS-UNet network and loss are loaded at run time from a clone of
+  [SebastianHafner/DS_UNet](https://github.com/SebastianHafner/DS_UNet) at commit `8bfa4be`, expected at
+  `../../repos/2/DS_UNet` relative to this folder.
+- Earth Engine exports use a separate environment `.venv_gee`:
+  `.venv_gee/Scripts/python.exe download_gee.py s1|s2|wc --project <gcp-project>`.
 
-The completed baselines were trained with Python 3.11 and PyTorch 2.5.1+cu124 on a CUDA-enabled NVIDIA GeForce RTX 4060 Laptop GPU.
+## Reproduction
 
-Install the pinned packages from `requirements.txt` into a virtual environment before running the commands below.
+Each step has a run script in `logs/robust/` that checks the smoke test and the pre-registered hashes, then runs
+evaluation, analysis and audit, for example (Step 8):
 
-## 10. Reproduction
-
-From the project directory, with the local virtual environment:
-
-```text
-.venv\Scripts\python.exe src\training\train_sar_baseline.py --epochs 50 --batch-size 64 --lr 1e-4 --seed 42 --crop-size 32 --crops-per-city 64
+```bash
+bash logs/robust/p8_run.sh > logs/robust/p8_run.log 2>&1
+.venv/Scripts/python.exe build_phase8_report.py
 ```
 
-```text
-.venv\Scripts\python.exe src\training\train_optical_baseline.py --epochs 50 --batch-size 64 --lr 1e-4 --seed 42 --crop-size 32 --crops-per-city 64
+The Phase 1–2 commands are listed in `experiments/robust/REPORT.md` §8. The run scripts `cd` into this project's
+absolute path on the original machine; edit that line before running elsewhere. Training is run with cuDNN determinism;
+repeat training gave bit-identical weights where checked (paper §3.2).
+
+To check the manuscript against the results:
+
+```bash
+.venv/Scripts/python.exe paper/check_final_paper_numbers.py
+.venv/Scripts/python.exe paper/check_final_paper_tables.py
 ```
 
-These commands expect the local OSCD and Sentinel-1 files described above. Those files are not in Git.
+## Citation
 
-## 11. Data availability
-
-Large datasets, model checkpoints, the Python virtual environment, and runtime output directories are intentionally left out of Git. The tracked experiment tables and figures record the completed baseline runs. This README does not provide dataset download URLs.
-
-## 12. Research roadmap
-
-The following work is planned and is not implemented yet:
-
-- SAR and optical fusion
-- asynchronous fusion that uses historical optical imagery with SAR
-- experiments on the temporal gap between the optical date and the SAR observation
-- SAR polarization experiments, where the available Sentinel-1 bands support them
-- ablation studies
+Paper in preparation. DS-UNet: Hafner, S., Nascetti, A., Azizpour, H., & Ban, Y. (2022). Sentinel-1 and Sentinel-2 data
+fusion for urban change detection using a dual stream U-Net. *IEEE GRSL, 19*, 4019907.
+OSCD: Daudt, R. C., Le Saux, B., Boulch, A., & Gousseau, Y. (2018). *Proc. IEEE IGARSS*, 2115–2118.
