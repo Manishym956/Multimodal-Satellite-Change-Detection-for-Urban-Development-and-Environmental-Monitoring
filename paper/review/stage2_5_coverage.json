@@ -1,0 +1,2107 @@
+{
+  "candidate_unregistered_count": 24,
+  "candidates": [
+    {
+      "candidate_id": "CAND-B3489-3587-97d458a27e0f",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 3587,
+      "line": 46,
+      "matched_claim_ids": [
+        "C001"
+      ],
+      "sentence_index": 1,
+      "start_byte": 3489,
+      "text": "radar (SAR) is unaffected by cloud, which motivates SAR–optical fusion for change detection [1].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 3586,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C001"
+          ],
+          "start_byte": 3583,
+          "text": "[1]",
+          "trigger_id": "TRIG-B3583-3586-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B3699-3730-f4993da4ed66",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 3730,
+      "line": 47,
+      "matched_claim_ids": [
+        "C002"
+      ],
+      "sentence_index": 3,
+      "start_byte": 3699,
+      "text": "[2] showed that, for one change",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 3702,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C002"
+          ],
+          "start_byte": 3699,
+          "text": "[2]",
+          "trigger_id": "TRIG-B3699-3702-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B5002-5124-ad30f422e3dd",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 5124,
+      "line": 65,
+      "matched_claim_ids": [
+        "C003"
+      ],
+      "sentence_index": 1,
+      "start_byte": 5002,
+      "text": "We answer them with the official DS-UNet code [1] on OSCD [3] enriched with Sentinel-1, in a measurement study rather than",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 5051,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C003"
+          ],
+          "start_byte": 5048,
+          "text": "[1]",
+          "trigger_id": "TRIG-B5048-5051-65de8fdc8769"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 5063,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C003"
+          ],
+          "start_byte": 5060,
+          "text": "[3]",
+          "trigger_id": "TRIG-B5060-5063-6a2c47ddc8d3"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B6262-6298-0cfb835ddaea",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 6298,
+      "line": 76,
+      "matched_claim_ids": [
+        "C004"
+      ],
+      "sentence_index": 3,
+      "start_byte": 6262,
+      "text": "[2] in a different setting, with the",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 6265,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C004"
+          ],
+          "start_byte": 6262,
+          "text": "[2]",
+          "trigger_id": "TRIG-B6262-6265-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B6785-6900-0657db42d42e",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 6900,
+      "line": 82,
+      "matched_claim_ids": [
+        "C005"
+      ],
+      "sentence_index": 1,
+      "start_byte": 6785,
+      "text": "[4]; every checkpoint and threshold is selected on validation cities only; and the 10 seeds are treated as training",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 6788,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C005"
+          ],
+          "start_byte": 6785,
+          "text": "[4]",
+          "trigger_id": "TRIG-B6785-6788-4019ca728be3"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7125-7210-96d15d889afc",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7210,
+      "line": 88,
+      "matched_claim_ids": [
+        "C006"
+      ],
+      "sentence_index": 1,
+      "start_byte": 7125,
+      "text": "images [5], with U-Net [6] variants as common backbones; reviews [7] cover the field.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7135,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C006"
+          ],
+          "start_byte": 7132,
+          "text": "[5]",
+          "trigger_id": "TRIG-B7132-7135-3a0addc5fc71"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7151,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C006"
+          ],
+          "start_byte": 7148,
+          "text": "[6]",
+          "trigger_id": "TRIG-B7148-7151-1fc1488a1c36"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7193,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C006"
+          ],
+          "start_byte": 7190,
+          "text": "[7]",
+          "trigger_id": "TRIG-B7190-7193-575b42ec809f"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7225-7247-54e2f7a37af8",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7247,
+      "line": 88,
+      "matched_claim_ids": [
+        "C007"
+      ],
+      "sentence_index": 3,
+      "start_byte": 7225,
+      "text": "[1] fuse Sentinel-1 VV",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7228,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C007"
+          ],
+          "start_byte": 7225,
+          "text": "[1]",
+          "trigger_id": "TRIG-B7225-7228-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7497-7610-435d39db62c9",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7610,
+      "line": 91,
+      "matched_claim_ids": [
+        "C008"
+      ],
+      "sentence_index": 1,
+      "start_byte": 7497,
+      "text": "[8] fuse co-registered Sentinel-1 and Sentinel-2 in Siamese networks for supervised change detection, Saha et al.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7500,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C008"
+          ],
+          "start_byte": 7497,
+          "text": "[8]",
+          "trigger_id": "TRIG-B7497-7500-1e1cb504289b"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7611-7620-e90abb4c2c65",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7620,
+      "line": 91,
+      "matched_claim_ids": [
+        "C009"
+      ],
+      "sentence_index": 2,
+      "start_byte": 7611,
+      "text": "[9] study",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7614,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C009"
+          ],
+          "start_byte": 7611,
+          "text": "[9]",
+          "trigger_id": "TRIG-B7611-7614-87434143bc23"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7622-7743-6ca83e410946",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7743,
+      "line": 92,
+      "matched_claim_ids": [
+        "C010"
+      ],
+      "sentence_index": 1,
+      "start_byte": 7622,
+      "text": "self-supervised change detection across different sensors, and DSNUNet [10] combines Sentinel-1 and Sentinel-2 for forest",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7697,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C010"
+          ],
+          "start_byte": 7693,
+          "text": "[10]",
+          "trigger_id": "TRIG-B7693-7697-984fd3ac40ce"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B7906-7964-713019222960",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 7964,
+      "line": 95,
+      "matched_claim_ids": [
+        "C011"
+      ],
+      "sentence_index": 2,
+      "start_byte": 7906,
+      "text": "[2] monitor construction-ready bare land in Guangzhou with",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 7909,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C011"
+          ],
+          "start_byte": 7906,
+          "text": "[2]",
+          "trigger_id": "TRIG-B7906-7909-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B8996-9025-445d6ab52f0b",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9025,
+      "line": 106,
+      "matched_claim_ids": [
+        "C012"
+      ],
+      "sentence_index": 1,
+      "start_byte": 8996,
+      "text": "for gesture recognition [11].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9024,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C012"
+          ],
+          "start_byte": 9020,
+          "text": "[11]",
+          "trigger_id": "TRIG-B9020-9024-1a4631e1092b"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9026-9112-7c9d7df0bdcb",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9112,
+      "line": 106,
+      "matched_claim_ids": [
+        "C013"
+      ],
+      "sentence_index": 2,
+      "start_byte": 9026,
+      "text": "Hafner and Ban [12] address multi-temporal urban mapping with a partly missing optical",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9045,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C013"
+          ],
+          "start_byte": 9041,
+          "text": "[12]",
+          "trigger_id": "TRIG-B9041-9045-03d13131525d"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9239-9294-0ea01046885a",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9294,
+      "line": 108,
+      "matched_claim_ids": [
+        "C014"
+      ],
+      "sentence_index": 1,
+      "start_byte": 9239,
+      "text": "removal reconstructs cloud-free Sentinel-2 images [13].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9293,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C014"
+          ],
+          "start_byte": 9289,
+          "text": "[13]",
+          "trigger_id": "TRIG-B9289-9293-7b6ebd7ab941"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9356-9473-ac63243cdbfa",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9473,
+      "line": 109,
+      "matched_claim_ids": [
+        "C015"
+      ],
+      "sentence_index": 1,
+      "start_byte": 9356,
+      "text": "Catalogue [14]; operational detectors such as s2cloudless [15] are imperfect, and an intercomparison of cloud-masking",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9370,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C015"
+          ],
+          "start_byte": 9366,
+          "text": "[14]",
+          "trigger_id": "TRIG-B9366-9370-5ab25d13af9a"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9418,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C015"
+          ],
+          "start_byte": 9414,
+          "text": "[15]",
+          "trigger_id": "TRIG-B9414-9418-6d4d53ea24c2"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9475-9558-a35fbe416258",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9558,
+      "line": 110,
+      "matched_claim_ids": [
+        "C016"
+      ],
+      "sentence_index": 1,
+      "start_byte": 9475,
+      "text": "algorithms documents large differences between methods and reference datasets [16].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9557,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C016"
+          ],
+          "start_byte": 9553,
+          "text": "[16]",
+          "trigger_id": "TRIG-B9553-9557-7e60ca026fbf"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9562-9684-ba5d3ba18a94",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9684,
+      "line": 112,
+      "matched_claim_ids": [
+        "C017"
+      ],
+      "sentence_index": 1,
+      "start_byte": 9562,
+      "text": "**Evaluation practice.** Seed variance can reverse model rankings on small benchmarks [17]; Appendix A shows this on OSCD.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9652,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C017"
+          ],
+          "start_byte": 9648,
+          "text": "[17]",
+          "trigger_id": "TRIG-B9648-9652-f78af0d19967"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9740-9846-14beeaa2da28",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9846,
+      "line": 118,
+      "matched_claim_ids": [
+        "C018"
+      ],
+      "sentence_index": 1,
+      "start_byte": 9740,
+      "text": "**OSCD.** OSCD [3] provides 24 bitemporal Sentinel-2 L1C image pairs with pixel-level urban change labels.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9758,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C018"
+          ],
+          "start_byte": 9755,
+          "text": "[3]",
+          "trigger_id": "TRIG-B9755-9758-6a2c47ddc8d3"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B9862-9984-06895572331a",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 9984,
+      "line": 119,
+      "matched_claim_ids": [
+        "C019"
+      ],
+      "sentence_index": 1,
+      "start_byte": 9862,
+      "text": "bands, divided by 10000 and clipped to [0, 1], and a holdout protocol: 10 of the 14 official training cities for training,",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 9907,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C019"
+          ],
+          "start_byte": 9901,
+          "text": "[0, 1]",
+          "trigger_id": "TRIG-B9901-9907-b0b1500df718"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B10416-10539-127c46f8d7bf",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 10539,
+      "line": 125,
+      "matched_claim_ids": [
+        "C020"
+      ],
+      "sentence_index": 1,
+      "start_byte": 10416,
+      "text": "**Sentinel-1 VV (Steps 2–6, 8).** The VV rasters released with DS-UNet [1], one or more relative orbits per city, resized",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 10492,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C020"
+          ],
+          "start_byte": 10489,
+          "text": "[1]",
+          "trigger_id": "TRIG-B10489-10492-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B10666-10785-c6bb340ddeec",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 10785,
+      "line": 128,
+      "matched_claim_ids": [
+        "C021"
+      ],
+      "sentence_index": 1,
+      "start_byte": 10666,
+      "text": "**Sentinel-1 VV and VH (Step 7).** A new Google Earth Engine [18] export of Sentinel-1 GRD (IW mode) with DS-UNet's own",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 10731,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C021"
+          ],
+          "start_byte": 10727,
+          "text": "[18]",
+          "trigger_id": "TRIG-B10727-10731-de1fcbf20dd1"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B12321-12435-22cf1b3b9c00",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 12435,
+      "line": 144,
+      "matched_claim_ids": [
+        "C022"
+      ],
+      "sentence_index": 1,
+      "start_byte": 12321,
+      "text": "**Land cover (Steps 7–8).** ESA WorldCover 2020 v100 [19] on the same grid, resized to the label grid by nearest",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 12380,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C022"
+          ],
+          "start_byte": 12376,
+          "text": "[19]",
+          "trigger_id": "TRIG-B12376-12380-7dbffa955aec"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B12793-12917-5926c16209e8",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 12917,
+      "line": 151,
+      "matched_claim_ids": [
+        "C023"
+      ],
+      "sentence_index": 1,
+      "start_byte": 12793,
+      "text": "The network and loss are the official DS-UNet files (`networks.DualStreamUNet`, topology [64, 128, 256, 512], decision-level",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 12901,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C023"
+          ],
+          "start_byte": 12882,
+          "text": "[64, 128, 256, 512]",
+          "trigger_id": "TRIG-B12882-12901-7677e16d6991"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B12919-13012-9cf6cf1982e3",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 13012,
+      "line": 152,
+      "matched_claim_ids": [
+        "C024"
+      ],
+      "sentence_index": 1,
+      "start_byte": 12919,
+      "text": "fusion by 1×1 convolution; `jaccard_like_loss`), loaded at run time from commit 8bfa4be [1].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 13011,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C024"
+          ],
+          "start_byte": 13008,
+          "text": "[1]",
+          "trigger_id": "TRIG-B13008-13011-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B13945-14069-1cf818e96df1",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 14069,
+      "line": 160,
+      "matched_claim_ids": [
+        "C025"
+      ],
+      "sentence_index": 1,
+      "start_byte": 13945,
+      "text": "gives test F1 0.557 ± 0.035 (10 seeds), below the published 0.600 [1]; we could not establish whether 0.600 is a single run",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 14015,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C025"
+          ],
+          "start_byte": 14012,
+          "text": "[1]",
+          "trigger_id": "TRIG-B14012-14015-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B16115-16237-92ed90c07896",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 16237,
+      "line": 190,
+      "matched_claim_ids": [
+        "C026"
+      ],
+      "sentence_index": 1,
+      "start_byte": 16115,
+      "text": "correction [4]), reported with the mean difference, its 95% CI, d_z, the number of seeds with a positive difference, and a",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 16129,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C026"
+          ],
+          "start_byte": 16126,
+          "text": "[4]",
+          "trigger_id": "TRIG-B16126-16129-4019ca728be3"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B16239-16326-62932f99b5c0",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 16326,
+      "line": 191,
+      "matched_claim_ids": [
+        "C027"
+      ],
+      "sentence_index": 1,
+      "start_byte": 16239,
+      "text": "Holm-corrected Wilcoxon signed-rank test (smallest attainable p with n = 10 is 0.0020).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 16314,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C027"
+          ],
+          "start_byte": 16308,
+          "text": "n = 10",
+          "trigger_id": "TRIG-B16308-16314-6af833f02fc8"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B16377-16485-3bfdf8d044f8",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 16485,
+      "line": 192,
+      "matched_claim_ids": [
+        "C028"
+      ],
+      "sentence_index": 2,
+      "start_byte": 16377,
+      "text": "Labels are \"X better/lower\" if Holm p < 0.05 with that sign, otherwise \"no detectable difference\"; a null is",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 16421,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C028"
+          ],
+          "start_byte": 16413,
+          "text": "p < 0.05",
+          "trigger_id": "TRIG-B16413-16421-1b25e149c9c6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B19916-19920-1d289980a563",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 19920,
+      "line": 235,
+      "matched_claim_ids": [
+        "C029"
+      ],
+      "sentence_index": 2,
+      "start_byte": 19916,
+      "text": "[1].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 19919,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C029"
+          ],
+          "start_byte": 19916,
+          "text": "[1]",
+          "trigger_id": "TRIG-B19916-19919-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B24724-24773-86a26adfec4a",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 24773,
+      "line": 294,
+      "matched_claim_ids": [
+        "C030"
+      ],
+      "sentence_index": 2,
+      "start_byte": 24724,
+      "text": "[2] (F1 83.99% at 1 month to 78.31% at 12 months,",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 24727,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C030"
+          ],
+          "start_byte": 24724,
+          "text": "[2]",
+          "trigger_id": "TRIG-B24724-24727-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B28543-28556-31dca420db43",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 28556,
+      "line": 339,
+      "matched_claim_ids": [
+        "C031"
+      ],
+      "sentence_index": 3,
+      "start_byte": 28543,
+      "text": "[2] for VH on",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 28546,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C031"
+          ],
+          "start_byte": 28543,
+          "text": "[2]",
+          "trigger_id": "TRIG-B28543-28546-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B32276-32400-9e541111c2e1",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 32400,
+      "line": 387,
+      "matched_claim_ids": [
+        "C032"
+      ],
+      "sentence_index": 1,
+      "start_byte": 32276,
+      "text": "Mask Catalogue [14], one per city and level, adjusted to cover exactly 10 / 30 / 60% of the city's pixels; inside it, all 13",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 32295,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C032"
+          ],
+          "start_byte": 32291,
+          "text": "[14]",
+          "trigger_id": "TRIG-B32291-32295-5ab25d13af9a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B33151-33267-d309d5654321",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 33267,
+      "line": 394,
+      "matched_claim_ids": [
+        "C033"
+      ],
+      "sentence_index": 1,
+      "start_byte": 33151,
+      "text": "composites; validation and test never share a scene), masked by s2cloudless 1.7.3 [15] at operating points chosen on",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 33237,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C033"
+          ],
+          "start_byte": 33233,
+          "text": "[15]",
+          "trigger_id": "TRIG-B33233-33237-6d4d53ea24c2"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B36845-36965-93da9160b3e8",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 36965,
+      "line": 443,
+      "matched_claim_ids": [
+        "C034"
+      ],
+      "sentence_index": 1,
+      "start_byte": 36845,
+      "text": "Replacing the cloud values by zero under the true mask improves F1 for both arms at every level (Holm p < 0.05 for all 6",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 36955,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C034"
+          ],
+          "start_byte": 36947,
+          "text": "p < 0.05",
+          "trigger_id": "TRIG-B36947-36955-1b25e149c9c6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B38038-38158-117edb70e729",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 38158,
+      "line": 462,
+      "matched_claim_ids": [
+        "C035"
+      ],
+      "sentence_index": 1,
+      "start_byte": 38038,
+      "text": "For B at 30% cover, each imperfect mask against the oracle mask (Holm over 9); every error type costs F1 (Holm p < 0.05,",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 38157,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C035"
+          ],
+          "start_byte": 38149,
+          "text": "p < 0.05",
+          "trigger_id": "TRIG-B38149-38157-1b25e149c9c6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B45670-45705-65cf178a0c14",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 45705,
+      "line": 561,
+      "matched_claim_ids": [
+        "C036"
+      ],
+      "sentence_index": 1,
+      "start_byte": 45670,
+      "text": "−0.083, −0.032; Holm p < 0.05).",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 45703,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C036"
+          ],
+          "start_byte": 45695,
+          "text": "p < 0.05",
+          "trigger_id": "TRIG-B45695-45703-1b25e149c9c6"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B46567-46653-f0bc40ef27e4",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 46653,
+      "line": 572,
+      "matched_claim_ids": [
+        "C037"
+      ],
+      "sentence_index": 3,
+      "start_byte": 46567,
+      "text": "[2] differs in change type, region, sensor configuration and architecture, so our null",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 46570,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C037"
+          ],
+          "start_byte": 46567,
+          "text": "[2]",
+          "trigger_id": "TRIG-B46567-46570-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B47990-48040-977bc9723191",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 48040,
+      "line": 588,
+      "matched_claim_ids": [
+        "C038"
+      ],
+      "sentence_index": 2,
+      "start_byte": 47990,
+      "text": "[1]: SAR helps only when it is encoded separately.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 47993,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C038"
+          ],
+          "start_byte": 47990,
+          "text": "[1]",
+          "trigger_id": "TRIG-B47990-47993-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B49668-49777-a1941ff83693",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 49777,
+      "line": 608,
+      "matched_claim_ids": [
+        "C039"
+      ],
+      "sentence_index": 1,
+      "start_byte": 49668,
+      "text": "- **One benchmark, few cities.** OSCD has 24 cities; results use 9 or 10 test cities and 4 validation cities.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 49740,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C039"
+          ],
+          "start_byte": 49735,
+          "text": "or 10",
+          "trigger_id": "TRIG-B49735-49740-2d17ed6a16d9"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B50294-50415-0479a9d66f0c",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 50415,
+      "line": 614,
+      "matched_claim_ids": [
+        "C040"
+      ],
+      "sentence_index": 1,
+      "start_byte": 50294,
+      "text": "through false-alarm rates by WorldCover class; WorldCover (2020) post-dates OSCD date 2, so classes are a stratification,",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 50358,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C040"
+          ],
+          "start_byte": 50341,
+          "text": "WorldCover (2020)",
+          "trigger_id": "TRIG-B50341-50358-84c15df5511f"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B51116-51203-7f3f35238da7",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 51203,
+      "line": 622,
+      "matched_claim_ids": [
+        "C041"
+      ],
+      "sentence_index": 1,
+      "start_byte": 51116,
+      "text": "per arm; attention-based or reconstruction-based models [2, 12] may behave differently.",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 51179,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C041"
+          ],
+          "start_byte": 51172,
+          "text": "[2, 12]",
+          "trigger_id": "TRIG-B51172-51179-41d9bfa2e9cf"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B51568-51572-1d289980a563",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 51572,
+      "line": 626,
+      "matched_claim_ids": [
+        "C042"
+      ],
+      "sentence_index": 1,
+      "start_byte": 51568,
+      "text": "[1].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 51571,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C042"
+          ],
+          "start_byte": 51568,
+          "text": "[1]",
+          "trigger_id": "TRIG-B51568-51571-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B52394-52518-569aadc885db",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 52518,
+      "line": 635,
+      "matched_claim_ids": [
+        "C043"
+      ],
+      "sentence_index": 1,
+      "start_byte": 52394,
+      "text": "- **Baseline gap.** Our reproduction of the official DS-UNet protocol (0.557 ± 0.035) is below the published 0.600 [1], and",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 52513,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C043"
+          ],
+          "start_byte": 52510,
+          "text": "[1]",
+          "trigger_id": "TRIG-B52510-52513-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B54555-54678-05217e1fd2ab",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 54678,
+      "line": 660,
+      "matched_claim_ids": [
+        "C044"
+      ],
+      "sentence_index": 1,
+      "start_byte": 54555,
+      "text": "**Data availability.** OSCD [3] and the Cloud Mask Catalogue [14] are public; the Sentinel-1 VV rasters are from the public",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 54586,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C044"
+          ],
+          "start_byte": 54583,
+          "text": "[3]",
+          "trigger_id": "TRIG-B54583-54586-6a2c47ddc8d3"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 54620,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C044"
+          ],
+          "start_byte": 54616,
+          "text": "[14]",
+          "trigger_id": "TRIG-B54616-54620-5ab25d13af9a"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B54680-54803-8cacd64d3f80",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 54803,
+      "line": 661,
+      "matched_claim_ids": [
+        "C045"
+      ],
+      "sentence_index": 1,
+      "start_byte": 54680,
+      "text": "DS-UNet repository [1]; Sentinel-1, Sentinel-2 and ESA WorldCover [19] were exported from Google Earth Engine [18] with the",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 54702,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C045"
+          ],
+          "start_byte": 54699,
+          "text": "[1]",
+          "trigger_id": "TRIG-B54699-54702-65de8fdc8769"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 54750,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C045"
+          ],
+          "start_byte": 54746,
+          "text": "[19]",
+          "trigger_id": "TRIG-B54746-54750-7dbffa955aec"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 54794,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C045"
+          ],
+          "start_byte": 54790,
+          "text": "[18]",
+          "trigger_id": "TRIG-B54790-54794-de1fcbf20dd1"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B56157-56210-767cb71cf588",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 56210,
+      "line": 683,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 56157,
+      "text": "[1] Hafner, S., Nascetti, A., Azizpour, H., & Ban, Y.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 56160,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 56157,
+          "text": "[1]",
+          "trigger_id": "TRIG-B56157-56160-65de8fdc8769"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B56415-56465-ab66daa3eab0",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 56465,
+      "line": 685,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 56415,
+      "text": "[2] Song, W., Lv, Q., Ding, Z., Hong, S., & Qi, Z.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 56418,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 56415,
+          "text": "[2]",
+          "trigger_id": "TRIG-B56415-56418-623bfc2eb2b4"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B56710-56723-dde4a681d150",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 56723,
+      "line": 687,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 56710,
+      "text": "[3] Daudt, R.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 56713,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 56710,
+          "text": "[3]",
+          "trigger_id": "TRIG-B56710-56713-6a2c47ddc8d3"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B56956-56968-705f606c1567",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 56968,
+      "line": 689,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 56956,
+      "text": "[4] Holm, S.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 56959,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 56956,
+          "text": "[4]",
+          "trigger_id": "TRIG-B56956-56959-4019ca728be3"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B57090-57103-85ec980f92e4",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 57103,
+      "line": 691,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 57090,
+      "text": "[5] Daudt, R.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 57093,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 57090,
+          "text": "[5]",
+          "trigger_id": "TRIG-B57090-57093-3a0addc5fc71"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B57281-57325-9f1e80799697",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 57325,
+      "line": 693,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 57281,
+      "text": "[6] Ronneberger, O., Fischer, P., & Brox, T.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 57284,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 57281,
+          "text": "[6]",
+          "trigger_id": "TRIG-B57281-57284-1fc1488a1c36"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B57482-57540-5fb805ee3899",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 57540,
+      "line": 695,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 57482,
+      "text": "[7] Shafique, A., Cao, G., Khan, Z., Asad, M., & Aslam, M.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 57485,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 57482,
+          "text": "[7]",
+          "trigger_id": "TRIG-B57482-57485-575b42ec809f"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B57690-57723-4b464c6ac219",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 57723,
+      "line": 697,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 57690,
+      "text": "[8] Ebel, P., Saha, S., & Zhu, X.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 57693,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 57690,
+          "text": "[8]",
+          "trigger_id": "TRIG-B57690-57693-1e1cb504289b"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B57980-58013-9190bfde5537",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 58013,
+      "line": 699,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 57980,
+      "text": "[9] Saha, S., Ebel, P., & Zhu, X.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 57983,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 57980,
+          "text": "[9]",
+          "trigger_id": "TRIG-B57980-57983-87434143bc23"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B58183-58246-311c6dbcd52b",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 58246,
+      "line": 701,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 58183,
+      "text": "[10] Jiang, J., Xing, Y., Wei, W., Yan, E., Xiang, J., & Mo, D.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 58187,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 58183,
+          "text": "[10]",
+          "trigger_id": "TRIG-B58183-58187-984fd3ac40ce"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B58425-58464-dfbe54b3b75c",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 58464,
+      "line": 703,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 58425,
+      "text": "[11] Neverova, N., Wolf, C., Taylor, G.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 58429,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 58425,
+          "text": "[11]",
+          "trigger_id": "TRIG-B58425-58429-1a4631e1092b"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B58630-58656-a4b7e3f93cb7",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 58656,
+      "line": 705,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 58630,
+      "text": "[12] Hafner, S., & Ban, Y.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 58634,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 58630,
+          "text": "[12]",
+          "trigger_id": "TRIG-B58630-58634-03d13131525d"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B58854-58904-799c1cf17f0d",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 58904,
+      "line": 707,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 58854,
+      "text": "[13] Ebel, P., Meraner, A., Schmitt, M., & Zhu, X.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 58858,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 58854,
+          "text": "[13]",
+          "trigger_id": "TRIG-B58854-58858-7b6ebd7ab941"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B59123-59188-118ea55ae499",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 59188,
+      "line": 709,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 59123,
+      "text": "[14] Francis, A., Mrziglod, J., Sidiropoulos, P., & Muller, J.-P.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 59127,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 59123,
+          "text": "[14]",
+          "trigger_id": "TRIG-B59123-59127-5ab25d13af9a"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B59292-59331-e25006d63074",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 59331,
+      "line": 711,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 59292,
+      "text": "[15] Sinergise EO research team (2024).",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 59296,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 59292,
+          "text": "[15]",
+          "trigger_id": "TRIG-B59292-59296-6d4d53ea24c2"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B59486-59828-4b54c2aab4e9",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 59828,
+      "line": 713,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 59486,
+      "text": "[16] Skakun, S., Wevers, J., Brockmann, C., Doxani, G., Aleksandrov, M., Batič, M., Frantz, D., Gascon, F., Gómez-Chova, L., Hagolle, O., López-Puigdollers, D., Louis, J., Lubej, M., Mateo-García, G., Osman, J., Peressutti, D., Pflug, B., Puc, J., Richter, R., Roger, J.-C., Scaramuzza, P., Vermote, E., Vesel, N., Zupanc, A., & Žust, L.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 59490,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 59486,
+          "text": "[16]",
+          "trigger_id": "TRIG-B59486-59490-7e60ca026fbf"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B60044-60139-79024c7cefd2",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 60139,
+      "line": 715,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 60044,
+      "text": "[17] Bouthillier, X., Delaunay, P., Bronzi, M., Trofimov, A., Nichyporuk, B., Szeto, J., et al.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 60048,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 60044,
+          "text": "[17]",
+          "trigger_id": "TRIG-B60044-60048-f78af0d19967"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B60268-60350-f54ea04069a0",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 60350,
+      "line": 717,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 60268,
+      "text": "[18] Gorelick, N., Hancher, M., Dixon, M., Ilyushchenko, S., Thau, D., & Moore, R.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 60272,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 60268,
+          "text": "[18]",
+          "trigger_id": "TRIG-B60268-60272-de1fcbf20dd1"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B60522-60545-42bec9cf04b7",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 60545,
+      "line": 719,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 60522,
+      "text": "[19] Zanaga, D., et al.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 60526,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 60522,
+          "text": "[19]",
+          "trigger_id": "TRIG-B60522-60526-7dbffa955aec"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B60635-60734-4a4c5692ab7b",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 60734,
+      "line": 721,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 60635,
+      "text": "[20] Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., et al.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 60639,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 60635,
+          "text": "[20]",
+          "trigger_id": "TRIG-B60635-60639-0fa8946a838f"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B60889-60905-558fb4b2566e",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 60905,
+      "line": 723,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 60889,
+      "text": "[21] Bandara, W.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 60893,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 60889,
+          "text": "[21]",
+          "trigger_id": "TRIG-B60889-60893-2653c0ef2789"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B61081-61113-4c63afa561ed",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 61113,
+      "line": 725,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 61081,
+      "text": "[22] Chen, H., Qi, Z., & Shi, Z.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 61085,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 61081,
+          "text": "[22]",
+          "trigger_id": "TRIG-B61081-61085-c1c5e738970e"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B61290-61377-2fcc32709642",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 61377,
+      "line": 727,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 61290,
+      "text": "[23] Van Etten, A., Hogan, D., Martinez Manso, J., Shermeyer, J., Weir, N., & Lewis, R.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 61294,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 61290,
+          "text": "[23]",
+          "trigger_id": "TRIG-B61290-61294-aa62c91b977d"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B61483-61511-8252ebc36728",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "candidate_unregistered",
+      "end_byte": 61511,
+      "line": 729,
+      "matched_claim_ids": [],
+      "sentence_index": 1,
+      "start_byte": 61483,
+      "text": "[24] Schmitt, M., Hughes, L.",
+      "triggers": [
+        {
+          "coverage_state": "trigger_unregistered",
+          "end_byte": 61487,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [],
+          "start_byte": 61483,
+          "text": "[24]",
+          "trigger_id": "TRIG-B61483-61487-4a92f71ecc2b"
+        }
+      ],
+      "uncovered_trigger_count": 1
+    },
+    {
+      "candidate_id": "CAND-B62384-62505-6e736e98af2e",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 62505,
+      "line": 739,
+      "matched_claim_ids": [
+        "C046"
+      ],
+      "sentence_index": 1,
+      "start_byte": 62384,
+      "text": "includes two lightweight Transformers [20] (1.16–1.36M parameters), motivated by Transformer change detectors [21, 22].",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 62426,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C046"
+          ],
+          "start_byte": 62422,
+          "text": "[20]",
+          "trigger_id": "TRIG-B62422-62426-0fa8946a838f"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 62504,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C046"
+          ],
+          "start_byte": 62496,
+          "text": "[21, 22]",
+          "trigger_id": "TRIG-B62496-62504-c56cd5de2d59"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B67375-67488-731dc30b83f8",
+      "candidate_kinds": [
+        "quantitative_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 67488,
+      "line": 797,
+      "matched_claim_ids": [
+        "C047"
+      ],
+      "sentence_index": 1,
+      "start_byte": 67375,
+      "text": "selected thresholds varied widely between seeds (0.525–0.725 for cross-attention), and with n = 3 none of these",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 67474,
+          "kind": "quantitative_sentence",
+          "matched_claim_ids": [
+            "C047"
+          ],
+          "start_byte": 67469,
+          "text": "n = 3",
+          "trigger_id": "TRIG-B67469-67474-c9b396c21cbb"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    },
+    {
+      "candidate_id": "CAND-B67874-67995-3d3bea5d4654",
+      "candidate_kinds": [
+        "citation_bearing_sentence"
+      ],
+      "coverage_state": "registry_span_matched",
+      "end_byte": 67995,
+      "line": 804,
+      "matched_claim_ids": [
+        "C048"
+      ],
+      "sentence_index": 1,
+      "start_byte": 67874,
+      "text": "over SpaceNet 7 [23] sites (distinct from SEN12MS [24]), with proxy labels from building footprints and 4 test sites; all",
+      "triggers": [
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 67894,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C048"
+          ],
+          "start_byte": 67890,
+          "text": "[23]",
+          "trigger_id": "TRIG-B67890-67894-aa62c91b977d"
+        },
+        {
+          "coverage_state": "registry_span_matched",
+          "end_byte": 67928,
+          "kind": "citation_bearing_sentence",
+          "matched_claim_ids": [
+            "C048"
+          ],
+          "start_byte": 67924,
+          "text": "[24]",
+          "trigger_id": "TRIG-B67924-67928-4a92f71ecc2b"
+        }
+      ],
+      "uncovered_trigger_count": 0
+    }
+  ],
+  "draft_raw_sha256": "4108bd34120e524cbb13a3de80500d5306818fb7174c0de6e2c3ff8cf6f14f45",
+  "mechanical_candidate_scope": [
+    "citation_bearing_sentence",
+    "quantitative_sentence"
+  ],
+  "registered_claims_outside_candidate_classes": [],
+  "registry_claim_count": 48,
+  "registry_raw_sha256": "e44ba5f2c188341ad5c8b16ca1dca7b82aebc69e00556002499b957f9585d416",
+  "registry_schema_version": "claim-registry/1.0",
+  "schema_version": "claim-registry-coverage/1.0",
+  "semantic_extraction_coverage": "not_machine_detectable"
+}

@@ -24,8 +24,10 @@ TEXT_SOURCES = [R / n for n in (
     "PHASE4B_REPORT.md", "PHASE5S_PREREGISTRATION.md", "PHASE5S_REPORT.md", "PHASE5_PREREGISTRATION.md", "PHASE5_REPORT.md",
     "PHASE6_PREREGISTRATION.md", "PHASE6_REPORT.md", "PHASE7_PREREGISTRATION.md", "PHASE7_REPORT.md",
     "PHASE8_PREREGISTRATION.md", "PHASE8_REPORT.md")] + [
-    ROOT / "docs" / "final" / "LITERATURE_REVIEW.md", ROOT / "paper" / "RESEARCH_PAPER_FINAL.md"]
-JSON_SOURCES = [R / "error_maps" / "selection.json", ROOT / "experiments" / "paper_statistics.json"]
+    ROOT / "docs" / "final" / "LITERATURE_REVIEW.md", ROOT / "paper" / "RESEARCH_PAPER_FINAL.md",
+    R / "stage4" / "STAGE4_EXPLORATORY_REPORT.md"]
+JSON_SOURCES = [R / "error_maps" / "selection.json", ROOT / "experiments" / "paper_statistics.json",
+                ROOT / "experiments" / "transformer_tuning_2026-10-15" / "threshold_selected_summary.json"]
 NUM = re.compile(r"(?<![\w.§])[+\-−]?(\d+\.\d+(?:e[+\-]\d+)?)(?![\w.])")
 
 

@@ -1,0 +1,1050 @@
+{
+ "schema_version": "claim-registry/1.0",
+ "draft_raw_sha256": "4108bd34120e524cbb13a3de80500d5306818fb7174c0de6e2c3ff8cf6f14f45",
+ "claims": [
+  {
+   "claim_id": "C001",
+   "claim_text": "radar (SAR) is unaffected by cloud, which motivates SAR–optical fusion for change detection [1].",
+   "draft_span": {
+    "start_byte": 3489,
+    "end_byte": 3587
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "1. Introduction\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C002",
+   "claim_text": "[2] showed that, for one change",
+   "draft_span": {
+    "start_byte": 3699,
+    "end_byte": 3730
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2"
+   ],
+   "writer_anchors": [
+    "ref2"
+   ],
+   "paper_section": "1. Introduction\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C003",
+   "claim_text": "We answer them with the official DS-UNet code [1] on OSCD [3] enriched with Sentinel-1, in a measurement study rather than",
+   "draft_span": {
+    "start_byte": 5002,
+    "end_byte": 5124
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1",
+    "ref3"
+   ],
+   "writer_anchors": [
+    "ref1",
+    "ref3"
+   ],
+   "paper_section": "1. Introduction\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C004",
+   "claim_text": "[2] in a different setting, with the",
+   "draft_span": {
+    "start_byte": 6262,
+    "end_byte": 6298
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2"
+   ],
+   "writer_anchors": [
+    "ref2"
+   ],
+   "paper_section": "1. Introduction\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C005",
+   "claim_text": "[4]; every checkpoint and threshold is selected on validation cities only; and the 10 seeds are treated as training",
+   "draft_span": {
+    "start_byte": 6785,
+    "end_byte": 6900
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref4"
+   ],
+   "writer_anchors": [
+    "ref4"
+   ],
+   "paper_section": "1. Introduction\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C006",
+   "claim_text": "images [5], with U-Net [6] variants as common backbones; reviews [7] cover the field.",
+   "draft_span": {
+    "start_byte": 7125,
+    "end_byte": 7210
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref5",
+    "ref6",
+    "ref7"
+   ],
+   "writer_anchors": [
+    "ref5",
+    "ref6",
+    "ref7"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C007",
+   "claim_text": "[1] fuse Sentinel-1 VV",
+   "draft_span": {
+    "start_byte": 7225,
+    "end_byte": 7247
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C008",
+   "claim_text": "[8] fuse co-registered Sentinel-1 and Sentinel-2 in Siamese networks for supervised change detection, Saha et al.",
+   "draft_span": {
+    "start_byte": 7497,
+    "end_byte": 7610
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref8"
+   ],
+   "writer_anchors": [
+    "ref8"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C009",
+   "claim_text": "[9] study",
+   "draft_span": {
+    "start_byte": 7611,
+    "end_byte": 7620
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref9"
+   ],
+   "writer_anchors": [
+    "ref9"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C010",
+   "claim_text": "self-supervised change detection across different sensors, and DSNUNet [10] combines Sentinel-1 and Sentinel-2 for forest",
+   "draft_span": {
+    "start_byte": 7622,
+    "end_byte": 7743
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref10"
+   ],
+   "writer_anchors": [
+    "ref10"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C011",
+   "claim_text": "[2] monitor construction-ready bare land in Guangzhou with",
+   "draft_span": {
+    "start_byte": 7906,
+    "end_byte": 7964
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2"
+   ],
+   "writer_anchors": [
+    "ref2"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C012",
+   "claim_text": "for gesture recognition [11].",
+   "draft_span": {
+    "start_byte": 8996,
+    "end_byte": 9025
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref11"
+   ],
+   "writer_anchors": [
+    "ref11"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C013",
+   "claim_text": "Hafner and Ban [12] address multi-temporal urban mapping with a partly missing optical",
+   "draft_span": {
+    "start_byte": 9026,
+    "end_byte": 9112
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref12"
+   ],
+   "writer_anchors": [
+    "ref12"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C014",
+   "claim_text": "removal reconstructs cloud-free Sentinel-2 images [13].",
+   "draft_span": {
+    "start_byte": 9239,
+    "end_byte": 9294
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref13"
+   ],
+   "writer_anchors": [
+    "ref13"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C015",
+   "claim_text": "Catalogue [14]; operational detectors such as s2cloudless [15] are imperfect, and an intercomparison of cloud-masking",
+   "draft_span": {
+    "start_byte": 9356,
+    "end_byte": 9473
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref14",
+    "ref15"
+   ],
+   "writer_anchors": [
+    "ref14",
+    "ref15"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C016",
+   "claim_text": "algorithms documents large differences between methods and reference datasets [16].",
+   "draft_span": {
+    "start_byte": 9475,
+    "end_byte": 9558
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref16"
+   ],
+   "writer_anchors": [
+    "ref16"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C017",
+   "claim_text": "**Evaluation practice.** Seed variance can reverse model rankings on small benchmarks [17]; Appendix A shows this on OSCD.",
+   "draft_span": {
+    "start_byte": 9562,
+    "end_byte": 9684
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref17"
+   ],
+   "writer_anchors": [
+    "ref17"
+   ],
+   "paper_section": "2. Related Work\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C018",
+   "claim_text": "**OSCD.** OSCD [3] provides 24 bitemporal Sentinel-2 L1C image pairs with pixel-level urban change labels.",
+   "draft_span": {
+    "start_byte": 9740,
+    "end_byte": 9846
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref3"
+   ],
+   "writer_anchors": [
+    "ref3"
+   ],
+   "paper_section": "3.1 Data and split\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C019",
+   "claim_text": "bands, divided by 10000 and clipped to [0, 1], and a holdout protocol: 10 of the 14 official training cities for training,",
+   "draft_span": {
+    "start_byte": 9862,
+    "end_byte": 9984
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref0",
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref0",
+    "ref1"
+   ],
+   "paper_section": "3.1 Data and split\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C020",
+   "claim_text": "**Sentinel-1 VV (Steps 2–6, 8).** The VV rasters released with DS-UNet [1], one or more relative orbits per city, resized",
+   "draft_span": {
+    "start_byte": 10416,
+    "end_byte": 10539
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "3.1 Data and split\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C021",
+   "claim_text": "**Sentinel-1 VV and VH (Step 7).** A new Google Earth Engine [18] export of Sentinel-1 GRD (IW mode) with DS-UNet's own",
+   "draft_span": {
+    "start_byte": 10666,
+    "end_byte": 10785
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref18"
+   ],
+   "writer_anchors": [
+    "ref18"
+   ],
+   "paper_section": "3.1 Data and split\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C022",
+   "claim_text": "**Land cover (Steps 7–8).** ESA WorldCover 2020 v100 [19] on the same grid, resized to the label grid by nearest",
+   "draft_span": {
+    "start_byte": 12321,
+    "end_byte": 12435
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref19"
+   ],
+   "writer_anchors": [
+    "ref19"
+   ],
+   "paper_section": "3.1 Data and split\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C023",
+   "claim_text": "The network and loss are the official DS-UNet files (`networks.DualStreamUNet`, topology [64, 128, 256, 512], decision-level",
+   "draft_span": {
+    "start_byte": 12793,
+    "end_byte": 12917
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.2 Models and training recipe\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C024",
+   "claim_text": "fusion by 1×1 convolution; `jaccard_like_loss`), loaded at run time from commit 8bfa4be [1].",
+   "draft_span": {
+    "start_byte": 12919,
+    "end_byte": 13012
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "3.2 Models and training recipe\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C025",
+   "claim_text": "gives test F1 0.557 ± 0.035 (10 seeds), below the published 0.600 [1]; we could not establish whether 0.600 is a single run",
+   "draft_span": {
+    "start_byte": 13945,
+    "end_byte": 14069
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "3.2 Models and training recipe\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C026",
+   "claim_text": "correction [4]), reported with the mean difference, its 95% CI, d_z, the number of seeds with a positive difference, and a",
+   "draft_span": {
+    "start_byte": 16115,
+    "end_byte": 16237
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref4"
+   ],
+   "writer_anchors": [
+    "ref4"
+   ],
+   "paper_section": "3.4 Statistics and integrity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C027",
+   "claim_text": "Holm-corrected Wilcoxon signed-rank test (smallest attainable p with n = 10 is 0.0020).",
+   "draft_span": {
+    "start_byte": 16239,
+    "end_byte": 16326
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Statistics and integrity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C028",
+   "claim_text": "Labels are \"X better/lower\" if Holm p < 0.05 with that sign, otherwise \"no detectable difference\"; a null is",
+   "draft_span": {
+    "start_byte": 16377,
+    "end_byte": 16485
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "3.4 Statistics and integrity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C029",
+   "claim_text": "[1].",
+   "draft_span": {
+    "start_byte": 19916,
+    "end_byte": 19920
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "4.1 RQ4: comparison with SAR-only, optical-only, conventional fusion and dual-stream approaches\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C030",
+   "claim_text": "[2] (F1 83.99% at 1 month to 78.31% at 12 months,",
+   "draft_span": {
+    "start_byte": 24724,
+    "end_byte": 24773
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2"
+   ],
+   "writer_anchors": [
+    "ref2"
+   ],
+   "paper_section": "4.3 RQ2: acquisition timing of the historical optical image\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C031",
+   "claim_text": "[2] for VH on",
+   "draft_span": {
+    "start_byte": 28543,
+    "end_byte": 28556
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2"
+   ],
+   "writer_anchors": [
+    "ref2"
+   ],
+   "paper_section": "4.4 RQ3: VV and VH polarisation\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C032",
+   "claim_text": "Mask Catalogue [14], one per city and level, adjusted to cover exactly 10 / 30 / 60% of the city's pixels; inside it, all 13",
+   "draft_span": {
+    "start_byte": 32276,
+    "end_byte": 32400
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref14"
+   ],
+   "writer_anchors": [
+    "ref14"
+   ],
+   "paper_section": "5. Robustness to a missing or cloudy post-change optical image\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C033",
+   "claim_text": "composites; validation and test never share a scene), masked by s2cloudless 1.7.3 [15] at operating points chosen on",
+   "draft_span": {
+    "start_byte": 33151,
+    "end_byte": 33267
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref15"
+   ],
+   "writer_anchors": [
+    "ref15"
+   ],
+   "paper_section": "5. Robustness to a missing or cloudy post-change optical image\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C034",
+   "claim_text": "Replacing the cloud values by zero under the true mask improves F1 for both arms at every level (Holm p < 0.05 for all 6",
+   "draft_span": {
+    "start_byte": 36845,
+    "end_byte": 36965
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.3 Zero-filling under the cloud recovers most of the loss, mainly for the dropout model (Step 4A)\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C035",
+   "claim_text": "For B at 30% cover, each imperfect mask against the oracle mask (Holm over 9); every error type costs F1 (Holm p < 0.05,",
+   "draft_span": {
+    "start_byte": 38038,
+    "end_byte": 38158
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.4 With synthetic mask errors, the mask should err toward over-masking (Step 4A-bis)\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C036",
+   "claim_text": "−0.083, −0.032; Holm p < 0.05).",
+   "draft_span": {
+    "start_byte": 45670,
+    "end_byte": 45705
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "5.7 A real cloud detector on composite clouds: recall bias helps, partly by discarding the image (Step 5)\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C037",
+   "claim_text": "[2] differs in change type, region, sensor configuration and architecture, so our null",
+   "draft_span": {
+    "start_byte": 46567,
+    "end_byte": 46653
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2"
+   ],
+   "writer_anchors": [
+    "ref2"
+   ],
+   "paper_section": "6. Discussion\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C038",
+   "claim_text": "[1]: SAR helps only when it is encoded separately.",
+   "draft_span": {
+    "start_byte": 47990,
+    "end_byte": 48040
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "6. Discussion\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C039",
+   "claim_text": "- **One benchmark, few cities.** OSCD has 24 cities; results use 9 or 10 test cities and 4 validation cities.",
+   "draft_span": {
+    "start_byte": 49668,
+    "end_byte": 49777
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "7. Limitations and threats to validity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C040",
+   "claim_text": "through false-alarm rates by WorldCover class; WorldCover (2020) post-dates OSCD date 2, so classes are a stratification,",
+   "draft_span": {
+    "start_byte": 50294,
+    "end_byte": 50415
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "7. Limitations and threats to validity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C041",
+   "claim_text": "per arm; attention-based or reconstruction-based models [2, 12] may behave differently.",
+   "draft_span": {
+    "start_byte": 51116,
+    "end_byte": 51203
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref2",
+    "ref12"
+   ],
+   "writer_anchors": [
+    "ref2",
+    "ref12"
+   ],
+   "paper_section": "7. Limitations and threats to validity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C042",
+   "claim_text": "[1].",
+   "draft_span": {
+    "start_byte": 51568,
+    "end_byte": 51572
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "7. Limitations and threats to validity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C043",
+   "claim_text": "- **Baseline gap.** Our reproduction of the official DS-UNet protocol (0.557 ± 0.035) is below the published 0.600 [1], and",
+   "draft_span": {
+    "start_byte": 52394,
+    "end_byte": 52518
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1"
+   ],
+   "writer_anchors": [
+    "ref1"
+   ],
+   "paper_section": "7. Limitations and threats to validity\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C044",
+   "claim_text": "**Data availability.** OSCD [3] and the Cloud Mask Catalogue [14] are public; the Sentinel-1 VV rasters are from the public",
+   "draft_span": {
+    "start_byte": 54555,
+    "end_byte": 54678
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref3",
+    "ref14"
+   ],
+   "writer_anchors": [
+    "ref3",
+    "ref14"
+   ],
+   "paper_section": "Declarations\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C045",
+   "claim_text": "DS-UNet repository [1]; Sentinel-1, Sentinel-2 and ESA WorldCover [19] were exported from Google Earth Engine [18] with the",
+   "draft_span": {
+    "start_byte": 54680,
+    "end_byte": 54803
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref1",
+    "ref18",
+    "ref19"
+   ],
+   "writer_anchors": [
+    "ref1",
+    "ref18",
+    "ref19"
+   ],
+   "paper_section": "Declarations\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C046",
+   "claim_text": "includes two lightweight Transformers [20] (1.16–1.36M parameters), motivated by Transformer change detectors [21, 22].",
+   "draft_span": {
+    "start_byte": 62384,
+    "end_byte": 62505
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref20",
+    "ref21",
+    "ref22"
+   ],
+   "writer_anchors": [
+    "ref20",
+    "ref21",
+    "ref22"
+   ],
+   "paper_section": "Appendix A: Preliminary study under a simpler protocol\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C047",
+   "claim_text": "selected thresholds varied widely between seeds (0.525–0.725 for cross-attention), and with n = 3 none of these",
+   "draft_span": {
+    "start_byte": 67375,
+    "end_byte": 67488
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [],
+   "writer_anchors": [],
+   "paper_section": "Appendix A: Preliminary study under a simpler protocol\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  },
+  {
+   "claim_id": "C048",
+   "claim_text": "over SpaceNet 7 [23] sites (distinct from SEN12MS [24]), with proxy labels from building footprints and 4 test sites; all",
+   "draft_span": {
+    "start_byte": 67874,
+    "end_byte": 67995
+   },
+   "claim_kinds": [
+    "quantitative"
+   ],
+   "ref_slugs": [
+    "ref23",
+    "ref24"
+   ],
+   "writer_anchors": [
+    "ref23",
+    "ref24"
+   ],
+   "paper_section": "Appendix B: SEN12-MT note\r",
+   "selection_tier": "HIGH-IMPACT",
+   "high_impact_basis": [
+    "numerical"
+   ]
+  }
+ ]
+}

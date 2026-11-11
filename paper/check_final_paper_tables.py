@@ -97,6 +97,35 @@ def main() -> None:
         check(f"A2 {row[0]} Δ", row[1], [t["mean_diff"]]), check(f"A2 {row[0]} n", row[2], f"{t['n_a']}vs{t['n_b']}", "count")
         check(f"A2 {row[0]} p", row[3], [t["welch_p"]], "p"), check(f"A2 {row[0]} Holm", row[4], [t["welch_p_holm"]], "p")
 
+    # Table A3: Transformers at validation-selected thresholds
+    th = json.loads((base.ROOT / "experiments" / "transformer_tuning_2026-10-15" / "threshold_selected_summary.json")
+                    .read_text(encoding="utf-8"))
+    a3 = {"Transformer Self-Attn (original, seed 42)": "self_original", "Transformer Self-Attn (tuned, wd=1e-4)": "self_tuned",
+          "Transformer Cross-Attn (original, seed 42)": "cross_original", "Transformer Cross-Attn (tuned, wd=1e-4)": "cross_tuned"}
+    for row in table(text, "**Table A3"):
+        m = th[a3[row[0]]]
+        check(f"A3 {row[0]} n", row[1], str(m["n"]), "count")
+        check(f"A3 {row[0]} thresholds", row[2], m["thresholds"])
+        for i, k in enumerate(("test_f1_at_0_5", "test_f1_at_selected", "test_precision_at_selected", "test_recall_at_selected",
+                               "test_iou_at_selected", "test_far_at_selected"), 3):
+            check(f"A3 {row[0]} {k}", row[i], [v for v in (m[k]["mean"], m[k]["sd"]) if v is not None])
+
+    # 4.6 and 5.8: exploratory revision tables (Stage 4), against experiments/robust/stage4/stage4_summary.json
+    s4 = load("stage4/stage4_summary.json")
+    for row, r in zip(table(text, "### 4.6"), s4["E2_city_vs_seed"], strict=True):
+        n = r["n_cities"]
+        check(f"4.6 {row[0]} cities", row[1], str(n), "count"), check(f"4.6 {row[0]} Δ", row[2], [r["seed_mean_diff"]])
+        check(f"4.6 {row[0]} seed CI", row[3], r["seed_ci95"]), check(f"4.6 {row[0]} SE seeds", row[4], [r["se_seeds"]])
+        check(f"4.6 {row[0]} SE cities", row[5], [r["se_cities_jackknife"]])
+        check(f"4.6 {row[0]} sign", row[6], f"{r['cities_same_sign']}/{n}", "count")
+        check(f"4.6 {row[0]} boot CI", row[7], r["boot_ci95"])
+        check(f"4.6 {row[0]} LOCO", row[8], [r["loco_min"], r["loco_max"]])
+    e5 = {x["contrast"]: x for x in s4["E5_fallback_rule"]}
+    for row in table(text, "### 5.8"):
+        for cell, m in zip(row[1:], ("cloud", "bal", "rb95", "rb99", "oracle"), strict=True):
+            x = e5[f"composite clouds {row[0]}: B with mask {m} - SAR-only"]
+            check(f"5.8 {row[0]} {m}", cell, [x["mean_diff"], *x["ci95"]])
+
     print(f"{base.n_checks} table cells checked, {len(base.fails)} mismatches")
     for f in base.fails:
         print("  MISMATCH", f)

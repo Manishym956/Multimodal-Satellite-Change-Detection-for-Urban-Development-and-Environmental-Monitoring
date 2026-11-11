@@ -1,0 +1,12 @@
+@page { size: A4; margin: 18mm 16mm; }
+body { font-family: "Georgia", "Times New Roman", serif; font-size: 10.5pt; line-height: 1.45; color: #111; max-width: none; margin: 0; }
+h1 { font-size: 17pt; line-height: 1.25; margin: 0 0 8pt; }
+h2 { font-size: 13pt; margin: 16pt 0 6pt; border-bottom: 1px solid #bbb; padding-bottom: 2pt; }
+h3 { font-size: 11pt; margin: 12pt 0 4pt; }
+p, li { text-align: justify; hyphens: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 8pt; margin: 6pt 0 10pt; page-break-inside: avoid; }
+th, td { border: 1px solid #999; padding: 2pt 4pt; }
+th { background: #eee; }
+code { font-family: Consolas, monospace; font-size: 8.5pt; word-break: break-all; }
+img { max-width: 100%; display: block; margin: 6pt auto; page-break-inside: avoid; }
+hr { border: 0; border-top: 1px solid #ccc; }

@@ -1,0 +1,443 @@
+diff --git a/experiments/robust/stage4b/STAGE4B_PREREGISTRATION.md b/experiments/robust/stage4b/STAGE4B_PREREGISTRATION.md
+new file mode 100644
+index 0000000..fe5e942
+--- /dev/null
++++ b/experiments/robust/stage4b/STAGE4B_PREREGISTRATION.md
+@@ -0,0 +1,116 @@
++# Stage 4B pre-registration: model B with and without the historical optical image (RQ1 and RQ5 attribution; evaluation only)
++
++Written 2026-11-02, after the Stage 3 simulated peer review and the Stage 4 exploratory re-analysis, and before
++`eval_stage4b.py` ran on any test city. Base commit `dfeba6c` (branch `main`); the Stage 4 working-tree changes are
++uncommitted. This file, `eval_stage4b.py` and `analyze_stage4b.py` are frozen by the SHA-256 hashes in §8, and the file is
++committed before the evaluation runs. Any later change is reported as a deviation.
++
++## 1. Why, and what is already known
++
++Stage 4 left two attribution questions open (`paper/review/stage4/RESPONSE_MATRIX.md`, gap analysis):
++
++- **RQ1.** At B's frozen clean-input threshold (the rule §5 uses), B without the post-change image scores +0.060 F1 above
++  the SAR-only U-Net (exploratory). That is a difference between two networks. The same-model contrast (B with against
++  without the historical image) exists only at each input's own validation threshold and at 0.5, so it is unknown how
++  much of the +0.060 comes from the historical image.
++- **RQ5.** Step 8 found a small false-alarm reduction in shrubland for B against the SAR-only U-Net. No count of B without
++  the historical image by land-cover class exists, so that reduction cannot be attributed to the image.
++
++**Seen before writing this file (partial unblinding, stated openly).** For B without any optical input (`no_opt`), the
++test counts pooled over the 10 test cities are stored at its own validation threshold and at 0.5 (Phase 2
++`metrics.json`). The within-B contrast is therefore known at those thresholds: present − absent −0.010 (95% CI
++[−0.026, +0.007]) and −0.003 ([−0.025, +0.019]). Not seen: any `no_opt` count at another threshold, any per-city `no_opt`
++count, and any `no_opt` count by land-cover class. A validation-city smoke test (beihai, seed 1, nothing saved) checked
++the code path only. Stage 4B is therefore a follow-up evaluation of models, data and contrasts that have already been
++analysed at other thresholds, not an independent study or a test of previously unseen hypotheses.
++
++## 2. Questions and hypotheses (two-sided)
++
++- **H1 (primary, RQ1 attribution):** at B's frozen clean threshold, does the historical image change B's test F1?
++- **H2 (secondary):** the same at B's frozen `no_o2` threshold, and for precision and recall at the clean threshold.
++- **H3 (RQ5 attribution):** within B, does the historical image change the false-alarm rate (and recall) in any of the 7
++  WorldCover classes tested in Step 8?
++
++## 3. Data, models and inputs (no training)
++
++- **Test cities:** the 10 OSCD test cities (brasilia, montpellier, norcia, rio, saclay_w, valencia, dubai, lasvegas,
++  milano, chongqing). RQ5 uses Step 8's 9 primary cities (all but chongqing), as registered for Step 8.
++- **Inputs:** Step 8's pipeline unchanged (`rrd.RRDDataset("test", "hafner_vv")`, DS-UNet VV rasters, first listed orbit
++  per city, cuDNN deterministic). Post-change optical image absent (zero) in both conditions.
++  - *present* (`no_o2`): OSCD's own date-1 Sentinel-2 image in the pre-change optical slot (Step 8 tag `oscd`).
++  - *absent* (`no_opt`): both optical slots zero; SAR t1 and t2 only.
++- **Checkpoints:** B (`p2_dropout`, modality dropout), seeds 1–10, `checkpoints/robust/p2_dropout_seed{s}.pt`, each the
++  step selected on validation cities in Phase 2. Loaded read-only; their SHA-256 hashes (§8) are recorded before
++  loading and checked again after the last seed. Not retrained, fine-tuned or modified.
++- **Thresholds (all frozen in the checkpoints; none chosen on test data):** `tau_clean` = the checkpoint's `full`
++  threshold (equal to Phase 3's frozen clean threshold for every seed, checked from stored files); the `no_o2`
++  threshold; 0.5 only in anchors.
++- **Land cover:** ESA WorldCover v100 (2020), nearest neighbour to the label grid, as Step 8.
++
++## 4. Evaluation (`eval_stage4b.py`, once; outputs in `experiments/robust/stage4b/runs/`)
++
++Saved per seed and city: (101, 4) TP, FP, FN, TN for each condition, and (101, 4) counts per WorldCover class.
++**Anchors** (any failure: nothing saved, the run stops and the failure is reported):
++
++1. *present* equals Step 8's stored `<city>__oscd` counts at all 101 thresholds, for every city and seed;
++2. *present* class counts at the `no_o2` threshold equal Step 8's stored class counts;
++3. class counts sum to the city counts at every threshold, for both conditions;
++4. *absent* pooled over the 10 cities equals the stored Phase 2 `no_opt` test counts at its own threshold and at 0.5;
++5. checkpoint hashes unchanged after the run.
++
++The script refuses to overwrite and prints no test metric. Existing result files are read, never written.
++
++## 5. Analysis (`analyze_stage4b.py`)
++
++Per seed, counts are pooled over cities and the metric is computed from the pooled counts. Contrasts are present − absent,
++paired over the 10 seeds: paired t-test, two-sided, α = 0.05, with 95% CI, d_z and an exact Wilcoxon test alongside.
++
++- **Primary:** F1, 10 test cities, both conditions at `tau_clean`. Label "higher with the image" / "lower with the image"
++  if p < 0.05, else "no detectable difference".
++- **No equivalence test.** No smallest effect of scientific interest in F1 is established for this task, so no
++  equivalence margin is set and no result is called negligible or equivalent. The primary result is the difference
++  test with its 95% CI; a null is not evidence of no effect, and the CI bounds are what the paper reports as the range
++  of contributions compatible with the data.
++- **Secondary (Holm over 3):** F1 at the `no_o2` threshold; precision and recall at `tau_clean`.
++- **RQ5 (Holm over 7, own family):** false-alarm rate per class (tree cover, shrubland, grassland, cropland, built-up,
++  bare, water), 9 primary cities, both conditions at the `no_o2` threshold (Step 8's registered RQ5 operating point).
++  **RQ5 recall:** the same, own Holm family over 7.
++- **Descriptive, no tests:** (a) at `tau_clean`, (present − SAR-only) = (present − absent) + (absent − SAR-only), each with
++  its paired CI; SAR-only is `p6_unet_sar` at its frozen threshold (Step 8 counts); (b) false-alarm rate per class at
++  `tau_clean`; (c) F1 of each Step 8 image age (1–18 months) minus *absent*, 9 primary cities, `no_o2` threshold.
++- **City level (exploratory, primary contrast only):** the method as corrected after a separate check of Stage 4 by a fresh
++  session of the same AI assistant (2026-11-02; not independent in error process). It reports standard errors of the
++  same pixel-pooled estimate with seeds resampled and with cities left out (jackknife), a paired two-stage percentile bootstrap (10000 replicates, RNG seed 20261103), a jackknife-t interval,
++  the range with one city left out, and unweighted per-city Δ with each city's share of change pixels. With 10 cities of
++  unequal size these intervals are approximate and are not used for any decision.
++
++## 6. How the result will be read
++
++- **H1 positive:** some of B's clean-threshold margin over the SAR-only U-Net comes from the historical image; the
++  decomposition shows how much.
++- **H1 null:** no contribution of the image is detected; the paper reports the 95% CI as the range of contributions
++  compatible with the data and does not claim the contribution is zero.
++- **H1 negative:** the image lowers B's F1 at this threshold.
++- **H3:** a class with a Holm-detectable within-B difference is attributable to the image. If the shrubland reduction is
++  not detectable within B, the paper keeps the Step 8 result as a between-model difference only.
++- **Text:** every result is reported, whatever its direction. The registered Step 6 and Step 8 results remain primary
++  and unchanged. Stage 4B is labelled as a post-review evaluation with the partial unblinding stated in §1.
++
++## 7. Change before freezing (2026-11-02, before any Stage 4B test evaluation)
++
++The draft set an equivalence margin of ±0.03 F1 (TOST on the primary contrast). Its stated basis was the effect
++detectable with 80% power for n = 10 and the SD of already-observed within-B differences; that is statistical
++convenience informed by seen results, not a scientific smallest effect of interest. The equivalence test was removed
++from this file and from `analyze_stage4b.py` (function `tost`, constant `MARGIN`, report line). Nothing else changed.
++
++## 8. Frozen files (SHA-256)
++
++Filled in when frozen; the file is committed with these values before the evaluation runs.
++
++| file | SHA-256 |
++|---|---|
++| `experiments/robust/stage4b/eval_stage4b.py` | `2b82687b68c18a6d8255ad54c6a5a6ae513897d2a0b4d8651010416ed4eb1746` |
++| `experiments/robust/stage4b/analyze_stage4b.py` | `c16dcbb666aeeaa016accd5fe4c95b6161f9f2d63e9bc09dbdc7b1386d50cbde` |
++| `checkpoints/robust/p2_dropout_seed1.pt` … `seed10.pt` | listed in `checkpoint_sha256.txt` (same folder) |
++
++**Expected cost:** about 5 minutes on the RTX 4060 laptop GPU (20 forward passes per seed), seconds for the analysis.
+diff --git a/experiments/robust/stage4b/eval_stage4b.py b/experiments/robust/stage4b/eval_stage4b.py
+new file mode 100644
+index 0000000..269ac48
+--- /dev/null
++++ b/experiments/robust/stage4b/eval_stage4b.py
+@@ -0,0 +1,112 @@
++"""Stage 4B evaluation (pre-registered in STAGE4B_PREREGISTRATION.md): model B with and without the historical image.
++
++Frozen B checkpoints (p2_dropout, seeds 1-10) on the 10 OSCD test cities, Step 8's pipeline (eval_phase8.py): DS-UNet VV
++rasters, first listed orbit per city, cuDNN deterministic. Two conditions, post-change optical image absent in both:
++    present  `no_o2`: OSCD's own date-1 image in the pre-change optical slot (Step 8 tag `oscd`)
++    absent   `no_opt`: both optical slots zero (SAR t1 and t2 only)
++Saved per seed and city: (101, 4) TP, FP, FN, TN for each condition, and the same (101, 4) counts per WorldCover class.
++No training; checkpoints are hashed before loading and again at the end.
++
++Anchors (failure: nothing saved): `present` equals Step 8's stored `<city>__oscd` counts at all 101 thresholds and its
++class counts at the frozen no_o2 threshold; `absent` pooled over the 10 cities equals the stored Phase 2 `no_opt` test
++counts at the stored threshold and at 0.5; class counts sum to the city counts at every threshold. Refuses to
++overwrite. Prints no test metric.
++
++Usage (from the repository root):
++    .venv/Scripts/python.exe experiments/robust/stage4b/eval_stage4b.py
++"""
++
++import hashlib
++import json
++import sys
++from pathlib import Path
++
++import numpy as np
++import torch
++
++ROOT = Path(__file__).resolve().parents[3]
++sys.path.insert(0, str(ROOT))
++from eval_phase7 import WC_CLASSES, worldcover  # noqa: E402
++from src.datasets.oscd_dataset import ORBITS  # noqa: E402
++from src.training import train_robust as tr  # noqa: E402
++from src.training import train_rrd as rrd  # noqa: E402
++from src.training.train_sar_baseline import sample_at_orbit  # noqa: E402
++
++R = ROOT / "experiments" / "robust"
++OUT = Path(__file__).resolve().parent / "runs"
++ARM, SEEDS = "p2_dropout", range(1, 11)
++CONDS = {"present": "no_o2", "absent": "no_opt"}
++SOURCES = ["experiments/robust/stage4b/eval_stage4b.py", "eval_phase8.py", "eval_phase7.py", "src/training/train_rrd.py",
++           "src/training/train_robust.py", "src/datasets/oscd_dataset.py"]
++
++
++def sha(p):
++    return hashlib.sha256(p.read_bytes()).hexdigest()
++
++
++@torch.inference_mode()
++def run(model, ds, device):
++    out = {}
++    for city in ds.cities:
++        s = sample_at_orbit(ds, ds.cities.index(city), int(ORBITS[city][0]))
++        t1, t2, label = s["t1_img"][None].to(device), s["t2_img"][None].to(device), s["label"].to(device)
++        wc = torch.from_numpy(worldcover(city, label.shape[1:]).astype(np.int64)).to(device)
++        for name, cond in CONDS.items():
++            prob = torch.sigmoid(model(*rrd.apply_condition(t1, t2, cond, 1)))[0]
++            out[f"{city}__{name}"] = tr.threshold_counts(prob, label).numpy()
++            for cls in WC_CLASSES:
++                m = wc == cls
++                out[f"{city}__{name}__wc{cls}"] = tr.threshold_counts(prob[0][m], label[0][m]).numpy()
++    return out
++
++
++def main():
++    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
++    torch.backends.cudnn.deterministic, torch.backends.cudnn.benchmark = True, False  # as training and every earlier eval
++    OUT.mkdir(parents=True, exist_ok=True)
++    source_sha256 = {f: sha(ROOT / f) for f in SOURCES}
++    ckpts = {s: ROOT / "checkpoints" / "robust" / f"{ARM}_seed{s}.pt" for s in SEEDS}
++    ck_sha = {s: sha(p) for s, p in ckpts.items()}
++    ds = rrd.RRDDataset("test", "hafner_vv")
++    for s in SEEDS:
++        f = OUT / f"{ARM}_seed{s}.npz"
++        if f.exists():
++            raise SystemExit(f"{f} exists; refusing to overwrite")
++        ck = torch.load(ckpts[s], map_location="cpu", weights_only=False)
++        model = rrd.build_model("dsunet", 1)
++        model.load_state_dict(ck["model_state_dict"])
++        model.to(device)
++        model.eval()
++        counts = run(model, ds, device)
++
++        p8 = np.load(R / "phase8" / "runs" / f"{ARM}_seed{s}.npz")
++        stored = json.loads((R / f"{ARM}_seed{s}" / "metrics.json").read_text(encoding="utf-8"))["test"]["no_opt"]
++        k8, ka = ck["thresholds"]["no_o2"], ck["thresholds"]["no_opt"]
++        anchors = {}
++        for c in ds.cities:
++            anchors[f"{c} present = Step 8 oscd"] = np.array_equal(counts[f"{c}__present"], p8[f"{c}__oscd"])
++            anchors[f"{c} present classes = Step 8"] = all(
++                np.array_equal(counts[f"{c}__present__wc{cls}"][k8], p8[f"{c}__oscd__wc{cls}"]) for cls in WC_CLASSES)
++            for name in CONDS:
++                anchors[f"{c} {name} classes sum"] = np.array_equal(
++                    sum(counts[f"{c}__{name}__wc{cls}"] for cls in WC_CLASSES), counts[f"{c}__{name}"])
++        pooled = sum(counts[f"{c}__absent"] for c in ds.cities)
++        for thr, k in (("at_selected", ka), ("at_0.5", 50)):
++            e = stored[thr]
++            anchors[f"absent pooled {thr} = Phase 2 no_opt"] = [int(x) for x in pooled[k]] == [e["tp"], e["fp"], e["fn"], e["tn"]]
++        if not all(anchors.values()):
++            raise SystemExit(f"ANCHOR FAILED seed {s}: {[k for k, v in anchors.items() if not v]}")
++        np.savez_compressed(f, **counts)
++        (OUT / f"{ARM}_seed{s}.json").write_text(json.dumps(
++            {"arm": ARM, "seed": s, "conditions": CONDS, "thresholds": ck["thresholds"], "selected_step": ck["step"],
++             "test_cities": list(ds.cities), "anchors": anchors, "checkpoint_sha256": ck_sha[s],
++             "source_sha256": source_sha256}, indent=2), encoding="utf-8")
++        print(ARM, s, "done", flush=True)
++    changed = [s for s, p in ckpts.items() if sha(p) != ck_sha[s]]
++    if changed:
++        raise SystemExit(f"CHECKPOINT CHANGED during evaluation: seeds {changed}")
++    print("STAGE 4B EVAL DONE")
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/experiments/robust/stage4b/analyze_stage4b.py b/experiments/robust/stage4b/analyze_stage4b.py
+new file mode 100644
+index 0000000..46f5ca1
+--- /dev/null
++++ b/experiments/robust/stage4b/analyze_stage4b.py
+@@ -0,0 +1,181 @@
++"""Stage 4B analysis (pre-registered in STAGE4B_PREREGISTRATION.md): model B with and without the historical image.
++
++Reads experiments/robust/stage4b/runs (eval_stage4b.py) plus stored Step 8 counts for the SAR-only U-Net and B's
++historical-image ages. Paired over the 10 training seeds, counts pooled over cities per seed, as every registered step.
++Every contrast is "present - absent" (historical image in the pre-change optical slot minus both optical slots zero).
++
++    primary            F1, 10 test cities, both conditions at B's frozen clean threshold (tau_clean, §5's threshold)
++    secondary          (Holm over 3) F1 at B's frozen no_o2 threshold; precision and recall at tau_clean
++    rq5_far            (Holm over the 7 registered RQ5 classes) false-alarm rate per WorldCover class, 9 primary cities,
++                       both conditions at B's frozen no_o2 threshold (the registered RQ5 operating point)
++    rq5_recall         as rq5_far for recall (own Holm family)
++    descriptive        decomposition at tau_clean: (present - SAR-only) = (present - absent) + (absent - SAR-only);
++                       FAR per class at tau_clean; each Step 8 image age - absent (9 primary cities, no_o2 threshold)
++    city_level         exploratory: CITY_METHOD below
++
++Outputs: stage4b_summary.json and STAGE4B_REPORT.md in this folder. Refuses to overwrite.
++
++Usage (from the repository root):
++    .venv/Scripts/python.exe experiments/robust/stage4b/analyze_stage4b.py
++"""
++
++import json
++import sys
++from pathlib import Path
++
++import numpy as np
++from scipy import stats
++
++ROOT = Path(__file__).resolve().parents[3]
++sys.path.insert(0, str(ROOT))
++from analyze_phase3 import holm, paired  # noqa: E402
++from analyze_phase7 import WC_NAMES, rates  # noqa: E402
++
++R = ROOT / "experiments" / "robust"
++HERE = Path(__file__).resolve().parent
++SEEDS = range(1, 11)
++RQ5_CLASSES = (10, 20, 30, 40, 50, 60, 80)  # the 7 classes tested in Step 8 (>= 1% of primary-city pixels)
++GAPS = ("gap01", "gap03", "gap06", "gap12", "gap18")
++
++
++def load():
++    runs = {}
++    for s in SEEDS:
++        meta = json.loads((HERE / "runs" / f"p2_dropout_seed{s}.json").read_text(encoding="utf-8"))
++        assert all(meta["anchors"].values()), s
++        runs[s] = (meta, np.load(HERE / "runs" / f"p2_dropout_seed{s}.npz"))
++    return runs
++
++
++def family(pairs):
++    """pairs: name -> (absent values, present values); Holm over the family on the t-test p-values."""
++    rows = {k: paired(a, b) for k, (a, b) in pairs.items()}
++    for k, h in zip(rows, holm([r["t_p"] for r in rows.values()])):
++        rows[k]["holm_p"] = h
++    for k, h in zip(rows, holm([r["wilcoxon_p"] for r in rows.values()])):
++        rows[k]["holm_wilcoxon_p"] = h
++    for r in rows.values():
++        r["label"] = ("higher with the image" if r["holm_p"] < 0.05 and r["mean_diff"] > 0 else
++                      "lower with the image" if r["holm_p"] < 0.05 and r["mean_diff"] < 0 else "no detectable difference")
++    return rows
++
++
++def main() -> None:
++    if (HERE / "stage4b_summary.json").exists():
++        raise SystemExit("stage4b_summary.json exists; refusing to overwrite")
++    runs = load()
++    s8 = json.loads((R / "phase8" / "summary.json").read_text(encoding="utf-8"))
++    primary, all10 = s8["primary_cities"], runs[1][0]["test_cities"]
++    p8 = {(a, s): (json.loads((R / "phase8" / "runs" / f"{a}_seed{s}.json").read_text(encoding="utf-8")),
++                   np.load(R / "phase8" / "runs" / f"{a}_seed{s}.npz")) for a in ("p2_dropout", "p6_unet_sar") for s in SEEDS}
++
++    def k_of(s, rule):  # frozen thresholds from the checkpoint (tau_clean = the full-input threshold, as Phase 3)
++        return {"clean": runs[s][0]["thresholds"]["full"], "no_o2": runs[s][0]["thresholds"]["no_o2"], "0.5": 50}[rule]
++
++    def met(cond, rule, metric="f1", cities=None, cls=None):
++        cities = cities or all10
++        sfx = f"__wc{cls}" if cls is not None else ""
++        return [rates(*(float(x) for x in sum(runs[s][1][f"{c}__{cond}{sfx}"][k_of(s, rule)] for c in cities)))[metric]
++                for s in SEEDS]
++
++    sar = [rates(*(float(x) for x in sum(p8["p6_unet_sar", s][1][f"{c}__oscd"][p8["p6_unet_sar", s][0]["thresholds"]["full"]]
++                                         for c in all10)))["f1"] for s in SEEDS]
++    # self-checks against audited values: present at no_o2 = Step 8's B@oscd (9 primary cities); SAR-only = Step 8
++    assert np.allclose(met("present", "no_o2", cities=primary), s8["arms"]["p2_dropout"]["oscd"]["f1"]["values"])
++    assert np.allclose([rates(*(float(x) for x in sum(p8["p6_unet_sar", s][1][f"{c}__oscd"][p8["p6_unet_sar", s][0]["thresholds"]["full"]]
++                                                        for c in primary)))["f1"] for s in SEEDS],
++                       s8["arms"]["p6_unet_sar"]["oscd"]["f1"]["values"])
++
++    out = {"test_cities": all10, "primary_cities": primary}
++    out["primary"] = paired(met("absent", "clean"), met("present", "clean"))
++    out["primary"]["label"] = ("higher with the image" if out["primary"]["t_p"] < 0.05 and out["primary"]["mean_diff"] > 0 else
++                               "lower with the image" if out["primary"]["t_p"] < 0.05 and out["primary"]["mean_diff"] < 0
++                               else "no detectable difference")
++    out["secondary"] = family({"F1 at the no_o2 threshold": (met("absent", "no_o2"), met("present", "no_o2")),
++                               "precision at tau_clean": (met("absent", "clean", "precision"), met("present", "clean", "precision")),
++                               "recall at tau_clean": (met("absent", "clean", "recall"), met("present", "clean", "recall"))})
++    out["rq5_far"] = family({WC_NAMES[c]: (met("absent", "no_o2", "false_alarm_rate", primary, c),
++                                           met("present", "no_o2", "false_alarm_rate", primary, c)) for c in RQ5_CLASSES})
++    out["rq5_recall"] = family({WC_NAMES[c]: (met("absent", "no_o2", "recall", primary, c),
++                                              met("present", "no_o2", "recall", primary, c)) for c in RQ5_CLASSES})
++    out["descriptive"] = {
++        "decomposition_tau_clean": {"present - SAR-only": paired(sar, met("present", "clean")),
++                                    "present - absent": out["primary"],
++                                    "absent - SAR-only": paired(sar, met("absent", "clean"))},
++        "far_by_class_tau_clean": {WC_NAMES[c]: paired(met("absent", "clean", "false_alarm_rate", primary, c),
++                                                       met("present", "clean", "false_alarm_rate", primary, c)) for c in RQ5_CLASSES},
++        "image_age_minus_absent": {g: paired(met("absent", "no_o2", cities=primary),
++                                             [rates(*(float(x) for x in sum(p8["p2_dropout", s][1][f"{c}__{g}"][k_of(s, "no_o2")]
++                                                                            for c in primary)))["f1"] for s in SEEDS]) for g in GAPS}}
++    out["city_level"] = city_level(runs, all10)
++    (HERE / "stage4b_summary.json").write_text(json.dumps(out, indent=1), encoding="utf-8")
++    (HERE / "STAGE4B_REPORT.md").write_text(report(out), encoding="utf-8")
++    print("wrote stage4b_summary.json and STAGE4B_REPORT.md")
++
++
++def f1c(c):
++    tp, fp, fn = float(c[0]), float(c[1]), float(c[2])
++    return 2 * tp / (2 * tp + fp + fn) if tp + fp + fn else 0.0
++
++
++def city_level(runs, cities, boot=10000):
++    """Exploratory, primary contrast only (tau_clean, 10 cities). Method as corrected after the separate (same-assistant) check of
++    Stage 4 E2: SEs of the same pixel-pooled estimate under seed and city resampling, a paired two-stage percentile
++    bootstrap, a jackknife-t interval, and per-city deltas (unweighted) with each city's share of change pixels."""
++    rng = np.random.default_rng(20261103)
++    k = {s: runs[s][0]["thresholds"]["full"] for s in SEEDS}
++    X = np.array([[runs[s][1][f"{c}__present"][k[s]] for c in cities] for s in SEEDS], dtype=float)
++    Y = np.array([[runs[s][1][f"{c}__absent"][k[s]] for c in cities] for s in SEEDS], dtype=float)
++    pooled = lambda C, ci: np.array([f1c(C[i, ci].sum(0)) for i in range(len(C))])
++    ns, nc = X.shape[:2]
++    allc = np.arange(nc)
++    d = pooled(X, allc) - pooled(Y, allc)
++    two = np.empty(boot)
++    for b in range(boot):  # same city and seed indices for both conditions: the pairing is kept
++        ci, si = rng.integers(0, nc, nc), rng.integers(0, ns, ns)
++        two[b] = (pooled(X, ci) - pooled(Y, ci))[si].mean()
++    jk = np.array([(pooled(X, np.delete(allc, j)) - pooled(Y, np.delete(allc, j))).mean() for j in range(nc)])
++    se_jk = float(np.sqrt((nc - 1) / nc * ((jk - jk.mean()) ** 2).sum()))
++    se_seed = float(d.std(ddof=1) / np.sqrt(ns))
++    t = stats.t.ppf(0.975, ns - 1)
++    per_city = np.array([[f1c(X[i, j]) - f1c(Y[i, j]) for j in range(nc)] for i in range(ns)]).mean(0)
++    pos = X[0, :, 0] + X[0, :, 2]
++    return {"mean_diff": float(d.mean()), "se_seeds": se_seed, "se_cities_jackknife": se_jk,
++            "two_stage_percentile_ci95": np.percentile(two, [2.5, 97.5]).tolist(),
++            "jackknife_t_ci95": [float(d.mean() - t * np.hypot(se_jk, se_seed)), float(d.mean() + t * np.hypot(se_jk, se_seed))],
++            "loco_range": [float(jk.min()), float(jk.max())], "loco_mean_diff": dict(zip(cities, jk.tolist())),
++            "per_city_mean_diff": dict(zip(cities, per_city.tolist())), "cities_same_sign": int((np.sign(per_city) == np.sign(d.mean())).sum()),
++            "change_pixel_share": dict(zip(cities, (pos / pos.sum()).tolist()))}
++
++
++def report(out):
++    f = lambda x: f"{x:+.3f}"
++    ci = lambda c: f"[{f(c[0])}, {f(c[1])}]"
++    row = lambda name, r: (f"| {name} | {f(r['mean_diff'])} | {ci(r['ci95'])} | {r['dz']:.2f} | {r['b_gt_a']}/10 | "
++                           f"{r['t_p']:.3g} | {r.get('holm_p', r['t_p']):.3g} | {r['wilcoxon_p']:.3g} | {r.get('label', '')} |")
++    H = ["| contrast | Δ (present − absent) | 95% CI | d_z | Δ > 0 | p | Holm p | Wilcoxon p | label |", "|---|---|---|---|---|---|---|---|---|"]
++    p, c = out["primary"], out["city_level"]
++    L = ["# Stage 4B: model B with and without the historical optical image", "",
++         "Pre-registered in `STAGE4B_PREREGISTRATION.md`. Generated by `analyze_stage4b.py`; numbers in `stage4b_summary.json`.", "",
++         "## Primary: F1, 10 test cities, both conditions at B's frozen clean threshold", "", *H, row("F1 at tau_clean", p), "",
++         "## Secondary (Holm over 3)", "", *H, *[row(k, r) for k, r in out["secondary"].items()], "",
++         "## RQ5: false-alarm rate by WorldCover class, 9 primary cities, B's no_o2 threshold (Holm over 7)", "", *H,
++         *[row(k, r) for k, r in out["rq5_far"].items()], "", "## RQ5: recall by class (Holm over 7)", "", *H,
++         *[row(k, r) for k, r in out["rq5_recall"].items()], "", "## Descriptive (no tests)", "",
++         "Decomposition at tau_clean (10 cities):", "", *H, *[row(k, r) for k, r in out["descriptive"]["decomposition_tau_clean"].items()], "",
++         "False-alarm rate by class at tau_clean (9 primary cities):", "", *H,
++         *[row(k, r) for k, r in out["descriptive"]["far_by_class_tau_clean"].items()], "",
++         "Each Step 8 image age minus absent (F1, 9 primary cities, no_o2 threshold):", "", *H,
++         *[row(k, r) for k, r in out["descriptive"]["image_age_minus_absent"].items()], "",
++         "## City level (exploratory; primary contrast)", "",
++         f"Δ {f(c['mean_diff'])}; SE over seeds {c['se_seeds']:.3f}, over cities (jackknife) {c['se_cities_jackknife']:.3f}; "
++         f"two-stage percentile 95% CI {ci(c['two_stage_percentile_ci95'])}; jackknife-t 95% CI {ci(c['jackknife_t_ci95'])}; "
++         f"one city left out {f(c['loco_range'][0])} to {f(c['loco_range'][1])}; cities with the same sign "
++         f"{c['cities_same_sign']}/{len(c['per_city_mean_diff'])} (unweighted).", "",
++         "| city | Δ | pooled Δ without it | share of change pixels |", "|---|---|---|---|",
++         *[f"| {k} | {f(v)} | {f(c['loco_mean_diff'][k])} | {100 * c['change_pixel_share'][k]:.0f}% |" for k, v in c["per_city_mean_diff"].items()]]
++    return "\n".join(L) + "\n"
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/experiments/robust/stage4b/checkpoint_sha256.txt b/experiments/robust/stage4b/checkpoint_sha256.txt
+new file mode 100644
+index 0000000..77a63d5
+--- /dev/null
++++ b/experiments/robust/stage4b/checkpoint_sha256.txt
+@@ -0,0 +1,10 @@
++5d4ee88e7b25dd44d005ff947e04462ad8c5a05128c18337e07c95cde4148c56  checkpoints/robust/p2_dropout_seed1.pt
++304ecd600b7923a9da1761e5d0a4e9db81a84542d1eef93d12004c340adbaf1b  checkpoints/robust/p2_dropout_seed10.pt
++a7f653323b57b4146b21ca3667fd040b7e66d43c65747fc2ab1700d14d60f271  checkpoints/robust/p2_dropout_seed2.pt
++e6791e7c25c009223e70e80cc88a7b4ea93785a53c668b7fc44b2e6c25f9652b  checkpoints/robust/p2_dropout_seed3.pt
++26af5944cf1f589fc0307b2117ca8193e5cab083e83cbfb792ce8ab5cd09fc21  checkpoints/robust/p2_dropout_seed4.pt
++ea29c2cf5a95a1a97acd381ee8e0a4f783636f7ee7e34ae908916db3f02281e0  checkpoints/robust/p2_dropout_seed5.pt
++7f87aa281991f28da7a53577b0c0201cc4e118d4a01c178a810270b1d414e6dd  checkpoints/robust/p2_dropout_seed6.pt
++963b6ed51b3a37e440eadc17f5144860b1f60f4c01f403951366e6892b50c8a5  checkpoints/robust/p2_dropout_seed7.pt
++218bc4b88c55db3953956afd794c9578afce1471565827b01885e940c5d2fb2a  checkpoints/robust/p2_dropout_seed8.pt
++53faaf97a607fb5d39a061cdf6e84d5018d98aa4f3b9895dcf2e17954b04e093  checkpoints/robust/p2_dropout_seed9.pt
