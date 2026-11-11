@@ -1,0 +1,1010 @@
+{
+  "window_days": 30,
+  "cloud_prob": 40,
+  "cities": {
+    "brasilia": {
+      "oscd_date2": "2017-10-17",
+      "days": [
+        {
+          "day": "2017-09-17",
+          "days_from_date2": -30,
+          "cloud": 0.00020731488203783256,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-20",
+          "days_from_date2": -27,
+          "cloud": 0.000169621267121863,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-22",
+          "days_from_date2": -25,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-25",
+          "days_from_date2": -22,
+          "cloud": 0.00022616168949581733,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-27",
+          "days_from_date2": -20,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-30",
+          "days_from_date2": -17,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-02",
+          "days_from_date2": -15,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-05",
+          "days_from_date2": -12,
+          "cloud": 0.0003769361491596956,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-07",
+          "days_from_date2": -10,
+          "cloud": 7.538722983193911e-05,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-10",
+          "days_from_date2": -7,
+          "cloud": 0.00028270211186977166,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-12",
+          "days_from_date2": -5,
+          "cloud": 5.654042237395433e-05,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-15",
+          "days_from_date2": -2,
+          "cloud": 0.00020731488203783256,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-17",
+          "days_from_date2": 0,
+          "cloud": 0.00047117018644961945,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-20",
+          "days_from_date2": 3,
+          "cloud": 0.035507976523234175,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-22",
+          "days_from_date2": 5,
+          "cloud": 0.0014323573668068431,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-25",
+          "days_from_date2": 8,
+          "cloud": 0.390504520166567,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-27",
+          "days_from_date2": 10,
+          "cloud": 0.9998303787328782,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-30",
+          "days_from_date2": 13,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-01",
+          "days_from_date2": 15,
+          "cloud": 0.9725353235364917,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-04",
+          "days_from_date2": 18,
+          "cloud": 0.9239624444471882,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-06",
+          "days_from_date2": 20,
+          "cloud": 0.021987498580022413,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-09",
+          "days_from_date2": 23,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-11",
+          "days_from_date2": 25,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-14",
+          "days_from_date2": 28,
+          "cloud": 0.05674123325969309,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-16",
+          "days_from_date2": 30,
+          "cloud": 0.19635320927502523,
+          "valid": 1
+        }
+      ]
+    },
+    "montpellier": {
+      "oscd_date2": "2017-10-30",
+      "days": [
+        {
+          "day": "2017-09-30",
+          "days_from_date2": -30,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-05",
+          "days_from_date2": -25,
+          "cloud": 0.0012954327411816157,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-10",
+          "days_from_date2": -20,
+          "cloud": 0.004686501223833274,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-15",
+          "days_from_date2": -15,
+          "cloud": 0.9062277588484491,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-20",
+          "days_from_date2": -10,
+          "cloud": 0.9932184822125951,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-25",
+          "days_from_date2": -5,
+          "cloud": 0.005407787186529947,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-30",
+          "days_from_date2": 0,
+          "cloud": 0.007031721947244712,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-04",
+          "days_from_date2": 5,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-09",
+          "days_from_date2": 10,
+          "cloud": 0.04415548975508263,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-14",
+          "days_from_date2": 15,
+          "cloud": 0.011293917443997643,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-19",
+          "days_from_date2": 20,
+          "cloud": 0.027159731911730982,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-24",
+          "days_from_date2": 25,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-29",
+          "days_from_date2": 30,
+          "cloud": 0.03880759395799464,
+          "valid": 1
+        }
+      ]
+    },
+    "norcia": {
+      "oscd_date2": "2017-10-18",
+      "days": [
+        {
+          "day": "2017-09-18",
+          "days_from_date2": -30,
+          "cloud": 0.0022676675784064856,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-23",
+          "days_from_date2": -25,
+          "cloud": 0.0002379161623096704,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-28",
+          "days_from_date2": -20,
+          "cloud": 0.0013085388927031871,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-03",
+          "days_from_date2": -15,
+          "cloud": 0.0029445623852914497,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-08",
+          "days_from_date2": -10,
+          "cloud": 0.35366680704497744,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-13",
+          "days_from_date2": -5,
+          "cloud": 0.0002081766420209616,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-18",
+          "days_from_date2": 0,
+          "cloud": 0.0002379161623096704,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-23",
+          "days_from_date2": 5,
+          "cloud": 0.9310125933456486,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-28",
+          "days_from_date2": 10,
+          "cloud": 0.0014274969738580223,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-02",
+          "days_from_date2": 15,
+          "cloud": 0.00297395202887088,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-07",
+          "days_from_date2": 20,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-12",
+          "days_from_date2": 25,
+          "cloud": 0.0006542694463515936,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-17",
+          "days_from_date2": 30,
+          "cloud": 0.018914218278049035,
+          "valid": 1
+        }
+      ]
+    },
+    "rio": {
+      "oscd_date2": "2017-10-11",
+      "days": [
+        {
+          "day": "2017-09-21",
+          "days_from_date2": -20,
+          "cloud": 0.005137692538595716,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-26",
+          "days_from_date2": -15,
+          "cloud": 0.007745547214205135,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-11",
+          "days_from_date2": 0,
+          "cloud": 0.0043854011515091175,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-16",
+          "days_from_date2": 5,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-31",
+          "days_from_date2": 20,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-05",
+          "days_from_date2": 25,
+          "cloud": 1,
+          "valid": 1
+        }
+      ]
+    },
+    "saclay_w": {
+      "oscd_date2": "2017-08-29",
+      "days": [
+        {
+          "day": "2017-07-30",
+          "days_from_date2": -30,
+          "cloud": 0.5220562982795316,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-02",
+          "days_from_date2": -27,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-04",
+          "days_from_date2": -25,
+          "cloud": 0.7609596367303327,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-07",
+          "days_from_date2": -22,
+          "cloud": 0.5818075552904187,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-09",
+          "days_from_date2": -20,
+          "cloud": 0.978849589233991,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-12",
+          "days_from_date2": -17,
+          "cloud": 0.9997554218155152,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-14",
+          "days_from_date2": -15,
+          "cloud": 0.19196520990857205,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-17",
+          "days_from_date2": -12,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-19",
+          "days_from_date2": -10,
+          "cloud": 0.6943731170122853,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-22",
+          "days_from_date2": -7,
+          "cloud": 0.029977982949761495,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-24",
+          "days_from_date2": -5,
+          "cloud": 0.9964751095593645,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-27",
+          "days_from_date2": -2,
+          "cloud": 0.004674843875957343,
+          "valid": 1
+        },
+        {
+          "day": "2017-08-29",
+          "days_from_date2": 0,
+          "cloud": 0.008538961206695552,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-01",
+          "days_from_date2": 3,
+          "cloud": 0.6761214372974902,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-03",
+          "days_from_date2": 5,
+          "cloud": 0.9997220702449037,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-06",
+          "days_from_date2": 8,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-08",
+          "days_from_date2": 10,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-11",
+          "days_from_date2": 13,
+          "cloud": 0.5204518043537604,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-13",
+          "days_from_date2": 15,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-16",
+          "days_from_date2": 18,
+          "cloud": 0.8327464074527348,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-18",
+          "days_from_date2": 20,
+          "cloud": 0.7935170475899225,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-21",
+          "days_from_date2": 23,
+          "cloud": 0.0027848561460655716,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-23",
+          "days_from_date2": 25,
+          "cloud": 0.9930432547418476,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-26",
+          "days_from_date2": 28,
+          "cloud": 0.7746566908122606,
+          "valid": 1
+        },
+        {
+          "day": "2017-09-28",
+          "days_from_date2": 30,
+          "cloud": 1,
+          "valid": 1
+        }
+      ]
+    },
+    "valencia": {
+      "oscd_date2": "2017-11-07",
+      "days": [
+        {
+          "day": "2017-10-08",
+          "days_from_date2": -30,
+          "cloud": 0.0024937906590480423,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-13",
+          "days_from_date2": -25,
+          "cloud": 0.005525237969108292,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-18",
+          "days_from_date2": -20,
+          "cloud": 0.5893506952588347,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-23",
+          "days_from_date2": -15,
+          "cloud": 0.42970419489212697,
+          "valid": 1
+        },
+        {
+          "day": "2017-10-28",
+          "days_from_date2": -10,
+          "cloud": 0.01647280864395416,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-02",
+          "days_from_date2": -5,
+          "cloud": 0.9999019295808239,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-07",
+          "days_from_date2": 0,
+          "cloud": 0.008147042116492574,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-12",
+          "days_from_date2": 5,
+          "cloud": 0.0045337103193211145,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-17",
+          "days_from_date2": 10,
+          "cloud": 0.00691564026495603,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-22",
+          "days_from_date2": 15,
+          "cloud": 0.008109736898217763,
+          "valid": 1
+        },
+        {
+          "day": "2017-11-27",
+          "days_from_date2": 20,
+          "cloud": 0.037635855688031974,
+          "valid": 1
+        },
+        {
+          "day": "2017-12-02",
+          "days_from_date2": 25,
+          "cloud": 0.02902252581380993,
+          "valid": 1
+        },
+        {
+          "day": "2017-12-07",
+          "days_from_date2": 30,
+          "cloud": 0.12376679194956663,
+          "valid": 1
+        }
+      ]
+    },
+    "dubai": {
+      "oscd_date2": "2018-03-30",
+      "days": [
+        {
+          "day": "2018-02-28",
+          "days_from_date2": -30,
+          "cloud": 0.9355085267273788,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-05",
+          "days_from_date2": -25,
+          "cloud": 0.016373270363352285,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-10",
+          "days_from_date2": -20,
+          "cloud": 0.012447968448122768,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-15",
+          "days_from_date2": -15,
+          "cloud": 0.017284678993632663,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-20",
+          "days_from_date2": -10,
+          "cloud": 0.02642031790936358,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-25",
+          "days_from_date2": -5,
+          "cloud": 0.15151925975642622,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-30",
+          "days_from_date2": 0,
+          "cloud": 0.04592365329818317,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-04",
+          "days_from_date2": 5,
+          "cloud": 0.12247684120083736,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-09",
+          "days_from_date2": 10,
+          "cloud": 0.999941454952901,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-14",
+          "days_from_date2": 15,
+          "cloud": 0.45298469681257086,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-19",
+          "days_from_date2": 20,
+          "cloud": 0.2502600447588394,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-24",
+          "days_from_date2": 25,
+          "cloud": 0.19305252239757245,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-29",
+          "days_from_date2": 30,
+          "cloud": 0.1270634438613137,
+          "valid": 1
+        }
+      ]
+    },
+    "lasvegas": {
+      "oscd_date2": "2018-02-05",
+      "days": [
+        {
+          "day": "2018-01-06",
+          "days_from_date2": -30,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-11",
+          "days_from_date2": -25,
+          "cloud": 0.010905650321677542,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-16",
+          "days_from_date2": -20,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-21",
+          "days_from_date2": -15,
+          "cloud": 0.00488135031348574,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-26",
+          "days_from_date2": -10,
+          "cloud": 0.004523213312553836,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-31",
+          "days_from_date2": -5,
+          "cloud": 0.021919809602832015,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-05",
+          "days_from_date2": 0,
+          "cloud": 0.004678499610178147,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-10",
+          "days_from_date2": 5,
+          "cloud": 0.9557154749155937,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-15",
+          "days_from_date2": 10,
+          "cloud": 0.005405218210964358,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-20",
+          "days_from_date2": 15,
+          "cloud": 0.017461263460795698,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-25",
+          "days_from_date2": 20,
+          "cloud": 0.002421849352167868,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-02",
+          "days_from_date2": 25,
+          "cloud": 0.00597460839295202,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-07",
+          "days_from_date2": 30,
+          "cloud": 1,
+          "valid": 1
+        }
+      ]
+    },
+    "milano": {
+      "oscd_date2": "2018-01-22",
+      "days": [
+        {
+          "day": "2017-12-23",
+          "days_from_date2": -30,
+          "cloud": 0.999846479582143,
+          "valid": 1
+        },
+        {
+          "day": "2017-12-28",
+          "days_from_date2": -25,
+          "cloud": 0.09229213770880597,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-02",
+          "days_from_date2": -20,
+          "cloud": 0.026340517576585176,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-07",
+          "days_from_date2": -15,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-12",
+          "days_from_date2": -10,
+          "cloud": 0.13688584020221975,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-17",
+          "days_from_date2": -5,
+          "cloud": 0.44966926169110993,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-22",
+          "days_from_date2": 0,
+          "cloud": 0.03365205128381157,
+          "valid": 1
+        },
+        {
+          "day": "2018-01-27",
+          "days_from_date2": 5,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-01",
+          "days_from_date2": 10,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-06",
+          "days_from_date2": 15,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-11",
+          "days_from_date2": 20,
+          "cloud": 0.9905582381498202,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-16",
+          "days_from_date2": 25,
+          "cloud": 0.8785089277331404,
+          "valid": 1
+        },
+        {
+          "day": "2018-02-21",
+          "days_from_date2": 30,
+          "cloud": 0.07307851949485632,
+          "valid": 1
+        }
+      ]
+    },
+    "chongqing": {
+      "oscd_date2": "2018-04-02",
+      "days": [
+        {
+          "day": "2018-03-03",
+          "days_from_date2": -30,
+          "cloud": 0.957708107846792,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-05",
+          "days_from_date2": -28,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-08",
+          "days_from_date2": -25,
+          "cloud": 0.008273880906780022,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-10",
+          "days_from_date2": -23,
+          "cloud": 0.9999912940657689,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-13",
+          "days_from_date2": -20,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-15",
+          "days_from_date2": -18,
+          "cloud": 0.029646130062014105,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-18",
+          "days_from_date2": -15,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-20",
+          "days_from_date2": -13,
+          "cloud": 0.06535100995323838,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-23",
+          "days_from_date2": -10,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-25",
+          "days_from_date2": -8,
+          "cloud": 0.9999564703288446,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-28",
+          "days_from_date2": -5,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-03-30",
+          "days_from_date2": -3,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-02",
+          "days_from_date2": 0,
+          "cloud": 0.006745460264989484,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-04",
+          "days_from_date2": 2,
+          "cloud": 0.9990838284506243,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-07",
+          "days_from_date2": 5,
+          "cloud": 0.0842697561375638,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-09",
+          "days_from_date2": 7,
+          "cloud": 0.017261102165811025,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-12",
+          "days_from_date2": 10,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-14",
+          "days_from_date2": 12,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-17",
+          "days_from_date2": 15,
+          "cloud": 0.007223740393001539,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-19",
+          "days_from_date2": 17,
+          "cloud": 0.14519821978325495,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-22",
+          "days_from_date2": 20,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-24",
+          "days_from_date2": 22,
+          "cloud": 1,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-27",
+          "days_from_date2": 25,
+          "cloud": 0.3893201607654869,
+          "valid": 1
+        },
+        {
+          "day": "2018-04-29",
+          "days_from_date2": 27,
+          "cloud": 0.8835280856510977,
+          "valid": 1
+        },
+        {
+          "day": "2018-05-02",
+          "days_from_date2": 30,
+          "cloud": 1,
+          "valid": 1
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+brasilia: 25 days, 25 full coverage, 3 with city-box cloud 5-70%: +8d 0.39, +28d 0.06, +30d 0.20
+montpellier: 13 days, 13 full coverage, 0 with city-box cloud 5-70%: 
+norcia: 13 days, 13 full coverage, 1 with city-box cloud 5-70%: -10d 0.35
+rio: 6 days, 6 full coverage, 0 with city-box cloud 5-70%: 
+saclay_w: 25 days, 25 full coverage, 6 with city-box cloud 5-70%: -30d 0.52, -22d 0.58, -15d 0.19, -10d 0.69, +3d 0.68, +13d 0.52
+valencia: 13 days, 13 full coverage, 3 with city-box cloud 5-70%: -20d 0.59, -15d 0.43, +30d 0.12
+dubai: 13 days, 13 full coverage, 6 with city-box cloud 5-70%: -5d 0.15, +5d 0.12, +15d 0.45, +20d 0.25, +25d 0.19, +30d 0.13
+lasvegas: 13 days, 13 full coverage, 0 with city-box cloud 5-70%: 
+milano: 13 days, 13 full coverage, 4 with city-box cloud 5-70%: -25d 0.09, -10d 0.14, -5d 0.45, +30d 0.07
+chongqing: 25 days, 25 full coverage, 4 with city-box cloud 5-70%: -13d 0.07, +5d 0.08, +17d 0.15, +25d 0.39
+wrote real_cloud_gee.json

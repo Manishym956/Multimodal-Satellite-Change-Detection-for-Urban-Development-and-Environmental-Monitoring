@@ -1,0 +1,7 @@
+ok   city evaluation runs and its anchors pass
+ok   city evaluation refuses to overwrite
+ok   analysis runs on stand-in data
+ok   primary contrast reproduces the Step 9 values
+ok   pooled delta from per-city counts equals the primary mean difference
+ok   analysis refuses to overwrite
+n_failed 0
