@@ -1,0 +1,7 @@
+ok   analysis runs on stand-in data
+ok   B within-model contrast reproduces Step 6
+ok   14 channels per date; no_opt zeroes both optical dates and keeps SAR
+ok   no_o2 keeps the historical image and zeroes the post-change optical
+ok   historical image changes the early-fusion output
+ok   validation evaluation returns all four conditions
+n_failed 0
