@@ -1,0 +1,8 @@
+ok   evaluation of seed 1 exits cleanly
+ok   every anchor passes for A, B and SAR-only
+ok   every city x condition array exists
+ok   evaluation refuses to overwrite
+ok   analysis runs on synthetic counts
+ok   contrast of identical conditions is zero
+ok   analysis refuses to overwrite
+n_failed 0

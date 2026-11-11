@@ -1,0 +1,92 @@
+{
+  "s2cloudless": "1.7.3",
+  "numpy": "2.4.6",
+  "threshold": 0.4,
+  "average_over": 1,
+  "dilation_size": 1,
+  "all_bands": false,
+  "model_file": "pixel_s2_cloud_detector_lightGBM_v0.1.txt",
+  "model_sha256": "0f92b6822cc0ad42982f55bab9b1688329e119451ad9a9e0a56384b9f37bc61d",
+  "files": {
+    "brasilia_cloudy.npz": {
+      "input_sha256": "f804d4aab5d95a0fe8c5202224e3f307b00cb5afd8eba98aa9dcbc2da110fe1e",
+      "output_sha256": "b3c286b72286b0961a4eda2b6d307580acaa88b8070eb38c8a3f98fe9a24bfa8"
+    },
+    "brasilia_control.npz": {
+      "input_sha256": "fde88911cce2c9130ee0eef0cfd2a0ba8b5506e23aa3ec04cc298c0cef6f7e8d",
+      "output_sha256": "becd8c34c84213b6bdc04999122a3b0980d5fa325eafcff20122c4731dfffa22"
+    },
+    "chongqing_cloudy.npz": {
+      "input_sha256": "c116585e5641aaac09555783f0d2d5ce1a806e4dca67e54043d0ad719365a398",
+      "output_sha256": "7c0e877168998d1fbc927f2b58a218c886e6bdbfe70c6065c8eec2889de69aa9"
+    },
+    "chongqing_control.npz": {
+      "input_sha256": "e2bf79a7e90384d60cb37af666bb408911bc3bd759d7bbc3ed8baf5b9c57f259",
+      "output_sha256": "de0dcdb578a5432e39908c0c2fc44457af7eda9a700b169bc2dc6ec0e0c4c6c8"
+    },
+    "dubai_cloudy.npz": {
+      "input_sha256": "87b7f29db1b174a5d08fc65cbed5f6af2765fdb4b25958c6a7046f910431f464",
+      "output_sha256": "87a2bb1aa86440c0cf15eae115b2f78b9031c95033d303abafe61de3e4e78d58"
+    },
+    "dubai_control.npz": {
+      "input_sha256": "34b39aa0b1859593cfb575232ffaceb1f99c87fe71b2e8103778cbb55ca384e3",
+      "output_sha256": "f7c4e721f5c5bd528b5dbc490bf4d8d36538d9ff4d7c370492329c537b2a578f"
+    },
+    "lasvegas_control.npz": {
+      "input_sha256": "f7d7cdd0035728666ec5e6690dd5fe352c56ebb73b6b905909ce3df46def1827",
+      "output_sha256": "b8cca7ce0dce571053b8b8e1105141af746552a5747b1b9b140eae88c66fd633"
+    },
+    "lasvegas_overcast.npz": {
+      "input_sha256": "c269befd5c76d381926a15a260358b1a6d108556e17a726463b373d83e5d5b49",
+      "output_sha256": "13c24e2ee345ac94ef1bbe3444ea8b68107f7bb184894b52c8a7b2208f4794b3"
+    },
+    "milano_cloudy.npz": {
+      "input_sha256": "c57fdc26e347b48264a31367ad80d5c9a8d7954f3a95f5cf112e146ce94be7e5",
+      "output_sha256": "a2a14d1c941478a5cd8d1e60452240c89716dfc615c0b08f32f8d88e6f656302"
+    },
+    "milano_control.npz": {
+      "input_sha256": "4a78eb31871e4d0385b4d2bb37254e86a9c1b5d4308db271b6869b2d9ffcf63e",
+      "output_sha256": "69c40bfc13f7f124ea663b01df5a221021ed40b684d9c3226ed5dee9f43bb1b9"
+    },
+    "montpellier_control.npz": {
+      "input_sha256": "36c953763c5ed42b900c94962fbfe1121e7ff8e318298aff2761d40628dccf43",
+      "output_sha256": "2e40c31bd274738ce74f09e35488a768f298f9b3c50b7a0dfd1929df33914fe0"
+    },
+    "montpellier_overcast.npz": {
+      "input_sha256": "862f0de60b8b1cc7e22c9d7ed6a0400e44400310c42c20913f2182d360f2cf80",
+      "output_sha256": "9f97f358d9e6e0ac790834c7483f07d758ed4ce5ceed3b86a2f844f8b81600a6"
+    },
+    "norcia_cloudy.npz": {
+      "input_sha256": "16a81521ea442eb9e894c8a64560ff83249fab744226e662c88b86d5de3751f2",
+      "output_sha256": "f95dd91a5d107ac105d37b7be5db8d257315f9428b5de1ac8952c8fd87d7e552"
+    },
+    "norcia_control.npz": {
+      "input_sha256": "7af194259fa3cd8aecbef79c22047071ff33443449b1b954e0f602b570385cac",
+      "output_sha256": "77c96a9569736bca9da84bffa01aa99ac6d75ddeeb2d94677ac62c542859b91d"
+    },
+    "rio_control.npz": {
+      "input_sha256": "6d347ae0f1018afbf06c2d0cf7af571935096bd5ce9a1127fffe65dfacb2ab9d",
+      "output_sha256": "a60c2e21af86269263cb1e1f0bb12679eec55151cb35c64d0eededf25dc651fc"
+    },
+    "rio_overcast.npz": {
+      "input_sha256": "c61c0a31fe710cd1730786c4e25bb339e10bbb49acb176a50da577b72c35dbb4",
+      "output_sha256": "b917a4e904a49966ba0c613a0ab037c1e1f58d1d53eb175eb71931fc8343d9e1"
+    },
+    "saclay_w_cloudy.npz": {
+      "input_sha256": "9fd293aa9efbb1ad5fcf8c125821691c5010069dfc2488117fdd00e4f37ef99b",
+      "output_sha256": "45c2c68676fbafcc5b807fcfabca8956dfb39160ab0563bb675cd303bc70b63a"
+    },
+    "saclay_w_control.npz": {
+      "input_sha256": "e12f7bb7747264dc7d71d3945b865a328cab039271855a072064214f6472f78b",
+      "output_sha256": "710234385161d951f56fd9137c51d24bebcc0d1193383efeaba191ab11131071"
+    },
+    "valencia_cloudy.npz": {
+      "input_sha256": "6dc3402aa5eb26309eaac06e97aad1617d7a3ed9c9c74a30c0ff1bc681d51403",
+      "output_sha256": "fec150146b7052600653023986c69671588487cb5b23ec7655bbc6786a0354a3"
+    },
+    "valencia_control.npz": {
+      "input_sha256": "a3859f51dec7214e8926194ee57471c28cfd04e83c99acb4e868f9e5c26c84ce",
+      "output_sha256": "9419ef1dd741e32419b0dd5eb5a8cee950ad62d8c2d423fa1e7bb5530d839f8f"
+    }
+  }
+}
