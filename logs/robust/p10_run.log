@@ -1,3 +1,48 @@
 19 hashes, 0 failed
 == p10_fusion_dropout seed 11 2026-11-11T12:16:16+05:30
 == p10_unet_sar seed 11 2026-11-11T12:19:45+05:30
+== p10_fusion_dropout seed 12 2026-11-11T12:23:27+05:30
+== p10_unet_sar seed 12 2026-11-11T12:28:10+05:30
+== p10_fusion_dropout seed 13 2026-11-11T12:33:45+05:30
+== p10_unet_sar seed 13 2026-11-11T12:37:06+05:30
+== p10_fusion_dropout seed 14 2026-11-11T12:40:24+05:30
+== p10_unet_sar seed 14 2026-11-11T12:43:50+05:30
+== p10_fusion_dropout seed 15 2026-11-11T12:47:08+05:30
+== p10_unet_sar seed 15 2026-11-11T12:50:27+05:30
+== p10_fusion_dropout seed 16 2026-11-11T12:53:42+05:30
+== p10_unet_sar seed 16 2026-11-11T12:57:05+05:30
+== p10_fusion_dropout seed 17 2026-11-11T13:00:23+05:30
+== p10_unet_sar seed 17 2026-11-11T13:03:45+05:30
+== p10_fusion_dropout seed 18 2026-11-11T13:06:53+05:30
+== p10_unet_sar seed 18 2026-11-11T13:10:06+05:30
+== p10_fusion_dropout seed 19 2026-11-11T13:13:15+05:30
+== p10_unet_sar seed 19 2026-11-11T13:16:27+05:30
+== p10_fusion_dropout seed 20 2026-11-11T13:19:37+05:30
+== p10_unet_sar seed 20 2026-11-11T13:22:49+05:30
+== city eval p10_fusion_dropout 2026-11-11T13:25:58+05:30
+p10_fusion_dropout 11 done
+p10_fusion_dropout 12 done
+p10_fusion_dropout 13 done
+p10_fusion_dropout 14 done
+p10_fusion_dropout 15 done
+p10_fusion_dropout 16 done
+p10_fusion_dropout 17 done
+p10_fusion_dropout 18 done
+p10_fusion_dropout 19 done
+p10_fusion_dropout 20 done
+CITY EVAL DONE
+== city eval p10_unet_sar 2026-11-11T13:26:20+05:30
+p10_unet_sar 11 done
+p10_unet_sar 12 done
+p10_unet_sar 13 done
+p10_unet_sar 14 done
+p10_unet_sar 15 done
+p10_unet_sar 16 done
+p10_unet_sar 17 done
+p10_unet_sar 18 done
+p10_unet_sar 19 done
+p10_unet_sar 20 done
+CITY EVAL DONE
+== analyze 2026-11-11T13:26:33+05:30
+wrote C:\Users\Manishym\Researchpapers\satellite‑change‑detection\projects\multimodal-satellite-change-detection\experiments\robust\step10\summary.json and STEP10_REPORT.md
+P10 DONE 2026-11-11T13:26:37+05:30

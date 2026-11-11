@@ -1,0 +1,28 @@
+{
+  "arm": "p10_unet_sar",
+  "seed": 12,
+  "arch": "unet_sar",
+  "thresholds": {
+    "full": 99,
+    "no_o2": 99,
+    "no_opt": 99,
+    "o2_copy": 99
+  },
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "anchors": {
+    "full at_selected": true,
+    "full at_0.5": true
+  },
+  "checkpoint_sha256": "b0df65cdb5985a9a3231589b9d0272df434039d3f4fcd86d8723df2ebcddcf3a"
+}

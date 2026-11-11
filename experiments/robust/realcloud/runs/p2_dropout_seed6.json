@@ -1,0 +1,69 @@
+{
+  "arm": "p2_dropout",
+  "seed": 6,
+  "tau_clean": 97,
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "anchors": {
+    "oscd pooled = Step 5 test__clean": true
+  },
+  "checkpoint_sha256": "7f87aa281991f28da7a53577b0c0201cc4e118d4a01c178a810270b1d414e6dd",
+  "operating_points": {
+    "bal": {
+      "t": 0.65,
+      "r": 6,
+      "recall": 0.7905188939366088,
+      "precision": 0.8871643348861482,
+      "f1": 0.8360579121319902,
+      "overmasked_clear": 0.04869265135934452,
+      "counts": [
+        2889960,
+        367565,
+        765816,
+        7181110
+      ]
+    },
+    "rb95": {
+      "t": 0.25,
+      "r": 8,
+      "target_recall": 0.95,
+      "target_reached": true,
+      "recall": 0.9536678396050524,
+      "precision": 0.5020870392729753,
+      "f1": 0.6578363830127673,
+      "overmasked_clear": 0.4580157444849593,
+      "counts": [
+        3486396,
+        3457412,
+        169380,
+        4091263
+      ]
+    },
+    "rb99": {
+      "t": 0.05,
+      "r": 16,
+      "target_recall": 0.99,
+      "target_reached": false,
+      "recall": 0.9860374377423562,
+      "precision": 0.3248157693605943,
+      "f1": 0.4886596107377546,
+      "overmasked_clear": 0.9926300973349628,
+      "counts": [
+        3604732,
+        7493042,
+        51044,
+        55633
+      ]
+    }
+  }
+}

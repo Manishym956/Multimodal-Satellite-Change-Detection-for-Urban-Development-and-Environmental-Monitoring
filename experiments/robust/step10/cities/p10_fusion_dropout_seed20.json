@@ -1,0 +1,32 @@
+{
+  "arm": "p10_fusion_dropout",
+  "seed": 20,
+  "arch": "unet_fusion",
+  "thresholds": {
+    "full": 77,
+    "no_o2": 51,
+    "no_opt": 61,
+    "o2_copy": 52
+  },
+  "test_cities": [
+    "brasilia",
+    "montpellier",
+    "norcia",
+    "rio",
+    "saclay_w",
+    "valencia",
+    "dubai",
+    "lasvegas",
+    "milano",
+    "chongqing"
+  ],
+  "anchors": {
+    "full at_selected": true,
+    "full at_0.5": true,
+    "no_o2 at_selected": true,
+    "no_o2 at_0.5": true,
+    "no_opt at_selected": true,
+    "no_opt at_0.5": true
+  },
+  "checkpoint_sha256": "66130c6ee5d601d0a2c5015d7413a9456c32ba56cf67a61ac5e9612e53bafd2f"
+}
