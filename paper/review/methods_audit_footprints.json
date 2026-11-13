@@ -1,0 +1,105 @@
+{
+ "rows": [
+  {
+   "city": "brasilia",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 2,
+   "s1_max_edge_offset_px": 0.35
+  },
+  {
+   "city": "montpellier",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 4,
+   "s1_max_edge_offset_px": 0.81
+  },
+  {
+   "city": "norcia",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 8,
+   "s1_max_edge_offset_px": 0.79
+  },
+  {
+   "city": "rio",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 2,
+   "s1_max_edge_offset_px": 0.94
+  },
+  {
+   "city": "saclay_w",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 6,
+   "s1_max_edge_offset_px": 0.65
+  },
+  {
+   "city": "valencia",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 8,
+   "s1_max_edge_offset_px": 0.81
+  },
+  {
+   "city": "dubai",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 4,
+   "s1_max_edge_offset_px": 0.92
+  },
+  {
+   "city": "lasvegas",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 4,
+   "s1_max_edge_offset_px": 0.87
+  },
+  {
+   "city": "milano",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 4,
+   "s1_max_edge_offset_px": 0.75
+  },
+  {
+   "city": "chongqing",
+   "s2_raw_edge_offset_px": 0.0,
+   "raw_crs_geographic_wgs84": true,
+   "rect_has_crs": false,
+   "rect_shape_equals_raw_10m": true,
+   "label_shape_equals_rect": true,
+   "s1_files": 4,
+   "s1_max_edge_offset_px": 0.69
+  }
+ ],
+ "s1_max_edge_offset_px_all": 0.94
+}

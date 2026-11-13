@@ -102,3 +102,11 @@ To check the manuscript against the results:
 Paper in preparation. DS-UNet: Hafner, S., Nascetti, A., Azizpour, H., & Ban, Y. (2022). Sentinel-1 and Sentinel-2 data
 fusion for urban change detection using a dual stream U-Net. *IEEE GRSL, 19*, 4019907.
 OSCD: Daudt, R. C., Le Saux, B., Boulch, A., & Gousseau, Y. (2018). *Proc. IEEE IGARSS*, 2115–2118.
+
+## Licence
+
+Copyright (C) 2026 Manish Y. M. The code in this repository is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the
+License, or (at your option) any later version (SPDX: `GPL-2.0-or-later`). It is distributed WITHOUT ANY WARRANTY; see
+`LICENSE` for the full text. The DS-UNet network and loss that the training scripts load at run time are by Hafner et
+al. and are distributed under GPL-2.0 in their own repository; they are not included here.

@@ -17,3 +17,4 @@ src/datasets/oscd_dataset.py -text
 /reeval_robust.py -text
 /summarize_robust.py -text
 /hash_robust_artifacts.py -text
+datasets/oscd_s2_realcloud/manifest.json -text

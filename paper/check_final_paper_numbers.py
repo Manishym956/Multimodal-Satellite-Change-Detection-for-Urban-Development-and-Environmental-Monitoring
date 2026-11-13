@@ -3,7 +3,7 @@
 Sources: the step reports, pre-registrations and generated tables in experiments/robust/ (Phases 2-5, Steps 6-8), the
 literature review (for numbers quoted from prior work), the error-map record and the preliminary study's statistics
 (Appendix A; its earlier manuscript is a source too because its tables are generated from the same files). JSON sources
-count with every float rounded to 2, 3 and 4 decimals. A number passes if the same digits (sign ignored, "−" read as "-")
+count with every float rounded to 2, 3 and 4 decimals and in 1-digit scientific form. A number passes if the same digits (sign ignored, "−" read as "-")
 occur in a source as a whole token. This catches typos and unsourced numbers, not numbers used in the wrong place; that is
 check_final_paper_tables.py's job. The header and References are skipped. Exits 1 if any number is unsourced.
 
@@ -25,9 +25,14 @@ TEXT_SOURCES = [R / n for n in (
     "PHASE6_PREREGISTRATION.md", "PHASE6_REPORT.md", "PHASE7_PREREGISTRATION.md", "PHASE7_REPORT.md",
     "PHASE8_PREREGISTRATION.md", "PHASE8_REPORT.md")] + [
     ROOT / "docs" / "final" / "LITERATURE_REVIEW.md", ROOT / "paper" / "RESEARCH_PAPER_FINAL.md",
-    R / "stage4" / "STAGE4_EXPLORATORY_REPORT.md"]
+    R / "stage4" / "STAGE4_EXPLORATORY_REPORT.md"] + [R / p for p in (
+    "stage4b/STAGE4B_PREREGISTRATION.md", "stage4b/STAGE4B_REPORT.md", "step9/STEP9_PREREGISTRATION.md", "step9/STEP9_REPORT.md",
+    "step10/STEP10_PREREGISTRATION.md", "step10/STEP10_REPORT.md", "realcloud/STEP11_PREREGISTRATION.md",
+    "realcloud/STEP11_REPORT.md")]
 JSON_SOURCES = [R / "error_maps" / "selection.json", ROOT / "experiments" / "paper_statistics.json",
-                ROOT / "experiments" / "transformer_tuning_2026-10-15" / "threshold_selected_summary.json"]
+                ROOT / "experiments" / "transformer_tuning_2026-10-15" / "threshold_selected_summary.json"] + [R / p for p in (
+    "stage4b/stage4b_summary.json", "step9/summary.json", "step10/summary.json", "realcloud/summary.json",
+    "revision/revision_exploratory.json", "feasibility/real_cloud_gee.json")]
 NUM = re.compile(r"(?<![\w.§])[+\-−]?(\d+\.\d+(?:e[+\-]\d+)?)(?![\w.])")
 
 
@@ -41,7 +46,7 @@ def json_numbers(obj) -> set[str]:
     if isinstance(obj, list):
         return set().union(*(json_numbers(v) for v in obj)) if obj else set()
     if isinstance(obj, float):
-        return {f"{abs(obj):.{d}f}" for d in (2, 3, 4)}
+        return {f"{abs(obj):.{d}f}" for d in (2, 3, 4)} | {f"{abs(obj):.1e}"}  # .1e: small p-values
     return set()
 
 

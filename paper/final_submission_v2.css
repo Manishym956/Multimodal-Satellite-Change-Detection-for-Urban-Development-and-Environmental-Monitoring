@@ -1,0 +1,5 @@
+/* v2-only print layout, loaded after paper.css (pandoc --css paper.css --css final_submission_v2.css). Layout only. */
+h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }        /* no heading stranded at a page foot */
+p:has(+ table) { break-after: avoid; page-break-after: avoid; }        /* table caption stays with its table */
+figure { break-inside: avoid; page-break-inside: avoid; }              /* figure image stays with its caption */
+code { word-break: normal; overflow-wrap: anywhere; hyphens: none; }   /* wrap paths whole; split only if wider than a line */

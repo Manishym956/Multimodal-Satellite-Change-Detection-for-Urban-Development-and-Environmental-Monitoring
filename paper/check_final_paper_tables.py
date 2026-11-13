@@ -26,9 +26,66 @@ def contrast(label, cells, r):
     check(f"{label} Holm", cells[4], [r["holm_p"]], "p"), check(f"{label} label", cells[5], r["label"].replace(" ", ""), "count")
 
 
+def labelled(label, cells, r, p_key="holm_p", has_dz=True):
+    """Revision tables: Δ, CI, (d_z), Δ > 0, p; the label must follow from sign and p (< 0.05) or say not detectable."""
+    i = 0
+    check(f"{label} Δ", cells[i], [r["mean_diff"]]), check(f"{label} CI", cells[i + 1], r["ci95"])
+    i += 2
+    if has_dz:
+        check(f"{label} dz", cells[i], [r["dz"]])
+        i += 1
+    check(f"{label} Δ>0", cells[i], f"{r['b_gt_a']}/10", "count"), check(f"{label} p", cells[i + 1], [r[p_key]], "p")
+    lab = cells[i + 2]
+    if lab.startswith("("):  # "(descriptive)" rows carry no label
+        return
+    want_null = r[p_key] >= 0.05
+    ok = (lab == "no detectable difference") == want_null and (
+        want_null or (("lower" in lab) == (r["mean_diff"] < 0) and ("higher" in lab) == (r["mean_diff"] > 0)))
+    base.n_checks += 1
+    if not ok:
+        base.fails.append(f"{label} label: '{lab}' vs Δ {r['mean_diff']:+.3f}, p {r[p_key]:.3g}")
+
+
+def check_revision_tables(text) -> None:
+    s4b, s9, s10, s11 = (load(p) for p in ("stage4b/stage4b_summary.json", "step9/summary.json", "step10/summary.json",
+                                           "realcloud/summary.json"))
+    dec = s4b["descriptive"]["decomposition_tau_clean"]
+    t4 = {"B: image present − absent": s4b["primary"], "B, image present − SAR-only": dec["present - SAR-only"],
+          "B, image absent − SAR-only": dec["absent - SAR-only"]}
+    for row in table(text, "**Table 4."):
+        labelled(f"T4 {row[0]}", row[1:], t4[row[0]], "t_p")
+    t5 = {"E: image present − absent": s9["primary"]["E: image present - absent"],
+          "(E present − absent) − (B present − absent)": s9["primary"]["interaction: (E present - absent) - (B present - absent)"],
+          "E@no_o2 − SAR-only": s9["secondary_rq1"]["E@no_o2 - SAR-only"], "E@no_o2 − B@no_o2": s9["secondary_rq1"]["E@no_o2 - B@no_o2"],
+          "E@full − input fusion": s9["secondary_full"]["E@full - input fusion"], "E@full − A": s9["secondary_full"]["E@full - A"]}
+    for row in table(text, "**Table 5."):
+        labelled(f"T5 {row[0]}", row[1:], t5[row[0]])
+    t6 = {"E@no_opt − SAR-only": s10["primary"]["E@no_opt - SAR-only"],
+          "E: image present − absent": s10["secondary"]["E: image present - absent (Step 9 H1)"],
+          "E@no_opt − SAR-only, threshold 0.5": s10["secondary"]["E@no_opt - SAR-only, threshold 0.5"]}
+    for row in table(text, "**Table 6."):
+        labelled(f"T6 {row[0]}", row[1:], t6[row[0]])
+    t7 = {"B: rb95 mask − no mask": s11["primary"]["B real_rb95 - B real"],
+          "B with rb95 mask − SAR-only": s11["primary"]["B real_rb95 - SAR-only"],
+          "B − A, no mask": s11["primary"]["B real - A real"], "B: bal mask − no mask": s11["secondary"]["B real_bal - B real"],
+          "B: rb95 mask − image discarded": s11["secondary"]["B real_rb95 - B missing"],
+          "A, no mask − SAR-only": s11["secondary"]["A real - SAR-only"],
+          "B: Earth Engine control − OSCD image": s11["secondary"]["B control - B oscd"]}
+    for row in table(text, "**Table 7."):
+        labelled(f"T7 {row[0]}", row[1:], t7[row[0]])
+    cond = {"OSCD image (clear)": "oscd", "Earth Engine control (clear, same day)": "control",
+            "real cloudy scene, no mask": "real", "real cloudy scene, bal mask": "real_bal",
+            "real cloudy scene, rb95 mask": "real_rb95", "image discarded": "missing"}
+    for row in table(text, "**Table 8."):
+        for cell, arm in zip(row[1:], ("p2_full", "p2_dropout"), strict=True):
+            check(f"T8 {row[0]} {arm}", cell, ms(s11["arms"]["cloudy"][arm][cond[row[0]]]["f1"]))
+
+
 def main() -> None:
     text = (base.ROOT / "paper" / "FINAL_RESEARCH_PAPER.md").read_text(encoding="utf-8")
-    base.check_robustness_tables(text, {f"4.{i}": f"### 5.{i}" for i in range(1, 8)})
+    base.check_robustness_tables(text, {"4.1": "### 5.1", "4.2": "### 5.2", "4.3": "### 5.3", "4.4": "**Table E1",
+                                        "4.5": "**Table E2", "4.6": "**Table E3", "4.7": "**Table E4"})
+    check_revision_tables(text)
 
     # 4.1 RQ4 (Step 6): metrics table, then contrasts
     s6 = load("phase6/summary.json")
@@ -49,7 +106,7 @@ def main() -> None:
     # 4.3 RQ2 (Step 8): F1 per tag
     s8 = load("phase8/summary.json")
     tags = ["oscd", "gee_t1", "gap01", "gap03", "gap06", "gap12", "gap18"]
-    for row in table(text, "### 4.3"):
+    for row in table(text, "### 4.4"):
         arm = {"B dropout": "p2_dropout", "async": "p6_async"}[row[0]]
         for i, t in enumerate(tags, 1):
             check(f"4.3 {arm} {t}", row[i], ms(s8["arms"][arm][t]["f1"]))
@@ -58,15 +115,15 @@ def main() -> None:
     s7 = load("phase7/summary.json")
     arm7 = {"SAR-only U-Net, VV": "p6_unet_sar", "SAR-only U-Net, VH": "p7_unet_vh", "SAR-only U-Net, VV+VH": "p7_unet_vvvh",
             "DS-UNet, VV": "p2_full", "DS-UNet, VH": "p7_dsunet_vh", "DS-UNet, VV+VH": "p7_dsunet_vvvh"}
-    for row in table(text, "### 4.4"):
+    for row in table(text, "### 4.5"):
         for i, k in enumerate(METRICS, 1):
             check(f"4.4 {row[0]} {k}", row[i], ms(s7["arms"][arm7[row[0]]]["9_cities"][k]))
-    for row in table(text.split("### 4.4", 1)[1].split("| DS-UNet, VV+VH |", 1)[1], "\n"):
+    for row in table(text.split("### 4.5", 1)[1].split("| DS-UNet, VV+VH |", 1)[1], "\n"):
         fam, c = row[0].split(": ")
         contrast(f"4.4 {row[0]}", row[1:], s7["primary_rq3" if fam == "SAR-only" else "secondary_dsunet"][c.replace("−", "-")])
 
     # 4.5 RQ5 (Step 8): false-alarm rate by WorldCover class
-    for row in table(text, "### 4.5"):
+    for row in table(text, "### 4.6"):
         check(f"4.5 {row[0]} share", row[1], [100 * s8["worldcover_share"][row[0]]])
         r = s8["rq5_landcover"][f"B@oscd - SAR-only, {row[0]}"]
         check(f"4.5 {row[0]} Δ", row[2], [r["mean_diff"]]), check(f"4.5 {row[0]} CI", row[3], r["ci95"])
@@ -112,7 +169,7 @@ def main() -> None:
 
     # 4.6 and 5.8: exploratory revision tables (Stage 4), against experiments/robust/stage4/stage4_summary.json
     s4 = load("stage4/stage4_summary.json")
-    for row, r in zip(table(text, "### 4.6"), s4["E2_city_vs_seed"], strict=True):
+    for row, r in zip(table(text, "### 4.7"), s4["E2_city_vs_seed"], strict=True):
         n = r["n_cities"]
         check(f"4.6 {row[0]} cities", row[1], str(n), "count"), check(f"4.6 {row[0]} Δ", row[2], [r["seed_mean_diff"]])
         check(f"4.6 {row[0]} seed CI", row[3], r["seed_ci95"]), check(f"4.6 {row[0]} SE seeds", row[4], [r["se_seeds"]])
@@ -121,7 +178,7 @@ def main() -> None:
         check(f"4.6 {row[0]} boot CI", row[7], r["boot_ci95"])
         check(f"4.6 {row[0]} LOCO", row[8], [r["loco_min"], r["loco_max"]])
     e5 = {x["contrast"]: x for x in s4["E5_fallback_rule"]}
-    for row in table(text, "### 5.8"):
+    for row in table(text, "**Table E5"):
         for cell, m in zip(row[1:], ("cloud", "bal", "rb95", "rb99", "oracle"), strict=True):
             x = e5[f"composite clouds {row[0]}: B with mask {m} - SAR-only"]
             check(f"5.8 {row[0]} {m}", cell, [x["mean_diff"], *x["ci95"]])
